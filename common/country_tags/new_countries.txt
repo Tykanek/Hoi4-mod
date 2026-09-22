@@ -1,0 +1,2 @@
+PRA = "countries/prague.txt"
+BEN = "countries/beneshov.txt"
