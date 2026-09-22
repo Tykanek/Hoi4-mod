@@ -1,0 +1,18 @@
+add_namespace = germania_event
+
+country_event = {
+    id = germania.1
+    title = germania.1.t
+    desc = germania.1.d
+
+    fire_only_once = yes
+    is_triggered_only = yes
+
+    option =  {
+        name = germania.1.a
+        if = {
+
+        }
+    }
+
+}
