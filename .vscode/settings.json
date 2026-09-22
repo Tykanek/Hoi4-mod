@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "**/*.txt": "paradox",
+        "**/*.mod": "paradox"
+    }
+}

@@ -1,0 +1,6 @@
+spritetypes = {
+	spriteType = {
+		#name = "leader_portraits"
+		#texturefile = "gfx/interface/leader_portraits.dds"
+	}
+}
