@@ -8,5 +8,15 @@ characters = {
                 large = gfx/leaders/PRA/PRA_great_leader.dds #add later
             }
         }
+
+        country_leader = {
+            ideology = democratic
+            personality = neutral
+            traits = {
+                trait_ideological_communist
+                trait_charismatic
+                trait_industrious
+            }
+        }
     }
 }
