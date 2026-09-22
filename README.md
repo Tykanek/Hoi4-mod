@@ -18,7 +18,6 @@ The mod may include:
 - New events and decisions
 - Alternate-history lore and storytelling
 - Unique countries, characters, and leaders
-- Custom military, diplomatic, and economic gameplay
 - New map, state, or province content as development progresses
 
 ## 🧩 Modding Hearts of Iron IV
@@ -41,7 +40,3 @@ This mod is currently in development. Features, lore, and gameplay systems may c
 ## 🤝 Contributing
 
 Ideas, feedback, writing, testing, balancing, and other contributions are welcome. As the project develops, more information about contribution guidelines will be added here.
-
----
-
-*History is only one possibility. In this mod, the future belongs to Prague and Benešov.*
