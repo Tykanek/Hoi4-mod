@@ -3,7 +3,7 @@ characters = {
         name = PRA_great_leader
         desc = PRA_great_leader_desc
 
-        potraits = {
+        portraits = {
             civilian = {
                 large = gfx/leaders/PRA/PRA_great_leader.dds #add later
             }

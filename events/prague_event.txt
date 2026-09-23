@@ -3,16 +3,16 @@ add_namespace = prague_event
 
 
 country_event = { #Default template
-	id = prague.1
-	title = "prague.1.t"
-	desc = "prague.1.d"
+	id = prague_event.1
+	title = "prague_event.1.t"
+	desc = "prague_event.1.d"
 
 	is_triggered_only = yes #yes = only triggered by script, no = can be triggered by 											script or by chance
 
 	fire_only_once = yes #yes = event can only fire once, no = event can fire multiple 										times
 
 	option = {
-		name = "prague.1.a" #The first option the player can choose
+		name = "prague_event.1.a" #The first option the player can choose
 		if = {
 			limit = { #If the condition is met
 				has_war = yes
