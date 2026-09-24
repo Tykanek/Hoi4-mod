@@ -1,7 +1,7 @@
-add_namespace = germania_event
+add_namespace = germania
 
 country_event = {
-    id = germania.1
+    id = germania.1 # enable The Empire path
     title = germania.1.t
     desc = germania.1.d
 
@@ -9,10 +9,170 @@ country_event = {
     is_triggered_only = yes
 
     option =  {
-        name = germania.1.a
-        if = {
-
-        }
+        name = germania.1.a # For The Fatherland! | Enables event chain for Rhineland POV
     }
+    option = {
+        name = germania.1.b # Heil Hitler! | Enables event chain for Berlin POV
+    }
+    option = {
+        name = germania.1.c # Nevermind, I have other plans | Disables event chain for both POVs
+    }
+}
 
+##############
+#            #
+# BERLIN POV #
+#            #
+##############
+
+country_event = {
+    id = germania.2 # Berlin POV
+    title = germania.2.t # Trouble on the Industrial Fringe
+    desc = germania.2.d
+
+    fire_only_once = yes
+    is_triggered_only = yes
+
+    option =  {
+        name = germania.2.a # Send local police to clear the agitators.
+    }
+    option = {
+        name = germania.2.b # Grant minor concessions to quiet them down.
+    }
+}
+country_event = {
+    id = germania.3 # Berlin POV
+    title = germania.3.t # The Memorandum from Cologne
+    desc = germania.3.d
+
+    fire_only_once = yes
+    is_triggered_only = yes
+
+    option =  {
+        name = germania.3.a # Declare the Council illegal and order the Abwehr to intervene.
+    }
+    option = {
+        name = germania.3.b # Attempt to co-opt the leadership.
+    }
+}
+country_event = {
+    id = germania.4 # Berlin POV
+    title = germania.4.t # Shadow Govenrnance
+    desc = germania.4.d
+
+    fire_only_once = yes
+    is_triggered_only = yes
+
+    option =  {
+        name = germania.4.a # Declare a state of emergency in the Western Marches.
+    }
+    option = {
+        name = germania.4.b # Prepare a military blockade along the Rhine.
+    }
+}
+country_event = {
+    id = germania.5 # Berlin POV
+    title = germania.5.t # The Ultimatum
+    desc = germania.5.d
+
+    fire_only_once = yes
+    is_triggered_only = yes
+
+    option =  {
+        name = germania.5.a # Reject this absurdity! Prepare the army!
+    }
+    option = {
+        name = germania.5.b # Try to negotiate an agreement.
+    }
+}
+country_event = {
+    id = germania.6 # Berlin POV
+    title = germania.6.t # The incident at the Mainz.
+    desc = germania.6.d
+
+    fire_only_once = yes
+    is_triggered_only = yes
+
+    option =  {
+        name = germania.6.a # Order total mobilization! Down with the traitors!
+    }
+}
+
+##################
+#                #
+# OPPOSITION POV #
+#                #
+##################
+
+country_event = {
+    id = germania.7 # Opposition POV
+    title = germania.7.t # Establishing the Executive Council
+    desc = germania.7.d
+
+    fire_only_once = yes
+    is_triggered_only = yes
+
+    option =  {
+        name = germania.7.a # Enforce absolute administrative discipline.
+    }
+    option = {
+        name = germania.7.b # Focus on military integration first.
+    }
+}
+country_event = {
+    id = germania.8 # Opposition POV
+    title = germania.8.t # The Legal Framework
+    desc = germania.8.d
+
+    fire_only_once = yes
+    is_triggered_only = yes
+
+    option =  {
+        name = germania.8.a # Dispatch the memorandum to Berlin.
+    }
+    option = {
+        name = germania.8.b # Publish it to the foreign press.
+    }
+}
+country_event = {
+    id = germania.9 # Opposition POV
+    title = germania.9.t # Logistical Optimization
+    desc = germania.9.d
+
+    fire_only_once = yes
+    is_triggered_only = yes
+
+    option =  {
+        name = germania.9.a # Seize the Ruhr industrial stockpiles.
+    }
+    option = {
+        name = germania.9.b # Fortify the western bank of the rhine.
+    }
+}
+country_event = {
+    id = germania.10 # Opposition POV
+    title = germania.10.t # Master Baiting the High Command
+    desc = germania.10.d
+
+    fire_only_once = yes
+    is_triggered_only = yes
+
+    option =  {
+        name = germania.10.a # Leak "flawed" defense plans to Berlin.
+    }
+    option = {
+        name = germania.10.b # Prepare the defensive perimeter.
+    }
+}
+country_event = {
+    id = germania.11 # Opposition POV
+    title = germania.11.t # The Mainz Trap
+    desc = germania.11.d
+
+    fire_only_once = yes
+    is_triggered_only = yes
+
+    option =  {
+        name = germania.11.a # Publish Berlin's aggression to the nation and strike!
+    }
 }
