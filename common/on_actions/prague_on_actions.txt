@@ -1,0 +1,12 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			CZE = {
+				puppet = {
+					target = PRA
+					end_wars = no
+				}
+			}
+		}
+	}
+}

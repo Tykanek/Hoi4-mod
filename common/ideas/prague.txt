@@ -1,0 +1,21 @@
+ideas = {
+
+	country = {
+
+		prague_newly_independent = {
+			picture = generic_independent_nation
+			modifier = {
+				political_power_gain = 0.15
+				stability_weekly = 0.05
+				war_support_weekly = 0.02
+				factory_output = 0.10
+				resource_extraction_speed = 0.10
+			}
+			removal_cost = -1
+			days_remove = 730
+		}
+
+	}
+
+}
+

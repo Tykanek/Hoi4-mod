@@ -17,44 +17,33 @@
 
 
 	focus = {
-		id = prague_stating
-		icon = GFX_goal_generic_major_war
+		id = prague_declare_independence
+		icon = GFX_goal_generic_political_pressure
 
-		x = 3
-		y = 3
-		relative_position_id = AST_empower_the_workers #controls the actual position of the demographic focus in the tree, not the position of the focus itself
+		x = 22
+		y = 0
 
-		cost = 10 #
-		prerequisite = { focus = AST_workers_paradise }
-
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				JAP = { has_government = communism }
-				factor = 0
-			}
-		}
+		cost = 10
 
 		available = {
-			NOT = { is_in_faction_with = JAP }
-			NOT = { has_country_flag = britain_enforced_our_loyalty }
+			is_subject_of = CZE
 		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 
 		completion_reward = {
-			create_wargoal = {
-				target = JAP
-				type = puppet_wargoal_focus
-				expire = 0
+			# Diplomatic & Political Unlocks
+			add_political_power = 150
+			add_war_support = 0.10
+
+			# Economic Sovereignty Recovery
+			add_stability = -0.05
+
+			# End Puppet Status
+			CZE = {
+				end_puppet = PRA
 			}
+
+			# National Transition Spirit
+			add_ideas = prague_newly_independent
 		}
 	}
 

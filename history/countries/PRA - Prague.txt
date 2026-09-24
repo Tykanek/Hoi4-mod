@@ -1,6 +1,8 @@
 ﻿capital = 1082 #Prague
 #oob = "DAG_1936"
 
+set_stability = 0.30
+set_war_support = 0.05
 
 create_country_leader = {
 	name = "Klement Gottwald"
