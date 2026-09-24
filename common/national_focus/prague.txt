@@ -1,0 +1,64 @@
+﻿focus_tree = {
+	id = praguean_focus
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = PRA
+		}
+	}
+
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1000 }
+
+
+
+	focus = {
+		id = prague_stating
+		icon = GFX_goal_generic_major_war
+
+		x = 3
+		y = 3
+		relative_position_id = AST_empower_the_workers #controls the actual position of the demographic focus in the tree, not the position of the focus itself
+
+		cost = 10 #
+		prerequisite = { focus = AST_workers_paradise }
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				JAP = { has_government = communism }
+				factor = 0
+			}
+		}
+
+		available = {
+			NOT = { is_in_faction_with = JAP }
+			NOT = { has_country_flag = britain_enforced_our_loyalty }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				target = JAP
+				type = puppet_wargoal_focus
+				expire = 0
+			}
+		}
+	}
+
+
+
+
+}
