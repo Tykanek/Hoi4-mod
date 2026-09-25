@@ -1,0 +1,42 @@
+state={
+	id=1084
+	name="STATE_1084"
+	manpower = 2174521
+	resources={
+		steel = 30
+		coal = 10
+        aluminium = 10
+	}
+
+	state_category = metropolis
+
+	history={
+		owner = GRA
+		victory_points = { 11531 5 }
+		victory_points = { 9575 3 }
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+			industrial_complex = 2
+			anti_air_building = 1
+			air_base = 2
+
+		}
+		add_core_of = GER
+        add_core_of = GRA
+		set_demilitarized_zone = yes
+
+		1939.3.14 = {
+			owner = GRA
+			controller = GRA
+		}
+	}
+
+	provinces={
+		11531
+		9575
+        3423
+	}
+
+	local_supplies=0.0
+}

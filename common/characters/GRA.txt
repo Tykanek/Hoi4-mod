@@ -14,4 +14,291 @@ characters = {
             }
         }
     }
+	GRA_tanya = { # Special Forces General and Artillery Advisor
+		name = "GRA_tanya"
+		desc = "GRA_tanya_desc"
+		portraits = {
+			army = {
+				large = "gfx/leaders/GRA/GRA_tanya.dds"
+				small = "gfx/leaders/GRA/GRA_tanya_small.dds"
+			}
+		}
+
+		advisor = {
+			slot = high_command
+			ledger = army
+			cost = 100
+			traits = {
+				# Devil of The Rhine
+				# Silver Wings Assault
+			}
+		}
+	}
+	GRA_rudersdorf = { # Field Marshal and Attack Chief of Army
+		name = "GRA_rudersdorf"
+		desc = "GRA_rudersdorf_desc"
+		portraits = {
+			army = {
+				large = "gfx/leaders/GRA/GRA_rudersdorf.dds"
+				small = "gfx/leaders/GRA/GRA_rudersdorf_small.dds"
+			}
+		}
+
+		advisor = {
+			slot = army_chief
+			cost = 200
+			traits = {
+				# Old Guard
+				# Iron Fist
+			}
+		}
+	}
+	GRA_zettour = { # Field Marshal and Defense/Logistics Chief of Army
+		name = "GRA_zettour"
+		desc = "GRA_zettour_desc"
+		portraits = {
+			army = {
+				large = "gfx/leaders/GRA/GRA_zettour.dds"
+				small = "gfx/leaders/GRA/GRA_zettour_small.dds"
+			}
+		}
+
+		advisor = {
+			slot = army_chief
+			cost = 200
+			traits = {
+
+				# Old Guard
+				# Logistics Mastermind
+			}
+		}
+	}
+	GRA_lergen = { # General and Logistics Advisor
+		name = "GRA_lergen"
+		desc = "GRA_lergen_desc"
+		portraits = {
+			army = {
+				large = "gfx/leaders/GRA/GRA_lergen.dds"
+				small = "gfx/leaders/GRA/GRA_lergen_small.dds"
+			}
+		}
+
+		advisor = {
+			slot = high_command
+			ledger = army
+			cost = 100
+			traits = {
+				
+			}
+		}
+	}
+	GRA_schugel = { # Theorist and Research Advisor
+		name = "GRA_schugel"
+		desc = "GRA_schugel_desc"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRA/GRA_schugel.dds"
+				small = "gfx/leaders/GRA/GRA_schugel_small.dds"
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			cost = 100
+			traits = {
+
+			}
+		}
+		advisor = {
+			slot = theorist
+			cost = 100
+			traits = {
+
+			}
+		}
+	}
+	GRA_weiss = { # General and Attack Advisor
+		name = "GRA_weiss"
+		desc = "GRA_weiss_desc"
+		portraits = {
+			army = {
+				large = "gfx/leaders/GRA/GRA_weiss.dds"
+				small = "gfx/leaders/GRA/GRA_weiss_small.dds"
+			}
+		}
+
+		advisor = {
+			slot = high_command
+			ledger = army
+			cost = 100
+			traits = {
+
+			}
+		}
+	}
+	GRA_ugar = { # General and Defense Advisor
+		name = "GRA_ugar"
+		desc = "GRA_ugar_desc"
+		portraits = {
+			army = {
+				large = "gfx/leaders/GRA/GRA_ugar.dds"
+				small = "gfx/leaders/GRA/GRA_ugar_small.dds"
+			}
+		}
+
+		advisor = {
+			slot = high_command
+			ledger = army
+			cost = 100
+			traits = {
+
+			}
+		}
+	}
+	GRA_romel = { # Tanks General and Tanks Advisor
+		name = "GRA_romel"
+		desc = "GRA_romel_desc"
+		portraits = {
+			army = {
+				large = "gfx/leaders/GRA/GRA_romel.dds"
+				small = "gfx/leaders/GRA/GRA_romel_small.dds"
+			}
+		}
+
+		advisor = {
+			slot = high_command
+			ledger = army
+			cost = 100
+			traits = {
+
+			}
+		}
+
+	}
+	GRA_neumann = { # General and Air Advisor
+		name = "GRA_neumann"
+		desc = "GRA_neumann_desc"
+		portraits = {
+			army = {
+				large = "gfx/leaders/GRA/GRA_neumann.dds"
+				small = "gfx/leaders/GRA/GRA_neumann_small.dds"
+			}
+		}
+
+		advisor = {
+			slot = high_command
+			ledger = air
+			cost = 100
+			traits = {
+
+			}
+		}
+	}
+	GRA_grantz = { # General and Recovery Advisor
+		name = "GRA_grantz"
+		desc = "GRA_grantz_desc"
+		portraits = {
+			army = {
+				large = "gfx/leaders/GRA/GRA_grantz.dds"
+				small = "gfx/leaders/GRA/GRA_grantz_small.dds"
+			}
+		}
+
+		advisor = {
+			slot = high_command
+			ledger = army
+			cost = 100
+			traits = {
+
+			}
+		}
+	}
+	GRA_koenig = { # General and Recon Advisor
+		name = "GRA_koenig"
+		desc = "GRA_koenig_desc"
+		portraits = {
+			army = {
+				large = "gfx/leaders/GRA/GRA_koenig.dds"
+				small = "gfx/leaders/GRA/GRA_koenig_small.dds"
+			}
+		}
+
+		advisor = {
+			slot = high_command
+			ledger = army
+			cost = 100
+			traits = {
+
+			}
+		}
+	}
+	GRA_glein = { # Naval General and Battleship Chief of Navy
+		name = "GRA_glein"
+		desc = "GRA_glein_desc"
+		portraits = {
+			army = {
+				large = "gfx/leaders/GRA/GRA_glein.dds"
+				small = "gfx/leaders/GRA/GRA_glein_small.dds"
+			}
+		}
+
+		advisor = {
+			slot = naval_chief
+			available = {
+				has_doctrine = fleet_in_being
+			}
+			cost = 200
+			traits = {
+
+			}
+		}
+	}
+	GRA_treizel = { # Naval General and Submarine Chief of Navy
+		name = "GRA_treizel"
+		desc = "GRA_treizel_desc"
+		portraits = {
+			army = {
+				large = "gfx/leaders/GRA/GRA_treizel.dds"
+				small = "gfx/leaders/GRA/GRA_treizel_small.dds"
+			}
+		}
+
+		advisor = {
+			slot = naval_chief
+			available = {
+				has_doctrine = trade_interdiction
+			}
+			visible = {
+				has_doctrine = trade_interdiction
+			}
+			cost = 200
+			traits = {
+
+			}
+		}
+	}
+	GRA_hildebrand = { # Intelligence Advisor
+		name = "GRA_hildebrand"
+		desc = "GRA_hildebrand_desc"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRA/GRA_hildebrand.dds"
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			available = {
+				has_intelligence_agency = yes # only available if the country has an intelligence agency
+			}
+			visible = {
+				has_intelligence_agency = yes # only visible if the country has an intelligence agency
+			}
+			cost = 100
+			traits = {
+
+			}
+		}
+	}
+
 }

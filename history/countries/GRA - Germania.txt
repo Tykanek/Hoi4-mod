@@ -1,4 +1,4 @@
-capital = 11531 # Saarbrücken
+capital = 587 # Koln
 set_stability = 0.45
 set_war_support = 0.40
 
@@ -107,3 +107,17 @@ set_popularities = {
 
 recruit_character = GRA_reichstag
 promote_character = GRA_reichstag
+recruit_character = GRA_tanya
+recruit_character = GRA_rudersdorf
+recruit_character = GRA_zettour
+recruit_character = GRA_lergen
+recruit_character = GRA_schugel
+recruit_character = GRA_weiss
+recruit_character = GRA_ugar
+recruit_character = GRA_romel
+recruit_character = GRA_neumann
+recruit_character = GRA_grantz
+recruit_character = GRA_koenig
+recruit_character = GRA_hildebrand
+recruit_character = GRA_glein
+recruit_character = GRA_treizel
