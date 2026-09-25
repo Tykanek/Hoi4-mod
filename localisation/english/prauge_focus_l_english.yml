@@ -1,13 +1,81 @@
 ﻿l_english:
- prague_declare_independence: "Declare Our Independence"
- prague_declare_independence_desc: "The people of Prague have endured years of Czechoslovak oversight. The time has come to end this arrangement and take responsibility for our own future."
- prague_remain_czech_subject: "Remain Under Czech Protection"
- prague_remain_czech_subject_desc: "Independence is a dangerous gamble. By remaining under Czechoslovak protection, Prague can preserve stability and strengthen its administration while accepting continued oversight."
- prague_newly_independent: "Newly Independent"
- prague_newly_independent_desc: "Prague has successfully gained its independence. Factories and resources are being reclaimed, and the nation rallies around its newfound sovereignty."
- pra_subordinated_administration: "Subordinated Administration"
- pra_subordinated_administration_desc: "Prague's government remains closely tied to Czechoslovakia, limiting its political freedom and industrial initiative while providing a measure of stability."
- cze_loyal_prague_subject: "Loyal Prague Subject"
- cze_loyal_prague_subject_desc: "Prague has reaffirmed its loyalty and accepted continued Czechoslovak oversight."
- pra_devotion_to_prague_treaty: "Devotion to the Prague Treaty"
- pra_devotion_to_prague_treaty_desc: "Prague has pledged to preserve its treaty obligations and maintain close relations with Czechoslovakia."
+
+ # ==============================================================
+ # SOVEREIGNTY
+ # ==============================================================
+
+ prague_declare_independence: "Proclaim Prague's Sovereignty"
+ prague_declare_independence_desc: "The agreements binding Prague to the Czech administration have become intolerable. The capital shall no longer accept orders from beyond its own borders. Whatever consequences follow, Prague will determine its own future."
+
+ prague_remain_czech_subject: "Preserve the Czech Arrangement"
+ prague_remain_czech_subject_desc: "Independence would leave Prague isolated from the countryside on which it depends. Whatever our disagreements with the Czech government, tearing apart the existing settlement may prove more dangerous than preserving it."
+
+
+ # ==============================================================
+ # VLtAVA DEFENSE FRONT
+ # ==============================================================
+
+ pra_mobilize_vltava_defense_front: "Mobilize the Vltava Defense Front"
+ pra_mobilize_vltava_defense_front_desc: "The Senate cannot guard every railway junction, bridge and warehouse. Colonel Peter Mohammedis has proposed a volunteer force composed of veterans, workers and patriotic students. Officially, its purpose is merely to defend Prague. Few believe it will remain merely a civil defense organization for long."
+
+ pra_vltava_defense_front_tt: "The §YVltava Defense Front§! will be organized and its first armed formation raised in Prague."
+
+
+ # ==============================================================
+ # VO POWER BASE
+ # ==============================================================
+
+ pra_bread_under_black_banner: "Bread Under the Black Banner"
+ pra_bread_under_black_banner_desc: "Coal trains have stopped arriving and grain stocks are dwindling. While the Senate argues over negotiations, VO detachments have begun opening warehouses and organizing ration distribution themselves. Hungry citizens care little which institution provides their bread."
+
+ pra_bread_under_black_banner_tt: "The §YVltava Defense Front§! will assume responsibility for emergency supply distribution and unlock §YVO Supply Operations§!."
+
+
+ pra_win_over_municipal_police: "Win Over the Municipal Police"
+ pra_win_over_municipal_police_desc: "Many junior officers of the Municipal Police served in the same trenches and garrisons as Mohammedis. They need not openly join us. They need only remember where their loyalties lie when the Senate eventually orders them to fire upon their fellow veterans."
+
+ pra_municipal_police_support_tt: "The §YPrague Municipal Police§! will refuse to defend the provisional government if Mohammedis moves against it."
+
+
+ pra_legionaries_answer_call: "The Legionaries Answer the Call"
+ pra_legionaries_answer_call_desc: "From Siberia to the disputed frontiers of Central Europe, the legionaries fought while politicians debated. Mohammedis has begun contacting his former comrades. Old uniforms are being taken from wardrobes, rifles cleaned and military associations transformed into recruitment offices."
+
+ pra_legionaries_answer_call_tt: "§YPeter Mohammedis§! will enter Prague politics and experienced legionary veterans will form a new regiment."
+
+
+ # ==============================================================
+ # COUP
+ # ==============================================================
+
+ pra_mohammedis_overthrows_government: "Mohammedis Overthrows the Prague Government"
+ pra_mohammedis_overthrows_government_desc: "The government has lost control of its food supplies, its streets and even its own police. Rumours now claim that the Senate is preparing humiliating concessions to Benešov. Mohammedis has concluded that there is nothing left worth negotiating with. Three thousand armed men are assembling throughout the city. Before nightfall, Prague will have a new government."
+
+
+ # ==============================================================
+ # POST-COUP
+ # ==============================================================
+
+ pra_fortify_vltava_crossings: "Fortify the Vltava Crossings"
+ pra_fortify_vltava_crossings_desc: "Prague's bridges are both lifelines and vulnerabilities. Concrete strongpoints, barricades and anti-aircraft positions will transform the Vltava into an obstacle no enemy can cross cheaply."
+
+ pra_fortify_vltava_crossings_tt: "The approaches to Prague will be fortified with §YLand Forts§! and §YAnti-Air Defences§!."
+
+
+ pra_commandeer_workshops: "Commandeer the Workshops"
+ pra_commandeer_workshops_desc: "The city contains hundreds of engineering shops, railway works and machine halls designed for civilian production. The Directorate has neither the time nor the patience to wait for private contracts. Their machines will now serve the defense of Prague."
+
+ pra_commandeer_workshops_tt: "Civilian workshops in Prague will be reorganized for §Ymilitary production§!."
+
+
+ pra_every_district_barracks: "Every District a Barracks"
+ pra_every_district_barracks_desc: "The defense of Prague cannot remain the responsibility of professional soldiers alone. Karlín, Žižkov, Holešovice and every other district must maintain its own armed formations. The entire city shall become a reserve army."
+
+ pra_every_district_barracks_tt: "Two additional §YPrague militia formations§! will be raised."
+
+
+ # ==============================================================
+ # BENEŠOV
+ # ==============================================================
+
+ pra_crush_benesov_threat: "Crush the Benešov Threat"
+ pra_crush_benesov_threat_desc: "So long as Benešov controls Prague's approaches, no warehouse will remain full and no railway will be secure. The Directorate was created to end this crisis. The time for fortifying Prague has passed. Now Prague will carry the war beyond its walls."

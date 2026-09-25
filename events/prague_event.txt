@@ -2,52 +2,74 @@ add_namespace = prague_event
 
 
 
-country_event = { #Default template
-	id = prague_event.1
-	title = "prague_event.1.t"
-	desc = "prague_event.1.d"
 
-	is_triggered_only = yes #yes = only triggered by script, no = can be triggered by 											script or by chance
+# ================================================================
+# PRAGUE IS CUT OFF
+# ================================================================
 
-	fire_only_once = yes #yes = event can only fire once, no = event can fire multiple 										times
+country_event = {
+    id = pra_mohammedis.1
 
-	option = {
-		name = "prague_event.1.a" #The first option the player can choose
-		if = {
-			limit = { #If the condition is met
-				has_war = yes
-			}
-			every_other_country = { #For each other country that is in war with you
-				limit = {
-					is_in_faction_with = ROOT
-					has_war_with = ROOT
-				}
-				add_political_power = 50
-			}
+    title = pra_mohammedis.1.t
+    desc = pra_mohammedis.1.d
 
-		}
-		else = { #If the condition is not met
-			add_political_power = -50
-		}
-	}
-	option = {
-		name = "prague.1.b" #The second option the player can choose
-		if = {
-			limit = { #If the condition is met
-				has_war = yes
-			}
-			every_other_country = { #For each other country
-				limit = {
-					is_in_faction_with = ROOT
-					has_war_with = ROOT
-				}
-				add_political_power = -50
-					# remove_ideas = prague_event_idea #removes the national idea from the 							country that is in a faction with the ROOT country and is at war
-			}
+    is_triggered_only = yes
 
-		}
-		else = { #If the condition is not met
-			add_political_power = 50
-		}
+    option = {
+        name = pra_mohammedis.1.a
+    }
 }
+
+
+# ================================================================
+# MUNICIPAL POLICE WON OVER
+# ================================================================
+
+country_event = {
+    id = pra_mohammedis.2
+
+    title = pra_mohammedis.2.t
+    desc = pra_mohammedis.2.d
+
+    is_triggered_only = yes
+
+    option = {
+        name = pra_mohammedis.2.a
+    }
+}
+
+
+# ================================================================
+# THE GOVERNMENT FALLS
+# ================================================================
+
+country_event = {
+    id = pra_mohammedis.3
+
+    title = pra_mohammedis.3.t
+    desc = pra_mohammedis.3.d
+
+    is_triggered_only = yes
+
+    option = {
+        name = pra_mohammedis.3.a
+    }
+}
+
+
+# ================================================================
+# WAR AGAINST BENEŠOV
+# ================================================================
+
+country_event = {
+    id = pra_mohammedis.4
+
+    title = pra_mohammedis.4.t
+    desc = pra_mohammedis.4.d
+
+    is_triggered_only = yes
+
+    option = {
+        name = pra_mohammedis.4.a
+    }
 }

@@ -1,31 +1,71 @@
 ideas = {
 
-	country = {
+    country = {
 
-		prague_newly_independent = {
-			picture = generic_independent_nation
-			modifier = {
-				political_power_gain = 0.15
-				stability_weekly = 0.05
-				war_support_weekly = 0.02
-				industrial_capacity_factory = 0.10
-				local_resources_factor = 0.10
-			}
-			removal_cost = -1
-		}
+        # ========================================================
+        # INDEPENDENCE CRISIS
+        # ========================================================
 
-		pra_subordinated_administration = {
-			picture = generic_political_reform
-			modifier = {
-				political_power_gain = -0.10
-				stability_weekly = 0.02
-				industrial_capacity_factory = -0.05
-				consumer_goods_factor = 0.05
-			}
-			removal_cost = -1
-		}
+        pra_cut_off_from_hinterland = {
 
-	}
+            modifier = {
+                consumer_goods_factor = 0.10
+                industrial_capacity_factory = -0.10
+                production_factory_max_efficiency_factor = -0.05
+            }
+        }
 
+
+        # ========================================================
+        # VO TAKES OVER DISTRIBUTION
+        # ========================================================
+
+        pra_vo_rationing_network = {
+
+            modifier = {
+                consumer_goods_factor = 0.05
+                industrial_capacity_factory = -0.05
+            }
+        }
+
+
+        # ========================================================
+        # VLtAVA DEFENSE FRONT
+        # ========================================================
+
+        pra_vltava_defense_front = {
+
+            modifier = {
+                recruitable_population_factor = 0.01
+                division_defence_factor = 0.05
+            }
+        }
+
+
+        # ========================================================
+        # MOHAMMEDIS' REGIME
+        # ========================================================
+
+        pra_directorate_of_national_salvation = {
+
+            modifier = {
+                political_power_factor = 0.15
+                mobilization_speed = 0.20
+                justify_war_goal_time = -0.15
+            }
+        }
+
+
+        # ========================================================
+        # LOYAL CZECH SUBJECT PATH
+        # ========================================================
+
+        pra_subordinated_administration = {
+
+            modifier = {
+                political_power_factor = -0.10
+                consumer_goods_factor = -0.05
+            }
+        }
+    }
 }
-

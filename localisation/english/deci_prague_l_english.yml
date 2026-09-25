@@ -1,0 +1,13 @@
+﻿l_english:
+
+ pra_vo_supply_operations: "Vltava Defense Front Supply Operations"
+ pra_vo_supply_operations_desc: "With the civilian administration increasingly incapable of maintaining regular deliveries, the VO has begun establishing its own network of warehouses, ration stations and transport detachments."
+
+ pra_seize_government_warehouses: "Seize Government Warehouses"
+ pra_seize_government_warehouses_desc: "Supplies sitting behind locked doors are useless to a starving city. VO detachments will take possession of government stocks and redirect whatever can serve our armed formations."
+
+ pra_secure_coal_depots: "Secure the Coal Depots"
+ pra_secure_coal_depots_desc: "Fuel and coal reserves must be protected from hoarding, theft and political interference. The VO will place the city's remaining strategic fuel stocks under armed guard."
+
+ pra_distribute_emergency_rations: "Distribute Emergency Rations"
+ pra_distribute_emergency_rations_desc: "Food bearing the black banners of the Vltava Defense Front will reach districts where municipal distribution has broken down. Every ration handed out is another reminder of who is actually keeping Prague alive."

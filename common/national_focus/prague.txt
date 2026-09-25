@@ -1,107 +1,575 @@
 ﻿focus_tree = {
-	id = praguean_focus
+    id = praguean_focus
 
-	country = {
-		factor = 0
+    country = {
+        factor = 0
 
-		modifier = {
-			add = 10
-			tag = PRA
-		}
-	}
+        modifier = {
+            add = 10
+            original_tag = PRA
+        }
+    }
 
-	default = no
+    default = no
 
-	continuous_focus_position = { x = 50 y = 1000 }
+    continuous_focus_position = {
+        x = 50
+        y = 1000
+    }
 
 
+    # ============================================================
+    # THE QUESTION OF SOVEREIGNTY
+    # ============================================================
 
-	focus = {
-		id = prague_declare_independence
-		icon = GFX_goal_generic_political_pressure
+    focus = {
+        id = prague_declare_independence
+        icon = GFX_goal_generic_political_pressure
 
-		x = 22
-		y = 0
+        x = 22
+        y = 0
 
-		mutually_exclusive = { focus = prague_remain_czech_subject }
+        cost = 4
 
-		cost = 10
+        mutually_exclusive = {
+            focus = prague_remain_czech_subject
+        }
 
-		available = {
-			is_subject_of = CZE
-		}
+        available = {
+            is_subject_of = CZE
+        }
 
-		completion_reward = {
-			# Diplomatic & Political Unlocks
-			add_political_power = 150
-			add_war_support = 0.10
+        bypass = {
+            is_subject = no
+        }
 
-			# Economic Sovereignty Recovery
-			add_stability = -0.05
+        completion_reward = {
 
-			# End Puppet Status
-			CZE = {
-				end_puppet = PRA
-			}
+            CZE = {
+                end_puppet = ROOT
+            }
 
-			# National Transition Spirit
-			add_timed_idea = {
-				idea = prague_newly_independent
-				days = 730
-			}
-		}
-	}
+            add_ideas = pra_cut_off_from_hinterland
 
-	focus = {
+            set_country_flag = pra_declared_independence
+
+            country_event = {
+                id = pra_mohammedis.1
+            }
+        }
+    }
+
+
+    focus = {
         id = prague_remain_czech_subject
         icon = GFX_goal_generic_political_pressure
 
         x = 40
         y = 0
 
-        mutually_exclusive = { focus = prague_declare_independence }
+        cost = 4
 
-        cost = 10
+        mutually_exclusive = {
+            focus = prague_declare_independence
+        }
 
         available = {
             is_subject_of = CZE
         }
 
         completion_reward = {
-            # Immediate Stability & Political Capital
-            add_political_power = 100
-            add_stability = 0.10
-            add_war_support = -0.15
 
-            # Weaken Autonomy
-            # Drops autonomy progress significantly towards the next lower puppet tier
             add_autonomy_ratio = {
                 value = -0.25
             }
 
-            # Strengthen Diplomatic & Trade Relations
+            add_ideas = pra_subordinated_administration
+
             CZE = {
                 add_opinion_modifier = {
                     target = ROOT
                     modifier = cze_loyal_prague_subject
                 }
-                add_political_power = 50
             }
 
             add_opinion_modifier = {
                 target = CZE
                 modifier = pra_devotion_to_prague_treaty
             }
-
-            # National Spirit: Ties economy and autonomy to Prague's master
-			add_timed_idea = {
-				idea = pra_subordinated_administration
-				days = 730
-			}
         }
     }
 
 
+    # ============================================================
+    # VLtAVA DEFENSE FRONT
+    # ============================================================
+
+    focus = {
+        id = pra_mobilize_vltava_defense_front
+        icon = GFX_goal_generic_paramilitary
+
+        prerequisite = {
+            focus = prague_declare_independence
+        }
+
+        relative_position_id = prague_declare_independence
+
+        x = 0
+        y = 1
+
+        cost = 3
+
+        available = {
+            has_government = democratic
+        }
+
+        completion_reward = {
+
+            set_country_flag = pra_vltava_defense_front_established
+
+            add_ideas = pra_vltava_defense_front
+
+            1082 = {
+                if = {
+                    limit = {
+                        is_owned_and_controlled_by = ROOT
+                    }
+
+                    create_unit = {
+                        division = "name = \"Vltavská obrana\" division_template = \"Pěší divize\" start_experience_factor = 0.2 start_equipment_factor = 0.5"
+                        owner = PRA
+                        prioritize_location = 11542
+                    }
+                }
+            }
+
+            custom_effect_tooltip = pra_vltava_defense_front_tt
+        }
+    }
 
 
+    # ============================================================
+    # VO BUILDS POWER OUTSIDE THE STATE
+    # ============================================================
+
+    focus = {
+        id = pra_bread_under_black_banner
+        icon = GFX_goal_generic_propaganda
+
+        prerequisite = {
+            focus = pra_mobilize_vltava_defense_front
+        }
+
+        relative_position_id = pra_mobilize_vltava_defense_front
+
+        x = -3
+        y = 1
+
+        cost = 3
+
+        available = {
+            has_government = democratic
+        }
+
+        completion_reward = {
+
+            set_country_flag = pra_vo_supply_network_unlocked
+
+            swap_ideas = {
+                remove_idea = pra_cut_off_from_hinterland
+                add_idea = pra_vo_rationing_network
+            }
+
+            unlock_decision_category_tooltip = pra_vo_supply_operations
+
+            custom_effect_tooltip = pra_bread_under_black_banner_tt
+        }
+    }
+
+
+    focus = {
+        id = pra_win_over_municipal_police
+        icon = GFX_goal_generic_secret_police
+
+        prerequisite = {
+            focus = pra_mobilize_vltava_defense_front
+        }
+
+        relative_position_id = pra_mobilize_vltava_defense_front
+
+        x = 0
+        y = 1
+
+        cost = 3
+
+        available = {
+            has_government = democratic
+        }
+
+        completion_reward = {
+
+            set_country_flag = pra_municipal_police_support_mohammedis
+
+            custom_effect_tooltip = pra_municipal_police_support_tt
+
+            country_event = {
+                id = pra_mohammedis.2
+            }
+        }
+    }
+
+
+    focus = {
+        id = pra_legionaries_answer_call
+        icon = GFX_goal_generic_more_territorial_claims
+
+        prerequisite = {
+            focus = pra_mobilize_vltava_defense_front
+        }
+
+        relative_position_id = pra_mobilize_vltava_defense_front
+
+        x = 3
+        y = 1
+
+        cost = 3
+
+        available = {
+            has_government = democratic
+        }
+
+        completion_reward = {
+
+            recruit_character = PRA_peter_mohammedis
+
+            set_country_flag = pra_legionaries_rallied
+
+            1082 = {
+                if = {
+                    limit = {
+                        is_owned_and_controlled_by = ROOT
+                    }
+
+                    create_unit = {
+                        division = "name = \"1. Legionářský pluk\" division_template = \"Pěší divize\" start_experience_factor = 0.6 start_equipment_factor = 0.8"
+                        owner = PRA
+                        prioritize_location = 11542
+                    }
+                }
+            }
+
+            custom_effect_tooltip = pra_legionaries_answer_call_tt
+        }
+    }
+
+
+    # ============================================================
+    # THE COUP
+    #
+    # Three separate prerequisite blocks means ALL THREE
+    # preparation focuses must be completed.
+    # ============================================================
+
+    focus = {
+        id = pra_mohammedis_overthrows_government
+        icon = GFX_goal_generic_forceful_treaty
+
+        prerequisite = {
+            focus = pra_bread_under_black_banner
+        }
+
+        prerequisite = {
+            focus = pra_win_over_municipal_police
+        }
+
+        prerequisite = {
+            focus = pra_legionaries_answer_call
+        }
+
+        relative_position_id = pra_mobilize_vltava_defense_front
+
+        x = 0
+        y = 3
+
+        cost = 2
+
+        available = {
+            has_government = democratic
+
+            has_country_flag = pra_municipal_police_support_mohammedis
+            has_country_flag = pra_legionaries_rallied
+            has_country_flag = pra_vo_supply_network_unlocked
+        }
+
+        completion_reward = {
+
+            # Mohammedis already exists as a recruited character
+            # because "The Legionaries Answer the Call" is required.
+
+            promote_character = PRA_peter_mohammedis
+
+            set_politics = {
+                ruling_party = fascism
+                elections_allowed = no
+            }
+
+            set_party_name = {
+                ideology = fascism
+                name = PRA_fascism_party_vo
+                long_name = PRA_fascism_party_vo_long
+            }
+
+            remove_ideas = pra_vltava_defense_front
+            remove_ideas = pra_vo_rationing_network
+
+            add_ideas = pra_directorate_of_national_salvation
+
+            set_country_flag = pra_mohammedis_in_power
+
+            1082 = {
+                if = {
+                    limit = {
+                        is_owned_and_controlled_by = ROOT
+                    }
+
+                    create_unit = {
+                        division = "name = \"1. Vltavský pluk\" division_template = \"Pěší divize\" start_experience_factor = 0.5 start_equipment_factor = 0.9"
+                        owner = PRA
+                        prioritize_location = 11542
+                    }
+                }
+            }
+
+            country_event = {
+                id = pra_mohammedis.3
+            }
+        }
+    }
+
+
+    # ============================================================
+    # FORTRESS PRAGUE
+    # ============================================================
+
+    focus = {
+        id = pra_fortify_vltava_crossings
+        icon = GFX_goal_generic_construct_military
+
+        prerequisite = {
+            focus = pra_mohammedis_overthrows_government
+        }
+
+        relative_position_id = pra_mohammedis_overthrows_government
+
+        x = -3
+        y = 1
+
+        cost = 4
+
+        available = {
+            has_government = fascism
+
+            1082 = {
+                is_owned_and_controlled_by = ROOT
+            }
+        }
+
+        completion_reward = {
+
+            1082 = {
+
+                add_building_construction = {
+                    type = bunker
+                    province = 11542
+                    level = 2
+                    instant_build = yes
+                }
+
+                add_building_construction = {
+                    type = anti_air_building
+                    level = 1
+                    instant_build = yes
+                }
+            }
+
+            set_country_flag = pra_vltava_crossings_fortified
+
+            custom_effect_tooltip = pra_fortify_vltava_crossings_tt
+        }
+    }
+
+
+    # ============================================================
+    # WAR INDUSTRY
+    # ============================================================
+
+    focus = {
+        id = pra_commandeer_workshops
+        icon = GFX_goal_generic_construct_mil_factory
+
+        prerequisite = {
+            focus = pra_mohammedis_overthrows_government
+        }
+
+        relative_position_id = pra_mohammedis_overthrows_government
+
+        x = 0
+        y = 1
+
+        cost = 4
+
+        available = {
+            has_government = fascism
+
+            1082 = {
+                is_owned_and_controlled_by = ROOT
+            }
+        }
+
+        completion_reward = {
+
+            1082 = {
+
+                add_extra_state_shared_building_slots = 1
+
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+
+            set_country_flag = pra_workshops_commandeered
+
+            custom_effect_tooltip = pra_commandeer_workshops_tt
+        }
+    }
+
+
+    # ============================================================
+    # TOTAL MOBILISATION OF THE CITY
+    # ============================================================
+
+    focus = {
+        id = pra_every_district_barracks
+        icon = GFX_goal_generic_military_sphere
+
+        prerequisite = {
+            focus = pra_mohammedis_overthrows_government
+        }
+
+        relative_position_id = pra_mohammedis_overthrows_government
+
+        x = 3
+        y = 1
+
+        cost = 4
+
+        available = {
+            has_government = fascism
+
+            1082 = {
+                is_owned_and_controlled_by = ROOT
+            }
+        }
+
+        completion_reward = {
+
+            1082 = {
+
+                create_unit = {
+                    division = "name = \"Karlínská domobrana\" division_template = \"Pěší divize\" start_experience_factor = 0.1 start_equipment_factor = 0.6"
+                    owner = PRA
+                    prioritize_location = 11542
+                }
+
+                create_unit = {
+                    division = "name = \"Žižkovská domobrana\" division_template = \"Pěší divize\" start_experience_factor = 0.1 start_equipment_factor = 0.6"
+                    owner = PRA
+                    prioritize_location = 11542
+                }
+            }
+
+            set_country_flag = pra_city_mobilized
+
+            custom_effect_tooltip = pra_every_district_barracks_tt
+        }
+    }
+
+
+    # ============================================================
+    # WAR WITH BENEŠOV
+    # ============================================================
+
+    focus = {
+        id = pra_crush_benesov_threat
+        icon = GFX_goal_generic_major_war
+
+        prerequisite = {
+            focus = pra_fortify_vltava_crossings
+        }
+
+        prerequisite = {
+            focus = pra_commandeer_workshops
+        }
+
+        prerequisite = {
+            focus = pra_every_district_barracks
+        }
+
+        relative_position_id = pra_mohammedis_overthrows_government
+
+        x = 0
+        y = 3
+
+        cost = 3
+
+        will_lead_to_war_with = BEN
+
+        available = {
+            is_subject = no
+            has_government = fascism
+
+            country_exists = BEN
+
+            NOT = {
+                has_war_with = BEN
+            }
+
+            NOT = {
+                is_in_faction_with = BEN
+            }
+
+            BEN = {
+                NOT = {
+                    is_subject_of = ROOT
+                }
+            }
+        }
+
+        bypass = {
+            OR = {
+
+                NOT = {
+                    country_exists = BEN
+                }
+
+                BEN = {
+                    is_subject_of = ROOT
+                }
+            }
+        }
+
+        completion_reward = {
+
+            create_wargoal = {
+                type = annex_everything
+                target = BEN
+            }
+
+            country_event = {
+                id = pra_mohammedis.4
+            }
+        }
+    }
 }

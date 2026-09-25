@@ -1,0 +1,71 @@
+pra_vo_supply_operations = {
+
+    pra_seize_government_warehouses = {
+
+        icon = GFX_decision_generic_communist_support
+
+        cost = 20
+
+        fire_only_once = yes
+
+        visible = {
+            has_country_flag = pra_vo_supply_network_unlocked
+        }
+
+        complete_effect = {
+
+            add_equipment_to_stockpile = {
+                type = infantry_equipment_0
+                amount = 250
+                producer = PRA
+            }
+
+            set_country_flag = pra_vo_seized_warehouses
+        }
+    }
+
+
+    pra_secure_coal_depots = {
+
+        icon = GFX_decision_generic_industry
+
+        cost = 20
+
+        fire_only_once = yes
+
+        visible = {
+            has_country_flag = pra_vo_supply_network_unlocked
+        }
+
+        complete_effect = {
+
+            add_fuel = 500
+
+            set_country_flag = pra_vo_secured_coal
+        }
+    }
+
+
+    pra_distribute_emergency_rations = {
+
+        icon = GFX_decision_generic_propaganda
+
+        cost = 25
+
+        fire_only_once = yes
+
+        visible = {
+            has_country_flag = pra_vo_supply_network_unlocked
+        }
+
+        complete_effect = {
+
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.05
+            }
+
+            set_country_flag = pra_vo_distributed_rations
+        }
+    }
+}
