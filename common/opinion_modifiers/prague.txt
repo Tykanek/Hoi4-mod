@@ -1,0 +1,11 @@
+opinion_modifiers = {
+
+	cze_loyal_prague_subject = {
+		value = 25
+	}
+
+	pra_devotion_to_prague_treaty = {
+		value = 15
+	}
+
+}

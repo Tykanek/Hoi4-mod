@@ -1,5 +1,13 @@
 ﻿l_english:
  prague_declare_independence: "Declare Our Independence"
  prague_declare_independence_desc: "The people of Prague have endured years of Czechoslovak oversight. The time has come to end this arrangement and take responsibility for our own future."
+ prague_remain_czech_subject: "Remain Under Czech Protection"
+ prague_remain_czech_subject_desc: "Independence is a dangerous gamble. By remaining under Czechoslovak protection, Prague can preserve stability and strengthen its administration while accepting continued oversight."
  prague_newly_independent: "Newly Independent"
  prague_newly_independent_desc: "Prague has successfully gained its independence. Factories and resources are being reclaimed, and the nation rallies around its newfound sovereignty."
+ pra_subordinated_administration: "Subordinated Administration"
+ pra_subordinated_administration_desc: "Prague's government remains closely tied to Czechoslovakia, limiting its political freedom and industrial initiative while providing a measure of stability."
+ cze_loyal_prague_subject: "Loyal Prague Subject"
+ cze_loyal_prague_subject_desc: "Prague has reaffirmed its loyalty and accepted continued Czechoslovak oversight."
+ pra_devotion_to_prague_treaty: "Devotion to the Prague Treaty"
+ pra_devotion_to_prague_treaty_desc: "Prague has pledged to preserve its treaty obligations and maintain close relations with Czechoslovakia."

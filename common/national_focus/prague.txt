@@ -23,6 +23,8 @@
 		x = 22
 		y = 0
 
+		mutually_exclusive = { focus = prague_remain_czech_subject }
+
 		cost = 10
 
 		available = {
@@ -43,9 +45,61 @@
 			}
 
 			# National Transition Spirit
-			add_ideas = prague_newly_independent
+			add_timed_idea = {
+				idea = prague_newly_independent
+				days = 730
+			}
 		}
 	}
+
+	focus = {
+        id = prague_remain_czech_subject
+        icon = GFX_goal_generic_political_pressure
+
+        x = 40
+        y = 0
+
+        mutually_exclusive = { focus = prague_declare_independence }
+
+        cost = 10
+
+        available = {
+            is_subject_of = CZE
+        }
+
+        completion_reward = {
+            # Immediate Stability & Political Capital
+            add_political_power = 100
+            add_stability = 0.10
+            add_war_support = -0.15
+
+            # Weaken Autonomy
+            # Drops autonomy progress significantly towards the next lower puppet tier
+            add_autonomy_ratio = {
+                value = -0.25
+            }
+
+            # Strengthen Diplomatic & Trade Relations
+            CZE = {
+                add_opinion_modifier = {
+                    target = ROOT
+                    modifier = cze_loyal_prague_subject
+                }
+                add_political_power = 50
+            }
+
+            add_opinion_modifier = {
+                target = CZE
+                modifier = pra_devotion_to_prague_treaty
+            }
+
+            # National Spirit: Ties economy and autonomy to Prague's master
+			add_timed_idea = {
+				idea = pra_subordinated_administration
+				days = 730
+			}
+        }
+    }
 
 
 

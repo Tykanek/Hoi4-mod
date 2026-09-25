@@ -1,17 +1,15 @@
 characters = {
-    PRA_great_leader={
+    PRA_great_leader = {
         name = PRA_great_leader
-        desc = PRA_great_leader_desc
 
         portraits = {
             civilian = {
-                large = gfx/leaders/PRA/PRA_great_leader.dds #add later
+                large = "gfx/leaders/PRA/testtttt.dds"
             }
         }
 
         country_leader = {
-            ideology = democratic
-            personality = neutral
+            ideology = liberalism
             traits = {
                 trait_ideological_communist
                 trait_charismatic

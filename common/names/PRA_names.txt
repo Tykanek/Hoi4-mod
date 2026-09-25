@@ -1,0 +1,8 @@
+PRA = {
+	names = {
+		"Vaclav" "Jan" "Josef" "Karel" "Petr" "Marie" "Anna" "Eva" "Hana"
+	}
+	surnames = {
+		"Novak" "Svoboda" "Novotny" "Dvorak"
+	}
+}

@@ -8,11 +8,21 @@ ideas = {
 				political_power_gain = 0.15
 				stability_weekly = 0.05
 				war_support_weekly = 0.02
-				factory_output = 0.10
-				resource_extraction_speed = 0.10
+				industrial_capacity_factory = 0.10
+				local_resources_factor = 0.10
 			}
 			removal_cost = -1
-			days_remove = 730
+		}
+
+		pra_subordinated_administration = {
+			picture = generic_political_reform
+			modifier = {
+				political_power_gain = -0.10
+				stability_weekly = 0.02
+				industrial_capacity_factory = -0.05
+				consumer_goods_factor = 0.05
+			}
+			removal_cost = -1
 		}
 
 	}
