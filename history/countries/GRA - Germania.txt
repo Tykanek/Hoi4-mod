@@ -1,0 +1,29 @@
+#capital =
+set_stability = 0.45
+set_war_support = 0.40
+
+create_country_leader = {
+	name = "Reichstag"
+	desc = ""
+	picture = "testtttt.dds"
+	ideology = constitutional_monarchism
+	traits = { }
+}
+
+set_research_slots = 2
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_military_police = 1
+	tech_mountaineers = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	paratroopers = 1
+	gw_artillery = 1
+}
+
+set_grand_doctrine = superior_firepower
