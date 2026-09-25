@@ -1,4 +1,4 @@
-﻿l_english:
+l_english:
 
  # ==============================================================
  # SOVEREIGNTY
@@ -79,3 +79,4 @@
 
  pra_crush_benesov_threat: "Crush the Benešov Threat"
  pra_crush_benesov_threat_desc: "So long as Benešov controls Prague's approaches, no warehouse will remain full and no railway will be secure. The Directorate was created to end this crisis. The time for fortifying Prague has passed. Now Prague will carry the war beyond its walls."
+ praguean_focus: "Praguean Focus"
