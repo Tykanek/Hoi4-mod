@@ -1271,3 +1271,8 @@ BEN = {
 	color = rgb { 255 4 71 }
 	color_ui = rgb { 255 4 72 }
 }
+
+GRA = {
+	color = rgb { 185 16 21 }
+	color_ui = rgb { 185 16 22 }
+}

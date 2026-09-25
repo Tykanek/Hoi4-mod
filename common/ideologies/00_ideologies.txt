@@ -34,18 +34,17 @@ ideologies = {
 
 	modifiers = {
 		generate_wargoal_tension = 0.75
-		join_faction_tension = 0.5
-		lend_lease_tension = 0.5
-		send_volunteers_tension = 0.5
-		guarantee_tension = 0.5
-		civilian_intel_to_others = 10.0
-		army_intel_to_others = 10.0
-		navy_intel_to_others = 10.0
+		join_faction_tension = 0.25
+		lend_lease_tension = 0.25
+		send_volunteers_tension = 0.1
+		guarantee_tension = 0.1
+		civilian_intel_to_others = 15.0
+		army_intel_to_others = 2.5
+		navy_intel_to_others = 7.5
 		airforce_intel_to_others = 10.0
-
 		}
 	}
-	
+
 	democratic = {
 
 		types = {

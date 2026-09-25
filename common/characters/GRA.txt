@@ -1,0 +1,17 @@
+characters = {
+    GRA_reichstag = {
+		name = "GRA_reichstag"
+		desc = "GRA_reichstag_desc"
+        portraits = {
+            civilian = {
+                large = "gfx/leaders/PRA/testtttt.dds"
+            }
+        }
+
+        country_leader = {
+            ideology = constitutional_monarchism
+            traits = {
+            }
+        }
+    }
+}
