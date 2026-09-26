@@ -1,20 +1,25 @@
 ﻿l_english:
 
  pra_mohammedis.1.t: "Prague Stands Alone"
- pra_mohammedis.1.d: "The consequences of sovereignty have arrived faster than even the pessimists expected. Freight traffic from the south has collapsed, coal deliveries have been interrupted and Benešov authorities are refusing passage to several Prague-bound convoys.\n\nThe provisional Senate insists that diplomacy will restore normal trade. Across the city, however, queues outside food depots grow longer by the day."
+ pra_mohammedis.1.d: "The consequences of sovereignty arrive faster than even the pessimists expected. Freight traffic from the south collapses, coal deliveries are interrupted and Benešov authorities refuse passage to Prague-bound convoys.\n\nThe provisional Senate insists that diplomacy will restore normal trade. Across the city, however, queues outside food depots grow longer by the day."
  pra_mohammedis.1.a: "We knew independence would have a price."
-
 
  pra_mohammedis.2.t: "The Police Will Not Intervene"
  pra_mohammedis.2.d: "Mohammedis has spent weeks meeting quietly with junior police commanders, many of them veterans themselves. No formal conspiracy has been created and no written pledge exists.\n\nNone is necessary.\n\nShould the Senate order the Municipal Police to suppress the Vltava Defense Front, its orders will be delayed, misunderstood or simply ignored."
  pra_mohammedis.2.a: "That will be enough."
 
-
  pra_mohammedis.3.t: "The Government Has Fallen"
- pra_mohammedis.3.d: "Before dawn, columns of armed Vltava Defense Front members moved through the streets toward the Rudolfinum. Municipal police watched from intersections but made no attempt to stop them.\n\nWithin hours, nearly three thousand men surrounded the seat of the provisional government. The parliamentary guard, isolated and hopelessly outnumbered, surrendered its weapons without firing a shot.\n\nPeter Mohammedis entered the assembly chamber personally. Accusing the cabinet of preparing Prague's capitulation, he ordered the ministers arrested and declared the provisional Senate dissolved.\n\nIn its place he has proclaimed a Directorate of National Salvation. Parliamentary government in Prague is over."
+ pra_mohammedis.3.d: "Before dawn, columns of armed Vltava Defense Front members move through the streets toward the Rudolfinum. Municipal police watch from intersections but make no attempt to stop them.\n\nWithin hours, nearly three thousand men surround the seat of the provisional government. The parliamentary guard, isolated and hopelessly outnumbered, surrenders its weapons without firing a shot.\n\nPeter Mohammedis enters the assembly chamber personally. He accuses the cabinet of preparing Prague's capitulation, orders the ministers arrested and declares the provisional Senate dissolved. In its place he proclaims a Directorate of National Salvation. Parliamentary government in Prague is over."
  pra_mohammedis.3.a: "The Directorate will save Prague."
 
-
  pra_mohammedis.4.t: "The Encirclement Must Be Broken"
- pra_mohammedis.4.d: "Prague has endured shortages, political paralysis and the collapse of its provisional government. The Directorate has fortified the capital, armed its districts and redirected the city's industry toward war.\n\nMohammedis now argues that none of these measures can guarantee Prague's survival while Benešov retains control of the surrounding routes.\n\nThe city has prepared long enough. The army has received its orders."
+ pra_mohammedis.4.d: "Prague has endured shortages, political paralysis and the collapse of its provisional government. The Directorate has fortified the capital, armed its districts and redirected the city's industry toward war.\n\nMohammedis now argues that none of these measures can guarantee Prague's survival while Benešov retains control of the surrounding routes. The city has prepared long enough."
  pra_mohammedis.4.a: "Forward."
+
+ pra_mohammedis.5.t: "Rumours of Capitulation"
+ pra_mohammedis.5.d: "The legionaries bring more than rifles. They bring stories from Siberia, from the border garrisons and from every crisis in which parliamentary committees asked soldiers to wait. Now rumours spread that the Senate will accept Benešov's terms to reopen the roads.\n\nMohammedis says the city cannot survive another week of indecision. His veterans answer that the order to act must come before the order to surrender."
+ pra_mohammedis.5.a: "Prague will not be bargained away."
+
+ pra_mohammedis.6.t: "The Hinterland Routes Reopened"
+ pra_mohammedis.6.d: "Benešov has capitulated. Prague's military victory does not erase the months of rationing, but the roads and coal routes beyond the city are no longer held by the force that strangled them. The emergency shortage regime can finally be dismantled."
+ pra_mohammedis.6.a: "The city can breathe again."

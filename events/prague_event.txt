@@ -1,4 +1,4 @@
-add_namespace = prague_event
+add_namespace = pra_mohammedis
 
 
 
@@ -71,5 +71,41 @@ country_event = {
 
     option = {
         name = pra_mohammedis.4.a
+    }
+}
+
+
+# ================================================================
+# RUMOURS BEFORE THE COUP
+# ================================================================
+
+country_event = {
+    id = pra_mohammedis.5
+
+    title = pra_mohammedis.5.t
+    desc = pra_mohammedis.5.d
+
+    is_triggered_only = yes
+
+    option = {
+        name = pra_mohammedis.5.a
+    }
+}
+
+
+# ================================================================
+# THE SHORTAGE ENDS AFTER BENEŠOV CAPITULATES
+# ================================================================
+
+country_event = {
+    id = pra_mohammedis.6
+
+    title = pra_mohammedis.6.t
+    desc = pra_mohammedis.6.d
+
+    is_triggered_only = yes
+
+    option = {
+        name = pra_mohammedis.6.a
     }
 }

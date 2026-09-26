@@ -3,7 +3,6 @@ focus_tree = {
 
     country = {
         factor = 0
-
         modifier = {
             add = 10
             original_tag = PRA
@@ -17,86 +16,45 @@ focus_tree = {
         y = 1000
     }
 
-
     # ============================================================
-    # ARMY BRANCH
+    # ARMY - A CITY BUILT FOR DEFENCE
     # ============================================================
 
     focus = {
         id = pra_reorganize_prague_garrison
         icon = GFX_goal_generic_allies_build_infantry
-
         x = 2
         y = 0
-
         cost = 5
-
-        search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
-
-        ai_will_do = {
-            factor = 7
-            modifier = {
-                factor = 2.0
-                has_war = yes
-            }
-        }
+        search_filters = { FOCUS_FILTER_ARMY_XP }
+        ai_will_do = { factor = 7 }
 
         completion_reward = {
-            army_experience = 20
-
-            add_doctrine_cost_reduction = {
-                name = land_doc_bonus
-                cost_reduction = 0.5
-                uses = 1
-                category = land_doctrine
-            }
+            army_experience = 10
+            add_ideas = pra_capital_defence_doctrine_1
         }
     }
 
     focus = {
         id = pra_standardize_army_equipment
         icon = GFX_goal_generic_small_arms
-
         relative_position_id = pra_reorganize_prague_garrison
-
         x = 0
         y = 1
-
         cost = 5
-
-        prerequisite = {
-            focus = pra_reorganize_prague_garrison
-        }
-
+        prerequisite = { focus = pra_reorganize_prague_garrison }
         search_filters = { FOCUS_FILTER_RESEARCH }
 
-        ai_will_do = {
-            factor = 6
-            modifier = {
-                factor = 1.8
-                has_war = yes
-            }
-        }
-
         completion_reward = {
+            swap_ideas = {
+                remove_idea = pra_capital_defence_doctrine_1
+                add_idea = pra_capital_defence_doctrine_2
+            }
             add_tech_bonus = {
-                name = infantry_artillery_bonus
+                name = infantry_weapons_bonus
                 bonus = 1.0
                 uses = 1
                 category = infantry_weapons
-            }
-
-            add_tech_bonus = {
-                name = support_equipment_bonus
-                bonus = 0.75
-                uses = 1
-                category = support_tech
-            }
-
-            add_equipment_to_stockpile = {
-                type = support_equipment_1
-                amount = 100
-                producer = PRA
             }
         }
     }
@@ -104,41 +62,25 @@ focus_tree = {
     focus = {
         id = pra_artillery_for_the_capital
         icon = GFX_goal_generic_army_artillery
-
         relative_position_id = pra_standardize_army_equipment
-
         x = -1
         y = 1
-
         cost = 5
-
-        prerequisite = {
-            focus = pra_standardize_army_equipment
-        }
-
-        search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
-
-        ai_will_do = {
-            factor = 5
-            modifier = {
-                factor = 1.8
-                has_war = yes
-            }
-        }
+        prerequisite = { focus = pra_standardize_army_equipment }
+        search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
 
         completion_reward = {
             army_experience = 10
-
+            add_ideas = pra_concentrated_artillery_batteries
             add_tech_bonus = {
-                name = infantry_artillery_bonus
+                name = artillery_bonus
                 bonus = 1.0
                 uses = 1
                 category = artillery
             }
-
             add_equipment_to_stockpile = {
                 type = artillery_equipment_1
-                amount = 80
+                amount = 60
                 producer = PRA
             }
         }
@@ -147,41 +89,25 @@ focus_tree = {
     focus = {
         id = pra_motorized_reserves
         icon = GFX_goal_generic_army_motorized
-
         relative_position_id = pra_standardize_army_equipment
-
         x = 1
         y = 1
-
         cost = 5
-
-        prerequisite = {
-            focus = pra_standardize_army_equipment
-        }
-
-        search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
-
-        ai_will_do = {
-            factor = 5
-            modifier = {
-                factor = 1.5
-                has_war = yes
-            }
-        }
+        prerequisite = { focus = pra_standardize_army_equipment }
+        search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
 
         completion_reward = {
             army_experience = 10
-
+            add_ideas = pra_mobile_metropolitan_reserves
             add_tech_bonus = {
                 name = motorized_bonus
                 bonus = 1.0
                 uses = 1
                 category = motorized_equipment
             }
-
             add_equipment_to_stockpile = {
                 type = motorized_equipment_1
-                amount = 120
+                amount = 80
                 producer = PRA
             }
         }
@@ -190,86 +116,44 @@ focus_tree = {
     focus = {
         id = pra_prague_general_staff
         icon = GFX_focus_generic_military_academy
-
         relative_position_id = pra_standardize_army_equipment
-
         x = 0
         y = 2
-
         cost = 7
-
-        prerequisite = {
-            focus = pra_artillery_for_the_capital
-        }
-
-        prerequisite = {
-            focus = pra_motorized_reserves
-        }
-
-        search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
-
-        ai_will_do = {
-            factor = 6
-            modifier = {
-                factor = 2.0
-                has_war = yes
-            }
-        }
+        prerequisite = { focus = pra_artillery_for_the_capital }
+        prerequisite = { focus = pra_motorized_reserves }
+        search_filters = { FOCUS_FILTER_ARMY_XP }
 
         completion_reward = {
-            army_experience = 25
-
-            add_doctrine_cost_reduction = {
-                name = land_doc_bonus
-                cost_reduction = 0.5
-                uses = 1
-                category = land_doctrine
+            army_experience = 15
+            swap_ideas = {
+                remove_idea = pra_capital_defence_doctrine_2
+                add_idea = pra_army_of_the_capital
             }
-
-            add_ideas = pra_prague_general_staff
         }
     }
 
-
     # ============================================================
-    # AIR FORCE BRANCH
+    # AIR FORCE - THE SKY ABOVE THE VLTAVA
     # ============================================================
 
     focus = {
         id = pra_establish_air_command
         icon = GFX_goal_generic_build_airforce
-
         x = 8
         y = 0
-
         cost = 5
-
-        search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIR_XP }
-
-        ai_will_do = {
-            factor = 4
-            modifier = {
-                factor = 1.5
-                has_war = yes
-            }
-        }
+        search_filters = { FOCUS_FILTER_AIR_XP }
 
         completion_reward = {
-            air_experience = 20
-
+            air_experience = 10
+            add_ideas = pra_prague_air_watch_1
             1082 = {
                 add_building_construction = {
                     type = air_base
                     level = 1
                     instant_build = yes
                 }
-            }
-
-            add_doctrine_cost_reduction = {
-                name = air_doc_bonus
-                cost_reduction = 0.5
-                uses = 1
-                category = air_doctrine
             }
         }
     }
@@ -277,29 +161,18 @@ focus_tree = {
     focus = {
         id = pra_expand_letnany_aviation_complex
         icon = GFX_focus_CZE_military_aeronautical_institute
-
         relative_position_id = pra_establish_air_command
-
         x = 0
         y = 1
-
         cost = 5
-
-        prerequisite = {
-            focus = pra_establish_air_command
-        }
-
-        search_filters = { FOCUS_FILTER_RESEARCH }
-
-        ai_will_do = {
-            factor = 4
-            modifier = {
-                factor = 1.4
-                has_war = yes
-            }
-        }
+        prerequisite = { focus = pra_establish_air_command }
+        search_filters = { FOCUS_FILTER_AIR_XP }
 
         completion_reward = {
+            swap_ideas = {
+                remove_idea = pra_prague_air_watch_1
+                add_idea = pra_prague_air_watch_2
+            }
             1082 = {
                 add_building_construction = {
                     type = air_base
@@ -307,48 +180,25 @@ focus_tree = {
                     instant_build = yes
                 }
             }
-
-            add_tech_bonus = {
-                name = fighter_bonus
-                bonus = 0.5
-                uses = 1
-                category = air_equipment
-            }
         }
     }
 
     focus = {
         id = pra_avia_fighter_programme
         icon = GFX_goal_generic_air_fighter
-
         relative_position_id = pra_expand_letnany_aviation_complex
-
         x = -1
         y = 1
-
         cost = 5
-
-        prerequisite = {
-            focus = pra_expand_letnany_aviation_complex
-        }
-
-        search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIR_XP }
-
-        ai_will_do = {
-            factor = 4
-            modifier = {
-                factor = 1.5
-                has_war = yes
-            }
-        }
+        prerequisite = { focus = pra_expand_letnany_aviation_complex }
+        search_filters = { FOCUS_FILTER_AIR_XP FOCUS_FILTER_RESEARCH }
 
         completion_reward = {
             air_experience = 10
-
+            add_ideas = pra_avia_interceptor_school
             add_tech_bonus = {
                 name = fighter_bonus
                 bonus = 1.0
-                ahead_reduction = 2
                 uses = 1
                 category = light_fighter
             }
@@ -358,35 +208,19 @@ focus_tree = {
     focus = {
         id = pra_letov_ground_support_programme
         icon = GFX_goal_generic_CAS
-
         relative_position_id = pra_expand_letnany_aviation_complex
-
         x = 1
         y = 1
-
         cost = 5
-
-        prerequisite = {
-            focus = pra_expand_letnany_aviation_complex
-        }
-
-        search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIR_XP }
-
-        ai_will_do = {
-            factor = 4
-            modifier = {
-                factor = 1.4
-                has_war = yes
-            }
-        }
+        prerequisite = { focus = pra_expand_letnany_aviation_complex }
+        search_filters = { FOCUS_FILTER_AIR_XP FOCUS_FILTER_RESEARCH }
 
         completion_reward = {
             air_experience = 10
-
+            add_ideas = pra_letov_close_support_doctrine
             add_tech_bonus = {
                 name = CAS_bonus
                 bonus = 1.0
-                ahead_reduction = 2
                 uses = 1
                 category = cas_bomber
             }
@@ -396,33 +230,19 @@ focus_tree = {
     focus = {
         id = pra_air_defence_of_prague
         icon = GFX_goal_generic_defence
-
         relative_position_id = pra_expand_letnany_aviation_complex
-
         x = 0
         y = 2
-
         cost = 7
-
-        prerequisite = {
-            focus = pra_avia_fighter_programme
-        }
-
-        prerequisite = {
-            focus = pra_letov_ground_support_programme
-        }
-
-        search_filters = { FOCUS_FILTER_RESEARCH }
-
-        ai_will_do = {
-            factor = 5
-            modifier = {
-                factor = 2.0
-                has_war = yes
-            }
-        }
+        prerequisite = { focus = pra_avia_fighter_programme }
+        prerequisite = { focus = pra_letov_ground_support_programme }
+        search_filters = { FOCUS_FILTER_AIR_XP }
 
         completion_reward = {
+            swap_ideas = {
+                remove_idea = pra_prague_air_watch_2
+                add_idea = pra_integrated_prague_air_defence
+            }
             1082 = {
                 add_building_construction = {
                     type = anti_air_building
@@ -430,50 +250,23 @@ focus_tree = {
                     instant_build = yes
                 }
             }
-
-            add_doctrine_cost_reduction = {
-                name = air_doc_bonus
-                cost_reduction = 0.5
-                uses = 1
-                category = air_doctrine
-            }
-
-            add_ideas = pra_air_defence_of_prague
         }
     }
 
-
     # ============================================================
-    # INDUSTRY BRANCH
+    # INDUSTRY - NOTHING GOES TO WASTE
     # ============================================================
 
     focus = {
         id = pra_mobilize_prague_industry
         icon = GFX_focus_generic_industry_1
-
         x = 15
         y = 0
-
         cost = 5
-
-        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-
-        ai_will_do = {
-            factor = 10
-            modifier = {
-                factor = 0.8
-                has_war = yes
-            }
-        }
+        search_filters = { FOCUS_FILTER_INDUSTRY }
 
         completion_reward = {
-            add_tech_bonus = {
-                name = industrial_bonus
-                bonus = 1.0
-                uses = 1
-                category = industry
-            }
-
+            add_ideas = pra_fragmented_workshop_network
             1082 = {
                 add_building_construction = {
                     type = infrastructure
@@ -487,36 +280,18 @@ focus_tree = {
     focus = {
         id = pra_modernize_workshops
         icon = GFX_focus_generic_industry_2
-
         relative_position_id = pra_mobilize_prague_industry
-
         x = 0
         y = 1
-
         cost = 5
-
-        prerequisite = {
-            focus = pra_mobilize_prague_industry
-        }
-
-        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-
-        ai_will_do = {
-            factor = 9
-            modifier = {
-                factor = 0.8
-                has_war = yes
-            }
-        }
+        prerequisite = { focus = pra_mobilize_prague_industry }
+        search_filters = { FOCUS_FILTER_INDUSTRY }
 
         completion_reward = {
-            add_tech_bonus = {
-                name = industrial_bonus
-                bonus = 1.0
-                uses = 1
-                category = cat_production
+            swap_ideas = {
+                remove_idea = pra_fragmented_workshop_network
+                add_idea = pra_modernized_workshop_network
             }
-
             1082 = {
                 add_extra_state_shared_building_slots = 1
             }
@@ -526,29 +301,15 @@ focus_tree = {
     focus = {
         id = pra_expand_ckd_works
         icon = GFX_goal_generic_construct_mil_factory
-
         relative_position_id = pra_modernize_workshops
-
         x = -1
         y = 1
-
         cost = 5
-
-        prerequisite = {
-            focus = pra_modernize_workshops
-        }
-
-        search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-
-        ai_will_do = {
-            factor = 8
-            modifier = {
-                factor = 1.5
-                has_war = yes
-            }
-        }
+        prerequisite = { focus = pra_modernize_workshops }
+        search_filters = { FOCUS_FILTER_INDUSTRY }
 
         completion_reward = {
+            add_ideas = pra_ckd_engineering
             1082 = {
                 add_extra_state_shared_building_slots = 1
                 add_building_construction = {
@@ -557,42 +318,21 @@ focus_tree = {
                     instant_build = yes
                 }
             }
-
-            add_tech_bonus = {
-                name = industrial_bonus
-                bonus = 0.75
-                uses = 1
-                category = cat_production
-            }
         }
     }
 
     focus = {
         id = pra_municipal_works_programme
         icon = GFX_goal_generic_construct_civ_factory
-
         relative_position_id = pra_modernize_workshops
-
         x = 1
         y = 1
-
         cost = 5
-
-        prerequisite = {
-            focus = pra_modernize_workshops
-        }
-
+        prerequisite = { focus = pra_modernize_workshops }
         search_filters = { FOCUS_FILTER_INDUSTRY }
 
-        ai_will_do = {
-            factor = 8
-            modifier = {
-                factor = 0.6
-                has_war = yes
-            }
-        }
-
         completion_reward = {
+            add_ideas = pra_municipal_infrastructure_works
             1082 = {
                 add_extra_state_shared_building_slots = 1
                 add_building_construction = {
@@ -607,33 +347,19 @@ focus_tree = {
     focus = {
         id = pra_arsenal_of_prague
         icon = GFX_focus_generic_industry_3
-
         relative_position_id = pra_modernize_workshops
-
         x = 0
         y = 2
-
         cost = 7
-
-        prerequisite = {
-            focus = pra_expand_ckd_works
-        }
-
-        prerequisite = {
-            focus = pra_municipal_works_programme
-        }
-
+        prerequisite = { focus = pra_expand_ckd_works }
+        prerequisite = { focus = pra_municipal_works_programme }
         search_filters = { FOCUS_FILTER_INDUSTRY }
 
-        ai_will_do = {
-            factor = 8
-            modifier = {
-                factor = 1.3
-                has_war = yes
-            }
-        }
-
         completion_reward = {
+            swap_ideas = {
+                remove_idea = pra_modernized_workshop_network
+                add_idea = pra_arsenal_of_prague_spirit
+            }
             1082 = {
                 add_extra_state_shared_building_slots = 1
                 add_building_construction = {
@@ -642,11 +368,8 @@ focus_tree = {
                     instant_build = yes
                 }
             }
-
-            add_ideas = pra_arsenal_of_prague
         }
     }
-
 
     # ============================================================
     # THE QUESTION OF SOVEREIGNTY
@@ -655,73 +378,41 @@ focus_tree = {
     focus = {
         id = prague_declare_independence
         icon = GFX_goal_generic_political_pressure
-
         x = 22
         y = 0
-
         cost = 4
-
-        mutually_exclusive = {
-            focus = prague_remain_czech_subject
-        }
-
-        available = {
-            is_subject_of = CZE
-        }
-
-        bypass = {
-            is_subject = no
-        }
+        mutually_exclusive = { focus = prague_remain_czech_subject }
+        available = { is_subject_of = CZE }
+        bypass = { is_subject = no }
 
         completion_reward = {
-
             CZE = {
                 end_puppet = ROOT
             }
-
             add_ideas = pra_cut_off_from_hinterland
-
             set_country_flag = pra_declared_independence
-
-            country_event = {
-                id = pra_mohammedis.1
-            }
+            country_event = { id = pra_mohammedis.1 }
         }
     }
-
 
     focus = {
         id = prague_remain_czech_subject
         icon = GFX_goal_generic_political_pressure
-
         x = 40
         y = 0
-
         cost = 4
-
-        mutually_exclusive = {
-            focus = prague_declare_independence
-        }
-
-        available = {
-            is_subject_of = CZE
-        }
+        mutually_exclusive = { focus = prague_declare_independence }
+        available = { is_subject_of = CZE }
 
         completion_reward = {
-
-            add_autonomy_ratio = {
-                value = -0.25
-            }
-
+            add_autonomy_ratio = { value = -0.25 }
             add_ideas = pra_subordinated_administration
-
             CZE = {
                 add_opinion_modifier = {
                     target = ROOT
                     modifier = cze_loyal_prague_subject
                 }
             }
-
             add_opinion_modifier = {
                 target = CZE
                 modifier = pra_devotion_to_prague_treaty
@@ -729,253 +420,151 @@ focus_tree = {
         }
     }
 
-
     # ============================================================
-    # VLtAVA DEFENSE FRONT
+    # THE VLTAVA DEFENSE FRONT
     # ============================================================
 
     focus = {
         id = pra_mobilize_vltava_defense_front
-        icon = GFX_goal_generic_paramilitary
-
-        prerequisite = {
-            focus = prague_declare_independence
-        }
-
+        icon = GFX_goal_generic_construct_military
+        prerequisite = { focus = prague_declare_independence }
         relative_position_id = prague_declare_independence
-
         x = 0
         y = 1
-
         cost = 3
-
-        available = {
-            has_government = democratic
-        }
+        available = { has_government = democratic }
 
         completion_reward = {
-
             set_country_flag = pra_vltava_defense_front_established
-
             add_ideas = pra_vltava_defense_front
-
             1082 = {
                 if = {
-                    limit = {
-                        is_owned_and_controlled_by = ROOT
-                    }
-
+                    limit = { is_owned_and_controlled_by = ROOT }
                     create_unit = {
-                        division = "name = \"Vltavská obrana\" division_template = \"Pěší divize\" start_experience_factor = 0.2 start_equipment_factor = 0.5"
+                        division = "name = \"Vltavská obrana\" division_template = \"Pesi divize\" start_experience_factor = 0.2 start_equipment_factor = 0.5"
                         owner = PRA
                         prioritize_location = 11542
                     }
                 }
             }
-
             custom_effect_tooltip = pra_vltava_defense_front_tt
         }
     }
 
-
-    # ============================================================
-    # VO BUILDS POWER OUTSIDE THE STATE
-    # ============================================================
-
     focus = {
         id = pra_bread_under_black_banner
         icon = GFX_goal_generic_propaganda
-
-        prerequisite = {
-            focus = pra_mobilize_vltava_defense_front
-        }
-
+        prerequisite = { focus = pra_mobilize_vltava_defense_front }
         relative_position_id = pra_mobilize_vltava_defense_front
-
         x = -3
         y = 1
-
         cost = 3
-
-        available = {
-            has_government = democratic
-        }
+        available = { has_government = democratic }
 
         completion_reward = {
-
             set_country_flag = pra_vo_supply_network_unlocked
-
-            swap_ideas = {
-                remove_idea = pra_cut_off_from_hinterland
-                add_idea = pra_vo_rationing_network
-            }
-
+            add_ideas = pra_vo_rationing_network
             unlock_decision_category_tooltip = pra_vo_supply_operations
-
             custom_effect_tooltip = pra_bread_under_black_banner_tt
         }
     }
 
-
     focus = {
         id = pra_win_over_municipal_police
-        icon = GFX_goal_generic_secret_police
-
-        prerequisite = {
-            focus = pra_mobilize_vltava_defense_front
-        }
-
+        icon = GFX_goal_generic_political_pressure
+        prerequisite = { focus = pra_mobilize_vltava_defense_front }
         relative_position_id = pra_mobilize_vltava_defense_front
-
         x = 0
         y = 1
-
         cost = 3
-
-        available = {
-            has_government = democratic
-        }
+        available = { has_government = democratic }
 
         completion_reward = {
-
             set_country_flag = pra_municipal_police_support_mohammedis
-
             custom_effect_tooltip = pra_municipal_police_support_tt
-
-            country_event = {
-                id = pra_mohammedis.2
-            }
+            country_event = { id = pra_mohammedis.2 }
         }
     }
-
 
     focus = {
         id = pra_legionaries_answer_call
         icon = GFX_goal_generic_more_territorial_claims
-
-        prerequisite = {
-            focus = pra_mobilize_vltava_defense_front
-        }
-
+        prerequisite = { focus = pra_mobilize_vltava_defense_front }
         relative_position_id = pra_mobilize_vltava_defense_front
-
         x = 3
         y = 1
-
         cost = 3
-
-        available = {
-            has_government = democratic
-        }
+        available = { has_government = democratic }
 
         completion_reward = {
-
-
-
             set_country_flag = pra_legionaries_rallied
-
             1082 = {
                 if = {
-                    limit = {
-                        is_owned_and_controlled_by = ROOT
-                    }
-
+                    limit = { is_owned_and_controlled_by = ROOT }
                     create_unit = {
-                        division = "name = \"1. Legionářský pluk\" division_template = \"Pěší divize\" start_experience_factor = 0.6 start_equipment_factor = 0.8"
+                        division = "name = \"1. Legionářský pluk\" division_template = \"Pesi divize\" start_experience_factor = 0.6 start_equipment_factor = 0.8"
                         owner = PRA
                         prioritize_location = 11542
                     }
                 }
             }
-
+            country_event = { id = pra_mohammedis.5 }
             custom_effect_tooltip = pra_legionaries_answer_call_tt
         }
     }
 
-
     # ============================================================
-    # THE COUP
-    #
-    # Three separate prerequisite blocks means ALL THREE
-    # preparation focuses must be completed.
+    # THE COUP - ALL THREE PREPARATIONS ARE REQUIRED
     # ============================================================
 
     focus = {
         id = pra_mohammedis_overthrows_government
         icon = GFX_goal_generic_forceful_treaty
-
-        prerequisite = {
-            focus = pra_bread_under_black_banner
-        }
-
-        prerequisite = {
-            focus = pra_win_over_municipal_police
-        }
-
-        prerequisite = {
-            focus = pra_legionaries_answer_call
-        }
-
+        prerequisite = { focus = pra_bread_under_black_banner }
+        prerequisite = { focus = pra_win_over_municipal_police }
+        prerequisite = { focus = pra_legionaries_answer_call }
         relative_position_id = pra_mobilize_vltava_defense_front
-
         x = 0
         y = 3
-
         cost = 2
-
         available = {
             has_government = democratic
-
             has_country_flag = pra_municipal_police_support_mohammedis
             has_country_flag = pra_legionaries_rallied
             has_country_flag = pra_vo_supply_network_unlocked
         }
 
         completion_reward = {
-
-            # Mohammedis already exists as a recruited character
-            # because "The Legionaries Answer the Call" is required.
-
             promote_character = PRA_peter_mohammedis
-
             set_politics = {
                 ruling_party = fascism
                 elections_allowed = no
             }
-
             set_party_name = {
                 ideology = fascism
                 name = PRA_fascism_party_vo
                 long_name = PRA_fascism_party_vo_long
             }
-
             remove_ideas = pra_vltava_defense_front
-            remove_ideas = pra_vo_rationing_network
-
+            swap_ideas = {
+                remove_idea = pra_vo_rationing_network
+                add_idea = pra_directorate_rationing
+            }
             add_ideas = pra_directorate_of_national_salvation
-
             set_country_flag = pra_mohammedis_in_power
-
             1082 = {
                 if = {
-                    limit = {
-                        is_owned_and_controlled_by = ROOT
-                    }
-
+                    limit = { is_owned_and_controlled_by = ROOT }
                     create_unit = {
-                        division = "name = \"1. Vltavský pluk\" division_template = \"Pěší divize\" start_experience_factor = 0.5 start_equipment_factor = 0.9"
+                        division = "name = \"1. Vltavský pluk\" division_template = \"Pesi divize\" start_experience_factor = 0.5 start_equipment_factor = 0.9"
                         owner = PRA
                         prioritize_location = 11542
                     }
                 }
             }
-
-            country_event = {
-                id = pra_mohammedis.3
-            }
+            country_event = { id = pra_mohammedis.3 }
         }
     }
-
 
     # ============================================================
     # FORTRESS PRAGUE
@@ -984,222 +573,126 @@ focus_tree = {
     focus = {
         id = pra_fortify_vltava_crossings
         icon = GFX_goal_generic_construct_military
-
-        prerequisite = {
-            focus = pra_mohammedis_overthrows_government
-        }
-
+        prerequisite = { focus = pra_mohammedis_overthrows_government }
         relative_position_id = pra_mohammedis_overthrows_government
-
         x = -3
         y = 1
-
         cost = 4
-
         available = {
             has_government = fascism
-
-            1082 = {
-                is_owned_and_controlled_by = ROOT
-            }
+            1082 = { is_owned_and_controlled_by = ROOT }
         }
 
         completion_reward = {
-
             1082 = {
-
                 add_building_construction = {
                     type = bunker
                     province = 11542
                     level = 2
                     instant_build = yes
                 }
-
                 add_building_construction = {
                     type = anti_air_building
                     level = 1
                     instant_build = yes
                 }
             }
-
             set_country_flag = pra_vltava_crossings_fortified
-
             custom_effect_tooltip = pra_fortify_vltava_crossings_tt
         }
     }
 
-
-    # ============================================================
-    # WAR INDUSTRY
-    # ============================================================
-
     focus = {
         id = pra_commandeer_workshops
         icon = GFX_goal_generic_construct_mil_factory
-
-        prerequisite = {
-            focus = pra_mohammedis_overthrows_government
-        }
-
+        prerequisite = { focus = pra_mohammedis_overthrows_government }
         relative_position_id = pra_mohammedis_overthrows_government
-
         x = 0
         y = 1
-
         cost = 4
-
         available = {
             has_government = fascism
-
-            1082 = {
-                is_owned_and_controlled_by = ROOT
-            }
+            1082 = { is_owned_and_controlled_by = ROOT }
         }
 
         completion_reward = {
-
             1082 = {
-
                 add_extra_state_shared_building_slots = 1
-
                 add_building_construction = {
                     type = arms_factory
                     level = 1
                     instant_build = yes
                 }
             }
-
             set_country_flag = pra_workshops_commandeered
-
             custom_effect_tooltip = pra_commandeer_workshops_tt
         }
     }
 
-
-    # ============================================================
-    # TOTAL MOBILISATION OF THE CITY
-    # ============================================================
-
     focus = {
         id = pra_every_district_barracks
         icon = GFX_goal_generic_military_sphere
-
-        prerequisite = {
-            focus = pra_mohammedis_overthrows_government
-        }
-
+        prerequisite = { focus = pra_mohammedis_overthrows_government }
         relative_position_id = pra_mohammedis_overthrows_government
-
         x = 3
         y = 1
-
         cost = 4
-
         available = {
             has_government = fascism
-
-            1082 = {
-                is_owned_and_controlled_by = ROOT
-            }
+            1082 = { is_owned_and_controlled_by = ROOT }
         }
 
         completion_reward = {
-
+            add_manpower = 5000
             1082 = {
-
                 create_unit = {
-                    division = "name = \"Karlínská domobrana\" division_template = \"Pěší divize\" start_experience_factor = 0.1 start_equipment_factor = 0.6"
+                    division = "name = \"Karlínská domobrana\" division_template = \"Pesi divize\" start_experience_factor = 0.1 start_equipment_factor = 0.6"
                     owner = PRA
                     prioritize_location = 11542
                 }
-
                 create_unit = {
-                    division = "name = \"Žižkovská domobrana\" division_template = \"Pěší divize\" start_experience_factor = 0.1 start_equipment_factor = 0.6"
+                    division = "name = \"Žižkovská domobrana\" division_template = \"Pesi divize\" start_experience_factor = 0.1 start_equipment_factor = 0.6"
                     owner = PRA
                     prioritize_location = 11542
                 }
             }
-
             set_country_flag = pra_city_mobilized
-
             custom_effect_tooltip = pra_every_district_barracks_tt
         }
     }
 
-
-    # ============================================================
-    # WAR WITH BENEŠOV
-    # ============================================================
-
     focus = {
         id = pra_crush_benesov_threat
         icon = GFX_goal_generic_major_war
-
-        prerequisite = {
-            focus = pra_fortify_vltava_crossings
-        }
-
-        prerequisite = {
-            focus = pra_commandeer_workshops
-        }
-
-        prerequisite = {
-            focus = pra_every_district_barracks
-        }
-
+        prerequisite = { focus = pra_fortify_vltava_crossings }
+        prerequisite = { focus = pra_commandeer_workshops }
+        prerequisite = { focus = pra_every_district_barracks }
         relative_position_id = pra_mohammedis_overthrows_government
-
         x = 0
         y = 3
-
         cost = 3
-
         will_lead_to_war_with = BEN
-
         available = {
             is_subject = no
             has_government = fascism
-
             country_exists = BEN
-
-            NOT = {
-                has_war_with = BEN
-            }
-
-            NOT = {
-                is_in_faction_with = BEN
-            }
-
-            BEN = {
-                NOT = {
-                    is_subject_of = ROOT
-                }
-            }
+            NOT = { has_war_with = BEN }
+            NOT = { is_in_faction_with = BEN }
+            BEN = { NOT = { is_subject_of = ROOT } }
         }
-
         bypass = {
             OR = {
-
-                NOT = {
-                    country_exists = BEN
-                }
-
-                BEN = {
-                    is_subject_of = ROOT
-                }
+                NOT = { country_exists = BEN }
+                BEN = { is_subject_of = ROOT }
             }
         }
 
         completion_reward = {
-
             create_wargoal = {
                 type = annex_everything
                 target = BEN
             }
-
-            country_event = {
-                id = pra_mohammedis.4
-            }
+            country_event = { id = pra_mohammedis.4 }
         }
     }
 }

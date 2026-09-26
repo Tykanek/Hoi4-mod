@@ -1,12 +1,38 @@
 on_actions = {
-	on_startup = {
-		effect = {
-			CZE = {
-				puppet = {
-					target = PRA
-					end_wars = no
-				}
-			}
-		}
-	}
+    on_startup = {
+        effect = {
+            CZE = {
+                puppet = {
+                    target = PRA
+                    end_wars = no
+                }
+            }
+        }
+    }
+
+    # ROOT is the capitulated country; FROM is the winner.
+    on_capitulation = {
+        effect = {
+            if = {
+                limit = {
+                    tag = BEN
+                    country_exists = PRA
+                    PRA = {
+                        OR = {
+                            has_idea = pra_cut_off_from_hinterland
+                            has_idea = pra_vo_rationing_network
+                            has_idea = pra_directorate_rationing
+                        }
+                    }
+                }
+                PRA = {
+                    remove_ideas = pra_cut_off_from_hinterland
+                    remove_ideas = pra_vo_rationing_network
+                    remove_ideas = pra_directorate_rationing
+                    set_country_flag = pra_benesov_crisis_resolved
+                    country_event = { id = pra_mohammedis.6 }
+                }
+            }
+        }
+    }
 }

@@ -1,5 +1,7 @@
-﻿capital = 1082 #Prague
-#oob = "DAG_1936"
+capital = 1082 #Prague
+oob = "PRA_1936"
+
+recruit_character = PRA_peter_mohammedis
 
 set_stability = 0.30
 set_war_support = 0.05
@@ -109,5 +111,4 @@ set_popularities = {
 	neutrality = 25
 	monarchism = 5
 }
-
 
