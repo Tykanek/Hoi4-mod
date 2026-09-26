@@ -18,17 +18,10 @@ on_actions = {
                     tag = BEN
                     country_exists = PRA
                     PRA = {
-                        OR = {
-                            has_idea = pra_cut_off_from_hinterland
-                            has_idea = pra_vo_rationing_network
-                            has_idea = pra_directorate_rationing
-                        }
+                        has_country_flag = pra_declared_independence
                     }
                 }
                 PRA = {
-                    remove_ideas = pra_cut_off_from_hinterland
-                    remove_ideas = pra_vo_rationing_network
-                    remove_ideas = pra_directorate_rationing
                     set_country_flag = pra_benesov_crisis_resolved
                     country_event = { id = pra_mohammedis.6 }
                 }

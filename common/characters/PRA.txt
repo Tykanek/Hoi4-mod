@@ -13,7 +13,6 @@ characters = {
             ideology = fascism_ideology
             traits = {
                 dictator
-                militia_organizer
             }
             expire = "1965.1.1"
         }
@@ -23,6 +22,106 @@ characters = {
             attack_skill = 2
             defense_skill = 3
             planning_skill = 1
+            logistics_skill = 2
+        }
+    }
+
+    PRA_antonin_havelka = {
+        name = "Antonín Havelka"
+        portraits = {
+            civilian = { large = "GFX_idea_generic_political_advisor_europe_2" }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = PRA_antonin_havelka
+            cost = 100
+            allowed = { original_tag = PRA }
+            available = { has_completed_focus = pra_dissolve_old_parties }
+            traits = { silent_workhorse }
+        }
+    }
+
+    PRA_ema_vrbova = {
+        name = "Ema Vrbová"
+        portraits = {
+            civilian = { large = "GFX_idea_generic_political_advisor_europe_3" }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = PRA_ema_vrbova
+            cost = 100
+            allowed = { original_tag = PRA }
+            available = { has_completed_focus = pra_total_metropolitan_mobilization }
+            traits = { captain_of_industry }
+        }
+    }
+
+    PRA_frantisek_novak = {
+        name = "František Novák"
+        portraits = {
+            civilian = { large = "GFX_idea_generic_political_advisor_europe_1" }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = PRA_frantisek_novak
+            cost = 100
+            allowed = { original_tag = PRA }
+            available = { has_completed_focus = pra_directorate_decrees }
+            traits = { fascist_demagogue }
+        }
+    }
+
+    PRA_jaroslav_kral = {
+        name = "Jaroslav Král"
+        portraits = {
+            army = { large = "GFX_idea_generic_army_europe_3" }
+        }
+        advisor = {
+            slot = high_command
+            ledger = army
+            idea_token = PRA_jaroslav_kral
+            cost = 100
+            allowed = { original_tag = PRA }
+            available = { has_completed_focus = pra_reward_loyal_officers }
+            traits = { army_artillery_2 }
+        }
+    }
+
+    PRA_vaclav_sedivy = {
+        name = "Václav Šedivý"
+        portraits = {
+            army = { large = "GFX_idea_generic_air_europe_2" }
+        }
+        advisor = {
+            slot = air_chief
+            idea_token = PRA_vaclav_sedivy
+            cost = 100
+            allowed = { original_tag = PRA }
+            available = { has_completed_focus = pra_kbely_command_network }
+            traits = { air_chief_reform_2 }
+        }
+    }
+
+    PRA_alois_simek = {
+        name = "Alois Šimek"
+        portraits = {
+            army = { large = "GFX_idea_generic_army_europe_1" }
+        }
+        advisor = {
+            slot = high_command
+            ledger = army
+            idea_token = PRA_alois_simek
+            cost = 100
+            allowed = { original_tag = PRA }
+            available = { has_completed_focus = pra_one_czech_command }
+            traits = { army_chief_defensive_2 }
+        }
+        corps_commander = {
+            traits = { organizer urban_assault_specialist }
+            skill = 3
+            attack_skill = 2
+            defense_skill = 4
+            planning_skill = 2
             logistics_skill = 2
         }
     }

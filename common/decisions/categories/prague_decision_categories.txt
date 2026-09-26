@@ -12,3 +12,33 @@ pra_vo_supply_operations = {
 
     visible_when_empty = no
 }
+
+pra_reserve_mobilization = {
+    allowed = { original_tag = PRA }
+    visible = {
+        has_completed_focus = pra_thirty_minute_reserve
+        NOT = { has_country_flag = pra_mohammedis_in_power }
+    }
+    visible_when_empty = no
+}
+
+pra_salvage_programme = {
+    allowed = { original_tag = PRA }
+    visible = { has_completed_focus = pra_nothing_leaves_scrap_yard }
+    visible_when_empty = no
+}
+
+pra_directorate_propaganda = {
+    allowed = { original_tag = PRA }
+    visible = {
+        has_country_flag = pra_directorate_decrees_issued
+        has_government = fascism
+    }
+    visible_when_empty = no
+}
+
+pra_bohemian_protectorate = {
+    allowed = { original_tag = PRA }
+    visible = { has_country_flag = pra_ultimatum_sent }
+    visible_when_empty = no
+}

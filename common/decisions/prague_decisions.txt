@@ -2,7 +2,7 @@ pra_vo_supply_operations = {
 
     pra_seize_government_warehouses = {
 
-        icon = GFX_decision_generic_communist_support
+        icon = GFX_decision_generic_military
 
         cost = 20
 
@@ -48,7 +48,7 @@ pra_vo_supply_operations = {
 
     pra_distribute_emergency_rations = {
 
-        icon = GFX_decision_generic_propaganda
+        icon = GFX_decision_generic_political_address
 
         cost = 25
 
@@ -66,6 +66,130 @@ pra_vo_supply_operations = {
             }
 
             set_country_flag = pra_vo_distributed_rations
+        }
+    }
+}
+
+pra_reserve_mobilization = {
+    pra_open_recruitment_office = {
+        icon = GFX_decision_generic_army
+        cost = 15
+        fire_only_once = yes
+        visible = { has_completed_focus = pra_thirty_minute_reserve }
+        complete_effect = {
+            add_manpower = 2500
+            set_country_flag = pra_recruitment_office_opened
+        }
+    }
+
+    pra_recruit_zhizkov_volunteers = {
+        icon = GFX_decision_generic_army
+        cost = 20
+        fire_only_once = yes
+        visible = {
+            has_completed_focus = pra_thirty_minute_reserve
+            NOT = { has_country_flag = pra_zhizkov_volunteers_recruited }
+        }
+        complete_effect = {
+            add_manpower = 4000
+            add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 100 producer = PRA }
+            set_country_flag = pra_zhizkov_volunteers_recruited
+        }
+    }
+
+    pra_recruit_karlin_volunteers = {
+        icon = GFX_decision_generic_army
+        cost = 20
+        fire_only_once = yes
+        visible = {
+            has_completed_focus = pra_thirty_minute_reserve
+            NOT = { has_country_flag = pra_karlin_volunteers_recruited }
+        }
+        complete_effect = {
+            add_manpower = 4000
+            add_equipment_to_stockpile = { type = support_equipment amount = 40 producer = PRA }
+            set_country_flag = pra_karlin_volunteers_recruited
+        }
+    }
+
+    pra_call_legionary_veterans = {
+        icon = GFX_decision_generic_political_address
+        cost = 25
+        fire_only_once = yes
+        visible = {
+            has_completed_focus = pra_legionary_officer_school
+            NOT = { has_country_flag = pra_legionary_veterans_called }
+        }
+        complete_effect = {
+            add_manpower = 5000
+            army_experience = 10
+            set_country_flag = pra_legionary_veterans_called
+        }
+    }
+}
+
+pra_salvage_programme = {
+    pra_strip_abandoned_warehouses = {
+        icon = GFX_decision_generic_industry
+        cost = 15
+        fire_only_once = yes
+        visible = { has_completed_focus = pra_nothing_leaves_scrap_yard }
+        complete_effect = {
+            add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 300 producer = PRA }
+            set_country_flag = pra_warehouses_stripped
+        }
+    }
+
+    pra_reclaim_damaged_guns = {
+        icon = GFX_decision_generic_industry
+        cost = 20
+        fire_only_once = yes
+        visible = { has_completed_focus = pra_nothing_leaves_scrap_yard }
+        complete_effect = {
+            add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 40 producer = PRA }
+            set_country_flag = pra_guns_reclaimed
+        }
+    }
+}
+
+pra_directorate_propaganda = {
+    pra_broadcast_the_directorate = {
+        icon = GFX_decision_generic_political_address
+        cost = 20
+        fire_only_once = yes
+        visible = { has_country_flag = pra_directorate_decrees_issued }
+        complete_effect = {
+            add_stability = 0.05
+            add_popularity = { ideology = fascism popularity = 0.05 }
+            set_country_flag = pra_directorate_broadcast
+        }
+    }
+
+    pra_publish_the_black_bulletin = {
+        icon = GFX_decision_generic_political_address
+        cost = 20
+        fire_only_once = yes
+        visible = { has_country_flag = pra_directorate_decrees_issued }
+        complete_effect = {
+            add_war_support = 0.05
+            set_country_flag = pra_black_bulletin_published
+        }
+    }
+}
+
+pra_bohemian_protectorate = {
+    pra_integrate_czech_officers = {
+        icon = GFX_decision_generic_army
+        cost = 25
+        fire_only_once = yes
+        visible = {
+            has_country_flag = pra_ultimatum_sent
+            NOT = { has_country_flag = pra_officers_integrated }
+        }
+        complete_effect = {
+            army_experience = 15
+            add_manpower = 3000
+            set_country_flag = pra_officers_integrated
         }
     }
 }

@@ -13,7 +13,7 @@ focus_tree = {
 
     continuous_focus_position = {
         x = 50
-        y = 1000
+        y = 2200
     }
 
     # ============================================================
@@ -71,7 +71,6 @@ focus_tree = {
 
         completion_reward = {
             army_experience = 10
-            add_ideas = pra_concentrated_artillery_batteries
             add_tech_bonus = {
                 name = artillery_bonus
                 bonus = 1.0
@@ -98,7 +97,6 @@ focus_tree = {
 
         completion_reward = {
             army_experience = 10
-            add_ideas = pra_mobile_metropolitan_reserves
             add_tech_bonus = {
                 name = motorized_bonus
                 bonus = 1.0
@@ -195,7 +193,6 @@ focus_tree = {
 
         completion_reward = {
             air_experience = 10
-            add_ideas = pra_avia_interceptor_school
             add_tech_bonus = {
                 name = fighter_bonus
                 bonus = 1.0
@@ -217,7 +214,6 @@ focus_tree = {
 
         completion_reward = {
             air_experience = 10
-            add_ideas = pra_letov_close_support_doctrine
             add_tech_bonus = {
                 name = CAS_bonus
                 bonus = 1.0
@@ -309,7 +305,6 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_INDUSTRY }
 
         completion_reward = {
-            add_ideas = pra_ckd_engineering
             1082 = {
                 add_extra_state_shared_building_slots = 1
                 add_building_construction = {
@@ -332,7 +327,6 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_INDUSTRY }
 
         completion_reward = {
-            add_ideas = pra_municipal_infrastructure_works
             1082 = {
                 add_extra_state_shared_building_slots = 1
                 add_building_construction = {
@@ -389,7 +383,7 @@ focus_tree = {
             CZE = {
                 end_puppet = ROOT
             }
-            add_ideas = pra_cut_off_from_hinterland
+            add_ideas = pra_fragmented_workshop_network
             set_country_flag = pra_declared_independence
             country_event = { id = pra_mohammedis.1 }
         }
@@ -421,7 +415,7 @@ focus_tree = {
     }
 
     # ============================================================
-    # THE VLTAVA DEFENSE FRONT
+    # STRAŠNICE ORGANIZES
     # ============================================================
 
     focus = {
@@ -436,12 +430,12 @@ focus_tree = {
 
         completion_reward = {
             set_country_flag = pra_vltava_defense_front_established
-            add_ideas = pra_vltava_defense_front
+            add_ideas = pra_capital_defence_doctrine_1
             1082 = {
                 if = {
                     limit = { is_owned_and_controlled_by = ROOT }
                     create_unit = {
-                        division = "name = \"Vltavská obrana\" division_template = \"Pesi divize\" start_experience_factor = 0.2 start_equipment_factor = 0.5"
+                        division = "name = \"Strašnická obrana\" division_template = \"Pesi divize\" start_experience_factor = 0.2 start_equipment_factor = 0.5"
                         owner = PRA
                         prioritize_location = 11542
                     }
@@ -463,7 +457,7 @@ focus_tree = {
 
         completion_reward = {
             set_country_flag = pra_vo_supply_network_unlocked
-            add_ideas = pra_vo_rationing_network
+            add_ideas = pra_fragmented_workshop_network
             unlock_decision_category_tooltip = pra_vo_supply_operations
             custom_effect_tooltip = pra_bread_under_black_banner_tt
         }
@@ -481,6 +475,7 @@ focus_tree = {
 
         completion_reward = {
             set_country_flag = pra_municipal_police_support_mohammedis
+            add_stability = 0.02
             custom_effect_tooltip = pra_municipal_police_support_tt
             country_event = { id = pra_mohammedis.2 }
         }
@@ -526,7 +521,7 @@ focus_tree = {
         relative_position_id = pra_mobilize_vltava_defense_front
         x = 0
         y = 3
-        cost = 2
+        cost = 3
         available = {
             has_government = democratic
             has_country_flag = pra_municipal_police_support_mohammedis
@@ -544,11 +539,6 @@ focus_tree = {
                 ideology = fascism
                 name = PRA_fascism_party_vo
                 long_name = PRA_fascism_party_vo_long
-            }
-            remove_ideas = pra_vltava_defense_front
-            swap_ideas = {
-                remove_idea = pra_vo_rationing_network
-                add_idea = pra_directorate_rationing
             }
             add_ideas = pra_directorate_of_national_salvation
             set_country_flag = pra_mohammedis_in_power
@@ -693,6 +683,762 @@ focus_tree = {
                 target = BEN
             }
             country_event = { id = pra_mohammedis.4 }
+        }
+    }
+
+    # ============================================================
+    # ARMY - FROM BARRICADES TO A FIELD COMMAND
+    # ============================================================
+
+    focus = {
+        id = pra_thirty_minute_reserve
+        icon = GFX_goal_generic_army_motorized
+        prerequisite = { focus = pra_prague_general_staff }
+        relative_position_id = pra_prague_general_staff
+        x = -3
+        y = 1
+        cost = 5
+        completion_reward = {
+            add_manpower = 2500
+            unlock_decision_category_tooltip = pra_reserve_mobilization
+        }
+    }
+
+    focus = {
+        id = pra_barricade_doctrine
+        icon = GFX_goal_generic_defence
+        prerequisite = { focus = pra_thirty_minute_reserve }
+        relative_position_id = pra_thirty_minute_reserve
+        x = 0
+        y = 1
+        cost = 5
+        completion_reward = {
+            army_experience = 25
+            add_command_power = 20
+        }
+    }
+
+    focus = {
+        id = pra_every_bridge_a_fortress
+        icon = GFX_goal_generic_construct_military
+        prerequisite = { focus = pra_barricade_doctrine }
+        relative_position_id = pra_barricade_doctrine
+        x = -2
+        y = 1
+        cost = 5
+        completion_reward = {
+            1082 = {
+                add_building_construction = {
+                    type = bunker
+                    province = 11542
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            army_experience = 10
+        }
+    }
+
+    focus = {
+        id = pra_legionary_officer_school
+        icon = GFX_focus_generic_military_academy
+        prerequisite = { focus = pra_barricade_doctrine }
+        relative_position_id = pra_barricade_doctrine
+        x = 2
+        y = 1
+        cost = 5
+        completion_reward = {
+            army_experience = 25
+            add_command_power = 20
+        }
+    }
+
+    focus = {
+        id = pra_metropolitan_assault_groups
+        icon = GFX_goal_generic_special_forces
+        prerequisite = { focus = pra_every_bridge_a_fortress }
+        prerequisite = { focus = pra_legionary_officer_school }
+        relative_position_id = pra_barricade_doctrine
+        x = 0
+        y = 3
+        cost = 7
+        completion_reward = {
+            1082 = {
+                create_unit = {
+                    division = "name = \"Metropolitni utocna skupina\" division_template = \"Metropolitni utocna skupina\" start_experience_factor = 0.4 start_equipment_factor = 0.7"
+                    owner = PRA
+                    prioritize_location = 11542
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = pra_fortress_army
+        icon = GFX_goal_generic_fortify_city
+        prerequisite = { focus = pra_metropolitan_assault_groups }
+        relative_position_id = pra_metropolitan_assault_groups
+        x = -2
+        y = 1
+        cost = 7
+        mutually_exclusive = { focus = pra_field_army }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = pra_army_of_the_capital
+                add_idea = pra_fortress_army
+            }
+            set_country_flag = pra_chose_fortress_army
+        }
+    }
+
+    focus = {
+        id = pra_field_army
+        icon = GFX_goal_generic_army_motorized
+        prerequisite = { focus = pra_metropolitan_assault_groups }
+        relative_position_id = pra_metropolitan_assault_groups
+        x = 2
+        y = 1
+        cost = 7
+        mutually_exclusive = { focus = pra_fortress_army }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = pra_army_of_the_capital
+                add_idea = pra_field_army
+            }
+            set_country_flag = pra_chose_field_army
+        }
+    }
+
+    # ============================================================
+    # AIR FORCE - THE CAPITAL'S WARNING NET
+    # ============================================================
+
+    focus = {
+        id = pra_prague_air_warning_service
+        icon = GFX_goal_generic_radar
+        prerequisite = { focus = pra_air_defence_of_prague }
+        relative_position_id = pra_air_defence_of_prague
+        x = -3
+        y = 1
+        cost = 5
+        completion_reward = {
+            air_experience = 15
+            1082 = {
+                add_building_construction = {
+                    type = radar_station
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = pra_kbely_command_network
+        icon = GFX_goal_generic_radar
+        prerequisite = { focus = pra_prague_air_warning_service }
+        relative_position_id = pra_prague_air_warning_service
+        x = 0
+        y = 1
+        cost = 5
+        completion_reward = {
+            air_experience = 15
+            1082 = {
+                add_building_construction = {
+                    type = air_base
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = pra_underground_aircraft_workshops
+        icon = GFX_goal_generic_construct_mil_factory
+        prerequisite = { focus = pra_kbely_command_network }
+        relative_position_id = pra_kbely_command_network
+        x = 0
+        y = 1
+        cost = 5
+        completion_reward = {
+            1082 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            air_experience = 10
+        }
+    }
+
+    focus = {
+        id = pra_interceptor_priority
+        icon = GFX_goal_generic_air_fighter
+        prerequisite = { focus = pra_underground_aircraft_workshops }
+        relative_position_id = pra_underground_aircraft_workshops
+        x = -2
+        y = 1
+        cost = 5
+        mutually_exclusive = { focus = pra_army_cooperation_air }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = pra_integrated_prague_air_defence
+                add_idea = pra_interceptor_priority
+            }
+            add_tech_bonus = {
+                name = pra_interceptor_bonus
+                bonus = 1.0
+                uses = 1
+                category = light_fighter
+            }
+        }
+    }
+
+    focus = {
+        id = pra_army_cooperation_air
+        icon = GFX_goal_generic_CAS
+        prerequisite = { focus = pra_underground_aircraft_workshops }
+        relative_position_id = pra_underground_aircraft_workshops
+        x = 2
+        y = 1
+        cost = 5
+        mutually_exclusive = { focus = pra_interceptor_priority }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = pra_integrated_prague_air_defence
+                add_idea = pra_army_cooperation_air
+            }
+            add_tech_bonus = {
+                name = pra_cas_bonus
+                bonus = 1.0
+                uses = 1
+                category = cas_bomber
+            }
+        }
+    }
+
+    # ============================================================
+    # INDUSTRY - A CITY THAT MAKES ITS OWN WAR
+    # ============================================================
+
+    focus = {
+        id = pra_vysocany_subcontractors
+        icon = GFX_goal_generic_construct_civ_factory
+        prerequisite = { focus = pra_arsenal_of_prague }
+        relative_position_id = pra_arsenal_of_prague
+        x = -3
+        y = 1
+        cost = 5
+        completion_reward = {
+            1082 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = pra_night_shifts_at_ckd
+        icon = GFX_goal_generic_construct_mil_factory
+        prerequisite = { focus = pra_vysocany_subcontractors }
+        relative_position_id = pra_vysocany_subcontractors
+        x = 0
+        y = 1
+        cost = 5
+        completion_reward = {
+            1082 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            add_equipment_to_stockpile = {
+                type = motorized_equipment_1
+                amount = 80
+                producer = PRA
+            }
+        }
+    }
+
+    focus = {
+        id = pra_nothing_leaves_scrap_yard
+        icon = GFX_goal_generic_construct_mil_factory
+        prerequisite = { focus = pra_night_shifts_at_ckd }
+        relative_position_id = pra_night_shifts_at_ckd
+        x = -2
+        y = 1
+        cost = 5
+        completion_reward = {
+            unlock_decision_category_tooltip = pra_salvage_programme
+        }
+    }
+
+    focus = {
+        id = pra_municipal_transport_authority
+        icon = GFX_goal_generic_construct_civ_factory
+        prerequisite = { focus = pra_night_shifts_at_ckd }
+        relative_position_id = pra_night_shifts_at_ckd
+        x = 2
+        y = 1
+        cost = 5
+        completion_reward = {
+            1082 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            add_equipment_to_stockpile = {
+                type = motorized_equipment_1
+                amount = 100
+                producer = PRA
+            }
+        }
+    }
+
+    focus = {
+        id = pra_skoda_connections
+        icon = GFX_focus_generic_industry_2
+        prerequisite = { focus = pra_nothing_leaves_scrap_yard }
+        prerequisite = { focus = pra_municipal_transport_authority }
+        relative_position_id = pra_night_shifts_at_ckd
+        x = 0
+        y = 3
+        cost = 7
+        completion_reward = {
+            add_equipment_to_stockpile = {
+                type = artillery_equipment_1
+                amount = 150
+                producer = PRA
+            }
+            add_tech_bonus = {
+                name = pra_skoda_artillery_bonus
+                bonus = 0.5
+                uses = 1
+                category = artillery
+            }
+        }
+    }
+
+    focus = {
+        id = pra_underground_production_halls
+        icon = GFX_goal_generic_construct_mil_factory
+        prerequisite = { focus = pra_skoda_connections }
+        relative_position_id = pra_skoda_connections
+        x = -2
+        y = 1
+        cost = 5
+        completion_reward = {
+            1082 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = pra_prague_technical_institute
+        icon = GFX_goal_generic_scientific_exchange
+        prerequisite = { focus = pra_skoda_connections }
+        relative_position_id = pra_skoda_connections
+        x = 2
+        y = 1
+        cost = 5
+        completion_reward = {
+            add_research_slot = 1
+        }
+    }
+
+    focus = {
+        id = pra_total_metropolitan_mobilization
+        icon = GFX_focus_generic_industry_3
+        prerequisite = { focus = pra_underground_production_halls }
+        prerequisite = { focus = pra_prague_technical_institute }
+        relative_position_id = pra_skoda_connections
+        x = 0
+        y = 3
+        cost = 7
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = pra_arsenal_of_prague_spirit
+                add_idea = pra_total_metropolitan_mobilization
+            }
+            add_war_support = 0.05
+        }
+    }
+
+    # ============================================================
+    # MOHAMMEDIS - THE MORNING AFTER THE COUP
+    # ============================================================
+
+    focus = {
+        id = pra_morning_after_coup
+        icon = GFX_goal_generic_political_pressure
+        prerequisite = { focus = pra_mohammedis_overthrows_government }
+        relative_position_id = pra_mohammedis_overthrows_government
+        x = 0
+        y = 4
+        cost = 3
+        available = { has_government = fascism }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = pra_directorate_of_national_salvation
+                add_idea = pra_morning_after_coup
+            }
+            country_event = { id = pra_mohammedis.7 }
+        }
+    }
+
+    focus = {
+        id = pra_dissolve_old_parties
+        icon = GFX_goal_generic_forceful_treaty
+        prerequisite = { focus = pra_morning_after_coup }
+        relative_position_id = pra_morning_after_coup
+        x = -3
+        y = 1
+        cost = 3
+        available = { has_government = fascism }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = pra_morning_after_coup
+                add_idea = pra_directorate_consolidation
+            }
+            set_country_flag = pra_old_parties_dissolved
+        }
+    }
+
+    focus = {
+        id = pra_directorate_decrees
+        icon = GFX_goal_generic_political_pressure
+        prerequisite = { focus = pra_morning_after_coup }
+        relative_position_id = pra_morning_after_coup
+        x = 0
+        y = 1
+        cost = 3
+        available = { has_government = fascism }
+        completion_reward = {
+            set_country_flag = pra_directorate_decrees_issued
+            unlock_decision_category_tooltip = pra_directorate_propaganda
+        }
+    }
+
+    focus = {
+        id = pra_purge_municipal_bureaucracy
+        icon = GFX_goal_generic_political_pressure
+        prerequisite = { focus = pra_directorate_decrees }
+        relative_position_id = pra_directorate_decrees
+        x = -2
+        y = 1
+        cost = 4
+        available = { has_government = fascism }
+        completion_reward = {
+            add_political_power = 50
+            country_event = { id = pra_mohammedis.8 }
+        }
+    }
+
+    focus = {
+        id = pra_reward_loyal_officers
+        icon = GFX_goal_generic_military_sphere
+        prerequisite = { focus = pra_directorate_decrees }
+        relative_position_id = pra_directorate_decrees
+        x = 2
+        y = 1
+        cost = 4
+        available = { has_government = fascism }
+        completion_reward = {
+            army_experience = 25
+            add_command_power = 20
+        }
+    }
+
+    focus = {
+        id = pra_black_uniform
+        icon = GFX_goal_generic_military_sphere
+        prerequisite = { focus = pra_reward_loyal_officers }
+        relative_position_id = pra_reward_loyal_officers
+        x = 0
+        y = 1
+        cost = 3
+        available = { has_government = fascism }
+        completion_reward = {
+            add_manpower = 5000
+            country_event = { id = pra_mohammedis.9 }
+        }
+    }
+
+    focus = {
+        id = pra_bread_before_politics
+        icon = GFX_goal_generic_propaganda
+        prerequisite = { focus = pra_purge_municipal_bureaucracy }
+        relative_position_id = pra_purge_municipal_bureaucracy
+        x = 0
+        y = 1
+        cost = 3
+        available = { has_government = fascism }
+        completion_reward = {
+            unlock_decision_category_tooltip = pra_directorate_propaganda
+        }
+    }
+
+    focus = {
+        id = pra_city_of_discipline
+        icon = GFX_goal_generic_military_sphere
+        prerequisite = { focus = pra_black_uniform }
+        prerequisite = { focus = pra_bread_before_politics }
+        relative_position_id = pra_black_uniform
+        x = 0
+        y = 2
+        cost = 5
+        available = { has_government = fascism }
+        completion_reward = {
+            add_stability = 0.05
+            country_event = { id = pra_mohammedis.10 }
+        }
+    }
+
+    focus = {
+        id = pra_mohammedis_speaks_from_rudolfinum
+        icon = GFX_goal_generic_propaganda
+        prerequisite = { focus = pra_city_of_discipline }
+        relative_position_id = pra_city_of_discipline
+        x = 0
+        y = 1
+        cost = 4
+        available = { has_government = fascism }
+        completion_reward = {
+            remove_ideas = pra_morning_after_coup
+            remove_ideas = pra_directorate_consolidation
+            add_ideas = pra_mohammedis_state
+            country_event = { id = pra_mohammedis.11 }
+        }
+    }
+
+    focus = {
+        id = pra_colonel_becomes_the_state
+        icon = GFX_goal_generic_forceful_treaty
+        prerequisite = { focus = pra_mohammedis_speaks_from_rudolfinum }
+        relative_position_id = pra_mohammedis_speaks_from_rudolfinum
+        x = 0
+        y = 1
+        cost = 5
+        available = { has_government = fascism }
+        completion_reward = {
+            remove_ideas = pra_mohammedis_state
+            add_ideas = pra_colonel_state
+            add_political_power = 50
+            set_country_flag = pra_colonel_is_the_state
+        }
+    }
+
+    # ============================================================
+    # CZECH EXPANSION - PRAGUE IS NOT AN ISLAND
+    # ============================================================
+
+    focus = {
+        id = pra_prague_is_not_an_island
+        icon = GFX_goal_generic_more_territorial_claims
+        prerequisite = { focus = pra_crush_benesov_threat }
+        relative_position_id = pra_crush_benesov_threat
+        x = 8
+        y = 1
+        cost = 4
+        available = { has_government = fascism }
+        completion_reward = {
+            set_country_flag = pra_bohemian_programme
+            add_political_power = 25
+            add_war_support = 0.03
+            country_event = { id = pra_mohammedis.12 }
+        }
+    }
+
+    focus = {
+        id = pra_protector_of_bohemia
+        icon = GFX_goal_generic_demand_territory
+        prerequisite = { focus = pra_prague_is_not_an_island }
+        relative_position_id = pra_prague_is_not_an_island
+        x = 0
+        y = 1
+        cost = 4
+        available = {
+            has_government = fascism
+        }
+        completion_reward = {
+            if = {
+                limit = {
+                    country_exists = CZE
+                    1088 = { is_owned_by = CZE }
+                }
+                CZE = { country_event = { id = pra_mohammedis.18 } }
+            }
+        }
+    }
+
+    focus = {
+        id = pra_borders_of_1918
+        icon = GFX_goal_generic_more_territorial_claims
+        prerequisite = { focus = pra_protector_of_bohemia }
+        relative_position_id = pra_protector_of_bohemia
+        x = -2
+        y = 1
+        cost = 4
+        available = { has_government = fascism }
+        completion_reward = {
+            add_political_power = 50
+            add_war_support = 0.05
+            if = {
+                limit = {
+                    country_exists = CZE
+                    1089 = { is_owned_by = CZE }
+                }
+                CZE = { country_event = { id = pra_mohammedis.19 } }
+            }
+        }
+    }
+
+    focus = {
+        id = pra_demand_central_bohemian_belt
+        icon = GFX_goal_generic_demand_territory
+        prerequisite = { focus = pra_protector_of_bohemia }
+        relative_position_id = pra_protector_of_bohemia
+        x = 2
+        y = 1
+        cost = 4
+        available = {
+            has_government = fascism
+        }
+        completion_reward = {
+            add_political_power = 25
+            add_war_support = 0.03
+            if = {
+                limit = {
+                    country_exists = CZE
+                    1090 = { is_owned_by = CZE }
+                }
+                CZE = { country_event = { id = pra_mohammedis.20 } }
+            }
+        }
+    }
+
+    focus = {
+        id = pra_ultimatum_from_prague
+        icon = GFX_goal_generic_forceful_treaty
+        prerequisite = { focus = pra_borders_of_1918 }
+        prerequisite = { focus = pra_demand_central_bohemian_belt }
+        relative_position_id = pra_protector_of_bohemia
+        x = 0
+        y = 3
+        cost = 5
+        available = {
+            has_government = fascism
+            country_exists = CZE
+            NOT = { has_war_with = CZE }
+        }
+        bypass = { NOT = { country_exists = CZE } }
+        completion_reward = {
+            set_country_flag = pra_ultimatum_sent
+            unlock_decision_category_tooltip = pra_bohemian_protectorate
+            add_political_power = 50
+            if = {
+                limit = {
+                    country_exists = CZE
+                    1087 = { is_owned_by = CZE }
+                }
+                CZE = { country_event = { id = pra_mohammedis.21 } }
+            }
+        }
+    }
+
+    focus = {
+        id = pra_secure_elbe_approaches
+        icon = GFX_goal_generic_construct_military
+        prerequisite = { focus = pra_ultimatum_from_prague }
+        relative_position_id = pra_ultimatum_from_prague
+        x = -2
+        y = 1
+        cost = 5
+        available = { has_government = fascism }
+        completion_reward = {
+            if = {
+                limit = { 1090 = { is_owned_by = ROOT } }
+                1090 = {
+                    add_building_construction = {
+                        type = infrastructure
+                        level = 1
+                        instant_build = yes
+                    }
+                    add_building_construction = {
+                        type = anti_air_building
+                        level = 1
+                        instant_build = yes
+                    }
+                }
+            }
+            army_experience = 20
+        }
+    }
+
+    focus = {
+        id = pra_one_czech_command
+        icon = GFX_focus_generic_military_academy
+        prerequisite = { focus = pra_ultimatum_from_prague }
+        relative_position_id = pra_ultimatum_from_prague
+        x = 2
+        y = 1
+        cost = 5
+        available = { has_government = fascism }
+        completion_reward = {
+            army_experience = 20
+        }
+    }
+
+    focus = {
+        id = pra_czech_state_reborn
+        icon = GFX_goal_generic_major_war
+        prerequisite = { focus = pra_secure_elbe_approaches }
+        prerequisite = { focus = pra_one_czech_command }
+        relative_position_id = pra_ultimatum_from_prague
+        x = 0
+        y = 3
+        cost = 7
+        available = {
+            has_government = fascism
+            OR = {
+                has_country_flag = pra_ultimatum_accepted
+                NOT = { country_exists = CZE }
+                CZE = { has_capitulated = yes }
+            }
+        }
+        completion_reward = {
+            9 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
+            1086 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
+            1087 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
+            1088 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
+            1089 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
+            1090 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
+            1091 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
+            1092 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
+            1093 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
+            1094 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
+            1095 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
+            1096 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
+            1097 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
+            country_event = { id = pra_mohammedis.14 }
         }
     }
 }

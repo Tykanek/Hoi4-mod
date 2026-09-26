@@ -109,3 +109,294 @@ country_event = {
         name = pra_mohammedis.6.a
     }
 }
+
+
+# ================================================================
+# MORNING AFTER THE COUP
+# ================================================================
+
+country_event = {
+    id = pra_mohammedis.7
+    title = pra_mohammedis.7.t
+    desc = pra_mohammedis.7.d
+    is_triggered_only = yes
+    option = { name = pra_mohammedis.7.a }
+}
+
+country_event = {
+    id = pra_mohammedis.8
+    title = pra_mohammedis.8.t
+    desc = pra_mohammedis.8.d
+    is_triggered_only = yes
+    option = { name = pra_mohammedis.8.a }
+}
+
+country_event = {
+    id = pra_mohammedis.9
+    title = pra_mohammedis.9.t
+    desc = pra_mohammedis.9.d
+    is_triggered_only = yes
+    option = { name = pra_mohammedis.9.a }
+}
+
+country_event = {
+    id = pra_mohammedis.10
+    title = pra_mohammedis.10.t
+    desc = pra_mohammedis.10.d
+    is_triggered_only = yes
+    option = { name = pra_mohammedis.10.a }
+}
+
+country_event = {
+    id = pra_mohammedis.11
+    title = pra_mohammedis.11.t
+    desc = pra_mohammedis.11.d
+    is_triggered_only = yes
+    option = { name = pra_mohammedis.11.a }
+}
+
+# ================================================================
+# THE CZECH QUESTION
+# ================================================================
+
+country_event = {
+    id = pra_mohammedis.12
+    title = pra_mohammedis.12.t
+    desc = pra_mohammedis.12.d
+    is_triggered_only = yes
+    option = { name = pra_mohammedis.12.a }
+}
+
+country_event = {
+    id = pra_mohammedis.13
+    title = pra_mohammedis.13.t
+    desc = pra_mohammedis.13.d
+    is_triggered_only = yes
+    option = { name = pra_mohammedis.13.a }
+}
+
+country_event = {
+    id = pra_mohammedis.14
+    title = pra_mohammedis.14.t
+    desc = pra_mohammedis.14.d
+    is_triggered_only = yes
+    option = { name = pra_mohammedis.14.a }
+}
+
+# ================================================================
+# STAGED CZECH DEMANDS
+# ================================================================
+
+country_event = {
+    id = pra_mohammedis.18
+    title = pra_mohammedis.18.t
+    desc = pra_mohammedis.18.d
+    is_triggered_only = yes
+
+    option = {
+        name = pra_mohammedis.18.a
+        ai_chance = { base = 99 }
+        if = {
+            limit = { 1088 = { is_owned_by = CZE } }
+            1088 = { transfer_state_to = PRA }
+        }
+        set_country_flag = cze_conceded_prague_hinterland
+        add_opinion_modifier = {
+            target = PRA
+            modifier = pra_cze_conceded_prague_demand
+        }
+        PRA = {
+            set_country_flag = pra_hinterland_demand_accepted
+            add_political_power = 35
+            add_stability = 0.02
+        }
+    }
+
+    option = {
+        name = pra_mohammedis.18.b
+        ai_chance = { base = 1 }
+        if = {
+            limit = {
+                1088 = {
+                    is_owned_by = CZE
+                    NOT = { is_claimed_by = PRA }
+                }
+            }
+            1088 = { add_claim_by = PRA }
+        }
+        set_country_flag = cze_rejected_prague_hinterland
+        add_opinion_modifier = {
+            target = PRA
+            modifier = pra_cze_rejected_prague_demand
+        }
+        PRA = {
+            set_country_flag = pra_hinterland_demand_refused
+            if = {
+                limit = {
+                    1088 = { is_owned_by = CZE }
+                }
+                create_wargoal = { type = take_claimed_state target = CZE }
+            }
+            add_war_support = 0.03
+        }
+    }
+}
+
+country_event = {
+    id = pra_mohammedis.19
+    title = pra_mohammedis.19.t
+    desc = pra_mohammedis.19.d
+    is_triggered_only = yes
+
+    option = {
+        name = pra_mohammedis.19.a
+        ai_chance = { base = 99 }
+        if = {
+            limit = { 1089 = { is_owned_by = CZE } }
+            1089 = { transfer_state_to = PRA }
+        }
+        set_country_flag = cze_conceded_border_district
+        add_opinion_modifier = {
+            target = PRA
+            modifier = pra_cze_conceded_prague_demand
+        }
+        PRA = {
+            set_country_flag = pra_border_district_accepted
+            add_political_power = 35
+            add_stability = 0.02
+        }
+    }
+
+    option = {
+        name = pra_mohammedis.19.b
+        ai_chance = { base = 1 }
+        if = {
+            limit = {
+                1089 = {
+                    is_owned_by = CZE
+                    NOT = { is_claimed_by = PRA }
+                }
+            }
+            1089 = { add_claim_by = PRA }
+        }
+        set_country_flag = cze_rejected_border_district
+        add_opinion_modifier = {
+            target = PRA
+            modifier = pra_cze_rejected_prague_demand
+        }
+        PRA = {
+            set_country_flag = pra_border_district_refused
+            if = {
+                limit = { 1089 = { is_owned_by = CZE } }
+                create_wargoal = { type = take_claimed_state target = CZE }
+            }
+            add_war_support = 0.04
+        }
+    }
+}
+
+country_event = {
+    id = pra_mohammedis.20
+    title = pra_mohammedis.20.t
+    desc = pra_mohammedis.20.d
+    is_triggered_only = yes
+
+    option = {
+        name = pra_mohammedis.20.a
+        ai_chance = { base = 99 }
+        if = {
+            limit = { 1090 = { is_owned_by = CZE } }
+            1090 = { transfer_state_to = PRA }
+        }
+        set_country_flag = cze_conceded_central_belt
+        add_opinion_modifier = {
+            target = PRA
+            modifier = pra_cze_conceded_prague_demand
+        }
+        PRA = {
+            set_country_flag = pra_central_belt_accepted
+            add_political_power = 35
+            add_stability = 0.02
+        }
+    }
+
+    option = {
+        name = pra_mohammedis.20.b
+        ai_chance = { base = 1 }
+        if = {
+            limit = {
+                1090 = {
+                    is_owned_by = CZE
+                    NOT = { is_claimed_by = PRA }
+                }
+            }
+            1090 = { add_claim_by = PRA }
+        }
+        set_country_flag = cze_rejected_central_belt
+        add_opinion_modifier = {
+            target = PRA
+            modifier = pra_cze_rejected_prague_demand
+        }
+        PRA = {
+            set_country_flag = pra_central_belt_refused
+            if = {
+                limit = { 1090 = { is_owned_by = CZE } }
+                create_wargoal = { type = take_claimed_state target = CZE }
+            }
+            add_war_support = 0.04
+        }
+    }
+}
+
+country_event = {
+    id = pra_mohammedis.21
+    title = pra_mohammedis.21.t
+    desc = pra_mohammedis.21.d
+    is_triggered_only = yes
+
+    option = {
+        name = pra_mohammedis.21.a
+        ai_chance = { base = 99 }
+        if = {
+            limit = { 1087 = { is_owned_by = CZE } }
+            1087 = { transfer_state_to = PRA }
+        }
+        set_country_flag = cze_accepted_prague_ultimatum
+        add_opinion_modifier = {
+            target = PRA
+            modifier = pra_cze_accepted_prague_ultimatum
+        }
+        PRA = {
+            set_country_flag = pra_ultimatum_accepted
+            add_political_power = 75
+            add_stability = 0.05
+        }
+    }
+
+    option = {
+        name = pra_mohammedis.21.b
+        ai_chance = { base = 1 }
+        if = {
+            limit = {
+                1087 = {
+                    is_owned_by = CZE
+                    NOT = { is_claimed_by = PRA }
+                }
+            }
+            1087 = { add_claim_by = PRA }
+        }
+        set_country_flag = cze_rejected_prague_ultimatum
+        add_opinion_modifier = {
+            target = PRA
+            modifier = pra_cze_rejected_prague_ultimatum
+        }
+        PRA = {
+            set_country_flag = pra_ultimatum_refused
+            if = {
+                limit = { 1087 = { is_owned_by = CZE } }
+                create_wargoal = { type = take_claimed_state target = CZE }
+            }
+            add_war_support = 0.05
+        }
+    }
+}

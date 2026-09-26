@@ -2,6 +2,12 @@ capital = 1082 #Prague
 oob = "PRA_1936"
 
 recruit_character = PRA_peter_mohammedis
+recruit_character = PRA_antonin_havelka
+recruit_character = PRA_ema_vrbova
+recruit_character = PRA_frantisek_novak
+recruit_character = PRA_jaroslav_kral
+recruit_character = PRA_vaclav_sedivy
+recruit_character = PRA_alois_simek
 
 set_stability = 0.30
 set_war_support = 0.05
@@ -111,4 +117,3 @@ set_popularities = {
 	neutrality = 25
 	monarchism = 5
 }
-

@@ -1,0 +1,21 @@
+state = {
+	id = 1089
+	name = "STATE_1089"
+	manpower = 8000
+	state_category = bohemian_district
+	history = {
+		owner = CZE
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = CZE
+		1939.3.14 = {
+			owner = GER
+			controller = GER
+		}
+	}
+	provinces = {
+		9414
+	}
+	local_supplies = 0.0
+}

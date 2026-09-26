@@ -8,4 +8,24 @@ opinion_modifiers = {
 		value = 15
 	}
 
+	pra_prague_claims_central_bohemia = {
+		value = -40
+	}
+
+	pra_cze_accepted_prague_ultimatum = {
+		value = 25
+	}
+
+	pra_cze_rejected_prague_ultimatum = {
+		value = -50
+	}
+
+	pra_cze_conceded_prague_demand = {
+		value = 10
+	}
+
+	pra_cze_rejected_prague_demand = {
+		value = -30
+	}
+
 }

@@ -1,0 +1,24 @@
+state = {
+	id = 1093
+	name = "STATE_1093"
+	manpower = 12000
+	state_category = rural
+	history = {
+		owner = BEN
+		controller = BEN
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+		}
+		add_core_of = CZE
+		add_core_of = BEN
+		1939.3.14 = {
+			owner = GER
+			controller = GER
+		}
+	}
+	provinces = {
+		11556
+	}
+	local_supplies = 0.0
+}

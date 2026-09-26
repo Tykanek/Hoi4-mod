@@ -1,13 +1,43 @@
 ﻿l_english:
 
- pra_vo_supply_operations: "Vltava Defense Front Supply Operations"
- pra_vo_supply_operations_desc: "With the civilian administration increasingly incapable of maintaining regular deliveries, the VO has begun establishing its own network of warehouses, ration stations and transport detachments."
+ pra_vo_supply_operations: "Strašnice Supply Operations"
+ pra_vo_supply_operations_desc: "With the civilian administration increasingly incapable of maintaining regular deliveries, Strašnice has begun establishing its own network of warehouses, ration stations and transport detachments."
 
  pra_seize_government_warehouses: "Seize Government Warehouses"
- pra_seize_government_warehouses_desc: "Supplies sitting behind locked doors are useless to a starving city. VO detachments will take possession of government stocks and redirect whatever can serve our armed formations."
+ pra_seize_government_warehouses_desc: "Supplies sitting behind locked doors are useless to a starving city. Strašnice detachments will take possession of government stocks and redirect whatever can serve our armed formations."
 
  pra_secure_coal_depots: "Secure the Coal Depots"
- pra_secure_coal_depots_desc: "Fuel and coal reserves must be protected from hoarding, theft and political interference. The VO will place the city's remaining strategic fuel stocks under armed guard."
+ pra_secure_coal_depots_desc: "Fuel and coal reserves must be protected from hoarding, theft and political interference. Strašnice will place the city's remaining strategic fuel stocks under armed guard."
 
  pra_distribute_emergency_rations: "Distribute Emergency Rations"
- pra_distribute_emergency_rations_desc: "Food bearing the black banners of the Vltava Defense Front will reach districts where municipal distribution has broken down. Every ration handed out is another reminder of who is actually keeping Prague alive."
+ pra_distribute_emergency_rations_desc: "Food bearing Strašnice's black banners will reach districts where municipal distribution has broken down. Every ration handed out is another reminder of who is actually keeping Prague alive."
+
+ pra_reserve_mobilization: "Reserve Mobilization"
+ pra_reserve_mobilization_desc: "Recruitment offices turn Prague's districts and veterans into organized reserves."
+ pra_open_recruitment_office: "Open Recruitment Offices"
+ pra_open_recruitment_office_desc: "Create district offices in Žižkov, Karlín and the surrounding wards."
+ pra_recruit_zhizkov_volunteers: "Recruit Žižkov Volunteers"
+ pra_recruit_zhizkov_volunteers_desc: "The workers of Žižkov answer the call with rifles and resolve."
+ pra_recruit_karlin_volunteers: "Recruit Karlín Volunteers"
+ pra_recruit_karlin_volunteers_desc: "Karlín's depots and workshops provide men for the reserve."
+ pra_call_legionary_veterans: "Call the Legionary Veterans"
+ pra_call_legionary_veterans_desc: "Former legionaries will return to the colors as instructors and cadre."
+
+ pra_salvage_programme: "Nothing Leaves the Scrap Yard"
+ pra_salvage_programme_desc: "Prague will recover every usable tool, gun and crate from its neglected stores."
+ pra_strip_abandoned_warehouses: "Strip Abandoned Warehouses"
+ pra_strip_abandoned_warehouses_desc: "Search sealed depots for serviceable infantry equipment."
+ pra_reclaim_damaged_guns: "Reclaim Damaged Guns"
+ pra_reclaim_damaged_guns_desc: "Repair artillery that other administrations have written off."
+
+ pra_directorate_propaganda: "Directorate Propaganda Bureau"
+ pra_directorate_propaganda_desc: "The new state will make its case through radio, posters and the black bulletin."
+ pra_broadcast_the_directorate: "Broadcast the Directorate"
+ pra_broadcast_the_directorate_desc: "A steady voice and visible deliveries can turn fear into acceptance."
+ pra_publish_the_black_bulletin: "Publish the Black Bulletin"
+ pra_publish_the_black_bulletin_desc: "Every district will receive the Directorate's version of events and orders."
+
+ pra_bohemian_protectorate: "The Bohemian Protectorate"
+ pra_bohemian_protectorate_desc: "Prague's programme for bringing the Czech approaches under one command."
+ pra_integrate_czech_officers: "Integrate Czech Officers"
+ pra_integrate_czech_officers_desc: "Prepare the staff and manpower needed for a reunified Czech command."

@@ -1,59 +1,46 @@
 ﻿l_english:
 
- pra_cut_off_from_hinterland: "Cut Off from the Hinterland"
- pra_cut_off_from_hinterland_desc: "Benešov controls the farms, coal routes and railway approaches that feed Prague. Until those approaches are reopened, every factory and household in the capital pays the price."
-
- pra_vo_rationing_network: "VO Rationing Network"
- pra_vo_rationing_network_desc: "The Vltava Defense Front has seized warehouses and improvised ration stations. Supplies remain scarce, but the hungry now know which organization can still put bread on a table."
- pra_directorate_rationing: "Directorate Rationing Bureau"
- pra_directorate_rationing_desc: "The provisional VO distribution network has become an official bureau of the Directorate. Its ledgers are stricter, its queues longer and its grip on the city's remaining stores absolute."
-
- pra_vltava_defense_front: "Vltava Defense Front"
- pra_vltava_defense_front_desc: "What began as volunteers guarding bridges and railway hubs has become a disciplined civil-defense organization under Colonel Peter Mohammedis. Its black uniforms are already becoming a political statement."
  pra_directorate_of_national_salvation: "Directorate of National Salvation"
  pra_directorate_of_national_salvation_desc: "The Senate is dissolved, the cabinet is under arrest and executive authority rests with the Directorate. Every institution in Prague now serves the city's survival and military security."
  pra_subordinated_administration: "Subordinated Administration"
  pra_subordinated_administration_desc: "Prague has abandoned complete sovereignty and reaffirmed the political settlement binding the city to the Czech state."
  pra_devotion_to_prague_treaty: "Devotion to the Prague Treaty"
+ cze_loyal_prague_subject: "Loyal Prague Subject"
+ pra_prague_claims_central_bohemia: "Prague's Claims on Central Bohemia"
 
  # ========================================================
  # ARMY BRANCH SPIRITS
  # ========================================================
- pra_capital_defence_doctrine_1: "The City Is the Fortress"
+ pra_capital_defence_doctrine_1: "Army of Prague"
  pra_capital_defence_doctrine_1_desc: "Prague cannot trade territory for time. Its soldiers learn to turn streets, courtyards and prepared positions into a compact urban fortress."
- pra_capital_defence_doctrine_2: "Guns Behind Every Barricade"
+ pra_capital_defence_doctrine_2: "Army of Prague"
  pra_capital_defence_doctrine_2_desc: "Standardized rifles, ammunition and maintenance let Prague's infantry fight harder while consuming less of the supply that the city can least afford to waste."
- pra_concentrated_artillery_batteries: "Concentrated Artillery Batteries"
- pra_concentrated_artillery_batteries_desc: "Prepared batteries cover the approaches to Prague, making the city's limited manpower count through carefully planned fire rather than costly counter-attacks."
- pra_mobile_metropolitan_reserves: "The Thirty-Minute Reserve"
- pra_mobile_metropolitan_reserves_desc: "Municipal lorries and motorized columns can cross Prague before a threatened district is isolated."
- pra_army_of_the_capital: "Army of the Capital"
+ pra_army_of_the_capital: "Army of Prague"
  pra_army_of_the_capital_desc: "The Prague War School unites infantry, artillery and reserve columns around a single purpose: no ground surrendered inside the capital."
 
  # ========================================================
  # AIR FORCE BRANCH SPIRITS
  # ========================================================
- pra_prague_air_watch_1: "Eyes Above the Vltava"
+ pra_prague_air_watch_1: "Prague Air Command"
  pra_prague_air_watch_1_desc: "Rooftop observers, telephone posts and hurried reports form Prague's first warning net against air raids."
- pra_prague_air_watch_2: "Sirens Over Prague"
+ pra_prague_air_watch_2: "Prague Air Command"
  pra_prague_air_watch_2_desc: "Expanded posts around Letňany and Kbely give the capital more time to scramble its aircraft and warn its anti-aircraft crews."
- pra_avia_interceptor_school: "Avia's Finest"
- pra_avia_interceptor_school_desc: "Avia pilots train for the steep climbs and close engagements needed to keep bombers away from the bridges and workshops of Prague."
- pra_letov_close_support_doctrine: "Letov Flies Low"
- pra_letov_close_support_doctrine_desc: "Letov crews coordinate their low-level attacks with the city's infantry, striking enemy formations where the ground battle is most fragile."
- pra_integrated_prague_air_defence: "Not One Bomb on Prague"
+ pra_integrated_prague_air_defence: "Prague Air Command"
  pra_integrated_prague_air_defence_desc: "Observers, fighters and anti-aircraft batteries now answer to one command, creating an integrated shield over the capital."
 
  # ========================================================
  # INDUSTRY BRANCH SPIRITS
  # ========================================================
- pra_fragmented_workshop_network: "A Factory in Every Courtyard"
+ pra_fragmented_workshop_network: "Metropolitan War Economy"
  pra_fragmented_workshop_network_desc: "Prague's small machine shops, railway sheds and municipal repair halls are catalogued as one network, squeezing more production from scarce inputs."
- pra_modernized_workshop_network: "Nothing Goes to Waste"
+ pra_modernized_workshop_network: "Metropolitan War Economy"
  pra_modernized_workshop_network_desc: "Standardized tools and centralized schedules allow the city's workshops to build efficiency while reducing the damage caused by missing resources."
- pra_ckd_engineering: "ČKD Works Through the Night"
- pra_ckd_engineering_desc: "ČKD becomes Prague's engineering hub, converting heavy machinery and skilled hands toward weapons, vehicles and precision military work."
- pra_municipal_infrastructure_works: "The Workshops of Vysočany"
- pra_municipal_infrastructure_works_desc: "Municipal crews connect Prague's utilities, roads and industrial districts so that a shortage of space does not become a shortage of output."
- pra_arsenal_of_prague_spirit: "Prague Must Supply Itself"
+ pra_arsenal_of_prague_spirit: "Metropolitan War Economy"
  pra_arsenal_of_prague_spirit_desc: "The capital's industrial network now operates with ruthless urban efficiency: every kilogram of steel, every machine and every hour must matter."
+
+ pra_directorate_consolidation: "The Directorate Consolidated"
+ pra_directorate_consolidation_desc: "The old parties are dissolved, the ministries are brought to heel and Prague's emergency government begins to operate as a single command."
+ pra_mohammedis_state: "Mohammedis' State"
+ pra_mohammedis_state_desc: "The Directorate, army and food office answer to one colonel."
+ pra_colonel_state: "The Colonel Is the State"
+ pra_colonel_state_desc: "Mohammedis has turned the emergency Directorate into a permanent personal regime: efficient, mobilized and openly dependent on one man."

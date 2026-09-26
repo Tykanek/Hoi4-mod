@@ -1,4 +1,4 @@
-﻿division_template = {
+division_template = {
 	name = "Pěší divize"					# Infantry Division
 	division_names_group = CZE_INF_01
 
@@ -34,7 +34,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Jezdecká brigáda"				# Cavalry Brigade -- precursor to Fast Divisions. Fast Divisions add 2nd regiment of 2x L tank, 2x mot
+	name = "Jezdecká brigáda"				# Cavalry Brigade -- precursor to Fast Divisions. Fast Divisions add 2nd regiment of 2x L tank, 2x mot 
 	division_names_group = CZE_CAV_01
 
 	regiments = {
@@ -50,7 +50,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Rychlá divize"	#Fast division -- these are in really bad shape in 1936. Orders are behind and they were force to take on tanks they didn't want due to politcal pressure. Large orders placed in 1936 to fill them
+	name = "Rychlá divize"	#Fast division -- these are in really bad shape in 1936. Orders are behind and they were force to take on tanks they didn't want due to politcal pressure. Large orders placed in 1936 to fill them		
 	division_names_group = CZE_ARM_01
 	regiments = {
 		light_armor = { x = 0 y = 0 }
@@ -69,12 +69,24 @@ division_template = {
 	}
 }
 
+division_template = {
+   	name = "Finanční Stráž"  #Financial Guard -- garison formations before their merger with State Defense Guard. Precursor to some reservists units
+	division_names_group = CZE_GAR_01
+    is_locked = yes #unlock via focus
+    division_cap = 0 #The formal army unit formation of the financial guard mostly existed on paper at start date. Was filled out into a full blown reservists units between 1936-1938
+    priority = 0
+	regiments = {
+		militia = { x = 0 y = 0 } #Mix of varrying levels of professional personal, normal citizens, police officers, and paramilitary members.
+	}
+}
+
+
 units = {
 	#### Československá Vojenská Jednotka #####
 	# directly subordinate
 	division = {
 		name = "1. jezdecká brigáda"
-    location = 3569  # Brno
+		location = 3569  # Brno
 		division_template = "Jezdecká brigáda"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.7
@@ -85,18 +97,19 @@ units = {
 			is_name_ordered = yes
 			name_order = 1
 		}
-        location = 3569  # Brno
+		location = 3569  # Brno
 		division_template = "Rychlá divize"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
-		force_equipment_variants = { light_tank_equipment_1 = { owner = "CZE" } }
+		force_equipment_variants = { light_tank_chassis_0 = { owner = "CZE" version_name = "Tancik vz. 33" } }
+		
 	}
 	division = { # "4. divize"
 		division_name = {
 			is_name_ordered = yes
 			name_order = 4
 		}
-        location = 3569  # Brno
+		location = 3569  # Brno
 		division_template = "Pěší divize"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.7
@@ -107,7 +120,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 12
 		}
-        location = 3569  # Brno
+		location = 3569  # Brno
 		division_template = "Pěší divize"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.7
@@ -145,7 +158,7 @@ units = {
 		division_template = "Rychlá divize"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.5
-		force_equipment_variants = { light_tank_equipment_1 = { owner = "CZE" } }
+		force_equipment_variants = { light_tank_chassis_0 = { owner = "CZE" version_name = "Tancik vz. 33" } }
 	}
 	division = { # "15. divize"
 		division_name = {
@@ -178,7 +191,7 @@ units = {
 		division_template = "Rychlá divize"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.1
-		force_equipment_variants = { light_tank_equipment_1 = { owner = "CZE" } }
+		force_equipment_variants = { light_tank_chassis_0 = { owner = "CZE" version_name = "Tancik vz. 33" } }
 	}
 	division = { # "4. fast"
 		division_name = {
@@ -189,7 +202,7 @@ units = {
 		division_template = "Rychlá divize"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.1
-		force_equipment_variants = { light_tank_equipment_1 = { owner = "CZE" } }
+		force_equipment_variants = { light_tank_chassis_0 = { owner = "CZE" version_name = "Tancik vz. 33" } }
 	}
 	### I Armáda ###
 	division = { # "18. divize"
@@ -377,6 +390,7 @@ instant_effect = {
 		efficiency = 100
 		industrial_manufacturer = mio:CZE_zbrojovka_brno_organization
 	}
+
 	add_equipment_production = {
 		equipment = {
 			type = support_equipment_1
@@ -385,11 +399,13 @@ instant_effect = {
 		requested_factories = 1
 		progress = 0.48
 		efficiency = 100
+		industrial_manufacturer = mio:CZE_zbrojovka_vsetin_organization
 	}
 	add_equipment_production = {
 		equipment = {
-			type = light_tank_equipment_2
+			type = light_tank_chassis_2
 			creator = CZE
+			version_name = "LT vz. 35"
 		}
 		requested_factories = 2
 		progress = 0.48

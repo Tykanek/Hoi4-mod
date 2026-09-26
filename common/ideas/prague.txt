@@ -6,51 +6,13 @@ ideas = {
         # INDEPENDENCE CRISIS
         # ========================================================
 
-        pra_cut_off_from_hinterland = {
-
-            modifier = {
-                consumer_goods_factor = 0.10
-                industrial_capacity_factory = -0.10
-                production_factory_max_efficiency_factor = -0.05
-            }
-        }
-
-
         # ========================================================
-        # VO TAKES OVER DISTRIBUTION
+        # STRAŠNICE TAKES OVER DISTRIBUTION
         # ========================================================
 
-        pra_vo_rationing_network = {
-
-            modifier = {
-                consumer_goods_factor = 0.05
-                industrial_capacity_factory = -0.05
-            }
-        }
-
-
-        pra_directorate_rationing = {
-
-            modifier = {
-                consumer_goods_factor = 0.03
-                industrial_capacity_factory = -0.03
-                production_lack_of_resource_penalty_factor = -0.05
-            }
-        }
-
-
         # ========================================================
-        # VLtAVA DEFENSE FRONT
+        # STRAŠNICE ORGANIZATION
         # ========================================================
-
-        pra_vltava_defense_front = {
-
-            modifier = {
-                recruitable_population_factor = 0.01
-                army_defence_factor = 0.05
-            }
-        }
-
 
         # ========================================================
         # MOHAMMEDIS' REGIME
@@ -89,6 +51,8 @@ ideas = {
                 army_core_defence_factor = 0.05
                 dig_in_speed_factor = 0.10
                 max_dig_in_factor = 0.05
+                army_defence_factor = 0.05
+                recruitable_population_factor = 0.01
             }
         }
 
@@ -102,25 +66,8 @@ ideas = {
                 army_infantry_attack_factor = 0.05
                 army_infantry_defence_factor = 0.05
                 supply_consumption_factor = -0.05
-            }
-        }
-
-
-        pra_concentrated_artillery_batteries = {
-
-            modifier = {
-                army_artillery_attack_factor = 0.10
-                army_artillery_defence_factor = 0.05
-            }
-        }
-
-
-        pra_mobile_metropolitan_reserves = {
-
-            modifier = {
-                army_speed_factor = 0.05
-                land_reinforce_rate = 0.02
-                motorized_defence_factor = 0.05
+                army_defence_factor = 0.05
+                recruitable_population_factor = 0.01
             }
         }
 
@@ -128,12 +75,21 @@ ideas = {
         pra_army_of_the_capital = {
 
             modifier = {
-                army_core_defence_factor = 0.05
+                army_core_defence_factor = 0.15
                 army_infantry_attack_factor = 0.05
-                army_org_factor = 0.05
+                army_infantry_defence_factor = 0.10
+                army_org_factor = 0.18
                 planning_speed = 0.10
-                dig_in_speed_factor = 0.15
-                max_dig_in_factor = 0.05
+                dig_in_speed_factor = 0.25
+                max_dig_in_factor = 0.10
+                supply_consumption_factor = -0.05
+                army_artillery_attack_factor = 0.05
+                army_artillery_defence_factor = 0.05
+                army_speed_factor = 0.03
+                land_reinforce_rate = 0.02
+                motorized_defence_factor = 0.05
+                army_defence_factor = 0.05
+                recruitable_population_factor = 0.03
             }
         }
 
@@ -161,31 +117,15 @@ ideas = {
         }
 
 
-        pra_avia_interceptor_school = {
-
-            modifier = {
-                air_superiority_efficiency = 0.10
-                air_agility_factor = 0.05
-            }
-        }
-
-
-        pra_letov_close_support_doctrine = {
-
-            modifier = {
-                ground_attack_factor = 0.10
-                air_attack = 0.05
-            }
-        }
-
-
         pra_integrated_prague_air_defence = {
 
             modifier = {
-                air_detection = 0.15
-                air_superiority_detect_factor = 0.05
-                air_superiority_efficiency = 0.05
-                air_accidents_factor = -0.15
+                air_detection = 0.20
+                air_superiority_detect_factor = 0.10
+                air_superiority_efficiency = 0.10
+                air_accidents_factor = -0.20
+                air_agility_factor = 0.03
+                ground_attack_factor = 0.05
             }
         }
 
@@ -197,8 +137,11 @@ ideas = {
         pra_fragmented_workshop_network = {
 
             modifier = {
+                consumer_goods_factor = 0.15
+                industrial_capacity_factory = -0.15
+                production_factory_max_efficiency_factor = -0.05
                 production_factory_efficiency_gain_factor = 0.05
-                production_lack_of_resource_penalty_factor = -0.10
+                production_lack_of_resource_penalty_factor = -0.15
             }
         }
 
@@ -206,26 +149,11 @@ ideas = {
         pra_modernized_workshop_network = {
 
             modifier = {
+                consumer_goods_factor = 0.05
+                industrial_capacity_factory = -0.05
                 production_factory_efficiency_gain_factor = 0.10
                 production_factory_max_efficiency_factor = 0.05
-                production_lack_of_resource_penalty_factor = -0.15
-            }
-        }
-
-
-        pra_ckd_engineering = {
-
-            modifier = {
-                industrial_capacity_factory = 0.05
-                equipment_conversion_speed = 0.10
-            }
-        }
-
-
-        pra_municipal_infrastructure_works = {
-
-            modifier = {
-                production_speed_infrastructure_factor = 0.15
+                production_lack_of_resource_penalty_factor = -0.20
             }
         }
 
@@ -233,11 +161,147 @@ ideas = {
         pra_arsenal_of_prague_spirit = {
 
             modifier = {
+                consumer_goods_factor = 0.05
                 industrial_capacity_factory = 0.05
-                production_factory_efficiency_gain_factor = 0.10
+                production_factory_efficiency_gain_factor = 0.15
                 production_factory_max_efficiency_factor = 0.05
-                production_lack_of_resource_penalty_factor = -0.20
+                production_lack_of_resource_penalty_factor = -0.25
+                equipment_conversion_speed = 0.10
+                production_speed_infrastructure_factor = 0.15
             }
         }
+
+
+        # ========================================================
+        # EXPANDED ARMY PROGRAMME
+        # ========================================================
+
+        pra_fortress_army = {
+            modifier = {
+                army_core_defence_factor = 0.25
+                army_infantry_attack_factor = 0.10
+                army_infantry_defence_factor = 0.15
+                army_org_factor = 0.18
+                planning_speed = 0.15
+                dig_in_speed_factor = 0.50
+                max_dig_in_factor = 0.25
+                army_artillery_attack_factor = 0.05
+                army_artillery_defence_factor = 0.05
+                land_reinforce_rate = 0.04
+                motorized_defence_factor = 0.05
+                army_defence_factor = 0.05
+                recruitable_population_factor = 0.03
+                supply_consumption_factor = -0.15
+                army_speed_factor = -0.08
+            }
+        }
+
+        pra_field_army = {
+            modifier = {
+                army_core_defence_factor = 0.15
+                army_infantry_attack_factor = 0.15
+                army_infantry_defence_factor = 0.10
+                army_org_factor = 0.18
+                planning_speed = 0.30
+                dig_in_speed_factor = 0.30
+                max_dig_in_factor = 0.10
+                army_artillery_attack_factor = 0.05
+                army_artillery_defence_factor = 0.05
+                army_speed_factor = 0.15
+                land_reinforce_rate = 0.06
+                motorized_defence_factor = 0.05
+                army_defence_factor = 0.05
+                recruitable_population_factor = 0.03
+                supply_consumption_factor = 0.05
+            }
+        }
+
+
+        # ========================================================
+        # EXPANDED AIR PROGRAMME
+        # ========================================================
+
+        pra_interceptor_priority = {
+            modifier = {
+                air_detection = 0.25
+                air_superiority_detect_factor = 0.15
+                air_superiority_efficiency = 0.20
+                air_accidents_factor = -0.25
+                air_agility_factor = 0.08
+                ground_attack_factor = 0.05
+            }
+        }
+
+        pra_army_cooperation_air = {
+            modifier = {
+                air_detection = 0.20
+                air_superiority_detect_factor = 0.10
+                air_superiority_efficiency = 0.10
+                air_accidents_factor = -0.20
+                air_agility_factor = 0.05
+                ground_attack_factor = 0.15
+            }
+        }
+
+
+        # ========================================================
+        # EXPANDED INDUSTRIAL PROGRAMME
+        # ========================================================
+
+        pra_total_metropolitan_mobilization = {
+            modifier = {
+                industrial_capacity_factory = 0.10
+                production_factory_efficiency_gain_factor = 0.20
+                production_lack_of_resource_penalty_factor = -0.25
+                equipment_conversion_speed = 0.10
+                production_speed_infrastructure_factor = 0.15
+                consumer_goods_factor = 0.12
+                stability_factor = -0.05
+            }
+        }
+
+
+        # ========================================================
+        # MOHAMMEDIS' DIRECTORATE
+        # ========================================================
+
+        pra_morning_after_coup = {
+            modifier = {
+                political_power_factor = 0.15
+                mobilization_speed = 0.20
+                justify_war_goal_time = -0.15
+                stability_factor = -0.05
+            }
+        }
+
+        pra_directorate_consolidation = {
+            modifier = {
+                political_power_factor = 0.20
+                mobilization_speed = 0.20
+                justify_war_goal_time = -0.15
+            }
+        }
+
+        pra_mohammedis_state = {
+            modifier = {
+                political_power_factor = 0.40
+                mobilization_speed = 0.20
+                justify_war_goal_time = -0.15
+                war_support_factor = 0.10
+                stability_factor = 0.15
+            }
+        }
+
+        pra_colonel_state = {
+            modifier = {
+                political_power_factor = 0.45
+                mobilization_speed = 0.20
+                justify_war_goal_time = -0.15
+                war_support_factor = 0.15
+                stability_factor = 0.12
+            }
+        }
+
+
     }
 }

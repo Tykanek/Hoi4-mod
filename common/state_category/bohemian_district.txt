@@ -1,0 +1,7 @@
+state_categories = {
+	bohemian_district = {
+		local_building_slots = 1
+
+		color = { 120 120 120 }
+	}
+}

@@ -1,0 +1,22 @@
+state = {
+	id = 1086
+	name = "STATE_1086"
+	manpower = 15000
+	state_category = rural
+	history = {
+		owner = CZE
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+		}
+		add_core_of = CZE
+		1939.3.14 = {
+			owner = GER
+			controller = GER
+		}
+	}
+	provinces = {
+		6592
+	}
+	local_supplies = 0.0
+}

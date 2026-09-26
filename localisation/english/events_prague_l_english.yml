@@ -5,11 +5,11 @@
  pra_mohammedis.1.a: "We knew independence would have a price."
 
  pra_mohammedis.2.t: "The Police Will Not Intervene"
- pra_mohammedis.2.d: "Mohammedis has spent weeks meeting quietly with junior police commanders, many of them veterans themselves. No formal conspiracy has been created and no written pledge exists.\n\nNone is necessary.\n\nShould the Senate order the Municipal Police to suppress the Vltava Defense Front, its orders will be delayed, misunderstood or simply ignored."
+ pra_mohammedis.2.d: "Mohammedis has spent weeks meeting quietly with junior police commanders, many of them veterans themselves. No formal conspiracy has been created and no written pledge exists.\n\nNone is necessary.\n\nShould the Senate order the Municipal Police to suppress the Strašnice movement, its orders will be delayed, misunderstood or simply ignored."
  pra_mohammedis.2.a: "That will be enough."
 
  pra_mohammedis.3.t: "The Government Has Fallen"
- pra_mohammedis.3.d: "Before dawn, columns of armed Vltava Defense Front members move through the streets toward the Rudolfinum. Municipal police watch from intersections but make no attempt to stop them.\n\nWithin hours, nearly three thousand men surround the seat of the provisional government. The parliamentary guard, isolated and hopelessly outnumbered, surrenders its weapons without firing a shot.\n\nPeter Mohammedis enters the assembly chamber personally. He accuses the cabinet of preparing Prague's capitulation, orders the ministers arrested and declares the provisional Senate dissolved. In its place he proclaims a Directorate of National Salvation. Parliamentary government in Prague is over."
+ pra_mohammedis.3.d: "Before dawn, columns of armed members of the Strašnice movement move through the streets toward the Rudolfinum. Municipal police watch from intersections but make no attempt to stop them.\n\nWithin hours, nearly three thousand men surround the seat of the provisional government. The parliamentary guard, isolated and hopelessly outnumbered, surrenders its weapons without firing a shot.\n\nPeter Mohammedis enters the assembly chamber personally. He accuses the cabinet of preparing Prague's capitulation, orders the ministers arrested and declares the provisional Senate dissolved. In its place he proclaims a Directorate of National Salvation. Parliamentary government in Prague is over."
  pra_mohammedis.3.a: "The Directorate will save Prague."
 
  pra_mohammedis.4.t: "The Encirclement Must Be Broken"
@@ -23,3 +23,60 @@
  pra_mohammedis.6.t: "The Hinterland Routes Reopened"
  pra_mohammedis.6.d: "Benešov has capitulated. Prague's military victory does not erase the months of rationing, but the roads and coal routes beyond the city are no longer held by the force that strangled them. The emergency shortage regime can finally be dismantled."
  pra_mohammedis.6.a: "The city can breathe again."
+
+ pra_mohammedis.7.t: "The Morning After"
+ pra_mohammedis.7.d: "Prague wakes beneath new flags. The Directorate has occupied the ministries, sealed the Senate archives and placed every district under emergency command. Some citizens cheer the end of parliamentary hesitation; others watch the black-uniformed patrols and wonder whether the emergency will ever end."
+ pra_mohammedis.7.a: "Order first. Questions later."
+
+ pra_mohammedis.8.t: "The Bureaucrats Resist"
+ pra_mohammedis.8.d: "Several senior clerks have refused to sign the Directorate's decrees. They are not soldiers and have no following in the streets, but they know where the records, ration ledgers and municipal keys are kept. Mohammedis must decide whether to compromise with the old administration or remove it wholesale."
+ pra_mohammedis.8.a: "Replace every doubtful hand."
+
+ pra_mohammedis.9.t: "The Black Uniform"
+ pra_mohammedis.9.d: "The Strašnice movement's volunteers now receive a common uniform and a common oath. The sight is deliberate: Prague's districts are no longer a collection of local guards, but the visible instrument of the Directorate."
+ pra_mohammedis.9.a: "Let the city see its new authority."
+
+ pra_mohammedis.10.t: "A City of Discipline"
+ pra_mohammedis.10.d: "The Directorate's decrees have reached every tram depot, school, warehouse and police station. Curfews are enforced, trains depart on schedule and the queues move under armed supervision. Prague is functioning again, though the city has paid for efficiency with its remaining political freedom."
+ pra_mohammedis.10.a: "Discipline is survival."
+
+ pra_mohammedis.11.t: "Mohammedis Speaks from the Rudolfinum"
+ pra_mohammedis.11.d: "Standing where he dissolved the provisional Senate, Peter Mohammedis promises that Prague will no longer beg for access to its own roads. He calls the Directorate temporary only in the sense that war is temporary: both will last until victory makes the old question irrelevant."
+ pra_mohammedis.11.a: "Prague will lead."
+
+ pra_mohammedis.12.t: "Prague Is Not an Island"
+ pra_mohammedis.12.d: "Benešov has fallen, but the victory leaves the central Czech lands divided between a restored Czechoslovakia and a Prague that has learned to govern itself. The Directorate now debates whether independence was a refuge or the first step toward a larger Czech state."
+ pra_mohammedis.12.a: "The Vltava must reach beyond the city."
+
+ pra_mohammedis.13.t: "The Ultimatum from Prague"
+ pra_mohammedis.13.d: "Prague's diplomatic note demands that Czechoslovakia recognize the capital's claims to the central Bohemian approaches. The language is formal, but no one mistakes the meaning: the Directorate has prepared an army and expects an answer before the next parade."
+ pra_mohammedis.13.a: "There will be no more divided commands."
+
+ pra_mohammedis.14.t: "The Czech State Reborn"
+ pra_mohammedis.14.d: "The old border has disappeared. State offices, arsenals and army commands are being folded into a single administration, while Prague's banners appear beside the older Czech emblems. Mohammedis has won the reunification he promised, but the question of what follows the emergency remains unanswered."
+ pra_mohammedis.14.a: "One country, one command."
+
+ pra_mohammedis.18.t: "Prague Demands the First District"
+ pra_mohammedis.18.d: "Peter Mohammedis presents the first demand as a temporary administrative measure. Prague, he argues, cannot protect its roads, depots and food routes while the district immediately around the capital answers to another government. The Czechoslovak cabinet considers the request outrageous, but not yet worth a war."
+ pra_mohammedis.18.a: "Concede the district."
+ pra_mohammedis.18.b: "Prague has gone too far."
+
+ pra_mohammedis.19.t: "Prague Demands the Next District"
+ pra_mohammedis.19.d: "The first concession has convinced Mohammedis that necessity is a language Prague may speak without interruption. The Directorate now demands one more district along the old administrative border, describing its roads and rail junctions as details that merely happen to require a new owner."
+ pra_mohammedis.19.a: "We cannot risk a war over this district."
+ pra_mohammedis.19.b: "Reject the demand."
+
+ pra_mohammedis.20.t: "Prague Demands the Central Bohemian District"
+ pra_mohammedis.20.d: "The Directorate now demands one central district as a permanent security belt. Rail junctions and supply roads are described as administrative details that merely happen to require a new owner. Czechoslovakia is invited to call this negotiation; the officers reading the note know better."
+ pra_mohammedis.20.a: "Concede the district."
+ pra_mohammedis.20.b: "Reject the demand."
+
+ pra_mohammedis.21.t: "The Ultimatum from Prague"
+ pra_mohammedis.21.d: "Prague's final demand is delivered with troop movements attached. Mohammedis insists that the remaining southern approach must be placed under the Directorate before the capital can be considered secure. Czechoslovakia is invited to call this negotiation; the officers reading the note recognize an ultimatum."
+ pra_mohammedis.21.a: "Accept Prague's demands."
+ pra_mohammedis.21.b: "Reject the ultimatum."
+
+ pra_cze_accepted_prague_ultimatum: "Czechoslovakia Accepted Prague's Demands"
+ pra_cze_rejected_prague_ultimatum: "Czechoslovakia Rejected Prague's Demands"
+ pra_cze_conceded_prague_demand: "Czechoslovakia Conceded a Prague Demand"
+ pra_cze_rejected_prague_demand: "Czechoslovakia Rejected a Prague Demand"
