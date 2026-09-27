@@ -1,0 +1,79 @@
+# Extend the vanilla Sokolov-raid German frontier pressure to the four states
+# split from state 69. The original strategy remains intact for state 69.
+PRA_GER_take_advantage_of_sudetenland_split = {
+	allowed = {
+		original_tag = GER
+	}
+
+	enable = {
+		exists = yes
+		has_war_with = CZE
+		has_war_with_major = no
+		surrender_progress < 0.02
+		OR = {
+			has_idea = CZE_sokolov_raid_pfot_limited_success_ns
+			has_idea = CZE_sokolov_raid_pfot_success_ns
+			has_idea = CZE_sokolov_raid_pfot_critical_success_ns
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		state = 1098
+		state_trigger = { is_controlled_by = CZE }
+		ratio = 0.25
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+	}
+	ai_strategy = {
+		type = front_control
+		state = 1099
+		state_trigger = { is_controlled_by = CZE }
+		ratio = 0.25
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+	}
+	ai_strategy = {
+		type = front_control
+		state = 1100
+		state_trigger = { is_controlled_by = CZE }
+		ratio = 0.25
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+	}
+	ai_strategy = {
+		type = front_control
+		state = 1101
+		state_trigger = { is_controlled_by = CZE }
+		ratio = 0.25
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+	}
+
+	ai_strategy = {
+		type = force_concentration_target_weight
+		state = 1098
+		value = 25
+	}
+	ai_strategy = {
+		type = force_concentration_target_weight
+		state = 1099
+		value = 25
+	}
+	ai_strategy = {
+		type = force_concentration_target_weight
+		state = 1100
+		value = 25
+	}
+	ai_strategy = {
+		type = force_concentration_target_weight
+		state = 1101
+		value = 25
+	}
+}

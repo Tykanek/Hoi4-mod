@@ -3,10 +3,10 @@ characters = {
         name = "Peter Mohammedis"
         portraits = {
             civilian = {
-                large = "gfx/leaders/PRA/PRA_peter_mohammedis.dds"
+                large = "GFX_portrait_PRA_peter_mohammedis"
             }
             army = {
-                large = "gfx/leaders/PRA/PRA_peter_mohammedis.dds"
+                large = "GFX_portrait_PRA_peter_mohammedis"
             }
         }
         country_leader = {

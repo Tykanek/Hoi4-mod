@@ -1,0 +1,254 @@
+# Compatibility for the four states split from vanilla state 69.
+# This deliberately keeps state 69 as the vanilla wargoal generator while
+# making the split states participate in the same Sudetenland target array.
+
+GER_set_array_of_sudetenland_targeted_states = {
+	if = {
+		limit = { controls_state = 69 }
+		69 = {
+			add_to_array = {
+				array = PREV.sudetenland_states_for_wargoal
+				value = THIS
+			}
+		}
+	}
+	if = {
+		limit = { controls_state = 972 }
+		972 = {
+			add_to_array = {
+				array = PREV.sudetenland_states_for_wargoal
+				value = THIS
+			}
+		}
+	}
+	if = {
+		limit = { controls_state = 74 }
+		74 = {
+			add_to_array = {
+				array = PREV.sudetenland_states_for_wargoal
+				value = THIS
+			}
+		}
+	}
+	if = {
+		limit = { controls_state = 1098 }
+		1098 = {
+			add_to_array = {
+				array = PREV.sudetenland_states_for_wargoal
+				value = THIS
+			}
+		}
+	}
+	if = {
+		limit = { controls_state = 1099 }
+		1099 = {
+			add_to_array = {
+				array = PREV.sudetenland_states_for_wargoal
+				value = THIS
+			}
+		}
+	}
+	if = {
+		limit = { controls_state = 1100 }
+		1100 = {
+			add_to_array = {
+				array = PREV.sudetenland_states_for_wargoal
+				value = THIS
+			}
+		}
+	}
+	if = {
+		limit = { controls_state = 1101 }
+		1101 = {
+			add_to_array = {
+				array = PREV.sudetenland_states_for_wargoal
+				value = THIS
+			}
+		}
+	}
+}
+
+# ROOT is the new controller, FROM is the old controller, and FROM.FROM is
+# the state whose control changed. Only a real ownership transfer of state 69
+# from CZE activates this effect. Occupation alone does not, and PRA-owned
+# split states are intentionally excluded.
+PRA_transfer_cze_owned_sudetenland_split_states = {
+	if = {
+		limit = {
+			FROM.FROM = {
+				state = 69
+				is_owned_by = ROOT
+			}
+			FROM = { tag = CZE }
+			ROOT = { tag = GER }
+		}
+		1098 = {
+			if = {
+				limit = { is_owned_by = CZE }
+				add_core_of = ROOT
+				transfer_state_to = ROOT
+			}
+		}
+		1099 = {
+			if = {
+				limit = { is_owned_by = CZE }
+				add_core_of = ROOT
+				transfer_state_to = ROOT
+			}
+		}
+		1100 = {
+			if = {
+				limit = { is_owned_by = CZE }
+				add_core_of = ROOT
+				transfer_state_to = ROOT
+			}
+		}
+		1101 = {
+			if = {
+				limit = { is_owned_by = CZE }
+				add_core_of = ROOT
+				transfer_state_to = ROOT
+			}
+		}
+	}
+}
+
+# Vanilla CZE fortification content targets the unsplit state scope. The two
+# moved border provinces and the two moved northern provinces therefore need
+# the same stage level that the original state-69 scope would have applied.
+# This is idempotent and only runs while CZE owns and controls the territory.
+PRA_sync_split_sudetenland_fortifications = {
+	if = {
+		limit = {
+			69 = { is_owned_and_controlled_by = CZE }
+			has_completed_focus = CZE_sudeten_1
+			NOT = { has_completed_focus = CZE_sudeten_2 }
+			NOT = { has_completed_focus = CZE_sudeten_3 }
+			NOT = { has_country_flag = CZE_second_sudetenland_fortification_program_was_finished }
+			NOT = { has_country_flag = CZE_third_sudetenland_fortification_program_was_finished }
+			NOT = { has_country_flag = CZE_fourth_sudetenland_fortification_program_was_finished }
+		}
+		PRA_set_split_sudetenland_bunker_level_3 = yes
+	}
+	if = {
+		limit = {
+			69 = { is_owned_and_controlled_by = CZE }
+			OR = {
+				has_completed_focus = CZE_sudeten_2
+				has_country_flag = CZE_second_sudetenland_fortification_program_was_finished
+			}
+			NOT = { has_completed_focus = CZE_sudeten_3 }
+			NOT = { has_country_flag = CZE_third_sudetenland_fortification_program_was_finished }
+			NOT = { has_country_flag = CZE_fourth_sudetenland_fortification_program_was_finished }
+		}
+		PRA_set_split_sudetenland_bunker_level_5 = yes
+	}
+	if = {
+		limit = {
+			69 = { is_owned_and_controlled_by = CZE }
+			OR = {
+				has_completed_focus = CZE_sudeten_3
+				has_country_flag = CZE_third_sudetenland_fortification_program_was_finished
+				has_country_flag = CZE_fourth_sudetenland_fortification_program_was_finished
+			}
+		}
+		PRA_set_split_sudetenland_bunker_level_7 = yes
+	}
+}
+
+PRA_set_split_sudetenland_bunker_level_3 = {
+	1098 = {
+		if = {
+			limit = { is_owned_and_controlled_by = CZE }
+			set_building_level = {
+				type = bunker
+				level = 3
+				province = { all_provinces = yes level < 3 }
+			}
+		}
+	}
+	1099 = {
+		if = {
+			limit = { is_owned_and_controlled_by = CZE }
+			set_building_level = {
+				type = bunker
+				level = 3
+				province = { all_provinces = yes level < 3 }
+			}
+		}
+	}
+	1100 = {
+		if = {
+			limit = { is_owned_and_controlled_by = CZE }
+			set_building_level = {
+				type = bunker
+				level = 3
+				province = { all_provinces = yes level < 3 }
+			}
+		}
+	}
+	1101 = {
+		if = {
+			limit = { is_owned_and_controlled_by = CZE }
+			set_building_level = {
+				type = bunker
+				level = 3
+				province = { all_provinces = yes level < 3 }
+			}
+		}
+	}
+}
+
+PRA_set_split_sudetenland_bunker_level_5 = {
+	1098 = {
+		if = {
+			limit = { is_owned_and_controlled_by = CZE }
+			set_building_level = { type = bunker level = 5 province = { all_provinces = yes level < 5 } }
+		}
+	}
+	1099 = {
+		if = {
+			limit = { is_owned_and_controlled_by = CZE }
+			set_building_level = { type = bunker level = 5 province = { all_provinces = yes level < 5 } }
+		}
+	}
+	1100 = {
+		if = {
+			limit = { is_owned_and_controlled_by = CZE }
+			set_building_level = { type = bunker level = 5 province = { all_provinces = yes level < 5 } }
+		}
+	}
+	1101 = {
+		if = {
+			limit = { is_owned_and_controlled_by = CZE }
+			set_building_level = { type = bunker level = 5 province = { all_provinces = yes level < 5 } }
+		}
+	}
+}
+
+PRA_set_split_sudetenland_bunker_level_7 = {
+	1098 = {
+		if = {
+			limit = { is_owned_and_controlled_by = CZE }
+			set_building_level = { type = bunker level = 7 province = { all_provinces = yes level < 7 } }
+		}
+	}
+	1099 = {
+		if = {
+			limit = { is_owned_and_controlled_by = CZE }
+			set_building_level = { type = bunker level = 7 province = { all_provinces = yes level < 7 } }
+		}
+	}
+	1100 = {
+		if = {
+			limit = { is_owned_and_controlled_by = CZE }
+			set_building_level = { type = bunker level = 7 province = { all_provinces = yes level < 7 } }
+		}
+	}
+	1101 = {
+		if = {
+			limit = { is_owned_and_controlled_by = CZE }
+			set_building_level = { type = bunker level = 7 province = { all_provinces = yes level < 7 } }
+		}
+	}
+}

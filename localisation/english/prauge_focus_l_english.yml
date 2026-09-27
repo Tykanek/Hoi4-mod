@@ -1,6 +1,17 @@
 ﻿l_english:
 
  # ==============================================================
+ pra_czech_supervisors_return: "Czech Supervisors Return"
+ pra_czech_supervisors_return_desc: "Prague will accept deeper oversight from the Czechoslovak government. Municipal decisions remain local in form, but the republic's supervisors will now have the final word."
+ pra_integrate_municipal_administration: "Integrate the Municipal Administration"
+ pra_integrate_municipal_administration_desc: "Prague's ministries, police and administration will be folded into Czechoslovak structures. The city will retain its name, but not its separate machinery of state."
+ pra_return_prague_to_republic: "Return Prague to the Republic"
+ pra_return_prague_to_republic_desc: "The last institutions of the Prague arrangement will be surrendered to Czechoslovakia. Reunification will end Prague's separate existence."
+ pra_return_prague_to_republic_tt: "Completing this focus will reintegrate Prague into Czechoslovakia. CZE will annex PRA."
+
+ pra_directorate_needs_experts: "The Directorate Needs Experts"
+ pra_directorate_needs_experts_desc: "A city-state aspiring to lead the Czech nation cannot rely indefinitely on improvised municipal engineers. The Directorate will recruit researchers, statisticians and technical specialists for the state."
+
  # SOVEREIGNTY
  # ==============================================================
  prague_declare_independence: "Proclaim Prague's Sovereignty"
@@ -106,11 +117,6 @@
  pra_legionary_officer_school_desc: "The veterans who survived Siberia and the long return home understand movement, exhaustion and the cost of hesitation. Their experience will be formalized in a Prague school for officers who can command both disciplined units and desperate street defenders."
  pra_metropolitan_assault_groups: "Metropolitan Assault Groups"
  pra_metropolitan_assault_groups_desc: "A defensive city still needs men who can seize a crossroads, clear a factory and reopen a railway line. Carefully selected troops will form mobile assault groups built around Prague's limited manpower and dense urban terrain."
- pra_fortress_army: "The Fortress Army"
- pra_fortress_army_desc: "Some officers believe Prague's strength lies in making every street costly to enter. The fortress army will anchor itself in concrete, barricades and mutually supporting districts, accepting slower movement and weaker field operations in exchange for a capital that is exceptionally hard to dislodge."
- pra_field_army: "A Field Army for Prague"
- pra_field_army_desc: "The Vltava cannot protect every approach, and an army that never leaves the capital will eventually be surrounded. Prague will train a mobile field force with stronger planning and offensive reach, accepting weaker static defense and entrenchment while it operates beyond the ring roads."
-
  # EXPANDED AIR FORCE
  pra_prague_air_warning_service: "The Prague Air Warning Service"
  pra_prague_air_warning_service_desc: "A small air force cannot defend the capital if it is surprised on the ground. Observers on church towers, factory roofs and the hills around Prague will build an early-warning net tied to the city's command posts."
@@ -138,9 +144,6 @@
  pra_underground_production_halls_desc: "The logic is simple enough for a Directorate decree: if enemy aircraft can reach a factory, the factory is in the wrong place. Cellars, tunnels and concealed halls will take over the most important work beneath streets that still appear civilian. Prague's production lines will continue below the bombing."
  pra_prague_technical_institute: "Someone Find an Engineer"
  pra_prague_technical_institute_desc: "Every improvised repair eventually reaches the point where someone asks why it was designed that way. Students, professors and workshop foremen will be placed at the disposal of the war economy, where they will be expected to produce answers before the next machine breaks. The Directorate has requisitioned the institute's patience along with its laboratories."
- pra_total_metropolitan_mobilization: "Everything in Prague Is Now Strategic"
- pra_total_metropolitan_mobilization_desc: "Every warehouse, garage, tram line, basement, engineer and spare piece of steel will be counted as part of the war economy. Municipal workers will receive military priorities, workshops will receive impossible schedules and the Directorate will requisition anything that remains unclaimed. Prague has no strategic depth, so it has decided that depth is unnecessary, even if civilian consumption and public stability suffer for it."
-
  # MOHAMMEDIS
  pra_morning_after_coup: "The Morning After the Coup"
  pra_morning_after_coup_desc: "The flags have changed, but the ministries, ration offices and police stations still carry the habits of the old republic. Mohammedis has taken Prague in an afternoon; now he must persuade its clerks, workers and hungry families that the new order can last until morning. A coup is a moment. A Directorate is paperwork with armed guards."

@@ -1,6 +1,6 @@
 spritetypes = {
 	spriteType = {
-		name = "GFX_portraint_PRA"
-		#texturefile = "gfx/interface/leader_portraits.dds"
+		name = "GFX_portrait_PRA_peter_mohammedis"
+		texturefile = "gfx/leaders/PRA/PRA_peter_mohammedis.dds"
 	}
 }

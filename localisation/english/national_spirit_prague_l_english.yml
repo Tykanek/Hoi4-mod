@@ -17,6 +17,16 @@
  pra_capital_defence_doctrine_2_desc: "Standardized rifles, ammunition and maintenance let Prague's infantry fight harder while consuming less of the supply that the city can least afford to waste."
  pra_army_of_the_capital: "Army of Prague"
  pra_army_of_the_capital_desc: "The Prague War School unites infantry, artillery and reserve columns around a single purpose: no ground surrendered inside the capital."
+ pra_army_of_the_capital_barricades: "Army of Prague: Doctrine of the Barricades"
+ pra_army_of_the_capital_barricades_desc: "Prague's army has turned prepared streets, bridges and courtyards into a coherent defensive doctrine."
+ pra_army_of_the_capital_officer_school: "Army of Prague: Legionary Officer School"
+ pra_army_of_the_capital_officer_school_desc: "Legionary veterans bring a professional staff culture and cheaper land-doctrine development to the capital's army."
+ pra_army_of_the_capital_assault_groups: "Army of Prague: Metropolitan Assault Groups"
+ pra_army_of_the_capital_assault_groups_desc: "The capital's defensive army now includes trained assault groups capable of breaking through urban strongpoints."
+ pra_fortress_army: "Fortress Army"
+ pra_fortress_army_desc: "Prague's army is built to hold the capital and its approaches through prepared positions, disciplined reserves and deep entrenchment."
+ pra_field_army: "Field Army"
+ pra_field_army_desc: "Prague's army has learned to carry its urban discipline beyond the city with faster planning and stronger infantry formations."
 
  # ========================================================
  # AIR FORCE BRANCH SPIRITS
@@ -37,6 +47,8 @@
  pra_modernized_workshop_network_desc: "Standardized tools and centralized schedules allow the city's workshops to build efficiency while reducing the damage caused by missing resources."
  pra_arsenal_of_prague_spirit: "Metropolitan War Economy"
  pra_arsenal_of_prague_spirit_desc: "The capital's industrial network now operates with ruthless urban efficiency: every kilogram of steel, every machine and every hour must matter."
+ pra_total_metropolitan_mobilization: "Metropolitan War Economy"
+ pra_total_metropolitan_mobilization_desc: "The entire city has been mobilized: workshops, engineers and transport offices now serve a single metropolitan war economy."
 
  pra_directorate_consolidation: "The Directorate Consolidated"
  pra_directorate_consolidation_desc: "The old parties are dissolved, the ministries are brought to heel and Prague's emergency government begins to operate as a single command."

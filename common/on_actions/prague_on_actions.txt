@@ -6,6 +6,66 @@ on_actions = {
                     target = PRA
                     end_wars = no
                 }
+
+                # The vanilla CZE history file initializes these modifiers by
+                # filtering for state 69. Apply the same historical modifiers
+                # to the four states created from that territory.
+                every_owned_state = {
+                    limit = {
+                        OR = {
+                            state = 1098
+                            state = 1099
+                            state = 1100
+                            state = 1101
+                        }
+                    }
+                    if = {
+                        limit = { has_dlc = "Gotterdammerung" }
+                        add_dynamic_modifier = {
+                            modifier = CZE_first_sudetenland_fortification_program_GD
+                        }
+                    }
+                    if = {
+                        limit = { NOT = { has_dlc = "Gotterdammerung" } }
+                        add_dynamic_modifier = {
+                            modifier = CZE_first_sudetenland_fortification_program
+                        }
+                    }
+                    add_dynamic_modifier = {
+                        modifier = CZE_sudetenland_german_state_modifier
+                        scope = ROOT
+                    }
+                }
+
+                # State history already supplies the dated German cores, but
+                # this also covers saves/events that core state 69 earlier.
+                if = {
+                    limit = { 69 = { is_core_of = GER } }
+                    1098 = { add_core_of = GER }
+                    1099 = { add_core_of = GER }
+                    1100 = { add_core_of = GER }
+                    1101 = { add_core_of = GER }
+                }
+            }
+        }
+    }
+
+    # Vanilla executes the Sudetenland transfer through state 69. Mirror that
+    # ownership transfer only for CZE-owned split states, so PRA acquisitions
+    # remain untouched in alternate-history games.
+    on_state_control_changed = {
+        effect = {
+            PRA_transfer_cze_owned_sudetenland_split_states = yes
+        }
+    }
+
+    # Focuses and decisions target the original state-69 scope. The helper is
+    # idempotent and restores the same fortification stage on the split
+    # provinces without multiplying the vanilla fortification program.
+    on_daily = {
+        effect = {
+            CZE = {
+                PRA_sync_split_sudetenland_fortifications = yes
             }
         }
     }
