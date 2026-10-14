@@ -2,6 +2,9 @@ capital = 1082 #Prague
 oob = "PRA_1936"
 
 recruit_character = PRA_peter_mohammedis
+recruit_character = PRA_generic_communist_revolutionary
+recruit_character = PRA_generic_democratic_reformer
+recruit_character = PRA_generic_head_of_intelligence
 recruit_character = PRA_antonin_havelka
 recruit_character = PRA_ema_vrbova
 recruit_character = PRA_frantisek_novak
@@ -15,7 +18,7 @@ set_war_support = 0.05
 create_country_leader = {
 	name = "Grznar"
 	desc = ""
-	picture = "GFX_idea_generic_political_advisor_europe_2"
+	picture = "GFX_portrait_PRA_grznar"
 	ideology = liberalism
 	traits = {
 		#

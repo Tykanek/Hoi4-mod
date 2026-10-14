@@ -1,0 +1,26 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_PRA_adam_bartipan"
+		texturefile = "gfx/interface/ideas/idea_PRA_adam_bartipan.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PRA_daniel_weigert"
+		texturefile = "gfx/interface/ideas/idea_PRA_daniel_weigert.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PRA_katerina_konecna"
+		texturefile = "gfx/interface/ideas/idea_PRA_katerina_konecna.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PRA_petr_fiala"
+		texturefile = "gfx/interface/ideas/idea_PRA_petr_fiala.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PRA_vladimir_bartak"
+		texturefile = "gfx/interface/ideas/idea_PRA_vladimir_bartak.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PRA_grznar"
+		texturefile = "gfx/interface/ideas/idea_PRA_grznar.dds"
+	}
+}

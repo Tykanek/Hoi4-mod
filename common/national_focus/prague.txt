@@ -593,6 +593,7 @@ focus_tree = {
 
         completion_reward = {
             promote_character = PRA_peter_mohammedis
+            recruit_character = PRA_grznar_advisor
             set_politics = {
                 ruling_party = fascism
                 elections_allowed = no

@@ -26,10 +26,74 @@ characters = {
         }
     }
 
-    PRA_antonin_havelka = {
-        name = "Antonín Havelka"
+    PRA_generic_communist_revolutionary = {
+        name = PRA_generic_communist_revolutionary
         portraits = {
-            civilian = { large = "GFX_idea_generic_political_advisor_europe_2" }
+            civilian = { small = GFX_idea_PRA_katerina_konecna }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = PRA_generic_communist_revolutionary
+            allowed = { original_tag = PRA }
+            available = {
+                IF = {
+                    limit = { has_dlc = "Man the Guns" }
+                    NOT = { has_autonomy_state = autonomy_supervised_state }
+                }
+            }
+            traits = { communist_revolutionary }
+            ai_will_do = { factor = 1 }
+        }
+    }
+
+    PRA_generic_democratic_reformer = {
+        name = PRA_generic_democratic_reformer
+        portraits = {
+            civilian = { small = GFX_idea_PRA_adam_bartipan }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = PRA_generic_democratic_reformer
+            allowed = { original_tag = PRA }
+            available = {
+                IF = {
+                    limit = { has_dlc = "Man the Guns" }
+                    NOT = { has_autonomy_state = autonomy_supervised_state }
+                }
+            }
+            traits = { democratic_reformer }
+            ai_will_do = { factor = 0 }
+        }
+    }
+
+    PRA_generic_head_of_intelligence = {
+        name = PRA_generic_head_of_intelligence
+        portraits = {
+            civilian = { small = GFX_idea_PRA_vladimir_bartak }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = PRA_generic_head_of_intelligence
+            allowed = {
+                original_tag = PRA
+                has_dlc = "La Resistance"
+            }
+            available = { has_intelligence_agency = yes }
+            traits = { head_of_intelligence }
+            ai_will_do = {
+                factor = 1
+                modifier = {
+                    has_intelligence_agency = no
+                    factor = 0
+                }
+            }
+        }
+    }
+
+    PRA_antonin_havelka = {
+        name = PRA_antonin_havelka
+        portraits = {
+            civilian = { small = GFX_idea_PRA_daniel_weigert }
         }
         advisor = {
             slot = political_advisor
@@ -42,9 +106,9 @@ characters = {
     }
 
     PRA_ema_vrbova = {
-        name = "Ema Vrbová"
+        name = PRA_ema_vrbova
         portraits = {
-            civilian = { large = "GFX_idea_generic_political_advisor_europe_3" }
+            civilian = { small = GFX_idea_generic_political_advisor_europe_3 }
         }
         advisor = {
             slot = political_advisor
@@ -57,9 +121,9 @@ characters = {
     }
 
     PRA_frantisek_novak = {
-        name = "František Novák"
+        name = PRA_frantisek_novak
         portraits = {
-            civilian = { large = "GFX_idea_generic_political_advisor_europe_1" }
+            civilian = { small = GFX_idea_PRA_petr_fiala }
         }
         advisor = {
             slot = political_advisor
@@ -71,10 +135,28 @@ characters = {
         }
     }
 
-    PRA_jaroslav_kral = {
-        name = "Jaroslav Král"
+    PRA_grznar_advisor = {
+        name = PRA_grznar_advisor
         portraits = {
-            army = { large = "GFX_idea_generic_army_europe_3" }
+            civilian = { small = GFX_idea_PRA_grznar }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = PRA_grznar_advisor
+            cost = 100
+            allowed = { original_tag = PRA }
+            available = {
+                has_country_flag = pra_mohammedis_in_power
+            }
+            traits = { pra_director_of_national_vitality }
+            ai_will_do = { factor = 1 }
+        }
+    }
+
+    PRA_jaroslav_kral = {
+        name = PRA_jaroslav_kral
+        portraits = {
+            army = { small = GFX_idea_generic_army_europe_3 }
         }
         advisor = {
             slot = high_command
@@ -90,7 +172,7 @@ characters = {
     PRA_vaclav_sedivy = {
         name = "Václav Šedivý"
         portraits = {
-            army = { large = "GFX_idea_generic_air_europe_2" }
+            army = { small = GFX_idea_generic_air_europe_2 }
         }
         advisor = {
             slot = air_chief
@@ -103,9 +185,12 @@ characters = {
     }
 
     PRA_alois_simek = {
-        name = "Alois Šimek"
+        name = PRA_alois_simek
         portraits = {
-            army = { large = "GFX_idea_generic_army_europe_1" }
+            army = {
+                large = "GFX_idea_generic_army_europe_1"
+                small = GFX_idea_generic_army_europe_1
+            }
         }
         advisor = {
             slot = high_command

@@ -3,4 +3,8 @@ spritetypes = {
 		name = "GFX_portrait_PRA_peter_mohammedis"
 		texturefile = "gfx/leaders/PRA/PRA_peter_mohammedis.dds"
 	}
+	spriteType = {
+		name = "GFX_portrait_PRA_grznar"
+		texturefile = "gfx/leaders/PRA/PRA_grznar.dds"
+	}
 }
