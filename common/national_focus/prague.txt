@@ -586,6 +586,7 @@ focus_tree = {
         cost = 10
         available = {
             has_government = democratic
+            fascism > 0.40
             has_country_flag = pra_municipal_police_support_mohammedis
             has_country_flag = pra_legionaries_rallied
             has_country_flag = pra_vo_supply_network_unlocked
@@ -593,7 +594,6 @@ focus_tree = {
 
         completion_reward = {
             promote_character = PRA_peter_mohammedis
-            recruit_character = PRA_grznar_advisor
             set_politics = {
                 ruling_party = fascism
                 elections_allowed = no

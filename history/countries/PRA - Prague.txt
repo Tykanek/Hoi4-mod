@@ -8,6 +8,7 @@ recruit_character = PRA_generic_head_of_intelligence
 recruit_character = PRA_antonin_havelka
 recruit_character = PRA_ema_vrbova
 recruit_character = PRA_frantisek_novak
+recruit_character = PRA_grznar_advisor
 recruit_character = PRA_jaroslav_kral
 recruit_character = PRA_vaclav_sedivy
 recruit_character = PRA_alois_simek

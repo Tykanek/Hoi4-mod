@@ -145,6 +145,9 @@ characters = {
             idea_token = PRA_grznar_advisor
             cost = 100
             allowed = { original_tag = PRA }
+            visible = {
+                has_country_flag = pra_mohammedis_in_power
+            }
             available = {
                 has_country_flag = pra_mohammedis_in_power
             }
