@@ -7,4 +7,8 @@ spritetypes = {
 		name = "GFX_portrait_PRA_grznar"
 		texturefile = "gfx/leaders/PRA/PRA_grznar.dds"
 	}
+	spriteType = {
+		name = "GFX_portrait_PRA_vladimir_bartak"
+		texturefile = "gfx/leaders/PRA/PRA_vladimir_bartak.dds"
+	}
 }

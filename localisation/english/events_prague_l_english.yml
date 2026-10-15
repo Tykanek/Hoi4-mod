@@ -80,3 +80,16 @@
  pra_cze_rejected_prague_ultimatum: "Czechoslovakia Rejected Prague's Demands"
  pra_cze_conceded_prague_demand: "Czechoslovakia Conceded a Prague Demand"
  pra_cze_rejected_prague_demand: "Czechoslovakia Rejected a Prague Demand"
+
+ pra_bartak_news.1.t: "Prague Considers Field Command for Vladimír Barták"
+ pra_bartak_news.1.d: "Vladimír Barták, already known inside Prague's new Strašnice regime for his exceptional military ability, weapons proficiency and field experience, has attracted the attention of the Directorate. Reports describe him as one of the most capable soldiers available to Prague, and Peter Mohammedis's government is now considering whether his talents would be better used in direct command of troops."
+ pra_bartak_news.1.a: "His battlefield record speaks for itself."
+
+ pra_bartak.1.t: "The Generalship of Vladimír Barták"
+ pra_bartak.1.d: "Barták's military reputation is unquestioned, but placing him in direct command would move one of the Directorate's most valuable figures into frontline military service. Peter Mohammedis and the command staff must now decide whether to entrust him with an army."
+ pra_bartak.1.a: "Promote him to General."
+ pra_bartak.1.b: "No, we have better generals."
+
+ pra_bartak_news.2.t: "Vladimír Barták Appointed General of Prague"
+ pra_bartak_news.2.d: "Peter Mohammedis has formally promoted Vladimír Barták to General. During a public military ceremony in Prague, Mohammedis personally decorated Barták and confirmed his new field command. The promotion is presented by the Strašnice regime as proof that military competence and loyalty will define the new Prague army."
+ pra_bartak_news.2.a: "Prague has gained a formidable commander."

@@ -23,4 +23,12 @@ spriteTypes = {
 		name = "GFX_idea_PRA_grznar"
 		texturefile = "gfx/interface/ideas/idea_PRA_grznar.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_PRA_jaroslav_kral"
+		texturefile = "gfx/interface/ideas/idea_PRA_jaroslav_kral.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PRA_alois_simek"
+		texturefile = "gfx/interface/ideas/idea_PRA_alois_simek.dds"
+	}
 }

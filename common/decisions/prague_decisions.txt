@@ -190,3 +190,27 @@ pra_bohemian_protectorate = {
         }
     }
 }
+
+pra_strasnice_military_command = {
+    pra_promote_vladimir_bartak = {
+        icon = GFX_decision_generic_army
+        cost = 50
+        fire_only_once = yes
+
+        visible = {
+            has_government = fascism
+            has_character = PRA_generic_head_of_intelligence
+            NOT = { has_country_flag = pra_bartak_decision_taken }
+        }
+
+        available = {
+            has_government = fascism
+        }
+
+        complete_effect = {
+            set_country_flag = pra_bartak_decision_taken
+            news_event = { id = pra_bartak_news.1 }
+            country_event = { id = pra_bartak.1 }
+        }
+    }
+}

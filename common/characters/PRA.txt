@@ -69,7 +69,13 @@ characters = {
     PRA_generic_head_of_intelligence = {
         name = PRA_generic_head_of_intelligence
         portraits = {
-            civilian = { small = GFX_idea_PRA_vladimir_bartak }
+            civilian = {
+                small = GFX_idea_PRA_vladimir_bartak
+            }
+            army = {
+                large = GFX_portrait_PRA_vladimir_bartak
+                small = GFX_idea_PRA_vladimir_bartak
+            }
         }
         advisor = {
             slot = political_advisor
@@ -159,7 +165,7 @@ characters = {
     PRA_jaroslav_kral = {
         name = PRA_jaroslav_kral
         portraits = {
-            army = { small = GFX_idea_generic_army_europe_3 }
+            army = { small = GFX_idea_PRA_jaroslav_kral }
         }
         advisor = {
             slot = high_command
@@ -192,7 +198,7 @@ characters = {
         portraits = {
             army = {
                 large = "GFX_idea_generic_army_europe_1"
-                small = GFX_idea_generic_army_europe_1
+                small = GFX_idea_PRA_alois_simek
             }
         }
         advisor = {

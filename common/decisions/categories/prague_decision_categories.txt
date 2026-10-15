@@ -42,3 +42,11 @@ pra_bohemian_protectorate = {
     visible = { has_country_flag = pra_ultimatum_sent }
     visible_when_empty = no
 }
+
+pra_strasnice_military_command = {
+    allowed = { original_tag = PRA }
+    visible = {
+        has_government = fascism
+    }
+    visible_when_empty = no
+}

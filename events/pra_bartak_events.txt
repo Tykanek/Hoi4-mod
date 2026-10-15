@@ -1,0 +1,79 @@
+add_namespace = pra_bartak
+add_namespace = pra_bartak_news
+
+# ================================================================
+# FIRST GLOBAL EVENT: BARTÁK CONSIDERED FOR COMMAND
+# ================================================================
+
+news_event = {
+	id = pra_bartak_news.1
+	title = pra_bartak_news.1.t
+	desc = pra_bartak_news.1.d
+	picture = GFX_news_event_PRA_bartak_firing
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = pra_bartak_news.1.a
+	}
+}
+
+# ================================================================
+# PRA CHOICE EVENT: THE GENERALSHIP OF VLADIMÍR BARTÁK (TEXT ONLY)
+# ================================================================
+
+country_event = {
+	id = pra_bartak.1
+	title = pra_bartak.1.t
+	desc = pra_bartak.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = pra_bartak.1.a
+		ai_chance = { base = 80 }
+
+		set_country_flag = pra_bartak_promoted_to_general
+		PRA_generic_head_of_intelligence = {
+			add_corps_commander_role = {
+				traits = { commando trickster infantry_officer }
+				skill = 4
+				attack_skill = 5
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 3
+				legacy_id = -1
+			}
+		}
+		news_event = { id = pra_bartak_news.2 }
+	}
+
+	option = {
+		name = pra_bartak.1.b
+		ai_chance = { base = 20 }
+
+		add_war_support = 0.15
+		add_stability = 0.05
+		add_political_power = -25
+		army_experience = 30
+	}
+}
+
+# ================================================================
+# SECOND GLOBAL EVENT: BARTÁK APPOINTED GENERAL
+# ================================================================
+
+news_event = {
+	id = pra_bartak_news.2
+	title = pra_bartak_news.2.t
+	desc = pra_bartak_news.2.d
+	picture = GFX_news_event_PRA_bartak_ceremony
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = pra_bartak_news.2.a
+	}
+}
