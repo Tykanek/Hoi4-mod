@@ -1,4 +1,4 @@
-﻿l_english:
+﻿_english:
 
  pra_vo_supply_operations: "Strašnice Supply Operations"
  pra_vo_supply_operations_desc: "With the civilian administration increasingly incapable of maintaining regular deliveries, Strašnice has begun establishing its own network of warehouses, ration stations and transport detachments."
@@ -88,3 +88,16 @@
  pra_integrate_state_1100_desc: "Consolidate administrative control over the critical northern transport corridor, securing it as an integral core of Prague."
  pra_integrate_state_1101: "Integrate Ústí District"
  pra_integrate_state_1101_desc: "Incorporate the industrial plants and river navigation authorities of Ústí under direct state supervision."
+
+ pra_benesov_investigation:0 "The Benešov Investigation"
+ pra_benesov_investigation_desc:0 "Following the formal determination that Benešov bears responsibility for Prague's present hardships, the Directorate has established a permanent inter-ministerial commission to conduct systematic official inquiries into the full extent of Benešov's interference in domestic, meteorological, and international affairs."
+ pra_investigate_benesov_economic_sabotage:0 "Investigate Economic Sabotage"
+ pra_investigate_benesov_economic_sabotage_desc:0 "Auditors from the Directorate's economic subcommission will examine price fluctuations, supply bottlenecks, and municipal ledger discrepancies, all of which point unmistakably toward deliberate commercial interference originating in Benešov."
+ pra_investigate_benesov_railway_delays:0 "Investigate the Railway Delays"
+ pra_investigate_benesov_railway_delays_desc:0 "Transport inspectors will review every late locomotive, misplaced freight manifest, and unscheduled signal stop across the Prague rail network to document how Benešov continues to disrupt our timetables."
+ pra_investigate_benesov_weather:0 "Investigate the Weather Connection"
+ pra_investigate_benesov_weather_desc:0 "Meteorological clerks and agricultural statisticians have been instructed to correlate unseasonal rain, sudden frosts, persistent Vltava fog, and irregular barometric readings with administrative activity in Benešov."
+ pra_investigate_benesov_foreign_wars:0 "Investigate Benešov's Role in Foreign Wars"
+ pra_investigate_benesov_foreign_wars_desc:0 "The inquiry will expand its terms of reference beyond Bohemia to evaluate diplomatic dispatches, foreign press clippings, and armed conflicts in distant continents, establishing the precise degree of Benešov's complicity in global instability."
+ pra_compile_benesov_dossier:0 "Compile the Benešov Dossier"
+ pra_compile_benesov_dossier_desc:0 "Every subcommittee report, statistical appendix, timetable discrepancy, barometric chart, and unexplained coincidence will be bound into a single, definitive state archive documenting the totality of Benešov's offenses against Prague."

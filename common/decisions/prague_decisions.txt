@@ -864,3 +864,146 @@ pra_integration_of_czech_lands = {
     }
 
 }
+
+
+pra_benesov_investigation = {
+    pra_investigate_benesov_economic_sabotage = {
+        icon = GFX_decision_generic_industry
+        cost = 20
+        fire_only_once = yes
+
+        visible = {
+            has_country_flag = pra_benesov_investigation_started
+            NOT = { has_country_flag = pra_benesov_economic_sabotage_investigated }
+        }
+
+        available = {
+            has_country_flag = pra_benesov_investigation_started
+            NOT = { has_country_flag = pra_benesov_economic_sabotage_investigated }
+        }
+
+        complete_effect = {
+            set_country_flag = pra_benesov_economic_sabotage_investigated
+            add_opinion_modifier = {
+                target = BEN
+                modifier = PRA_benesov_economic_sabotage
+            }
+        }
+
+        ai_will_do = {
+            factor = 50
+        }
+    }
+
+    pra_investigate_benesov_railway_delays = {
+        icon = GFX_decision_generic_construction
+        cost = 25
+        fire_only_once = yes
+
+        visible = {
+            has_country_flag = pra_benesov_investigation_started
+            NOT = { has_country_flag = pra_benesov_railway_delays_investigated }
+        }
+
+        available = {
+            has_country_flag = pra_benesov_investigation_started
+            NOT = { has_country_flag = pra_benesov_railway_delays_investigated }
+        }
+
+        complete_effect = {
+            set_country_flag = pra_benesov_railway_delays_investigated
+            add_opinion_modifier = {
+                target = BEN
+                modifier = PRA_benesov_railway_delays
+            }
+        }
+
+        ai_will_do = {
+            factor = 50
+        }
+    }
+
+    pra_investigate_benesov_weather = {
+        icon = GFX_decision_generic_research
+        cost = 30
+        fire_only_once = yes
+
+        visible = {
+            has_country_flag = pra_benesov_investigation_started
+            NOT = { has_country_flag = pra_benesov_weather_investigated }
+        }
+
+        available = {
+            has_country_flag = pra_benesov_investigation_started
+            NOT = { has_country_flag = pra_benesov_weather_investigated }
+        }
+
+        complete_effect = {
+            set_country_flag = pra_benesov_weather_investigated
+            add_opinion_modifier = {
+                target = BEN
+                modifier = PRA_benesov_weather_connection
+            }
+        }
+
+        ai_will_do = {
+            factor = 50
+        }
+    }
+
+    pra_investigate_benesov_foreign_wars = {
+        icon = GFX_decision_generic_military
+        cost = 35
+        fire_only_once = yes
+
+        visible = {
+            has_country_flag = pra_benesov_investigation_started
+            NOT = { has_country_flag = pra_benesov_foreign_wars_investigated }
+        }
+
+        available = {
+            has_country_flag = pra_benesov_investigation_started
+            NOT = { has_country_flag = pra_benesov_foreign_wars_investigated }
+        }
+
+        complete_effect = {
+            set_country_flag = pra_benesov_foreign_wars_investigated
+            add_opinion_modifier = {
+                target = BEN
+                modifier = PRA_benesov_foreign_wars
+            }
+        }
+
+        ai_will_do = {
+            factor = 50
+        }
+    }
+
+    pra_compile_benesov_dossier = {
+        icon = GFX_decision_generic_intelligence_operation
+        cost = 40
+        fire_only_once = yes
+
+        visible = {
+            has_country_flag = pra_benesov_investigation_started
+            NOT = { has_country_flag = pra_benesov_dossier_compiled }
+        }
+
+        available = {
+            has_country_flag = pra_benesov_investigation_started
+            NOT = { has_country_flag = pra_benesov_dossier_compiled }
+        }
+
+        complete_effect = {
+            set_country_flag = pra_benesov_dossier_compiled
+            add_opinion_modifier = {
+                target = BEN
+                modifier = PRA_benesov_dossier
+            }
+        }
+
+        ai_will_do = {
+            factor = 50
+        }
+    }
+}

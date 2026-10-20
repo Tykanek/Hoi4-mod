@@ -51,7 +51,7 @@ focus_tree = {
 
     focus = {
         id = pra_standardize_army_equipment
-        icon = GFX_goal_generic_small_arms
+        icon = GFX_focus_PRA_standardize_army_equipment
         relative_position_id = pra_reorganize_prague_garrison
         x = 0
         y = 1
@@ -75,7 +75,7 @@ focus_tree = {
 
     focus = {
         id = pra_artillery_for_the_capital
-        icon = GFX_goal_generic_army_artillery
+        icon = GFX_focus_PRA_artillery_for_the_capital
         relative_position_id = pra_standardize_army_equipment
         x = -1
         y = 1
@@ -239,7 +239,7 @@ focus_tree = {
 
     focus = {
         id = pra_air_defence_of_prague
-        icon = GFX_goal_generic_defence
+        icon = GFX_focus_PRA_air_defence_of_prague
         relative_position_id = pra_expand_letnany_aviation_complex
         x = 0
         y = 2
@@ -269,7 +269,7 @@ focus_tree = {
 
     focus = {
         id = pra_mobilize_prague_industry
-        icon = GFX_focus_generic_industry_1
+        icon = GFX_focus_PRA_mobilize_prague_industry
         x = 15
         y = 0
         cost = 10
@@ -299,7 +299,7 @@ focus_tree = {
 
     focus = {
         id = pra_modernize_workshops
-        icon = GFX_focus_generic_industry_2
+        icon = GFX_focus_PRA_modernize_workshops
         relative_position_id = pra_mobilize_prague_industry
         x = 0
         y = 1
@@ -395,7 +395,7 @@ focus_tree = {
 
     focus = {
         id = prague_declare_independence
-        icon = GFX_goal_generic_political_pressure
+        icon = GFX_focus_PRA_declare_independence
         x = 22
         y = 0
         cost = 10
@@ -425,7 +425,7 @@ focus_tree = {
 
     focus = {
         id = prague_remain_czech_subject
-        icon = GFX_goal_generic_political_pressure
+        icon = GFX_focus_PRA_remain_czech_subject
         x = 40
         y = 0
         cost = 10
@@ -450,7 +450,7 @@ focus_tree = {
 
     focus = {
         id = pra_czech_supervisors_return
-        icon = GFX_goal_generic_political_pressure
+        icon = GFX_focus_PRA_czech_supervisors_return
         prerequisite = { focus = prague_remain_czech_subject }
         relative_position_id = prague_remain_czech_subject
         x = 0
@@ -471,7 +471,7 @@ focus_tree = {
 
     focus = {
         id = pra_integrate_municipal_administration
-        icon = GFX_goal_generic_political_pressure
+        icon = GFX_focus_PRA_integrate_municipal_administration
         prerequisite = { focus = pra_czech_supervisors_return }
         relative_position_id = pra_czech_supervisors_return
         x = 0
@@ -492,7 +492,7 @@ focus_tree = {
 
     focus = {
         id = pra_return_prague_to_republic
-        icon = GFX_goal_generic_forceful_treaty
+        icon = GFX_focus_PRA_return_prague_to_republic
         prerequisite = { focus = pra_integrate_municipal_administration }
         relative_position_id = pra_integrate_municipal_administration
         x = 0
@@ -516,7 +516,7 @@ focus_tree = {
 
     focus = {
         id = pra_mobilize_vltava_defense_front
-        icon = GFX_goal_generic_construct_military
+        icon = GFX_focus_PRA_mobilize_vltava_defense_front
         prerequisite = { focus = prague_declare_independence }
         relative_position_id = prague_declare_independence
         x = 0
@@ -557,7 +557,7 @@ focus_tree = {
 
     focus = {
         id = pra_bread_under_black_banner
-        icon = GFX_goal_generic_propaganda
+        icon = GFX_focus_PRA_bread_under_black_banner
         prerequisite = { focus = pra_mobilize_vltava_defense_front }
         relative_position_id = pra_mobilize_vltava_defense_front
         x = -2
@@ -585,7 +585,7 @@ focus_tree = {
 
     focus = {
         id = pra_win_over_municipal_police
-        icon = GFX_goal_generic_political_pressure
+        icon = GFX_focus_PRA_win_over_municipal_police
         prerequisite = { focus = pra_mobilize_vltava_defense_front }
         relative_position_id = pra_mobilize_vltava_defense_front
         x = 0
@@ -603,7 +603,7 @@ focus_tree = {
 
     focus = {
         id = pra_legionaries_answer_call
-        icon = GFX_goal_generic_more_territorial_claims
+        icon = GFX_focus_PRA_legionaries_answer_call
         prerequisite = { focus = pra_mobilize_vltava_defense_front }
         relative_position_id = pra_mobilize_vltava_defense_front
         x = 2
@@ -630,7 +630,7 @@ focus_tree = {
 
     focus = {
     id = pra_strange_interlude
-    icon = GFX_goal_generic_political_pressure
+    icon = GFX_focus_PRA_strange_interlude
 
     x = 31
     y = 2
@@ -665,13 +665,38 @@ focus_tree = {
     }
 }
 
+    focus = {
+        id = pra_investigate_benesov_hatred
+        icon = GFX_focus_PRA_investigate_benesov_hatred
+        prerequisite = {
+            focus = pra_strange_interlude
+        }
+        relative_position_id = pra_strange_interlude
+        x = 0
+        y = 1
+        cost = 10
+
+        available = {
+            has_government = fascism
+            has_country_leader = {
+                character = PRA_peter_mohammedis
+                ruling_only = yes
+            }
+        }
+
+        completion_reward = {
+            set_country_flag = pra_benesov_investigation_started
+            unlock_decision_category_tooltip = pra_benesov_investigation
+        }
+    }
+
     # ============================================================
     # THE COUP - ALL THREE PREPARATIONS ARE REQUIRED
     # ============================================================
 
     focus = {
         id = pra_mohammedis_overthrows_government
-        icon = GFX_goal_generic_forceful_treaty
+        icon = GFX_focus_PRA_mohammedis_overthrows_government
         prerequisite = { focus = pra_bread_under_black_banner }
         prerequisite = { focus = pra_win_over_municipal_police }
         prerequisite = { focus = pra_legionaries_answer_call }
@@ -753,7 +778,7 @@ focus_tree = {
 
     focus = {
         id = pra_commandeer_workshops
-        icon = GFX_goal_generic_construct_mil_factory
+        icon = GFX_focus_PRA_commandeer_workshops
         prerequisite = { focus = pra_mohammedis_overthrows_government }
         relative_position_id = pra_mohammedis_overthrows_government
         x = 0
@@ -887,7 +912,7 @@ focus_tree = {
 
     focus = {
         id = pra_metropolitan_assault_groups
-        icon = GFX_goal_generic_special_forces
+        icon = GFX_focus_PRA_metropolitan_assault_groups
         prerequisite = { focus = pra_every_bridge_a_fortress }
         prerequisite = { focus = pra_legionary_officer_school }
         relative_position_id = pra_barricade_doctrine
@@ -953,7 +978,7 @@ focus_tree = {
 
     focus = {
         id = pra_prague_air_warning_service
-        icon = GFX_goal_generic_radar
+        icon = GFX_focus_PRA_prague_air_warning_service
         prerequisite = { focus = pra_air_defence_of_prague }
         relative_position_id = pra_air_defence_of_prague
         x = -1
@@ -1226,7 +1251,7 @@ focus_tree = {
 
     focus = {
         id = pra_morning_after_coup
-        icon = GFX_goal_generic_political_pressure
+        icon = GFX_focus_PRA_morning_after_coup
         prerequisite = { focus = pra_commandeer_workshops }
         relative_position_id = pra_commandeer_workshops
         x = 0
@@ -1244,7 +1269,7 @@ focus_tree = {
 
     focus = {
         id = pra_dissolve_old_parties
-        icon = GFX_goal_generic_forceful_treaty
+        icon = GFX_focus_PRA_dissolve_old_parties
         prerequisite = { focus = pra_morning_after_coup }
         relative_position_id = pra_morning_after_coup
         x = -2
@@ -1270,7 +1295,7 @@ focus_tree = {
 
     focus = {
         id = pra_directorate_decrees
-        icon = GFX_goal_generic_political_pressure
+        icon = GFX_focus_PRA_directorate_decrees
         prerequisite = { focus = pra_morning_after_coup }
         relative_position_id = pra_morning_after_coup
         x = 0
@@ -1285,7 +1310,7 @@ focus_tree = {
 
     focus = {
         id = pra_purge_municipal_bureaucracy
-        icon = GFX_goal_generic_political_pressure
+        icon = GFX_focus_PRA_purge_municipal_bureaucracy
         prerequisite = { focus = pra_directorate_decrees }
         relative_position_id = pra_directorate_decrees
         x = -1
@@ -1300,7 +1325,7 @@ focus_tree = {
 
     focus = {
         id = pra_reward_loyal_officers
-        icon = GFX_goal_generic_military_sphere
+        icon = GFX_focus_PRA_reward_loyal_officers
         prerequisite = { focus = pra_directorate_decrees }
         relative_position_id = pra_directorate_decrees
         x = 1
@@ -1315,7 +1340,7 @@ focus_tree = {
 
     focus = {
         id = pra_black_uniform
-        icon = GFX_goal_generic_military_sphere
+        icon = GFX_focus_PRA_black_uniform
         prerequisite = { focus = pra_reward_loyal_officers }
         relative_position_id = pra_reward_loyal_officers
         x = 0
@@ -1330,7 +1355,7 @@ focus_tree = {
 
     focus = {
         id = pra_bread_before_politics
-        icon = GFX_goal_generic_propaganda
+        icon = GFX_focus_PRA_bread_before_politics
         prerequisite = { focus = pra_purge_municipal_bureaucracy }
         relative_position_id = pra_purge_municipal_bureaucracy
         x = 0
@@ -1344,7 +1369,7 @@ focus_tree = {
 
     focus = {
         id = pra_city_of_discipline
-        icon = GFX_goal_generic_military_sphere
+        icon = GFX_focus_PRA_city_of_discipline
         prerequisite = { focus = pra_black_uniform }
         prerequisite = { focus = pra_bread_before_politics }
         relative_position_id = pra_black_uniform
@@ -1360,7 +1385,7 @@ focus_tree = {
 
     focus = {
         id = pra_mohammedis_speaks_from_rudolfinum
-        icon = GFX_goal_generic_propaganda
+        icon = GFX_focus_PRA_mohammedis_speaks_from_rudolfinum
         prerequisite = { focus = pra_city_of_discipline }
         relative_position_id = pra_city_of_discipline
         x = 0
@@ -1377,7 +1402,7 @@ focus_tree = {
 
     focus = {
         id = pra_colonel_becomes_the_state
-        icon = GFX_goal_generic_forceful_treaty
+        icon = GFX_focus_PRA_colonel_becomes_the_state
         prerequisite = { focus = pra_mohammedis_speaks_from_rudolfinum }
         relative_position_id = pra_mohammedis_speaks_from_rudolfinum
         x = 0
@@ -1412,7 +1437,7 @@ focus_tree = {
 
     focus = {
         id = pra_prague_is_not_an_island
-        icon = GFX_goal_generic_more_territorial_claims
+        icon = GFX_focus_PRA_prague_is_not_an_island
         prerequisite = { focus = pra_colonel_becomes_the_state }
         relative_position_id = pra_colonel_becomes_the_state
         x = 1
@@ -1429,7 +1454,7 @@ focus_tree = {
 
     focus = {
         id = pra_protector_of_bohemia
-        icon = GFX_goal_generic_demand_territory
+        icon = GFX_focus_PRA_protector_of_bohemia
         prerequisite = { focus = pra_prague_is_not_an_island }
         relative_position_id = pra_prague_is_not_an_island
         x = 0
@@ -1458,7 +1483,7 @@ focus_tree = {
 
     focus = {
         id = pra_borders_of_1918
-        icon = GFX_goal_generic_more_territorial_claims
+        icon = GFX_focus_PRA_borders_of_1918
         prerequisite = { focus = pra_protector_of_bohemia }
         relative_position_id = pra_protector_of_bohemia
         x = -2
@@ -1487,7 +1512,7 @@ focus_tree = {
 
     focus = {
         id = pra_demand_central_bohemian_belt
-        icon = GFX_goal_generic_demand_territory
+        icon = GFX_focus_PRA_demand_central_bohemian_belt
         prerequisite = { focus = pra_protector_of_bohemia }
         relative_position_id = pra_protector_of_bohemia
         x = 2
@@ -1518,7 +1543,7 @@ focus_tree = {
 
     focus = {
         id = pra_ultimatum_from_prague
-        icon = GFX_goal_generic_forceful_treaty
+        icon = GFX_focus_PRA_ultimatum_from_prague
         prerequisite = { focus = pra_borders_of_1918 }
         prerequisite = { focus = pra_demand_central_bohemian_belt }
         relative_position_id = pra_protector_of_bohemia
@@ -1553,7 +1578,7 @@ focus_tree = {
 
     focus = {
         id = pra_secure_western_bohemia
-        icon = GFX_goal_generic_demand_territory
+        icon = GFX_focus_PRA_secure_western_bohemia
         prerequisite = { focus = pra_ultimatum_from_prague }
         relative_position_id = pra_ultimatum_from_prague
         x = -3
@@ -1588,7 +1613,7 @@ focus_tree = {
 
     focus = {
         id = pra_bring_south_into_fold
-        icon = GFX_goal_generic_demand_territory
+        icon = GFX_focus_PRA_bring_south_into_fold
         prerequisite = { focus = pra_ultimatum_from_prague }
         relative_position_id = pra_ultimatum_from_prague
         x = -1
@@ -1623,7 +1648,7 @@ focus_tree = {
 
     focus = {
         id = pra_secure_eastern_bohemia
-        icon = GFX_goal_generic_more_territorial_claims
+        icon = GFX_focus_PRA_secure_eastern_bohemia
         prerequisite = { focus = pra_ultimatum_from_prague }
         relative_position_id = pra_ultimatum_from_prague
         x = 1
@@ -1662,7 +1687,7 @@ focus_tree = {
 
     focus = {
         id = pra_one_czech_command
-        icon = GFX_focus_generic_military_academy
+        icon = GFX_focus_PRA_one_czech_command
         prerequisite = { focus = pra_ultimatum_from_prague }
         relative_position_id = pra_ultimatum_from_prague
         x = 3
@@ -1676,7 +1701,7 @@ focus_tree = {
 
     focus = {
         id = pra_bohemian_borderlands
-        icon = GFX_goal_generic_more_territorial_claims
+        icon = GFX_focus_PRA_bohemian_borderlands
         prerequisite = { focus = pra_secure_western_bohemia }
         prerequisite = { focus = pra_secure_eastern_bohemia }
         relative_position_id = pra_ultimatum_from_prague
@@ -1718,7 +1743,7 @@ focus_tree = {
 
     focus = {
         id = pra_secure_southern_borderlands
-        icon = GFX_goal_generic_demand_territory
+        icon = GFX_focus_PRA_secure_southern_borderlands
         prerequisite = { focus = pra_bring_south_into_fold }
         relative_position_id = pra_ultimatum_from_prague
         x = 0
@@ -1747,7 +1772,7 @@ focus_tree = {
 
     focus = {
         id = pra_secure_elbe_approaches
-        icon = GFX_goal_generic_construct_military
+        icon = GFX_focus_PRA_secure_elbe_approaches
         prerequisite = { focus = pra_secure_eastern_bohemia }
         relative_position_id = pra_ultimatum_from_prague
         x = 2
@@ -1776,7 +1801,7 @@ focus_tree = {
 
     focus = {
         id = pra_czech_state_reborn
-        icon = GFX_goal_generic_major_war
+        icon = GFX_focus_PRA_czech_state_reborn
         prerequisite = { focus = pra_bohemian_borderlands }
         prerequisite = { focus = pra_secure_southern_borderlands }
         prerequisite = { focus = pra_one_czech_command }
@@ -1819,7 +1844,7 @@ focus_tree = {
 
     focus = {
         id = pra_crush_benesov_threat
-        icon = GFX_goal_generic_major_war
+        icon = GFX_focus_PRA_crush_benesov_threat
         prerequisite = { focus = pra_czech_state_reborn }
         relative_position_id = pra_czech_state_reborn
         x = 0

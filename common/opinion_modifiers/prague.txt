@@ -29,7 +29,27 @@ opinion_modifiers = {
 	}
 
 	PRA_blames_benesov = {
-		value = -50
+		value = -10
+	}
+
+	PRA_benesov_economic_sabotage = {
+		value = -10
+	}
+
+	PRA_benesov_railway_delays = {
+		value = -10
+	}
+
+	PRA_benesov_weather_connection = {
+		value = -15
+	}
+
+	PRA_benesov_foreign_wars = {
+		value = -15
+	}
+
+	PRA_benesov_dossier = {
+		value = -20
 	}
 
 }
