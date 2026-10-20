@@ -1,4 +1,5 @@
 add_namespace = pra_mohammedis
+add_namespace = pra_news
 
 
 
@@ -58,7 +59,7 @@ country_event = {
 
 
 # ================================================================
-# WAR AGAINST BENEŠOV
+# WAR AGAINST BENE┼áOV
 # ================================================================
 
 country_event = {
@@ -94,7 +95,7 @@ country_event = {
 
 
 # ================================================================
-# THE SHORTAGE ENDS AFTER BENEŠOV CAPITULATES
+# THE SHORTAGE ENDS AFTER BENE┼áOV CAPITULATES
 # ================================================================
 
 country_event = {
@@ -195,49 +196,40 @@ country_event = {
 
     option = {
         name = pra_mohammedis.18.a
-        ai_chance = { base = 99 }
+        ai_chance = { base = 100 }
         if = {
-            limit = { 1088 = { is_owned_by = CZE } }
-            1088 = { transfer_state_to = PRA }
+            limit = { 1088 = { is_owned_by = ROOT } }
+            1088 = { transfer_state_to = FROM }
         }
         set_country_flag = cze_conceded_prague_hinterland
         add_opinion_modifier = {
-            target = PRA
+            target = FROM
             modifier = pra_cze_conceded_prague_demand
         }
-        PRA = {
-            set_country_flag = pra_hinterland_demand_accepted
-            add_political_power = 35
-            add_stability = 0.02
+        FROM = {
+            country_event = { id = pra_mohammedis.22 days = 1 }
         }
     }
 
     option = {
         name = pra_mohammedis.18.b
-        ai_chance = { base = 1 }
+        ai_chance = { base = 0 }
         if = {
             limit = {
                 1088 = {
-                    is_owned_by = CZE
-                    NOT = { is_claimed_by = PRA }
+                    is_owned_by = ROOT
+                    NOT = { is_claimed_by = FROM }
                 }
             }
-            1088 = { add_claim_by = PRA }
+            1088 = { add_claim_by = FROM }
         }
         set_country_flag = cze_rejected_prague_hinterland
         add_opinion_modifier = {
-            target = PRA
+            target = FROM
             modifier = pra_cze_rejected_prague_demand
         }
-        PRA = {
-            set_country_flag = pra_hinterland_demand_refused
-            if = {
-                limit = {
-                    1088 = { is_owned_by = CZE }
-                }
-                create_wargoal = { type = take_claimed_state target = CZE }
-            }
-            add_war_support = 0.03
+        FROM = {
+            country_event = { id = pra_mohammedis.23 days = 1 }
         }
     }
 }
@@ -250,47 +242,40 @@ country_event = {
 
     option = {
         name = pra_mohammedis.19.a
-        ai_chance = { base = 99 }
+        ai_chance = { base = 100 }
         if = {
-            limit = { 1089 = { is_owned_by = CZE } }
-            1089 = { transfer_state_to = PRA }
+            limit = { 1089 = { is_owned_by = ROOT } }
+            1089 = { transfer_state_to = FROM }
         }
         set_country_flag = cze_conceded_border_district
         add_opinion_modifier = {
-            target = PRA
+            target = FROM
             modifier = pra_cze_conceded_prague_demand
         }
-        PRA = {
-            set_country_flag = pra_border_district_accepted
-            add_political_power = 35
-            add_stability = 0.02
+        FROM = {
+            country_event = { id = pra_mohammedis.24 days = 1 }
         }
     }
 
     option = {
         name = pra_mohammedis.19.b
-        ai_chance = { base = 1 }
+        ai_chance = { base = 0 }
         if = {
             limit = {
                 1089 = {
-                    is_owned_by = CZE
-                    NOT = { is_claimed_by = PRA }
+                    is_owned_by = ROOT
+                    NOT = { is_claimed_by = FROM }
                 }
             }
-            1089 = { add_claim_by = PRA }
+            1089 = { add_claim_by = FROM }
         }
         set_country_flag = cze_rejected_border_district
         add_opinion_modifier = {
-            target = PRA
+            target = FROM
             modifier = pra_cze_rejected_prague_demand
         }
-        PRA = {
-            set_country_flag = pra_border_district_refused
-            if = {
-                limit = { 1089 = { is_owned_by = CZE } }
-                create_wargoal = { type = take_claimed_state target = CZE }
-            }
-            add_war_support = 0.04
+        FROM = {
+            country_event = { id = pra_mohammedis.25 days = 1 }
         }
     }
 }
@@ -303,47 +288,40 @@ country_event = {
 
     option = {
         name = pra_mohammedis.20.a
-        ai_chance = { base = 99 }
+        ai_chance = { base = 100 }
         if = {
-            limit = { 1090 = { is_owned_by = CZE } }
-            1090 = { transfer_state_to = PRA }
+            limit = { 1090 = { is_owned_by = ROOT } }
+            1090 = { transfer_state_to = FROM }
         }
         set_country_flag = cze_conceded_central_belt
         add_opinion_modifier = {
-            target = PRA
+            target = FROM
             modifier = pra_cze_conceded_prague_demand
         }
-        PRA = {
-            set_country_flag = pra_central_belt_accepted
-            add_political_power = 35
-            add_stability = 0.02
+        FROM = {
+            country_event = { id = pra_mohammedis.26 days = 1 }
         }
     }
 
     option = {
         name = pra_mohammedis.20.b
-        ai_chance = { base = 1 }
+        ai_chance = { base = 0 }
         if = {
             limit = {
                 1090 = {
-                    is_owned_by = CZE
-                    NOT = { is_claimed_by = PRA }
+                    is_owned_by = ROOT
+                    NOT = { is_claimed_by = FROM }
                 }
             }
-            1090 = { add_claim_by = PRA }
+            1090 = { add_claim_by = FROM }
         }
         set_country_flag = cze_rejected_central_belt
         add_opinion_modifier = {
-            target = PRA
+            target = FROM
             modifier = pra_cze_rejected_prague_demand
         }
-        PRA = {
-            set_country_flag = pra_central_belt_refused
-            if = {
-                limit = { 1090 = { is_owned_by = CZE } }
-                create_wargoal = { type = take_claimed_state target = CZE }
-            }
-            add_war_support = 0.04
+        FROM = {
+            country_event = { id = pra_mohammedis.27 days = 1 }
         }
     }
 }
@@ -356,47 +334,755 @@ country_event = {
 
     option = {
         name = pra_mohammedis.21.a
-        ai_chance = { base = 99 }
+        ai_chance = { base = 100 }
         if = {
-            limit = { 1087 = { is_owned_by = CZE } }
-            1087 = { transfer_state_to = PRA }
+            limit = { 1087 = { is_owned_by = ROOT } }
+            1087 = { transfer_state_to = FROM }
         }
         set_country_flag = cze_accepted_prague_ultimatum
         add_opinion_modifier = {
-            target = PRA
+            target = FROM
             modifier = pra_cze_accepted_prague_ultimatum
         }
-        PRA = {
-            set_country_flag = pra_ultimatum_accepted
-            add_political_power = 75
-            add_stability = 0.05
+        FROM = {
+            country_event = { id = pra_mohammedis.28 days = 1 }
         }
     }
 
     option = {
         name = pra_mohammedis.21.b
-        ai_chance = { base = 1 }
+        ai_chance = { base = 0 }
         if = {
             limit = {
                 1087 = {
-                    is_owned_by = CZE
-                    NOT = { is_claimed_by = PRA }
+                    is_owned_by = ROOT
+                    NOT = { is_claimed_by = FROM }
                 }
             }
-            1087 = { add_claim_by = PRA }
+            1087 = { add_claim_by = FROM }
         }
         set_country_flag = cze_rejected_prague_ultimatum
         add_opinion_modifier = {
-            target = PRA
+            target = FROM
             modifier = pra_cze_rejected_prague_ultimatum
         }
-        PRA = {
-            set_country_flag = pra_ultimatum_refused
-            if = {
-                limit = { 1087 = { is_owned_by = CZE } }
-                create_wargoal = { type = take_claimed_state target = CZE }
-            }
-            add_war_support = 0.05
+        FROM = {
+            country_event = { id = pra_mohammedis.29 days = 1 }
         }
+    }
+}
+
+# ================================================================
+# INITIAL DEMAND CONFIRMATIONS & REFUSALS (PRA POV)
+# ================================================================
+
+country_event = {
+    id = pra_mohammedis.22
+    title = pra_mohammedis.22.t
+    desc = pra_mohammedis.22.d
+    is_triggered_only = yes
+
+    option = {
+        name = pra_mohammedis.22.a
+        set_country_flag = pra_hinterland_demand_accepted
+        add_political_power = 35
+        add_stability = 0.02
+    }
+}
+
+country_event = {
+    id = pra_mohammedis.23
+    title = pra_mohammedis.23.t
+    desc = pra_mohammedis.23.d
+    is_triggered_only = yes
+
+    option = {
+        name = pra_mohammedis.23.a
+        set_country_flag = pra_hinterland_demand_refused
+        if = {
+            limit = {
+                country_exists = CZE
+                NOT = { has_war_with = CZE }
+                NOT = { has_wargoal_against = { target = CZE } }
+            }
+            create_wargoal = { type = take_claimed_state target = CZE }
+        }
+        add_war_support = 0.03
+    }
+}
+
+country_event = {
+    id = pra_mohammedis.24
+    title = pra_mohammedis.24.t
+    desc = pra_mohammedis.24.d
+    is_triggered_only = yes
+
+    option = {
+        name = pra_mohammedis.24.a
+        set_country_flag = pra_border_district_accepted
+        add_political_power = 35
+        add_stability = 0.02
+    }
+}
+
+country_event = {
+    id = pra_mohammedis.25
+    title = pra_mohammedis.25.t
+    desc = pra_mohammedis.25.d
+    is_triggered_only = yes
+
+    option = {
+        name = pra_mohammedis.25.a
+        set_country_flag = pra_border_district_refused
+        if = {
+            limit = {
+                country_exists = CZE
+                NOT = { has_war_with = CZE }
+                NOT = { has_wargoal_against = { target = CZE } }
+            }
+            create_wargoal = { type = take_claimed_state target = CZE }
+        }
+        add_war_support = 0.04
+    }
+}
+
+country_event = {
+    id = pra_mohammedis.26
+    title = pra_mohammedis.26.t
+    desc = pra_mohammedis.26.d
+    is_triggered_only = yes
+
+    option = {
+        name = pra_mohammedis.26.a
+        set_country_flag = pra_central_belt_accepted
+        add_political_power = 35
+        add_stability = 0.02
+    }
+}
+
+country_event = {
+    id = pra_mohammedis.27
+    title = pra_mohammedis.27.t
+    desc = pra_mohammedis.27.d
+    is_triggered_only = yes
+
+    option = {
+        name = pra_mohammedis.27.a
+        set_country_flag = pra_central_belt_refused
+        if = {
+            limit = {
+                country_exists = CZE
+                NOT = { has_war_with = CZE }
+                NOT = { has_wargoal_against = { target = CZE } }
+            }
+            create_wargoal = { type = take_claimed_state target = CZE }
+        }
+        add_war_support = 0.04
+    }
+}
+
+country_event = {
+    id = pra_mohammedis.28
+    title = pra_mohammedis.28.t
+    desc = pra_mohammedis.28.d
+    is_triggered_only = yes
+
+    option = {
+        name = pra_mohammedis.28.a
+        set_country_flag = pra_ultimatum_accepted
+        add_political_power = 75
+        add_stability = 0.05
+    }
+}
+
+country_event = {
+    id = pra_mohammedis.29
+    title = pra_mohammedis.29.t
+    desc = pra_mohammedis.29.d
+    is_triggered_only = yes
+
+    option = {
+        name = pra_mohammedis.29.a
+        set_country_flag = pra_ultimatum_refused
+        if = {
+            limit = {
+                country_exists = CZE
+                NOT = { has_war_with = CZE }
+                NOT = { has_wargoal_against = { target = CZE } }
+            }
+            create_wargoal = { type = take_claimed_state target = CZE }
+        }
+        add_war_support = 0.05
+    }
+}
+
+# ================================================================
+# REGIONAL DEMAND 1: WESTERN BOHEMIA (9, 1086)
+# ================================================================
+
+country_event = {
+    id = pra_mohammedis.30
+    title = pra_mohammedis.30.t
+    desc = pra_mohammedis.30.d
+    is_triggered_only = yes
+
+    option = {
+        name = pra_mohammedis.30.a
+        ai_chance = { base = 100 }
+        if = {
+            limit = { 9 = { is_owned_by = ROOT } }
+            9 = { transfer_state_to = FROM }
+        }
+        if = {
+            limit = { 1086 = { is_owned_by = ROOT } }
+            1086 = { transfer_state_to = FROM }
+        }
+        set_country_flag = cze_conceded_western_bohemia
+        add_opinion_modifier = {
+            target = FROM
+            modifier = pra_cze_conceded_prague_demand
+        }
+        FROM = {
+            country_event = { id = pra_mohammedis.31 days = 1 }
+        }
+    }
+
+    option = {
+        name = pra_mohammedis.30.b
+        ai_chance = { base = 0 }
+        if = {
+            limit = {
+                9 = {
+                    is_owned_by = ROOT
+                    NOT = { is_claimed_by = FROM }
+                }
+            }
+            9 = { add_claim_by = FROM }
+        }
+        if = {
+            limit = {
+                1086 = {
+                    is_owned_by = ROOT
+                    NOT = { is_claimed_by = FROM }
+                }
+            }
+            1086 = { add_claim_by = FROM }
+        }
+        set_country_flag = cze_rejected_western_bohemia
+        add_opinion_modifier = {
+            target = FROM
+            modifier = pra_cze_rejected_prague_demand
+        }
+        FROM = {
+            country_event = { id = pra_mohammedis.32 days = 1 }
+        }
+    }
+}
+
+country_event = {
+    id = pra_mohammedis.31
+    title = pra_mohammedis.31.t
+    desc = pra_mohammedis.31.d
+    is_triggered_only = yes
+
+    option = {
+        name = pra_mohammedis.31.a
+        set_country_flag = pra_western_bohemia_accepted
+        add_political_power = 35
+        add_stability = 0.02
+    }
+}
+
+country_event = {
+    id = pra_mohammedis.32
+    title = pra_mohammedis.32.t
+    desc = pra_mohammedis.32.d
+    is_triggered_only = yes
+
+    option = {
+        name = pra_mohammedis.32.a
+        set_country_flag = pra_western_bohemia_refused
+        if = {
+            limit = {
+                country_exists = CZE
+                NOT = { has_war_with = CZE }
+                NOT = { has_wargoal_against = { target = CZE } }
+            }
+            create_wargoal = { type = take_claimed_state target = CZE }
+        }
+        add_war_support = 0.04
+    }
+}
+
+# ================================================================
+# REGIONAL DEMAND 2: SOUTHERN BOHEMIA (1091, 1092)
+# ================================================================
+
+country_event = {
+    id = pra_mohammedis.33
+    title = pra_mohammedis.33.t
+    desc = pra_mohammedis.33.d
+    is_triggered_only = yes
+
+    option = {
+        name = pra_mohammedis.33.a
+        ai_chance = { base = 100 }
+        if = {
+            limit = { 1091 = { is_owned_by = ROOT } }
+            1091 = { transfer_state_to = FROM }
+        }
+        if = {
+            limit = { 1092 = { is_owned_by = ROOT } }
+            1092 = { transfer_state_to = FROM }
+        }
+        set_country_flag = cze_conceded_southern_bohemia
+        add_opinion_modifier = {
+            target = FROM
+            modifier = pra_cze_conceded_prague_demand
+        }
+        FROM = {
+            country_event = { id = pra_mohammedis.34 days = 1 }
+        }
+    }
+
+    option = {
+        name = pra_mohammedis.33.b
+        ai_chance = { base = 0 }
+        if = {
+            limit = {
+                1091 = {
+                    is_owned_by = ROOT
+                    NOT = { is_claimed_by = FROM }
+                }
+            }
+            1091 = { add_claim_by = FROM }
+        }
+        if = {
+            limit = {
+                1092 = {
+                    is_owned_by = ROOT
+                    NOT = { is_claimed_by = FROM }
+                }
+            }
+            1092 = { add_claim_by = FROM }
+        }
+        set_country_flag = cze_rejected_southern_bohemia
+        add_opinion_modifier = {
+            target = FROM
+            modifier = pra_cze_rejected_prague_demand
+        }
+        FROM = {
+            country_event = { id = pra_mohammedis.35 days = 1 }
+        }
+    }
+}
+
+country_event = {
+    id = pra_mohammedis.34
+    title = pra_mohammedis.34.t
+    desc = pra_mohammedis.34.d
+    is_triggered_only = yes
+
+    option = {
+        name = pra_mohammedis.34.a
+        set_country_flag = pra_southern_bohemia_accepted
+        add_political_power = 35
+        add_stability = 0.02
+    }
+}
+
+country_event = {
+    id = pra_mohammedis.35
+    title = pra_mohammedis.35.t
+    desc = pra_mohammedis.35.d
+    is_triggered_only = yes
+
+    option = {
+        name = pra_mohammedis.35.a
+        set_country_flag = pra_southern_bohemia_refused
+        if = {
+            limit = {
+                country_exists = CZE
+                NOT = { has_war_with = CZE }
+                NOT = { has_wargoal_against = { target = CZE } }
+            }
+            create_wargoal = { type = take_claimed_state target = CZE }
+        }
+        add_war_support = 0.04
+    }
+}
+
+# ================================================================
+# REGIONAL DEMAND 3: EASTERN BOHEMIA (1094, 1095, 1096, 1097)
+# ================================================================
+
+country_event = {
+    id = pra_mohammedis.36
+    title = pra_mohammedis.36.t
+    desc = pra_mohammedis.36.d
+    is_triggered_only = yes
+
+    option = {
+        name = pra_mohammedis.36.a
+        ai_chance = { base = 100 }
+        if = {
+            limit = { 1094 = { is_owned_by = ROOT } }
+            1094 = { transfer_state_to = FROM }
+        }
+        if = {
+            limit = { 1095 = { is_owned_by = ROOT } }
+            1095 = { transfer_state_to = FROM }
+        }
+        if = {
+            limit = { 1096 = { is_owned_by = ROOT } }
+            1096 = { transfer_state_to = FROM }
+        }
+        if = {
+            limit = { 1097 = { is_owned_by = ROOT } }
+            1097 = { transfer_state_to = FROM }
+        }
+        set_country_flag = cze_conceded_eastern_bohemia
+        add_opinion_modifier = {
+            target = FROM
+            modifier = pra_cze_conceded_prague_demand
+        }
+        FROM = {
+            country_event = { id = pra_mohammedis.37 days = 1 }
+        }
+    }
+
+    option = {
+        name = pra_mohammedis.36.b
+        ai_chance = { base = 0 }
+        if = {
+            limit = {
+                1094 = {
+                    is_owned_by = ROOT
+                    NOT = { is_claimed_by = FROM }
+                }
+            }
+            1094 = { add_claim_by = FROM }
+        }
+        if = {
+            limit = {
+                1095 = {
+                    is_owned_by = ROOT
+                    NOT = { is_claimed_by = FROM }
+                }
+            }
+            1095 = { add_claim_by = FROM }
+        }
+        if = {
+            limit = {
+                1096 = {
+                    is_owned_by = ROOT
+                    NOT = { is_claimed_by = FROM }
+                }
+            }
+            1096 = { add_claim_by = FROM }
+        }
+        if = {
+            limit = {
+                1097 = {
+                    is_owned_by = ROOT
+                    NOT = { is_claimed_by = FROM }
+                }
+            }
+            1097 = { add_claim_by = FROM }
+        }
+        set_country_flag = cze_rejected_eastern_bohemia
+        add_opinion_modifier = {
+            target = FROM
+            modifier = pra_cze_rejected_prague_demand
+        }
+        FROM = {
+            country_event = { id = pra_mohammedis.38 days = 1 }
+        }
+    }
+}
+
+country_event = {
+    id = pra_mohammedis.37
+    title = pra_mohammedis.37.t
+    desc = pra_mohammedis.37.d
+    is_triggered_only = yes
+
+    option = {
+        name = pra_mohammedis.37.a
+        set_country_flag = pra_eastern_bohemia_accepted
+        add_political_power = 35
+        add_stability = 0.02
+    }
+}
+
+country_event = {
+    id = pra_mohammedis.38
+    title = pra_mohammedis.38.t
+    desc = pra_mohammedis.38.d
+    is_triggered_only = yes
+
+    option = {
+        name = pra_mohammedis.38.a
+        set_country_flag = pra_eastern_bohemia_refused
+        if = {
+            limit = {
+                country_exists = CZE
+                NOT = { has_war_with = CZE }
+                NOT = { has_wargoal_against = { target = CZE } }
+            }
+            create_wargoal = { type = take_claimed_state target = CZE }
+        }
+        add_war_support = 0.04
+    }
+}
+
+# ================================================================
+# REGIONAL DEMAND 4: NORTHERN & WESTERN SUDETENLAND (69, 1098, 1099, 1100, 1101)
+# ================================================================
+
+country_event = {
+    id = pra_mohammedis.39
+    title = pra_mohammedis.39.t
+    desc = pra_mohammedis.39.d
+    is_triggered_only = yes
+
+    option = {
+        name = pra_mohammedis.39.a
+        ai_chance = { base = 100 }
+        if = {
+            limit = { 69 = { is_owned_by = ROOT } }
+            69 = { transfer_state_to = FROM }
+        }
+        if = {
+            limit = { 1098 = { is_owned_by = ROOT } }
+            1098 = { transfer_state_to = FROM }
+        }
+        if = {
+            limit = { 1099 = { is_owned_by = ROOT } }
+            1099 = { transfer_state_to = FROM }
+        }
+        if = {
+            limit = { 1100 = { is_owned_by = ROOT } }
+            1100 = { transfer_state_to = FROM }
+        }
+        if = {
+            limit = { 1101 = { is_owned_by = ROOT } }
+            1101 = { transfer_state_to = FROM }
+        }
+        set_country_flag = cze_conceded_bohemian_borderlands
+        add_opinion_modifier = {
+            target = FROM
+            modifier = pra_cze_conceded_prague_demand
+        }
+        FROM = {
+            country_event = { id = pra_mohammedis.40 days = 1 }
+        }
+    }
+
+    option = {
+        name = pra_mohammedis.39.b
+        ai_chance = { base = 0 }
+        if = {
+            limit = {
+                69 = {
+                    is_owned_by = ROOT
+                    NOT = { is_claimed_by = FROM }
+                }
+            }
+            69 = { add_claim_by = FROM }
+        }
+        if = {
+            limit = {
+                1098 = {
+                    is_owned_by = ROOT
+                    NOT = { is_claimed_by = FROM }
+                }
+            }
+            1098 = { add_claim_by = FROM }
+        }
+        if = {
+            limit = {
+                1099 = {
+                    is_owned_by = ROOT
+                    NOT = { is_claimed_by = FROM }
+                }
+            }
+            1099 = { add_claim_by = FROM }
+        }
+        if = {
+            limit = {
+                1100 = {
+                    is_owned_by = ROOT
+                    NOT = { is_claimed_by = FROM }
+                }
+            }
+            1100 = { add_claim_by = FROM }
+        }
+        if = {
+            limit = {
+                1101 = {
+                    is_owned_by = ROOT
+                    NOT = { is_claimed_by = FROM }
+                }
+            }
+            1101 = { add_claim_by = FROM }
+        }
+        set_country_flag = cze_rejected_bohemian_borderlands
+        add_opinion_modifier = {
+            target = FROM
+            modifier = pra_cze_rejected_prague_demand
+        }
+        FROM = {
+            country_event = { id = pra_mohammedis.41 days = 1 }
+        }
+    }
+}
+
+country_event = {
+    id = pra_mohammedis.40
+    title = pra_mohammedis.40.t
+    desc = pra_mohammedis.40.d
+    is_triggered_only = yes
+
+    option = {
+        name = pra_mohammedis.40.a
+        set_country_flag = pra_bohemian_borderlands_accepted
+        add_political_power = 50
+        add_stability = 0.03
+    }
+}
+
+country_event = {
+    id = pra_mohammedis.41
+    title = pra_mohammedis.41.t
+    desc = pra_mohammedis.41.d
+    is_triggered_only = yes
+
+    option = {
+        name = pra_mohammedis.41.a
+        set_country_flag = pra_bohemian_borderlands_refused
+        if = {
+            limit = {
+                country_exists = CZE
+                NOT = { has_war_with = CZE }
+                NOT = { has_wargoal_against = { target = CZE } }
+            }
+            create_wargoal = { type = take_claimed_state target = CZE }
+        }
+        add_war_support = 0.05
+    }
+}
+
+# ================================================================
+# REGIONAL DEMAND 5: SOUTH SUDETENLAND (972)
+# ================================================================
+
+country_event = {
+    id = pra_mohammedis.42
+    title = pra_mohammedis.42.t
+    desc = pra_mohammedis.42.d
+    is_triggered_only = yes
+
+    option = {
+        name = pra_mohammedis.42.a
+        ai_chance = { base = 100 }
+        if = {
+            limit = { 972 = { is_owned_by = ROOT } }
+            972 = { transfer_state_to = FROM }
+        }
+        set_country_flag = cze_conceded_southern_borderlands
+        add_opinion_modifier = {
+            target = FROM
+            modifier = pra_cze_conceded_prague_demand
+        }
+        FROM = {
+            country_event = { id = pra_mohammedis.43 days = 1 }
+        }
+    }
+
+    option = {
+        name = pra_mohammedis.42.b
+        ai_chance = { base = 0 }
+        if = {
+            limit = {
+                972 = {
+                    is_owned_by = ROOT
+                    NOT = { is_claimed_by = FROM }
+                }
+            }
+            972 = { add_claim_by = FROM }
+        }
+        set_country_flag = cze_rejected_southern_borderlands
+        add_opinion_modifier = {
+            target = FROM
+            modifier = pra_cze_rejected_prague_demand
+        }
+        FROM = {
+            country_event = { id = pra_mohammedis.44 days = 1 }
+        }
+    }
+}
+
+country_event = {
+    id = pra_mohammedis.43
+    title = pra_mohammedis.43.t
+    desc = pra_mohammedis.43.d
+    is_triggered_only = yes
+
+    option = {
+        name = pra_mohammedis.43.a
+        set_country_flag = pra_southern_borderlands_accepted
+        add_political_power = 25
+        add_stability = 0.02
+    }
+}
+
+country_event = {
+    id = pra_mohammedis.44
+    title = pra_mohammedis.44.t
+    desc = pra_mohammedis.44.d
+    is_triggered_only = yes
+
+    option = {
+        name = pra_mohammedis.44.a
+        set_country_flag = pra_southern_borderlands_refused
+        if = {
+            limit = {
+                country_exists = CZE
+                NOT = { has_war_with = CZE }
+                NOT = { has_wargoal_against = { target = CZE } }
+            }
+            create_wargoal = { type = take_claimed_state target = CZE }
+        }
+        add_war_support = 0.04
+    }
+}
+
+# ================================================================
+# BLAME BENEŠOV FOR EVERYTHING: BEN REACTION & GLOBAL NEWS
+# ================================================================
+
+country_event = {
+    id = pra_mohammedis.45
+    title = pra_mohammedis.45.t
+    desc = pra_mohammedis.45.d
+    is_triggered_only = yes
+
+    option = {
+        name = pra_mohammedis.45.a
+    }
+}
+
+news_event = {
+    id = pra_news.1
+    title = pra_news.1.t
+    desc = pra_news.1.d
+    picture = GFX_news_event_PRA_blame_benesov
+
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = pra_news.1.a
     }
 }

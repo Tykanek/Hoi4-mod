@@ -35,7 +35,12 @@ country_event = {
 		ai_chance = { base = 80 }
 
 		set_country_flag = pra_bartak_promoted_to_general
+		deactivate_advisor = PRA_generic_head_of_intelligence
+		remove_ideas = PRA_generic_head_of_intelligence
 		PRA_generic_head_of_intelligence = {
+			remove_advisor_role = {
+				slot = political_advisor
+			}
 			add_corps_commander_role = {
 				traits = { commando trickster infantry_officer }
 				skill = 4
@@ -44,6 +49,16 @@ country_event = {
 				planning_skill = 3
 				logistics_skill = 3
 				legacy_id = -1
+			}
+			add_advisor_role = {
+				advisor = {
+					slot = army_chief
+					idea_token = PRA_vladimir_bartak_army_chief
+					cost = 100
+					traits = {
+						army_chief_offensive_2
+					}
+				}
 			}
 		}
 		news_event = { id = pra_bartak_news.2 }

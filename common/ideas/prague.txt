@@ -19,7 +19,7 @@ ideas = {
         # ========================================================
 
         pra_directorate_of_national_salvation = {
-
+            picture = pra_directorate_of_national_salvation
             modifier = {
                 political_power_factor = 0.15
                 mobilization_speed = 0.20
@@ -33,7 +33,7 @@ ideas = {
         # ========================================================
 
         pra_subordinated_administration = {
-
+            picture = pra_subordinated_administration
             modifier = {
                 political_power_factor = -0.10
                 consumer_goods_factor = -0.05
@@ -46,7 +46,7 @@ ideas = {
         # ========================================================
 
         pra_capital_defence_doctrine_1 = {
-
+            picture = pra_capital_defence_doctrine_1
             modifier = {
                 army_core_defence_factor = 0.05
                 dig_in_speed_factor = 0.10
@@ -58,7 +58,7 @@ ideas = {
 
 
         pra_capital_defence_doctrine_2 = {
-
+            picture = pra_capital_defence_doctrine_2
             modifier = {
                 army_core_defence_factor = 0.05
                 dig_in_speed_factor = 0.10
@@ -73,7 +73,7 @@ ideas = {
 
 
         pra_army_of_the_capital = {
-
+            picture = pra_army_of_the_capital
             modifier = {
                 army_core_defence_factor = 0.15
                 army_infantry_attack_factor = 0.05
@@ -95,6 +95,7 @@ ideas = {
 
         # Cumulative Army spirit stages. Only one of these is active at a time.
         pra_army_of_the_capital_barricades = {
+            picture = pra_army_of_the_capital_barricades
             modifier = {
                 army_core_defence_factor = 0.25
                 army_infantry_attack_factor = 0.05
@@ -115,6 +116,7 @@ ideas = {
         }
 
         pra_army_of_the_capital_officer_school = {
+            picture = pra_army_of_the_capital_officer_school
             modifier = {
                 army_core_defence_factor = 0.25
                 army_infantry_attack_factor = 0.05
@@ -136,6 +138,7 @@ ideas = {
         }
 
         pra_army_of_the_capital_assault_groups = {
+            picture = pra_army_of_the_capital_assault_groups
             modifier = {
                 army_core_defence_factor = 0.25
                 army_infantry_attack_factor = 0.15
@@ -162,7 +165,7 @@ ideas = {
         # ========================================================
 
         pra_prague_air_watch_1 = {
-
+            picture = pra_prague_air_watch_1
             modifier = {
                 air_detection = 0.10
                 air_accidents_factor = -0.10
@@ -171,7 +174,7 @@ ideas = {
 
 
         pra_prague_air_watch_2 = {
-
+            picture = pra_prague_air_watch_2
             modifier = {
                 air_detection = 0.15
                 air_superiority_detect_factor = 0.05
@@ -181,7 +184,7 @@ ideas = {
 
 
         pra_integrated_prague_air_defence = {
-
+            picture = pra_integrated_prague_air_defence
             modifier = {
                 air_detection = 0.20
                 air_superiority_detect_factor = 0.10
@@ -198,7 +201,7 @@ ideas = {
         # ========================================================
 
         pra_fragmented_workshop_network = {
-
+            picture = pra_fragmented_workshop_network
             modifier = {
                 consumer_goods_factor = 0.15
                 industrial_capacity_factory = -0.15
@@ -210,7 +213,7 @@ ideas = {
 
 
         pra_modernized_workshop_network = {
-
+            picture = pra_modernized_workshop_network
             modifier = {
                 consumer_goods_factor = 0.05
                 industrial_capacity_factory = -0.05
@@ -222,7 +225,7 @@ ideas = {
 
 
         pra_arsenal_of_prague_spirit = {
-
+            picture = pra_arsenal_of_prague_spirit
             modifier = {
                 consumer_goods_factor = 0.05
                 industrial_capacity_factory = 0.05
@@ -240,6 +243,7 @@ ideas = {
         # ========================================================
 
         pra_fortress_army = {
+            picture = pra_fortress_army
             modifier = {
                 army_core_defence_factor = 0.35
                 army_infantry_attack_factor = 0.20
@@ -261,6 +265,7 @@ ideas = {
         }
 
         pra_field_army = {
+            picture = pra_field_army
             modifier = {
                 army_core_defence_factor = 0.25
                 army_infantry_attack_factor = 0.25
@@ -287,6 +292,7 @@ ideas = {
         # ========================================================
 
         pra_interceptor_priority = {
+            picture = pra_interceptor_priority
             modifier = {
                 air_detection = 0.25
                 air_superiority_detect_factor = 0.15
@@ -298,6 +304,7 @@ ideas = {
         }
 
         pra_army_cooperation_air = {
+            picture = pra_army_cooperation_air
             modifier = {
                 air_detection = 0.20
                 air_superiority_detect_factor = 0.10
@@ -314,6 +321,7 @@ ideas = {
         # ========================================================
 
         pra_total_metropolitan_mobilization = {
+            picture = pra_total_metropolitan_mobilization
             modifier = {
                 industrial_capacity_factory = 0.10
                 production_factory_efficiency_gain_factor = 0.20
@@ -331,6 +339,7 @@ ideas = {
         # ========================================================
 
         pra_morning_after_coup = {
+            picture = pra_morning_after_coup
             modifier = {
                 political_power_factor = 0.15
                 mobilization_speed = 0.20
@@ -340,6 +349,7 @@ ideas = {
         }
 
         pra_directorate_consolidation = {
+            picture = pra_directorate_consolidation
             modifier = {
                 political_power_factor = 0.20
                 mobilization_speed = 0.20
@@ -348,6 +358,7 @@ ideas = {
         }
 
         pra_mohammedis_state = {
+            picture = pra_mohammedis_state
             modifier = {
                 political_power_factor = 0.40
                 mobilization_speed = 0.20
@@ -358,6 +369,7 @@ ideas = {
         }
 
         pra_colonel_state = {
+            picture = pra_colonel_state
             modifier = {
                 political_power_factor = 0.10
                 mobilization_speed = 0.20

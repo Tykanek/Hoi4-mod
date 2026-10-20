@@ -17,7 +17,7 @@
  pra_mohammedis.4.a: "Forward."
 
  pra_mohammedis.5.t: "Rumours of Capitulation"
- pra_mohammedis.5.d: "The legionaries bring more than rifles. They bring stories from Siberia, from the border garrisons and from every crisis in which parliamentary committees asked soldiers to wait. Now rumours spread that the Senate will accept Benešov's terms to reopen the roads.\n\nMohammedis says the city cannot survive another week of indecision. His veterans answer that the order to act must come before the order to surrender."
+ pra_mohammedis.5.d: "Táborder garrisons and from every crisis in which parliamentary committees asked soldiers to wait. Now rumours spread that the Senate will accept Benešov's terms to reopen the roads.\n\nMohammedis says the city cannot survive another week of indecision. His veterans answer that the order to act must come before the order to surrender."
  pra_mohammedis.5.a: "Prague will not be bargained away."
 
  pra_mohammedis.6.t: "The Hinterland Routes Reopened"
@@ -52,8 +52,8 @@
  pra_mohammedis.13.d: "Prague's diplomatic note demands that Czechoslovakia recognize the capital's claims to the central Bohemian approaches. The language is formal, but no one mistakes the meaning: the Directorate has prepared an army and expects an answer before the next parade."
  pra_mohammedis.13.a: "There will be no more divided commands."
 
- pra_mohammedis.14.t: "The Czech State Reborn"
- pra_mohammedis.14.d: "The old border has disappeared. State offices, arsenals and army commands are being folded into a single administration, while Prague's banners appear beside the older Czech emblems. Mohammedis has won the reunification he promised, but the question of what follows the emergency remains unanswered."
+ pra_mohammedis.14.t: "Táborn"
+ pra_mohammedis.14.d: "Táborder has disappeared. State offices, arsenals and army commands are being folded into a single administration, while Prague's banners appear beside the older Czech emblems. Mohammedis has won the reunification he promised, but the question of what follows the emergency remains unanswered."
  pra_mohammedis.14.a: "One country, one command."
 
  pra_mohammedis.18.t: "Prague Demands the First District"
@@ -62,7 +62,7 @@
  pra_mohammedis.18.b: "Prague has gone too far."
 
  pra_mohammedis.19.t: "Prague Demands the Next District"
- pra_mohammedis.19.d: "The first concession has convinced Mohammedis that necessity is a language Prague may speak without interruption. The Directorate now demands one more district along the old administrative border, describing its roads and rail junctions as details that merely happen to require a new owner."
+ pra_mohammedis.19.d: "Táborder, describing its roads and rail junctions as details that merely happen to require a new owner."
  pra_mohammedis.19.a: "We cannot risk a war over this district."
  pra_mohammedis.19.b: "Reject the demand."
 
@@ -81,8 +81,8 @@
  pra_cze_conceded_prague_demand: "Czechoslovakia Conceded a Prague Demand"
  pra_cze_rejected_prague_demand: "Czechoslovakia Rejected a Prague Demand"
 
- pra_bartak_news.1.t: "Prague Considers Field Command for Vladimír Barták"
- pra_bartak_news.1.d: "Vladimír Barták, already known inside Prague's new Strašnice regime for his exceptional military ability, weapons proficiency and field experience, has attracted the attention of the Directorate. Reports describe him as one of the most capable soldiers available to Prague, and Peter Mohammedis's government is now considering whether his talents would be better used in direct command of troops."
+ pra_bartak_news.1.t: "Prague Considers Command for Vladimír Barták"
+ pra_bartak_news.1.d: "Vladimír Barták has gained renown across Prague for his exceptional weapons proficiency and combat record. With his military reputation soaring, the Directorate is weighing whether to grant him direct field command."
  pra_bartak_news.1.a: "His battlefield record speaks for itself."
 
  pra_bartak.1.t: "The Generalship of Vladimír Barták"
@@ -90,6 +90,110 @@
  pra_bartak.1.a: "Promote him to General."
  pra_bartak.1.b: "No, we have better generals."
 
- pra_bartak_news.2.t: "Vladimír Barták Appointed General of Prague"
- pra_bartak_news.2.d: "Peter Mohammedis has formally promoted Vladimír Barták to General. During a public military ceremony in Prague, Mohammedis personally decorated Barták and confirmed his new field command. The promotion is presented by the Strašnice regime as proof that military competence and loyalty will define the new Prague army."
+ pra_bartak_news.2.t: "Vladimír Barták Promoted to General"
+ pra_bartak_news.2.d: "In a formal ceremony in Prague, Peter Mohammedis has decorated Vladimír Barták and elevated him to the rank of General. The Directorate presents the appointment as a clear signal of Prague's military resolve."
  pra_bartak_news.2.a: "Prague has gained a formidable commander."
+ pra_mohammedis.22.t: "Prague Hinterland Secured"
+ pra_mohammedis.22.d: "Czechoslovak authorities have agreed to withdraw their administration from the district immediately outside Prague. Directorate patrols have already moved into the area, securing our roads and depots without incident."
+ pra_mohammedis.22.a: "The capital breathes a little easier."
+
+ pra_mohammedis.23.t: "Czechoslovakia Rejects Our Hinterland Demand"
+ pra_mohammedis.23.d: "The government in Czechoslovakia has firmly refused our request for the western hinterland district, condemning it as an illegitimate territorial encroachment."
+ pra_mohammedis.23.a: "They will learn the cost of obstinacy."
+
+ pra_mohammedis.24.t: "Northern District Transferred"
+ pra_mohammedis.24.d: "Czechoslovak officials have yielded the northern district along the old administrative line. Our outposts are now established along the northern railway junctions."
+ pra_mohammedis.24.a: "Prague's security corridor expands."
+
+ pra_mohammedis.25.t: "Northern Demand Refused"
+ pra_mohammedis.25.d: "Czechoslovakia has refused to concede the northern district, warning Prague against further territorial posturing."
+ pra_mohammedis.25.a: "A short-sighted decision."
+
+ pra_mohammedis.26.t: "Central Bohemian Belt Secured"
+ pra_mohammedis.26.d: "The central district along the Elbe approach has been ceded to the Directorate. The rail connections and supply lines now answer to our military command."
+ pra_mohammedis.26.a: "Our central belt is unbroken."
+
+ pra_mohammedis.27.t: "Central Belt Demand Refused"
+ pra_mohammedis.27.d: "Czechoslovakia has rejected our demand for the central district, calling Prague's demands extortion."
+ pra_mohammedis.27.a: "They mistake patience for weakness."
+
+ pra_mohammedis.28.t: "The Ultimatum Accepted"
+ pra_mohammedis.28.d: "Faced with Prague's military readiness, Czechoslovakia has bowed to the ultimatum. The remaining southwestern approach has been handed over, and our administrative protectorate is recognized."
+ pra_mohammedis.28.a: "Prague dictates the terms."
+
+ pra_mohammedis.29.t: "The Ultimatum Defied"
+ pra_mohammedis.29.d: "Czechoslovakia has rejected the Prague Ultimatum, preparing to resist any further expansion by force of arms."
+ pra_mohammedis.29.a: "Then the guns will speak."
+
+ pra_mohammedis.30.t: "Prague Demands Western Bohemia"
+ pra_mohammedis.30.d: "Peter Mohammedis demands the immediate transfer of Western Bohemia, including the crucial industrial city of Plzeň and its adjacent districts. The Directorate insists that western industry cannot be left vulnerable under divided command."
+ pra_mohammedis.30.a: "We have little choice but to concede."
+ pra_mohammedis.30.b: "Plzeň remains under Czechoslovak rule!"
+
+ pra_mohammedis.31.t: "Western Bohemia Ceded to Prague"
+ pra_mohammedis.31.d: "Czechoslovak authorities have officially handed over Western Bohemia. The factories, railways, and civic institutions of Plzeň have raised Prague's standard."
+ pra_mohammedis.31.a: "The western gates are secure."
+
+ pra_mohammedis.32.t: "Western Demands Rejected"
+ pra_mohammedis.32.d: "Czechoslovakia has rejected our western demands, retaining control over Plzeň and the western districts."
+ pra_mohammedis.32.a: "They will regret this defiance."
+
+ pra_mohammedis.33.t: "Prague Demands Southern Bohemia"
+ pra_mohammedis.33.d: "A formal dispatch from Prague demands the immediate transfer of Tábor and Budweis. The Directorate asserts that the southern roads and administrative centers must be integrated under central military governance."
+ pra_mohammedis.33.a: "Concede the southern districts."
+ pra_mohammedis.33.b: "We will not surrender the south."
+
+ pra_mohammedis.34.t: "Southern Bohemia Joins the Directorate"
+ pra_mohammedis.34.d: "Administrative offices in Tábor and Budweis have transferred control to our commissioners. The southern flank of the capital is now firmly secured."
+ pra_mohammedis.34.a: "The south answers to Prague."
+
+ pra_mohammedis.35.t: "Southern Demand Refused"
+ pra_mohammedis.35.d: "Czechoslovakia has refused to cede Tábor and Budweis, denouncing Prague's expansion into the south."
+ pra_mohammedis.35.a: "An intolerable refusal."
+
+ pra_mohammedis.36.t: "Prague Demands Eastern Bohemia"
+ pra_mohammedis.36.d: "Mohammedis insists that the remaining eastern Bohemian districts along the upper Elbe must be unified with the capital to complete the internal security perimeter."
+ pra_mohammedis.36.a: "Transfer the eastern districts."
+ pra_mohammedis.36.b: "Prague will receive nothing more in the east."
+
+ pra_mohammedis.37.t: "Eastern Bohemia Secured"
+ pra_mohammedis.37.d: "Czechoslovak troops have vacated the eastern districts. Directorate officials have assumed control of all road networks and municipal offices up to the traditional border with Moravia."
+ pra_mohammedis.37.a: "The entire Bohemian interior is ours."
+
+ pra_mohammedis.38.t: "Eastern Demand Refused"
+ pra_mohammedis.38.d: "Czechoslovakia has rejected our eastern demands, barring our inspectors from entering the eastern districts."
+ pra_mohammedis.38.a: "Their defiance will cost them dearly."
+
+ pra_mohammedis.39.t: "Prague Demands the Bohemian Borderlands"
+ pra_mohammedis.39.d: "The Directorate warns that Czechoslovakia's weakened authority cannot effectively hold the heavily fortified northern and western mountain border. Prague demands that all garrison installations and frontier districts be transferred to Directorate command immediately."
+ pra_mohammedis.39.a: "Yield the border fortifications."
+ pra_mohammedis.39.b: "The border defenses will never fall to Prague!"
+
+ pra_mohammedis.40.t: "The Borderlands Transferred to Prague"
+ pra_mohammedis.40.d: "Direct reports confirm that the mountain bunkers, garrison forts, and frontier towns of northern and western Bohemia are now garrisoned by Prague's legionaries. The natural mountain fortress is unified."
+ pra_mohammedis.40.a: "Bohemia's mountain crown is restored."
+
+ pra_mohammedis.41.t: "Borderland Ultimatum Rejected"
+ pra_mohammedis.41.d: "Czechoslovakia has rejected our demand for the northern and western frontier zones, locking the bunker complexes against our commanders."
+ pra_mohammedis.41.a: "A fatal mistake."
+
+ pra_mohammedis.42.t: "Prague Demands the Southern Borderlands"
+ pra_mohammedis.42.d: "To complete the defensive ring around Bohemia, Peter Mohammedis demands the immediate handover of the Šumava border district, completing our defensive line along the southern forest frontier."
+ pra_mohammedis.42.a: "Surrender the southern borderland."
+ pra_mohammedis.42.b: "We refuse to yield Šumava."
+
+ pra_mohammedis.43.t: "The Southern Borderlands Secured"
+ pra_mohammedis.43.d: "Directorate mountain units have occupied the Šumava passes and border stations. The southern frontier of Bohemia is completely secured under Prague's jurisdiction."
+ pra_mohammedis.43.a: "Our borders are sealed."
+
+ pra_mohammedis.44.t: "Southern Borderland Refused"
+ pra_mohammedis.44.d: "Czechoslovakia has refused to hand over the Šumava borderland, maintaining its garrisons along the southern mountain line."
+ pra_mohammedis.44.a: "This dispute is not over."
+
+ pra_mohammedis.45.t: "Prague Has Blamed Us Again"
+ pra_mohammedis.45.d: "Dispatches from Prague indicate that the capital's authorities have issued a formal proclamation holding Benešov responsible for nearly every calamity known to modern statecraft. According to the document, our administration has somehow engineered railway delays, poor harvests, industrial failures, economic instability, climate change, and the ongoing wars in Asia, alongside several other problems clearly beyond the authority of the Benešov administration.\n\nNo explanation has been offered as to how municipal offices in Benešov acquired jurisdiction over the weather or the Far East, yet the accusations are being repeated in Prague as established fact."
+ pra_mohammedis.45.a: "How is this our fault?"
+
+ pra_news.1.t:0 "Prague Blames Benešov for Everything"
+ pra_news.1.d:0 "The Prague government has formally declared Benešov responsible for a remarkable range of domestic and international problems.\n\nAccording to the statement, Benešov is to blame for economic instability, poor harvests, railway delays, wars in Asia, and several other crises. No evidence was presented, but the announcement has proven popular in Prague."
+ pra_news.1.a:0 "At last, someone is being held accountable."

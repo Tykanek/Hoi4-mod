@@ -1,0 +1,94 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_pra_directorate_of_national_salvation"
+		texturefile = "gfx/interface/ideas/idea_pra_directorate_of_national_salvation.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pra_subordinated_administration"
+		texturefile = "gfx/interface/ideas/idea_pra_subordinated_administration.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pra_capital_defence_doctrine_1"
+		texturefile = "gfx/interface/ideas/idea_pra_capital_defence_doctrine_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pra_capital_defence_doctrine_2"
+		texturefile = "gfx/interface/ideas/idea_pra_capital_defence_doctrine_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pra_army_of_the_capital"
+		texturefile = "gfx/interface/ideas/idea_pra_army_of_the_capital.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pra_army_of_the_capital_barricades"
+		texturefile = "gfx/interface/ideas/idea_pra_army_of_the_capital_barricades.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pra_army_of_the_capital_officer_school"
+		texturefile = "gfx/interface/ideas/idea_pra_army_of_the_capital_officer_school.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pra_army_of_the_capital_assault_groups"
+		texturefile = "gfx/interface/ideas/idea_pra_army_of_the_capital_assault_groups.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pra_prague_air_watch_1"
+		texturefile = "gfx/interface/ideas/idea_pra_prague_air_watch_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pra_prague_air_watch_2"
+		texturefile = "gfx/interface/ideas/idea_pra_prague_air_watch_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pra_integrated_prague_air_defence"
+		texturefile = "gfx/interface/ideas/idea_pra_integrated_prague_air_defence.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pra_fragmented_workshop_network"
+		texturefile = "gfx/interface/ideas/idea_pra_fragmented_workshop_network.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pra_modernized_workshop_network"
+		texturefile = "gfx/interface/ideas/idea_pra_modernized_workshop_network.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pra_arsenal_of_prague_spirit"
+		texturefile = "gfx/interface/ideas/idea_pra_arsenal_of_prague_spirit.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pra_fortress_army"
+		texturefile = "gfx/interface/ideas/idea_pra_fortress_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pra_field_army"
+		texturefile = "gfx/interface/ideas/idea_pra_field_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pra_interceptor_priority"
+		texturefile = "gfx/interface/ideas/idea_pra_interceptor_priority.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pra_army_cooperation_air"
+		texturefile = "gfx/interface/ideas/idea_pra_army_cooperation_air.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pra_total_metropolitan_mobilization"
+		texturefile = "gfx/interface/ideas/idea_pra_total_metropolitan_mobilization.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pra_morning_after_coup"
+		texturefile = "gfx/interface/ideas/idea_pra_morning_after_coup.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pra_directorate_consolidation"
+		texturefile = "gfx/interface/ideas/idea_pra_directorate_consolidation.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pra_mohammedis_state"
+		texturefile = "gfx/interface/ideas/idea_pra_mohammedis_state.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pra_colonel_state"
+		texturefile = "gfx/interface/ideas/idea_pra_colonel_state.dds"
+	}
+}

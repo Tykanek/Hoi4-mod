@@ -31,4 +31,8 @@ spriteTypes = {
 		name = "GFX_idea_PRA_alois_simek"
 		texturefile = "gfx/interface/ideas/idea_PRA_alois_simek.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_PRA_octane"
+		texturefile = "gfx/interface/ideas/idea_PRA_octane.dds"
+	}
 }

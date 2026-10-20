@@ -31,7 +31,21 @@ focus_tree = {
 
         completion_reward = {
             army_experience = 10
-            add_ideas = pra_capital_defence_doctrine_1
+            if = {
+                limit = {
+                    NOT = {
+                        has_idea = pra_capital_defence_doctrine_1
+                        has_idea = pra_capital_defence_doctrine_2
+                        has_idea = pra_army_of_the_capital
+                        has_idea = pra_army_of_the_capital_barricades
+                        has_idea = pra_army_of_the_capital_officer_school
+                        has_idea = pra_army_of_the_capital_assault_groups
+                        has_idea = pra_fortress_army
+                        has_idea = pra_field_army
+                    }
+                }
+                add_ideas = pra_capital_defence_doctrine_1
+            }
         }
     }
 
@@ -262,7 +276,17 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_INDUSTRY }
 
         completion_reward = {
-            add_ideas = pra_fragmented_workshop_network
+            if = {
+                limit = {
+                    NOT = {
+                        has_idea = pra_fragmented_workshop_network
+                        has_idea = pra_modernized_workshop_network
+                        has_idea = pra_arsenal_of_prague_spirit
+                        has_idea = pra_total_metropolitan_mobilization
+                    }
+                }
+                add_ideas = pra_fragmented_workshop_network
+            }
             1082 = {
                 add_building_construction = {
                     type = infrastructure
@@ -383,7 +407,17 @@ focus_tree = {
             CZE = {
                 end_puppet = ROOT
             }
-            add_ideas = pra_fragmented_workshop_network
+            if = {
+                limit = {
+                    NOT = {
+                        has_idea = pra_fragmented_workshop_network
+                        has_idea = pra_modernized_workshop_network
+                        has_idea = pra_arsenal_of_prague_spirit
+                        has_idea = pra_total_metropolitan_mobilization
+                    }
+                }
+                add_ideas = pra_fragmented_workshop_network
+            }
             set_country_flag = pra_declared_independence
             country_event = { id = pra_mohammedis.1 }
         }
@@ -492,7 +526,21 @@ focus_tree = {
 
         completion_reward = {
             set_country_flag = pra_vltava_defense_front_established
-            add_ideas = pra_capital_defence_doctrine_1
+            if = {
+                limit = {
+                    NOT = {
+                        has_idea = pra_capital_defence_doctrine_1
+                        has_idea = pra_capital_defence_doctrine_2
+                        has_idea = pra_army_of_the_capital
+                        has_idea = pra_army_of_the_capital_barricades
+                        has_idea = pra_army_of_the_capital_officer_school
+                        has_idea = pra_army_of_the_capital_assault_groups
+                        has_idea = pra_fortress_army
+                        has_idea = pra_field_army
+                    }
+                }
+                add_ideas = pra_capital_defence_doctrine_1
+            }
             1082 = {
                 if = {
                     limit = { is_owned_and_controlled_by = ROOT }
@@ -512,14 +560,24 @@ focus_tree = {
         icon = GFX_goal_generic_propaganda
         prerequisite = { focus = pra_mobilize_vltava_defense_front }
         relative_position_id = pra_mobilize_vltava_defense_front
-        x = -3
+        x = -2
         y = 1
         cost = 10
         available = { has_government = democratic }
 
         completion_reward = {
             set_country_flag = pra_vo_supply_network_unlocked
-            add_ideas = pra_fragmented_workshop_network
+            if = {
+                limit = {
+                    NOT = {
+                        has_idea = pra_fragmented_workshop_network
+                        has_idea = pra_modernized_workshop_network
+                        has_idea = pra_arsenal_of_prague_spirit
+                        has_idea = pra_total_metropolitan_mobilization
+                    }
+                }
+                add_ideas = pra_fragmented_workshop_network
+            }
             unlock_decision_category_tooltip = pra_vo_supply_operations
             custom_effect_tooltip = pra_bread_under_black_banner_tt
         }
@@ -548,7 +606,7 @@ focus_tree = {
         icon = GFX_goal_generic_more_territorial_claims
         prerequisite = { focus = pra_mobilize_vltava_defense_front }
         relative_position_id = pra_mobilize_vltava_defense_front
-        x = 3
+        x = 2
         y = 1
         cost = 10
         available = { has_government = democratic }
@@ -570,6 +628,43 @@ focus_tree = {
         }
     }
 
+    focus = {
+    id = pra_strange_interlude
+    icon = GFX_goal_generic_political_pressure
+
+    x = 31
+    y = 2
+    cost = 10
+
+    available = {
+        has_government = fascism
+        has_country_leader = {
+            character = PRA_peter_mohammedis
+            ruling_only = yes
+        }
+    }
+
+    completion_reward = {
+        add_stability = 0.10
+
+        add_opinion_modifier = {
+            target = BEN
+            modifier = PRA_blames_benesov
+        }
+
+        BEN = {
+            add_stability = -0.10
+            country_event = {
+                id = pra_mohammedis.45
+            }
+        }
+
+        news_event = {
+            id = pra_news.1
+        }
+    }
+}
+
     # ============================================================
     # THE COUP - ALL THREE PREPARATIONS ARE REQUIRED
     # ============================================================
@@ -582,7 +677,7 @@ focus_tree = {
         prerequisite = { focus = pra_legionaries_answer_call }
         relative_position_id = pra_mobilize_vltava_defense_front
         x = 0
-        y = 3
+        y = 2
         cost = 10
         available = {
             has_government = democratic
@@ -605,6 +700,7 @@ focus_tree = {
             }
             add_ideas = pra_directorate_of_national_salvation
             set_country_flag = pra_mohammedis_in_power
+            set_cosmetic_tag = PRA_fascism
             1082 = {
                 if = {
                     limit = { is_owned_and_controlled_by = ROOT }
@@ -628,7 +724,7 @@ focus_tree = {
         icon = GFX_goal_generic_construct_military
         prerequisite = { focus = pra_mohammedis_overthrows_government }
         relative_position_id = pra_mohammedis_overthrows_government
-        x = -3
+        x = -2
         y = 1
         cost = 10
         available = {
@@ -687,7 +783,7 @@ focus_tree = {
         icon = GFX_goal_generic_military_sphere
         prerequisite = { focus = pra_mohammedis_overthrows_government }
         relative_position_id = pra_mohammedis_overthrows_government
-        x = 3
+        x = 2
         y = 1
         cost = 10
         available = {
@@ -723,7 +819,7 @@ focus_tree = {
         icon = GFX_goal_generic_army_motorized
         prerequisite = { focus = pra_prague_general_staff }
         relative_position_id = pra_prague_general_staff
-        x = -3
+        x = -2
         y = 1
         cost = 10
         completion_reward = {
@@ -755,7 +851,7 @@ focus_tree = {
         icon = GFX_goal_generic_construct_military
         prerequisite = { focus = pra_barricade_doctrine }
         relative_position_id = pra_barricade_doctrine
-        x = -2
+        x = -1
         y = 1
         cost = 10
         completion_reward = {
@@ -776,7 +872,7 @@ focus_tree = {
         icon = GFX_focus_generic_military_academy
         prerequisite = { focus = pra_barricade_doctrine }
         relative_position_id = pra_barricade_doctrine
-        x = 2
+        x = 1
         y = 1
         cost = 10
         completion_reward = {
@@ -796,7 +892,7 @@ focus_tree = {
         prerequisite = { focus = pra_legionary_officer_school }
         relative_position_id = pra_barricade_doctrine
         x = 0
-        y = 3
+        y = 2
         cost = 10
         completion_reward = {
             army_experience = 25
@@ -860,7 +956,7 @@ focus_tree = {
         icon = GFX_goal_generic_radar
         prerequisite = { focus = pra_air_defence_of_prague }
         relative_position_id = pra_air_defence_of_prague
-        x = -3
+        x = -1
         y = 1
         cost = 10
         completion_reward = {
@@ -971,7 +1067,7 @@ focus_tree = {
         icon = GFX_goal_generic_construct_civ_factory
         prerequisite = { focus = pra_arsenal_of_prague }
         relative_position_id = pra_arsenal_of_prague
-        x = -3
+        x = -2
         y = 1
         cost = 10
         completion_reward = {
@@ -1016,7 +1112,7 @@ focus_tree = {
         icon = GFX_goal_generic_construct_mil_factory
         prerequisite = { focus = pra_night_shifts_at_ckd }
         relative_position_id = pra_night_shifts_at_ckd
-        x = -2
+        x = -1
         y = 1
         cost = 10
         completion_reward = {
@@ -1029,7 +1125,7 @@ focus_tree = {
         icon = GFX_goal_generic_construct_civ_factory
         prerequisite = { focus = pra_night_shifts_at_ckd }
         relative_position_id = pra_night_shifts_at_ckd
-        x = 2
+        x = 1
         y = 1
         cost = 10
         completion_reward = {
@@ -1056,7 +1152,7 @@ focus_tree = {
         prerequisite = { focus = pra_municipal_transport_authority }
         relative_position_id = pra_night_shifts_at_ckd
         x = 0
-        y = 3
+        y = 2
         cost = 10
         completion_reward = {
             add_equipment_to_stockpile = {
@@ -1078,7 +1174,7 @@ focus_tree = {
         icon = GFX_goal_generic_construct_mil_factory
         prerequisite = { focus = pra_skoda_connections }
         relative_position_id = pra_skoda_connections
-        x = -2
+        x = -1
         y = 1
         cost = 10
         completion_reward = {
@@ -1098,7 +1194,7 @@ focus_tree = {
         icon = GFX_goal_generic_scientific_exchange
         prerequisite = { focus = pra_skoda_connections }
         relative_position_id = pra_skoda_connections
-        x = 2
+        x = 1
         y = 1
         cost = 10
         completion_reward = {
@@ -1113,13 +1209,13 @@ focus_tree = {
         prerequisite = { focus = pra_prague_technical_institute }
         relative_position_id = pra_skoda_connections
         x = 0
-        y = 3
+        y = 2
         cost = 10
         completion_reward = {
-            swap_ideas = {
-                remove_idea = pra_arsenal_of_prague_spirit
-                add_idea = pra_total_metropolitan_mobilization
-            }
+            remove_ideas = pra_fragmented_workshop_network
+            remove_ideas = pra_modernized_workshop_network
+            remove_ideas = pra_arsenal_of_prague_spirit
+            add_ideas = pra_total_metropolitan_mobilization
             add_war_support = 0.05
         }
     }
@@ -1151,14 +1247,22 @@ focus_tree = {
         icon = GFX_goal_generic_forceful_treaty
         prerequisite = { focus = pra_morning_after_coup }
         relative_position_id = pra_morning_after_coup
-        x = -3
+        x = -2
         y = 1
         cost = 10
         available = { has_government = fascism }
         completion_reward = {
-            swap_ideas = {
-                remove_idea = pra_morning_after_coup
-                add_idea = pra_directorate_consolidation
+            if = {
+                limit = {
+                    NOT = {
+                        has_idea = pra_mohammedis_state
+                        has_idea = pra_colonel_state
+                    }
+                }
+                swap_ideas = {
+                    remove_idea = pra_morning_after_coup
+                    add_idea = pra_directorate_consolidation
+                }
             }
             set_country_flag = pra_old_parties_dissolved
         }
@@ -1184,7 +1288,7 @@ focus_tree = {
         icon = GFX_goal_generic_political_pressure
         prerequisite = { focus = pra_directorate_decrees }
         relative_position_id = pra_directorate_decrees
-        x = -2
+        x = -1
         y = 1
         cost = 10
         available = { has_government = fascism }
@@ -1199,7 +1303,7 @@ focus_tree = {
         icon = GFX_goal_generic_military_sphere
         prerequisite = { focus = pra_directorate_decrees }
         relative_position_id = pra_directorate_decrees
-        x = 2
+        x = 1
         y = 1
         cost = 10
         available = { has_government = fascism }
@@ -1245,7 +1349,7 @@ focus_tree = {
         prerequisite = { focus = pra_bread_before_politics }
         relative_position_id = pra_black_uniform
         x = 0
-        y = 2
+        y = 1
         cost = 10
         available = { has_government = fascism }
         completion_reward = {
@@ -1293,7 +1397,7 @@ focus_tree = {
         icon = GFX_goal_generic_scientific_exchange
         prerequisite = { focus = pra_colonel_becomes_the_state }
         relative_position_id = pra_colonel_becomes_the_state
-        x = -3
+        x = -1
         y = 1
         cost = 10
         available = { has_government = fascism }
@@ -1311,7 +1415,7 @@ focus_tree = {
         icon = GFX_goal_generic_more_territorial_claims
         prerequisite = { focus = pra_colonel_becomes_the_state }
         relative_position_id = pra_colonel_becomes_the_state
-        x = 8
+        x = 1
         y = 1
         cost = 10
         available = { has_government = fascism }
@@ -1334,13 +1438,20 @@ focus_tree = {
         available = {
             has_government = fascism
         }
+        bypass = {
+            OR = {
+                NOT = { country_exists = CZE }
+                1088 = { NOT = { is_owned_by = CZE } }
+            }
+        }
         completion_reward = {
+            custom_effect_tooltip = pra_demand_territory_tt
             if = {
                 limit = {
                     country_exists = CZE
                     1088 = { is_owned_by = CZE }
                 }
-                CZE = { country_event = { id = pra_mohammedis.18 } }
+                CZE = { country_event = { id = pra_mohammedis.18 days = 2 } }
             }
         }
     }
@@ -1354,15 +1465,22 @@ focus_tree = {
         y = 1
         cost = 10
         available = { has_government = fascism }
+        bypass = {
+            OR = {
+                NOT = { country_exists = CZE }
+                1089 = { NOT = { is_owned_by = CZE } }
+            }
+        }
         completion_reward = {
             add_political_power = 50
             add_war_support = 0.05
+            custom_effect_tooltip = pra_demand_territory_tt
             if = {
                 limit = {
                     country_exists = CZE
                     1089 = { is_owned_by = CZE }
                 }
-                CZE = { country_event = { id = pra_mohammedis.19 } }
+                CZE = { country_event = { id = pra_mohammedis.19 days = 2 } }
             }
         }
     }
@@ -1378,15 +1496,22 @@ focus_tree = {
         available = {
             has_government = fascism
         }
+        bypass = {
+            OR = {
+                NOT = { country_exists = CZE }
+                1090 = { NOT = { is_owned_by = CZE } }
+            }
+        }
         completion_reward = {
             add_political_power = 25
             add_war_support = 0.03
+            custom_effect_tooltip = pra_demand_territory_tt
             if = {
                 limit = {
                     country_exists = CZE
                     1090 = { is_owned_by = CZE }
                 }
-                CZE = { country_event = { id = pra_mohammedis.20 } }
+                CZE = { country_event = { id = pra_mohammedis.20 days = 2 } }
             }
         }
     }
@@ -1405,17 +1530,217 @@ focus_tree = {
             country_exists = CZE
             NOT = { has_war_with = CZE }
         }
-        bypass = { NOT = { country_exists = CZE } }
+        bypass = {
+            OR = {
+                NOT = { country_exists = CZE }
+                1087 = { NOT = { is_owned_by = CZE } }
+            }
+        }
         completion_reward = {
             set_country_flag = pra_ultimatum_sent
             unlock_decision_category_tooltip = pra_bohemian_protectorate
             add_political_power = 50
+            custom_effect_tooltip = pra_demand_territory_tt
             if = {
                 limit = {
                     country_exists = CZE
                     1087 = { is_owned_by = CZE }
                 }
-                CZE = { country_event = { id = pra_mohammedis.21 } }
+                CZE = { country_event = { id = pra_mohammedis.21 days = 2 } }
+            }
+        }
+    }
+
+    focus = {
+        id = pra_secure_western_bohemia
+        icon = GFX_goal_generic_demand_territory
+        prerequisite = { focus = pra_ultimatum_from_prague }
+        relative_position_id = pra_ultimatum_from_prague
+        x = -3
+        y = 1
+        cost = 10
+        available = { has_government = fascism }
+        bypass = {
+            OR = {
+                NOT = { country_exists = CZE }
+                AND = {
+                    9 = { NOT = { is_owned_by = CZE } }
+                    1086 = { NOT = { is_owned_by = CZE } }
+                }
+            }
+        }
+        completion_reward = {
+            add_political_power = 25
+            add_war_support = 0.03
+            custom_effect_tooltip = pra_demand_territory_tt
+            if = {
+                limit = {
+                    country_exists = CZE
+                    OR = {
+                        9 = { is_owned_by = CZE }
+                        1086 = { is_owned_by = CZE }
+                    }
+                }
+                CZE = { country_event = { id = pra_mohammedis.30 days = 2 } }
+            }
+        }
+    }
+
+    focus = {
+        id = pra_bring_south_into_fold
+        icon = GFX_goal_generic_demand_territory
+        prerequisite = { focus = pra_ultimatum_from_prague }
+        relative_position_id = pra_ultimatum_from_prague
+        x = -1
+        y = 1
+        cost = 10
+        available = { has_government = fascism }
+        bypass = {
+            OR = {
+                NOT = { country_exists = CZE }
+                AND = {
+                    1091 = { NOT = { is_owned_by = CZE } }
+                    1092 = { NOT = { is_owned_by = CZE } }
+                }
+            }
+        }
+        completion_reward = {
+            add_political_power = 25
+            add_war_support = 0.03
+            custom_effect_tooltip = pra_demand_territory_tt
+            if = {
+                limit = {
+                    country_exists = CZE
+                    OR = {
+                        1091 = { is_owned_by = CZE }
+                        1092 = { is_owned_by = CZE }
+                    }
+                }
+                CZE = { country_event = { id = pra_mohammedis.33 days = 2 } }
+            }
+        }
+    }
+
+    focus = {
+        id = pra_secure_eastern_bohemia
+        icon = GFX_goal_generic_more_territorial_claims
+        prerequisite = { focus = pra_ultimatum_from_prague }
+        relative_position_id = pra_ultimatum_from_prague
+        x = 1
+        y = 1
+        cost = 10
+        available = { has_government = fascism }
+        bypass = {
+            OR = {
+                NOT = { country_exists = CZE }
+                AND = {
+                    1094 = { NOT = { is_owned_by = CZE } }
+                    1095 = { NOT = { is_owned_by = CZE } }
+                    1096 = { NOT = { is_owned_by = CZE } }
+                    1097 = { NOT = { is_owned_by = CZE } }
+                }
+            }
+        }
+        completion_reward = {
+            add_political_power = 25
+            add_war_support = 0.03
+            custom_effect_tooltip = pra_demand_territory_tt
+            if = {
+                limit = {
+                    country_exists = CZE
+                    OR = {
+                        1094 = { is_owned_by = CZE }
+                        1095 = { is_owned_by = CZE }
+                        1096 = { is_owned_by = CZE }
+                        1097 = { is_owned_by = CZE }
+                    }
+                }
+                CZE = { country_event = { id = pra_mohammedis.36 days = 2 } }
+            }
+        }
+    }
+
+    focus = {
+        id = pra_one_czech_command
+        icon = GFX_focus_generic_military_academy
+        prerequisite = { focus = pra_ultimatum_from_prague }
+        relative_position_id = pra_ultimatum_from_prague
+        x = 3
+        y = 1
+        cost = 10
+        available = { has_government = fascism }
+        completion_reward = {
+            army_experience = 20
+        }
+    }
+
+    focus = {
+        id = pra_bohemian_borderlands
+        icon = GFX_goal_generic_more_territorial_claims
+        prerequisite = { focus = pra_secure_western_bohemia }
+        prerequisite = { focus = pra_secure_eastern_bohemia }
+        relative_position_id = pra_ultimatum_from_prague
+        x = -2
+        y = 2
+        cost = 10
+        available = { has_government = fascism }
+        bypass = {
+            OR = {
+                NOT = { country_exists = CZE }
+                AND = {
+                    69 = { NOT = { is_owned_by = CZE } }
+                    1098 = { NOT = { is_owned_by = CZE } }
+                    1099 = { NOT = { is_owned_by = CZE } }
+                    1100 = { NOT = { is_owned_by = CZE } }
+                    1101 = { NOT = { is_owned_by = CZE } }
+                }
+            }
+        }
+        completion_reward = {
+            add_political_power = 50
+            add_war_support = 0.05
+            custom_effect_tooltip = pra_demand_territory_tt
+            if = {
+                limit = {
+                    country_exists = CZE
+                    OR = {
+                        69 = { is_owned_by = CZE }
+                        1098 = { is_owned_by = CZE }
+                        1099 = { is_owned_by = CZE }
+                        1100 = { is_owned_by = CZE }
+                        1101 = { is_owned_by = CZE }
+                    }
+                }
+                CZE = { country_event = { id = pra_mohammedis.39 days = 2 } }
+            }
+        }
+    }
+
+    focus = {
+        id = pra_secure_southern_borderlands
+        icon = GFX_goal_generic_demand_territory
+        prerequisite = { focus = pra_bring_south_into_fold }
+        relative_position_id = pra_ultimatum_from_prague
+        x = 0
+        y = 2
+        cost = 10
+        available = { has_government = fascism }
+        bypass = {
+            OR = {
+                NOT = { country_exists = CZE }
+                972 = { NOT = { is_owned_by = CZE } }
+            }
+        }
+        completion_reward = {
+            add_political_power = 25
+            add_war_support = 0.03
+            custom_effect_tooltip = pra_demand_territory_tt
+            if = {
+                limit = {
+                    country_exists = CZE
+                    972 = { is_owned_by = CZE }
+                }
+                CZE = { country_event = { id = pra_mohammedis.42 days = 2 } }
             }
         }
     }
@@ -1423,10 +1748,10 @@ focus_tree = {
     focus = {
         id = pra_secure_elbe_approaches
         icon = GFX_goal_generic_construct_military
-        prerequisite = { focus = pra_ultimatum_from_prague }
+        prerequisite = { focus = pra_secure_eastern_bohemia }
         relative_position_id = pra_ultimatum_from_prague
-        x = -2
-        y = 1
+        x = 2
+        y = 2
         cost = 10
         available = { has_government = fascism }
         completion_reward = {
@@ -1450,23 +1775,10 @@ focus_tree = {
     }
 
     focus = {
-        id = pra_one_czech_command
-        icon = GFX_focus_generic_military_academy
-        prerequisite = { focus = pra_ultimatum_from_prague }
-        relative_position_id = pra_ultimatum_from_prague
-        x = 2
-        y = 1
-        cost = 10
-        available = { has_government = fascism }
-        completion_reward = {
-            army_experience = 20
-        }
-    }
-
-    focus = {
         id = pra_czech_state_reborn
         icon = GFX_goal_generic_major_war
-        prerequisite = { focus = pra_secure_elbe_approaches }
+        prerequisite = { focus = pra_bohemian_borderlands }
+        prerequisite = { focus = pra_secure_southern_borderlands }
         prerequisite = { focus = pra_one_czech_command }
         relative_position_id = pra_ultimatum_from_prague
         x = 0
@@ -1482,6 +1794,9 @@ focus_tree = {
         }
         completion_reward = {
             9 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
+            69 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
+            972 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
+            1082 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
             1086 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
             1087 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
             1088 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
@@ -1494,6 +1809,10 @@ focus_tree = {
             1095 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
             1096 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
             1097 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
+            1098 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
+            1099 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
+            1100 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
+            1101 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
             country_event = { id = pra_mohammedis.14 }
         }
     }
@@ -1530,4 +1849,5 @@ focus_tree = {
             country_event = { id = pra_mohammedis.4 }
         }
     }
+
 }

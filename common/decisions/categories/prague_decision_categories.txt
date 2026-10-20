@@ -50,3 +50,14 @@ pra_strasnice_military_command = {
     }
     visible_when_empty = no
 }
+
+pra_integration_of_czech_lands = {
+    icon = GFX_decision_category_generic_political_actions
+    allowed = {
+        original_tag = PRA
+    }
+    visible = {
+        has_country_flag = pra_mohammedis_in_power
+    }
+    visible_when_empty = no
+}

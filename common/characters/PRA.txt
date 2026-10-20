@@ -84,7 +84,12 @@ characters = {
                 original_tag = PRA
                 has_dlc = "La Resistance"
             }
-            available = { has_intelligence_agency = yes }
+            available = {
+                has_intelligence_agency = yes
+                NOT = {
+                    has_country_flag = pra_bartak_promoted_to_general
+                }
+            }
             traits = { head_of_intelligence }
             ai_will_do = {
                 factor = 1
@@ -217,6 +222,24 @@ characters = {
             defense_skill = 4
             planning_skill = 2
             logistics_skill = 2
+        }
+    }
+
+    PRA_octane = {
+        name = PRA_octane
+        portraits = {
+            army = {
+                small = GFX_idea_PRA_octane
+            }
+        }
+        advisor = {
+            slot = high_command
+            ledger = army
+            idea_token = PRA_octane
+            cost = 100
+            allowed = { original_tag = PRA }
+            available = { has_completed_focus = pra_reward_loyal_officers }
+            traits = { army_infantry_2 }
         }
     }
 }

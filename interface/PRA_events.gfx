@@ -7,5 +7,9 @@ spriteTypes = {
 		name = "GFX_news_event_PRA_bartak_ceremony"
 		texturefile = "gfx/event_pictures/news_event_PRA_bartak_ceremony.dds"
 	}
+	spriteType = {
+		name = "GFX_news_event_PRA_blame_benesov"
+		texturefile = "gfx/event_pictures/news_event_PRA_blame_benesov.dds"
+	}
 }
 

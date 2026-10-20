@@ -28,4 +28,8 @@ opinion_modifiers = {
 		value = -30
 	}
 
+	PRA_blames_benesov = {
+		value = -50
+	}
+
 }
