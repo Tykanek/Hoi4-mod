@@ -1740,5 +1740,199 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 
+	spriteType = {
+		name = "GFX_focus_PRA_incompetence_of_pospisil"
+		texturefile = "gfx/interface/goals/focus_PRA_incompetence_of_pospisil.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_PRA_incompetence_of_pospisil_shine"
+		texturefile = "gfx/interface/goals/focus_PRA_incompetence_of_pospisil.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_PRA_incompetence_of_pospisil.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_PRA_incompetence_of_pospisil.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_focus_PRA_get_them_all_drunk"
+		texturefile = "gfx/interface/goals/focus_PRA_get_them_all_drunk.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_PRA_get_them_all_drunk_shine"
+		texturefile = "gfx/interface/goals/focus_PRA_get_them_all_drunk.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_PRA_get_them_all_drunk.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_PRA_get_them_all_drunk.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_focus_PRA_pospisil_cant_play_hoi4"
+		texturefile = "gfx/interface/goals/focus_PRA_pospisil_cant_play_hoi4.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_PRA_pospisil_cant_play_hoi4_shine"
+		texturefile = "gfx/interface/goals/focus_PRA_pospisil_cant_play_hoi4.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_PRA_pospisil_cant_play_hoi4.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_PRA_pospisil_cant_play_hoi4.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_focus_PRA_u_r_trash_kid"
+		texturefile = "gfx/interface/goals/focus_PRA_u_r_trash_kid.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_PRA_u_r_trash_kid_shine"
+		texturefile = "gfx/interface/goals/focus_PRA_u_r_trash_kid.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_PRA_u_r_trash_kid.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_PRA_u_r_trash_kid.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_focus_PRA_holy_trash_templates"
+		texturefile = "gfx/interface/goals/focus_PRA_holy_trash_templates.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_PRA_holy_trash_templates_shine"
+		texturefile = "gfx/interface/goals/focus_PRA_holy_trash_templates.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_PRA_holy_trash_templates.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_PRA_holy_trash_templates.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		legacy_lazy_load = no
+	}
 }
 

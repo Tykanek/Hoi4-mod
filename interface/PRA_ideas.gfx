@@ -91,4 +91,8 @@ spriteTypes = {
 		name = "GFX_idea_pra_colonel_state"
 		texturefile = "gfx/interface/ideas/idea_pra_colonel_state.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_ben_matej_dvorak_getting_everyone_drunk"
+		texturefile = "gfx/interface/ideas/idea_ben_matej_dvorak_getting_everyone_drunk.dds"
+	}
 }

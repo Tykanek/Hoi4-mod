@@ -1,0 +1,15 @@
+ideas = {
+	country = {
+		ben_matej_dvorak_getting_everyone_drunk = {
+			picture = ben_matej_dvorak_getting_everyone_drunk
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				monthly_population = -0.01
+			}
+		}
+	}
+}
+

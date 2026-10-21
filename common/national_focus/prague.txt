@@ -691,6 +691,143 @@ focus_tree = {
     }
 
     # ============================================================
+    # BENEŠOV SABOTAGE FOCUSES
+    # ============================================================
+
+    focus = {
+        id = pra_incompetence_of_pospisil
+        icon = GFX_focus_PRA_incompetence_of_pospisil
+        prerequisite = {
+            focus = pra_investigate_benesov_hatred
+        }
+        relative_position_id = pra_investigate_benesov_hatred
+        x = -4
+        y = 1
+        cost = 10
+
+        available = {
+            has_opinion = {
+                target = BEN
+                value < -50
+            }
+        }
+
+        completion_reward = {
+            BEN = {
+                add_stability = -0.10
+            }
+        }
+    }
+
+    focus = {
+        id = pra_get_them_all_drunk
+        icon = GFX_focus_PRA_get_them_all_drunk
+        prerequisite = {
+            focus = pra_investigate_benesov_hatred
+        }
+        relative_position_id = pra_investigate_benesov_hatred
+        x = -2
+        y = 1
+        cost = 10
+
+        available = {
+            has_opinion = {
+                target = BEN
+                value < -60
+            }
+        }
+
+        completion_reward = {
+            BEN = {
+                add_stability = -0.10
+                add_ideas = ben_matej_dvorak_getting_everyone_drunk
+            }
+        }
+    }
+
+    focus = {
+        id = pra_pospisil_cant_play_hoi4
+        icon = GFX_focus_PRA_pospisil_cant_play_hoi4
+        prerequisite = {
+            focus = pra_investigate_benesov_hatred
+        }
+        relative_position_id = pra_investigate_benesov_hatred
+        x = 0
+        y = 1
+        cost = 10
+
+        available = {
+            has_opinion = {
+                target = BEN
+                value < -70
+            }
+        }
+
+        completion_reward = {
+            BEN = {
+                add_war_support = -0.05
+            }
+        }
+    }
+
+    focus = {
+        id = pra_u_r_trash_kid
+        icon = GFX_focus_PRA_u_r_trash_kid
+        prerequisite = {
+            focus = pra_investigate_benesov_hatred
+        }
+        relative_position_id = pra_investigate_benesov_hatred
+        x = 2
+        y = 1
+        cost = 10
+
+        available = {
+            has_opinion = {
+                target = BEN
+                value < -80
+            }
+            has_war_with = BEN
+        }
+
+        completion_reward = {
+            BEN = {
+                add_war_support = -0.05
+            }
+        }
+    }
+
+    focus = {
+        id = pra_holy_trash_templates
+        icon = GFX_focus_PRA_holy_trash_templates
+        prerequisite = {
+            focus = pra_investigate_benesov_hatred
+        }
+        relative_position_id = pra_investigate_benesov_hatred
+        x = 4
+        y = 1
+        cost = 10
+
+        available = {
+            has_opinion = {
+                target = BEN
+                value < -100
+            }
+            BEN = {
+                num_divisions > 6
+            }
+        }
+
+        completion_reward = {
+            BEN = {
+                army_experience = -50
+                air_experience = -50
+                navy_experience = -50
+                add_command_power = -10
+            }
+        }
+    }
+
+    # ============================================================
     # THE COUP - ALL THREE PREPARATIONS ARE REQUIRED
     # ============================================================
 

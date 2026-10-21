@@ -56,3 +56,9 @@
  pra_mohammedis_state_desc: "The Directorate, army and food office answer to one colonel."
  pra_colonel_state: "The Colonel Is the State"
  pra_colonel_state_desc: "Mohammedis has turned the emergency Directorate into a permanent personal regime: efficient, mobilized and openly dependent on one man."
+
+ # ========================================================
+ # BENEŠOV SABOTAGE SPIRITS
+ # ========================================================
+ ben_matej_dvorak_getting_everyone_drunk:0 "Matěj Dvořák Responsible for Getting Everyone Drunk"
+ ben_matej_dvorak_getting_everyone_drunk_desc:0 "A systematic investigation has concluded that Matěj Dvořák bears direct responsibility for an alarming decline in sobriety across Benešov. The resulting demographic consequences are considered severe."
