@@ -1,0 +1,326 @@
+focus_tree = {
+	id = benesov_focus
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			original_tag = BEN
+		}
+	}
+
+	default = no
+
+	continuous_focus_position = {
+		x = 50
+		y = 2200
+	}
+
+	# ============================================================
+	# ECONOMIC RECOVERY BRANCH (Left: x = 2)
+	# ============================================================
+
+	focus = {
+		id = ben_count_what_remains
+		icon = GFX_focus_BEN_count_what_remains
+		x = 2
+		y = 0
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.025
+		}
+	}
+
+	focus = {
+		id = ben_reopen_local_workshops
+		icon = GFX_focus_BEN_reopen_local_workshops
+		prerequisite = { focus = ben_count_what_remains }
+		x = 2
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			1093 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			swap_ideas = {
+				remove_idea = ben_collapsed_local_economy
+				add_idea = ben_struggling_local_economy
+			}
+		}
+	}
+
+	focus = {
+		id = ben_localize_supply_contracts
+		icon = GFX_focus_BEN_localize_supply_contracts
+		prerequisite = { focus = ben_reopen_local_workshops }
+		x = 2
+		y = 2
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ben_dependent_on_czech_deliveries
+				add_idea = ben_reduced_czech_dependency
+			}
+		}
+	}
+
+	focus = {
+		id = ben_benesov_works_again
+		icon = GFX_focus_BEN_benesov_works_again
+		prerequisite = { focus = ben_localize_supply_contracts }
+		x = 2
+		y = 3
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			remove_ideas = ben_struggling_local_economy
+			1093 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = ben_economic_recovery
+		icon = GFX_focus_BEN_economic_recovery
+		prerequisite = { focus = ben_benesov_works_again }
+		x = 2
+		y = 4
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ben_reduced_czech_dependency
+				add_idea = ben_recovered_local_economy
+			}
+		}
+	}
+
+	# ============================================================
+	# NOTE: Reserved middle space (x = 6 to 18) for Phase 3 Lore
+	# ============================================================
+
+	# ============================================================
+	# ARMY BRANCH (Right: x = 21)
+	# ============================================================
+
+	focus = {
+		id = ben_inventory_the_armories
+		icon = GFX_focus_BEN_inventory_the_armories
+		x = 21
+		y = 0
+		cost = 10
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		ai_will_do = { factor = 3 }
+
+		completion_reward = {
+			army_experience = 10
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 200
+				producer = BEN
+			}
+		}
+	}
+
+	focus = {
+		id = ben_organize_the_garrison
+		icon = GFX_focus_BEN_organize_the_garrison
+		prerequisite = { focus = ben_inventory_the_armories }
+		x = 21
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		ai_will_do = { factor = 3 }
+
+		completion_reward = {
+			army_experience = 15
+			add_command_power = 15
+		}
+	}
+
+	focus = {
+		id = ben_local_supply_depots
+		icon = GFX_focus_BEN_local_supply_depots
+		prerequisite = { focus = ben_organize_the_garrison }
+		x = 21
+		y = 2
+		cost = 10
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		ai_will_do = { factor = 3 }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ben_army_without_supply_system
+				add_idea = ben_improvised_supply_system
+			}
+		}
+	}
+
+	focus = {
+		id = ben_standardize_the_infantry
+		icon = GFX_focus_BEN_standardize_the_infantry
+		prerequisite = { focus = ben_local_supply_depots }
+		x = 21
+		y = 3
+		cost = 10
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		ai_will_do = { factor = 3 }
+
+		completion_reward = {
+			army_experience = 25
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 250
+				producer = BEN
+			}
+		}
+	}
+
+	focus = {
+		id = ben_army_that_can_fight
+		icon = GFX_focus_BEN_army_that_can_fight
+		prerequisite = { focus = ben_standardize_the_infantry }
+		x = 21
+		y = 4
+		cost = 10
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		ai_will_do = { factor = 3 }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ben_improvised_supply_system
+				add_idea = ben_reorganized_benesov_army
+			}
+		}
+	}
+
+	# ============================================================
+	# AIR BRANCH (Far Right: x = 26)
+	# ============================================================
+
+	focus = {
+		id = ben_survey_the_airfields
+		icon = GFX_focus_BEN_survey_the_airfields
+		x = 26
+		y = 0
+		cost = 10
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		ai_will_do = { factor = 2 }
+
+		completion_reward = {
+			air_experience = 10
+			1093 = {
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ben_build_a_flight_school
+		icon = GFX_focus_BEN_build_a_flight_school
+		prerequisite = { focus = ben_survey_the_airfields }
+		x = 26
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		ai_will_do = { factor = 2 }
+
+		completion_reward = {
+			air_experience = 15
+			add_doctrine_cost_reduction = {
+				name = ben_flight_school_bonus
+				category = air_doctrine
+				cost_reduction = 0.5
+				uses = 1
+			}
+		}
+	}
+
+	focus = {
+		id = ben_scrounge_for_aircraft
+		icon = GFX_focus_BEN_scrounge_for_aircraft
+		prerequisite = { focus = ben_build_a_flight_school }
+		x = 26
+		y = 2
+		cost = 10
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		ai_will_do = { factor = 2 }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ben_air_force_in_name_only
+				add_idea = ben_embryonic_air_force
+			}
+		}
+	}
+
+	focus = {
+		id = ben_benesov_air_command
+		icon = GFX_focus_BEN_benesov_air_command
+		prerequisite = { focus = ben_scrounge_for_aircraft }
+		x = 26
+		y = 3
+		cost = 10
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		ai_will_do = { factor = 2 }
+
+		completion_reward = {
+			air_experience = 25
+			add_doctrine_cost_reduction = {
+				name = ben_air_command_doctrine
+				category = air_doctrine
+				cost_reduction = 0.5
+				uses = 1
+			}
+		}
+	}
+
+	focus = {
+		id = ben_air_force_of_our_own
+		icon = GFX_focus_BEN_air_force_of_our_own
+		prerequisite = { focus = ben_benesov_air_command }
+		x = 26
+		y = 4
+		cost = 10
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		ai_will_do = { factor = 2 }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ben_embryonic_air_force
+				add_idea = ben_reorganized_air_command
+			}
+		}
+	}
+}
+

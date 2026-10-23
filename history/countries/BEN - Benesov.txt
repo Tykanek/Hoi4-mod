@@ -1,7 +1,28 @@
 capital = 1093
+oob = "BEN_1936"
 
-set_stability = 0.50
-set_war_support = 0.10
+# Starting characters
+recruit_character = BEN_matej_dvorak
+
+# Starting national debuffs
+add_ideas = {
+	ben_dependent_on_czech_deliveries
+	ben_collapsed_local_economy
+	ben_army_without_supply_system
+	ben_air_force_in_name_only
+}
+
+set_stability = 0.30
+set_war_support = 0.05
+
+set_research_slots = 2
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	gw_artillery = 1
+}
 
 set_politics = {
 	ruling_party = democratic
@@ -12,9 +33,8 @@ set_politics = {
 
 set_popularities = {
 	democratic = 60
-	fascism = 10
-	communism = 10
-	neutrality = 20
+	communism = 15
+	fascism = 5
+	neutrality = 15
+	monarchism = 5
 }
-
-set_research_slots = 2

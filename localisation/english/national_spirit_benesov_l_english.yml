@@ -1,0 +1,33 @@
+﻿l_english:
+ ben_dependent_on_czech_deliveries:0 "Dependent on Czech Deliveries"
+ ben_dependent_on_czech_deliveries_desc:0 "Benešov's economy was never designed to function independently. Machinery, industrial inputs, replacement parts, and essential goods previously arrived through the Czechoslovak economic network, leaving local production severely impaired by trade disruptions."
+
+ ben_collapsed_local_economy:0 "Collapsed Local Economy"
+ ben_collapsed_local_economy_desc:0 "Benešov lacks the industrial base, financial institutions, and skilled workforce required to sustain an autonomous economy. Workshops are shuttered and construction efforts are crippled."
+
+ ben_struggling_local_economy:0 "Struggling Local Economy"
+ ben_struggling_local_economy_desc:0 "Workshops are reopening and basic tools have been returned to service, but local production remains fragile and functions below capacity."
+
+ ben_reduced_czech_dependency:0 "Reduced Czech Dependency"
+ ben_reduced_czech_dependency_desc:0 "Local contracts and municipal workshops have replaced several critical external suppliers, significantly cushioning the impact of disrupted deliveries."
+
+ ben_recovered_local_economy:0 "Recovered Local Economy"
+ ben_recovered_local_economy_desc:0 "Benešov has stabilized its public finances, reorganized municipal workshops, and built a resilient, self-sufficient economic baseline."
+
+ ben_army_without_supply_system:0 "An Army Without a Supply System"
+ ben_army_without_supply_system_desc:0 "The garrison possesses rifles and uniforms, but almost none of the logistical infrastructure expected of an independent army. Ammunition distribution and field logistics remain severely degraded."
+
+ ben_improvised_supply_system:0 "Improvised Supply System"
+ ben_improvised_supply_system_desc:0 "Decentralized district depots and local transport coordination now ensure a reliable supply flow, reducing acute field shortages."
+
+ ben_reorganized_benesov_army:0 "Reorganized Benešov Army"
+ ben_reorganized_benesov_army_desc:0 "With standardized field equipment, dependable logistics, and unified command procedures, the Benešov armed forces have achieved true combat readiness."
+
+ ben_air_force_in_name_only:0 "An Air Force in Name Only"
+ ben_air_force_in_name_only_desc:0 "Benešov inherited neither a meaningful aircraft inventory nor the technical organization required to operate one, leaving its airspace entirely unprotected."
+
+ ben_embryonic_air_force:0 "Embryonic Air Force"
+ ben_embryonic_air_force_desc:0 "A handful of repaired training biplanes and a nascent flight school provide Benešov with its first rudimentary aviation capability."
+
+ ben_reorganized_air_command:0 "Reorganized Air Command"
+ ben_reorganized_air_command_desc:0 "Dedicated maintenance facilities, trained pilots, and an established air command now coordinate air defense operations across Benešov."

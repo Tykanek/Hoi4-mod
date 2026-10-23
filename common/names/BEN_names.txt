@@ -1,0 +1,23 @@
+BEN = {
+	male = {
+		names = {
+			"Jan" "Josef" "Karel" "František" "Václav" "Miroslav" "Jaroslav" "Jiří" "Antonín" "Pavel"
+			"Petr" "Tomáš" "Zdeněk" "Ladislav" "Milan" "Stanislav" "Vladimír" "Alois" "Vojtěch" "Rostislav"
+		}
+		surnames = {
+			"Dvořák" "Novák" "Svoboda" "Novotný" "Černý" "Procházka" "Kučera" "Veselý" "Horák" "Němec"
+			"Marek" "Pospíšil" "Beneš" "Fiala" "Růžička" "Sedláček" "Kolář" "Urban" "Vaněk" "Krejčí"
+		}
+	}
+	female = {
+		names = {
+			"Marie" "Anna" "Eva" "Hana" "Věra" "Lenka" "Alena" "Jaroslava" "Jana" "Helena"
+			"Božena" "Alžběta" "Marta" "Ludmila" "Růžena"
+		}
+		surnames = {
+			"Dvořáková" "Nováková" "Svobodová" "Novotná" "Černá" "Procházková" "Kučerová" "Veselá" "Horáková" "Němcová"
+			"Marková" "Pospíšilová" "Benešová" "Fialová" "Růžičková" "Sedláčková" "Kolářová" "Urbanová" "Vaňková" "Krejčová"
+		}
+	}
+}
+

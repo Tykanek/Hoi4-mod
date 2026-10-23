@@ -1755,6 +1755,17 @@
  CZE_neutrality_party_national_unity: "Strana národní jednoty"
  CZE_democratic_party_second_republic: "Národní strana práce"
 
+ BEN_democratic_party: "Benešov Democratic Administration"
+ BEN_democratic_party_long: "Benešov Democratic Administration"
+ BEN_communism_party: "Communist Party of Benešov"
+ BEN_communism_party_long: "Communist Party of Benešov"
+ BEN_fascism_party: "Benešov National Movement"
+ BEN_fascism_party_long: "Benešov National Movement"
+ BEN_neutrality_party: "Independent Administration"
+ BEN_neutrality_party_long: "Independent Administration"
+ BEN_monarchism_party: "Monarchist League of Benešov"
+ BEN_monarchism_party_long: "Monarchist League of Benešov"
+
 
 
 

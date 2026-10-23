@@ -1,0 +1,47 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_ben_dependent_on_czech_deliveries"
+		texturefile = "gfx/interface/ideas/idea_ben_dependent_on_czech_deliveries.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ben_collapsed_local_economy"
+		texturefile = "gfx/interface/ideas/idea_ben_collapsed_local_economy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ben_struggling_local_economy"
+		texturefile = "gfx/interface/ideas/idea_ben_struggling_local_economy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ben_reduced_czech_dependency"
+		texturefile = "gfx/interface/ideas/idea_ben_reduced_czech_dependency.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ben_recovered_local_economy"
+		texturefile = "gfx/interface/ideas/idea_ben_recovered_local_economy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ben_army_without_supply_system"
+		texturefile = "gfx/interface/ideas/idea_ben_army_without_supply_system.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ben_improvised_supply_system"
+		texturefile = "gfx/interface/ideas/idea_ben_improvised_supply_system.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ben_reorganized_benesov_army"
+		texturefile = "gfx/interface/ideas/idea_ben_reorganized_benesov_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ben_air_force_in_name_only"
+		texturefile = "gfx/interface/ideas/idea_ben_air_force_in_name_only.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ben_embryonic_air_force"
+		texturefile = "gfx/interface/ideas/idea_ben_embryonic_air_force.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ben_reorganized_air_command"
+		texturefile = "gfx/interface/ideas/idea_ben_reorganized_air_command.dds"
+	}
+}
+

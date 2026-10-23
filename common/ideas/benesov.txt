@@ -1,5 +1,6 @@
 ideas = {
 	country = {
+		# Existing Prague sabotage spirit - DO NOT ADD AT START
 		ben_matej_dvorak_getting_everyone_drunk = {
 			picture = ben_matej_dvorak_getting_everyone_drunk
 			allowed = {
@@ -10,6 +11,155 @@ ideas = {
 				monthly_population = -0.01
 			}
 		}
+
+		# ============================================================
+		# STARTING SEVERE NATIONAL DEBUFFS (4)
+		# ============================================================
+
+		ben_dependent_on_czech_deliveries = {
+			picture = ben_dependent_on_czech_deliveries
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.15
+				industrial_capacity_factory = -0.15
+				production_factory_max_efficiency_factor = -0.10
+			}
+		}
+
+		ben_collapsed_local_economy = {
+			picture = ben_collapsed_local_economy
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = -0.20
+				production_factory_efficiency_gain_factor = -0.20
+				production_speed_industrial_complex_factor = -0.10
+			}
+		}
+
+		ben_army_without_supply_system = {
+			picture = ben_army_without_supply_system
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_org_factor = -0.15
+				supply_consumption_factor = 0.20
+				training_time_army_factor = 0.20
+				experience_gain_army_factor = -0.25
+			}
+		}
+
+		ben_air_force_in_name_only = {
+			picture = ben_air_force_in_name_only
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				air_mission_efficiency = -0.25
+				experience_gain_air_factor = -0.50
+			}
+		}
+
+		# ============================================================
+		# INTERMEDIATE RECOVERY SPIRITS (4)
+		# ============================================================
+
+		ben_struggling_local_economy = {
+			picture = ben_struggling_local_economy
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = -0.10
+				production_factory_efficiency_gain_factor = -0.10
+			}
+		}
+
+		ben_reduced_czech_dependency = {
+			picture = ben_reduced_czech_dependency
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.075
+				industrial_capacity_factory = -0.075
+				production_factory_max_efficiency_factor = -0.05
+			}
+		}
+
+		ben_improvised_supply_system = {
+			picture = ben_improvised_supply_system
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_org_factor = -0.075
+				supply_consumption_factor = 0.10
+				training_time_army_factor = 0.10
+			}
+		}
+
+		ben_embryonic_air_force = {
+			picture = ben_embryonic_air_force
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				air_mission_efficiency = -0.125
+				experience_gain_air_factor = -0.25
+			}
+		}
+
+		# ============================================================
+		# POSITIVE REORGANIZED SPIRITS (3)
+		# ============================================================
+
+		ben_recovered_local_economy = {
+			picture = ben_recovered_local_economy
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		ben_reorganized_benesov_army = {
+			picture = ben_reorganized_benesov_army
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_org_factor = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+
+		ben_reorganized_air_command = {
+			picture = ben_reorganized_air_command
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				air_mission_efficiency = 0.05
+				experience_gain_air_factor = 0.05
+			}
+		}
 	}
 }
-

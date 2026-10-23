@@ -1,0 +1,17 @@
+characters = {
+	BEN_matej_dvorak = {
+		name = BEN_matej_dvorak
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Europe_Generic_1"
+				small = "GFX_Portrait_Europe_Generic_1_small"
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+}
+
