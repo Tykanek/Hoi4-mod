@@ -43,5 +43,28 @@ spriteTypes = {
 		name = "GFX_idea_ben_reorganized_air_command"
 		texturefile = "gfx/interface/ideas/idea_ben_reorganized_air_command.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_ben_public_morale_program"
+		texturefile = "gfx/interface/ideas/idea_ben_public_morale_program.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ben_pospisil_strategic_theory"
+		texturefile = "gfx/interface/ideas/idea_ben_pospisil_strategic_theory.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ben_state_strategic_education"
+		texturefile = "gfx/interface/ideas/idea_ben_state_strategic_education.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ben_stepans_distribution_network"
+		texturefile = "gfx/interface/ideas/idea_ben_stepans_distribution_network.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ben_pospisil_doctrine"
+		texturefile = "gfx/interface/ideas/idea_ben_pospisil_doctrine.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ben_claimant_to_czech_leadership"
+		texturefile = "gfx/interface/ideas/idea_ben_claimant_to_czech_leadership.dds"
+	}
 }
-

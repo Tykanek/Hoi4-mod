@@ -13,5 +13,46 @@ characters = {
 			expire = "1965.1.1"
 		}
 	}
-}
 
+	BEN_adam_pospisil = {
+		name = BEN_adam_pospisil
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Europe_Generic_2"
+				small = "GFX_Portrait_Europe_Generic_2_small"
+			}
+		}
+		country_leader = {
+			ideology = marxism
+			traits = { }
+			expire = "1965.1.1"
+		}
+	}
+
+	BEN_stepan_pospisil = {
+		name = BEN_stepan_pospisil
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Europe_Generic_3"
+				small = "GFX_Portrait_Europe_Generic_3_small"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = BEN_stepan_pospisil
+			allowed = {
+				original_tag = BEN
+			}
+			available = {
+				has_country_flag = ben_stepan_recruited
+			}
+			traits = {
+				ben_informal_distribution_network
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}

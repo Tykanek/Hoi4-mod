@@ -1,4 +1,4 @@
-﻿l_english:
+﻿﻿l_english:
  ben_dependent_on_czech_deliveries:0 "Dependent on Czech Deliveries"
  ben_dependent_on_czech_deliveries_desc:0 "Benešov's economy was never designed to function independently. Machinery, industrial inputs, replacement parts, and essential goods previously arrived through the Czechoslovak economic network, leaving local production severely impaired by trade disruptions."
 
@@ -31,3 +31,15 @@
 
  ben_reorganized_air_command:0 "Reorganized Air Command"
  ben_reorganized_air_command_desc:0 "Dedicated maintenance facilities, trained pilots, and an established air command now coordinate air defense operations across Benešov."
+ben_public_morale_program:0 "Public Morale Programme"
+ ben_public_morale_program_desc:0 "Subsidized municipal tavern rations and communal beer supplies help maintain civilian spirits during times of economic isolation, though diverting a modest share of consumer goods."
+ ben_pospisil_strategic_theory:0 "Pospíšil's Strategic Theory"
+ ben_pospisil_strategic_theory_desc:0 "Heavily influenced by rigorous tabletop military simulations and grand operational treatises, the revolutionary leadership emphasizes meticulous planning and calculated battlefield maneuvers."
+ ben_state_strategic_education:0 "State Strategic Education"
+ ben_state_strategic_education_desc:0 "Comprehensive military-theoretical training across public schools and union halls equips conscripts and junior officers with an acute awareness of operational geometry."
+ ben_stepans_distribution_network:0 "Štěpán's Distribution Network"
+ ben_stepans_distribution_network_desc:0 "Run by Štěpán Pospíšil, this pragmatic logistics apparatus coordinates brewery transport lines, regional warehouses, and repair workshops to accelerate public construction and keep supply lines flowing."
+ ben_pospisil_doctrine:0 "The Pospíšil Doctrine"
+ ben_pospisil_doctrine_desc:0 "An all-encompassing military philosophy that pairs aggressive operational planning with hyper-optimized squad organization, turning the Benešov army into a formidable tactical instrument."
+ ben_claimant_to_czech_leadership:0 "Claimant to Czech Leadership"
+ ben_claimant_to_czech_leadership_desc:0 "Benešov openly asserts moral and political primacy over the historical Czech lands, justifying swift military intervention against rival regimes to liberate the working class."

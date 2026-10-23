@@ -161,5 +161,84 @@ ideas = {
 				experience_gain_air_factor = 0.05
 			}
 		}
+
+		# ============================================================
+		# PHASE 3 POLITICAL LORE SPIRITS (6)
+		# ============================================================
+
+		ben_public_morale_program = {
+			picture = ben_public_morale_program
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.03
+				consumer_goods_factor = 0.02
+			}
+		}
+
+		ben_pospisil_strategic_theory = {
+			picture = ben_pospisil_strategic_theory
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				planning_speed = 0.05
+				max_planning = 0.05
+			}
+		}
+
+		ben_state_strategic_education = {
+			picture = ben_state_strategic_education
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				planning_speed = 0.10
+				experience_gain_army_factor = 0.05
+			}
+		}
+
+		ben_stepans_distribution_network = {
+			picture = ben_stepans_distribution_network
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				supply_consumption_factor = -0.05
+				industry_repair_factor = 0.10
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		ben_pospisil_doctrine = {
+			picture = ben_pospisil_doctrine
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_org_factor = 0.05
+				planning_speed = 0.10
+				max_planning = 0.10
+			}
+		}
+
+		ben_claimant_to_czech_leadership = {
+			picture = ben_claimant_to_czech_leadership
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.05
+				war_support_factor = 0.05
+				justify_war_goal_time = -0.10
+			}
+		}
 	}
 }

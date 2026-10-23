@@ -1,4 +1,4 @@
-﻿l_english:
+﻿﻿l_english:
  PRA_great_leader: "Grznar"
  PRA_grznar: "Grznar"
  PRA_grznar_advisor: "Grznar"
@@ -48,3 +48,9 @@
 
  BEN_matej_dvorak: "Matěj Dvořák"
  BEN_matej_dvorak_desc: "The democratic leader of the Benešov administration, working to maintain local order and navigate relations with Czechoslovakia."
+BEN_adam_pospisil:0 "Adam Pospíšil"
+ BEN_adam_pospisil_desc:0 "A passionate communist theoretician and obsessive student of grand strategy, Pospíšil treats military, economic, and political governance as components of an interconnected operational simulation."
+ BEN_stepan_pospisil:0 "Štěpán Pospíšil"
+ BEN_stepan_pospisil_desc:0 "Adam's brother and pragmatic right hand, Štěpán manages an extensive informal network spanning tavern keepers, warehouse workers, and railway clerks."
+ ben_informal_distribution_network:0 "Informal Distribution Network"
+ ben_informal_distribution_network_desc:0 "Deep connections across local pubs, transport hubs, and storage yards allow for rapid, flexible logistics that bypass bureaucratic paralysis."

@@ -1,0 +1,12 @@
+opinion_modifiers = {
+	ben_reaffirmed_czech_ties = {
+		value = 25
+	}
+	ben_declared_independence_opinion = {
+		value = -40
+	}
+	ben_denounced_old_republic = {
+		value = -30
+	}
+}
+

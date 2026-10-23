@@ -1,0 +1,116 @@
+add_namespace = benesov
+add_namespace = benesov_news
+
+# ================================================================
+# BENEŠOV COUNTRY EVENTS
+# ================================================================
+
+# The Fate of Benešov (Opening political question)
+country_event = {
+	id = benesov.1
+	title = benesov.1.t
+	desc = benesov.1.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = benesov.1.a
+	}
+}
+
+# Benešov Declares Independence (Fires after ben_cut_the_last_czech_ties under Dvořák)
+country_event = {
+	id = benesov.2
+	title = benesov.2.t
+	desc = benesov.2.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	option = {
+		name = benesov.2.a
+	}
+}
+
+# The Beer Rationing Debate (Tavern crisis under Dvořák)
+country_event = {
+	id = benesov.3
+	title = benesov.3.t
+	desc = benesov.3.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = benesov.3.a
+	}
+}
+
+# The Strategist of Benešov (Adam Pospíšil's political rise before takeover)
+country_event = {
+	id = benesov.4
+	title = benesov.4.t
+	desc = benesov.4.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = benesov.4.a
+	}
+}
+
+# Dvořák Has Lost the Streets (Before takeover)
+country_event = {
+	id = benesov.5
+	title = benesov.5.t
+	desc = benesov.5.d
+	picture = GFX_report_event_gathering_protest
+	is_triggered_only = yes
+
+	option = {
+		name = benesov.5.a
+	}
+}
+
+# Proclamation of the People's Republic (After communist takeover)
+country_event = {
+	id = benesov.6
+	title = benesov.6.t
+	desc = benesov.6.d
+	picture = GFX_report_event_crowd_cheering
+	is_triggered_only = yes
+
+	option = {
+		name = benesov.6.a
+	}
+}
+
+# ================================================================
+# BENEŠOV NEWS EVENTS
+# ================================================================
+
+# Benešov Returns to Czechoslovakia (Loyalist route)
+news_event = {
+	id = benesov_news.1
+	title = benesov_news.1.t
+	desc = benesov_news.1.d
+	picture = GFX_news_event_001
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = benesov_news.1.a
+	}
+}
+
+# Benešov Declares Independence (Independence route under Dvořák)
+news_event = {
+	id = benesov_news.2
+	title = benesov_news.2.t
+	desc = benesov_news.2.d
+	picture = GFX_news_event_002
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = benesov_news.2.a
+	}
+}
