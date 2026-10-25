@@ -2,10 +2,10 @@ add_namespace = benesov
 add_namespace = benesov_news
 
 # ================================================================
-# BENEŠOV COUNTRY EVENTS
+# BENESHOV COUNTRY EVENTS
 # ================================================================
 
-# The Fate of Benešov (Opening political question)
+# The Fate of Beneshov (Opening political question)
 country_event = {
 	id = benesov.1
 	title = benesov.1.t
@@ -18,7 +18,7 @@ country_event = {
 	}
 }
 
-# Benešov Declares Independence (Fires after ben_cut_the_last_czech_ties under Dvořák)
+# Beneshov Declares Independence (Fires after ben_cut_the_last_czech_ties under Dvorak)
 country_event = {
 	id = benesov.2
 	title = benesov.2.t
@@ -31,7 +31,7 @@ country_event = {
 	}
 }
 
-# The Beer Rationing Debate (Tavern crisis under Dvořák)
+# The Beer Rationing Debate (Tavern crisis under Dvorak)
 country_event = {
 	id = benesov.3
 	title = benesov.3.t
@@ -44,7 +44,7 @@ country_event = {
 	}
 }
 
-# The Strategist of Benešov (Adam Pospíšil's political rise before takeover)
+# The Strategist of Beneshov (Adam Pospisil's political rise before takeover)
 country_event = {
 	id = benesov.4
 	title = benesov.4.t
@@ -57,7 +57,7 @@ country_event = {
 	}
 }
 
-# Dvořák Has Lost the Streets (Before takeover)
+# Dvorak Has Lost the Streets (Before takeover)
 country_event = {
 	id = benesov.5
 	title = benesov.5.t
@@ -83,11 +83,206 @@ country_event = {
 	}
 }
 
+# Czechoslovakia Receives Beneshov Demand for Moravia
+country_event = {
+	id = benesov.20
+	title = benesov.20.t
+	desc = benesov.20.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	option = {
+		name = benesov.20.a
+		ai_chance = { base = 100 }
+		if = {
+			limit = { 75 = { is_owned_by = ROOT } }
+			75 = { transfer_state_to = FROM }
+		}
+		set_country_flag = cze_conceded_moravia_to_ben
+		add_opinion_modifier = {
+			target = FROM
+			modifier = ben_cze_conceded_moravia
+		}
+		FROM = {
+			country_event = { id = benesov.21 days = 1 }
+		}
+	}
+
+	option = {
+		name = benesov.20.b
+		ai_chance = { base = 0 }
+		if = {
+			limit = {
+				75 = {
+					is_owned_by = ROOT
+					NOT = { is_claimed_by = FROM }
+				}
+			}
+			75 = { add_claim_by = FROM }
+		}
+		set_country_flag = cze_rejected_moravia_to_ben
+		add_opinion_modifier = {
+			target = FROM
+			modifier = ben_cze_rejected_moravia
+		}
+		FROM = {
+			country_event = { id = benesov.22 days = 1 }
+		}
+	}
+}
+
+# Beneshov Receives Concession of Moravia
+country_event = {
+	id = benesov.21
+	title = benesov.21.t
+	desc = benesov.21.d
+	picture = GFX_report_event_crowd_cheering
+	is_triggered_only = yes
+
+	option = {
+		name = benesov.21.a
+		set_country_flag = ben_moravia_acquired
+		add_political_power = 35
+		add_stability = 0.02
+	}
+}
+
+# Beneshov Receives Rejection of Moravia
+country_event = {
+	id = benesov.22
+	title = benesov.22.t
+	desc = benesov.22.d
+	picture = GFX_report_event_gathering_protest
+	is_triggered_only = yes
+
+	option = {
+		name = benesov.22.a
+		set_country_flag = ben_moravia_demands_rejected
+		if = {
+			limit = {
+				country_exists = CZE
+				NOT = { has_war_with = CZE }
+				NOT = { has_wargoal_against = { target = CZE } }
+			}
+			create_wargoal = {
+				type = take_claimed_state
+				target = CZE
+				generator = { 75 }
+			}
+		}
+		add_war_support = 0.05
+	}
+}
+
+# Czechoslovakia Receives Beneshov Demand for Silesia and Zaolzie
+country_event = {
+	id = benesov.23
+	title = benesov.23.t
+	desc = benesov.23.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	option = {
+		name = benesov.23.a
+		ai_chance = { base = 100 }
+		if = {
+			limit = { 74 = { is_owned_by = ROOT } }
+			74 = { transfer_state_to = FROM }
+		}
+		if = {
+			limit = { 72 = { is_owned_by = ROOT } }
+			72 = { transfer_state_to = FROM }
+		}
+		set_country_flag = cze_conceded_silesia_to_ben
+		add_opinion_modifier = {
+			target = FROM
+			modifier = ben_cze_conceded_silesia
+		}
+		FROM = {
+			country_event = { id = benesov.24 days = 1 }
+		}
+	}
+
+	option = {
+		name = benesov.23.b
+		ai_chance = { base = 0 }
+		if = {
+			limit = {
+				74 = {
+					is_owned_by = ROOT
+					NOT = { is_claimed_by = FROM }
+				}
+			}
+			74 = { add_claim_by = FROM }
+		}
+		if = {
+			limit = {
+				72 = {
+					is_owned_by = ROOT
+					NOT = { is_claimed_by = FROM }
+				}
+			}
+			72 = { add_claim_by = FROM }
+		}
+		set_country_flag = cze_rejected_silesia_to_ben
+		add_opinion_modifier = {
+			target = FROM
+			modifier = ben_cze_rejected_silesia
+		}
+		FROM = {
+			country_event = { id = benesov.25 days = 1 }
+		}
+	}
+}
+
+# Beneshov Receives Concession of Silesia and Zaolzie
+country_event = {
+	id = benesov.24
+	title = benesov.24.t
+	desc = benesov.24.d
+	picture = GFX_report_event_crowd_cheering
+	is_triggered_only = yes
+
+	option = {
+		name = benesov.24.a
+		set_country_flag = ben_silesia_acquired
+		add_political_power = 35
+		add_stability = 0.02
+	}
+}
+
+# Beneshov Receives Rejection of Silesia and Zaolzie
+country_event = {
+	id = benesov.25
+	title = benesov.25.t
+	desc = benesov.25.d
+	picture = GFX_report_event_gathering_protest
+	is_triggered_only = yes
+
+	option = {
+		name = benesov.25.a
+		set_country_flag = ben_silesia_demands_rejected
+		if = {
+			limit = {
+				country_exists = CZE
+				NOT = { has_war_with = CZE }
+				NOT = { has_wargoal_against = { target = CZE } }
+			}
+			create_wargoal = {
+				type = take_claimed_state
+				target = CZE
+				generator = { 74 72 }
+			}
+		}
+		add_war_support = 0.05
+	}
+}
+
 # ================================================================
-# BENEŠOV NEWS EVENTS
+# BENESHOV NEWS EVENTS
 # ================================================================
 
-# Benešov Returns to Czechoslovakia (Loyalist route)
+# Beneshov Returns to Czechoslovakia (Loyalist route)
 news_event = {
 	id = benesov_news.1
 	title = benesov_news.1.t
@@ -101,7 +296,7 @@ news_event = {
 	}
 }
 
-# Benešov Declares Independence (Independence route under Dvořák)
+# Beneshov Declares Independence (Independence route under Dvorak)
 news_event = {
 	id = benesov_news.2
 	title = benesov_news.2.t

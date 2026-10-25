@@ -8,5 +8,19 @@ opinion_modifiers = {
 	ben_denounced_old_republic = {
 		value = -30
 	}
+	ben_cut_ties = {
+		value = -40
+	}
+	ben_cze_conceded_moravia = {
+		value = 20
+	}
+	ben_cze_rejected_moravia = {
+		value = -50
+	}
+	ben_cze_conceded_silesia = {
+		value = 20
+	}
+	ben_cze_rejected_silesia = {
+		value = -50
+	}
 }
-

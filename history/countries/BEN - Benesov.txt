@@ -6,12 +6,21 @@ recruit_character = BEN_matej_dvorak
 recruit_character = BEN_adam_pospisil
 recruit_character = BEN_stepan_pospisil
 
-# Starting national debuffs
+# Starting national debuffs (10 severe support problems)
 add_ideas = {
-	ben_dependent_on_czech_deliveries
-	ben_collapsed_local_economy
+	# Economy debuff (Consolidated into 1 staged national spirit)
+	ben_great_beneshov_depression_1
+
+	# Army debuffs (3)
 	ben_army_without_supply_system
+	ben_untrained_local_militia
+	ben_no_officer_corps
+
+	# Air debuffs (4)
 	ben_air_force_in_name_only
+	ben_no_trained_pilots
+	ben_no_aviation_industry
+	ben_improvised_airfields
 }
 
 set_stability = 0.30

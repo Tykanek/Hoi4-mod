@@ -1598,4 +1598,781 @@ spriteTypes = {
 
 		legacy_lazy_load = no
 	}
+	spriteType = {
+		name = "GFX_focus_BEN_restore_basic_infrastructure"
+		texturefile = "gfx/interface/goals/focus_BEN_restore_basic_infrastructure.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_restore_basic_infrastructure_shine"
+		texturefile = "gfx/interface/goals/focus_BEN_restore_basic_infrastructure.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_restore_basic_infrastructure.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_restore_basic_infrastructure.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_standardize_local_production"
+		texturefile = "gfx/interface/goals/focus_BEN_standardize_local_production.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_standardize_local_production_shine"
+		texturefile = "gfx/interface/goals/focus_BEN_standardize_local_production.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_standardize_local_production.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_standardize_local_production.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_rebuild_civilian_industry"
+		texturefile = "gfx/interface/goals/focus_BEN_rebuild_civilian_industry.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_rebuild_civilian_industry_shine"
+		texturefile = "gfx/interface/goals/focus_BEN_rebuild_civilian_industry.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_rebuild_civilian_industry.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_rebuild_civilian_industry.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_expand_local_construction"
+		texturefile = "gfx/interface/goals/focus_BEN_expand_local_construction.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_expand_local_construction_shine"
+		texturefile = "gfx/interface/goals/focus_BEN_expand_local_construction.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_expand_local_construction.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_expand_local_construction.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_a_civilian_economy_again"
+		texturefile = "gfx/interface/goals/focus_BEN_a_civilian_economy_again.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_a_civilian_economy_again_shine"
+		texturefile = "gfx/interface/goals/focus_BEN_a_civilian_economy_again.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_a_civilian_economy_again.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_a_civilian_economy_again.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_convert_the_workshops"
+		texturefile = "gfx/interface/goals/focus_BEN_convert_the_workshops.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_convert_the_workshops_shine"
+		texturefile = "gfx/interface/goals/focus_BEN_convert_the_workshops.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_convert_the_workshops.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_convert_the_workshops.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_expand_arms_production"
+		texturefile = "gfx/interface/goals/focus_BEN_expand_arms_production.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_expand_arms_production_shine"
+		texturefile = "gfx/interface/goals/focus_BEN_expand_arms_production.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_expand_arms_production.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_expand_arms_production.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_benesov_arsenal"
+		texturefile = "gfx/interface/goals/focus_BEN_benesov_arsenal.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_benesov_arsenal_shine"
+		texturefile = "gfx/interface/goals/focus_BEN_benesov_arsenal.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_benesov_arsenal.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_benesov_arsenal.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_count_every_rifle"
+		texturefile = "gfx/interface/goals/focus_BEN_count_every_rifle.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_count_every_rifle_shine"
+		texturefile = "gfx/interface/goals/focus_BEN_count_every_rifle.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_count_every_rifle.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_count_every_rifle.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_begin_proper_drills"
+		texturefile = "gfx/interface/goals/focus_BEN_begin_proper_drills.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_begin_proper_drills_shine"
+		texturefile = "gfx/interface/goals/focus_BEN_begin_proper_drills.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_begin_proper_drills.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_begin_proper_drills.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_create_an_officer_cadre"
+		texturefile = "gfx/interface/goals/focus_BEN_create_an_officer_cadre.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_create_an_officer_cadre_shine"
+		texturefile = "gfx/interface/goals/focus_BEN_create_an_officer_cadre.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_create_an_officer_cadre.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_create_an_officer_cadre.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_establish_a_quartermaster_corps"
+		texturefile = "gfx/interface/goals/focus_BEN_establish_a_quartermaster_corps.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_establish_a_quartermaster_corps_shine"
+		texturefile = "gfx/interface/goals/focus_BEN_establish_a_quartermaster_corps.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_establish_a_quartermaster_corps.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_establish_a_quartermaster_corps.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_rewrite_the_field_manuals"
+		texturefile = "gfx/interface/goals/focus_BEN_rewrite_the_field_manuals.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_rewrite_the_field_manuals_shine"
+		texturefile = "gfx/interface/goals/focus_BEN_rewrite_the_field_manuals.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_rewrite_the_field_manuals.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_rewrite_the_field_manuals.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_professionalize_the_garrison"
+		texturefile = "gfx/interface/goals/focus_BEN_professionalize_the_garrison.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_professionalize_the_garrison_shine"
+		texturefile = "gfx/interface/goals/focus_BEN_professionalize_the_garrison.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_professionalize_the_garrison.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_professionalize_the_garrison.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_clear_the_runways"
+		texturefile = "gfx/interface/goals/focus_BEN_clear_the_runways.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_clear_the_runways_shine"
+		texturefile = "gfx/interface/goals/focus_BEN_clear_the_runways.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_clear_the_runways.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_clear_the_runways.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_train_the_first_pilots"
+		texturefile = "gfx/interface/goals/focus_BEN_train_the_first_pilots.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_train_the_first_pilots_shine"
+		texturefile = "gfx/interface/goals/focus_BEN_train_the_first_pilots.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_train_the_first_pilots.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_train_the_first_pilots.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_standardize_spare_parts"
+		texturefile = "gfx/interface/goals/focus_BEN_standardize_spare_parts.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_standardize_spare_parts_shine"
+		texturefile = "gfx/interface/goals/focus_BEN_standardize_spare_parts.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_standardize_spare_parts.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_standardize_spare_parts.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_rebuild_the_hangars"
+		texturefile = "gfx/interface/goals/focus_BEN_rebuild_the_hangars.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_rebuild_the_hangars_shine"
+		texturefile = "gfx/interface/goals/focus_BEN_rebuild_the_hangars.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_rebuild_the_hangars.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_rebuild_the_hangars.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_organize_fighter_squadrons"
+		texturefile = "gfx/interface/goals/focus_BEN_organize_fighter_squadrons.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_organize_fighter_squadrons_shine"
+		texturefile = "gfx/interface/goals/focus_BEN_organize_fighter_squadrons.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_organize_fighter_squadrons.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_organize_fighter_squadrons.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_domestic_aircraft_workshops"
+		texturefile = "gfx/interface/goals/focus_BEN_domestic_aircraft_workshops.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_domestic_aircraft_workshops_shine"
+		texturefile = "gfx/interface/goals/focus_BEN_domestic_aircraft_workshops.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_domestic_aircraft_workshops.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_domestic_aircraft_workshops.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_professional_pilot_corps"
+		texturefile = "gfx/interface/goals/focus_BEN_professional_pilot_corps.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_BEN_professional_pilot_corps_shine"
+		texturefile = "gfx/interface/goals/focus_BEN_professional_pilot_corps.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_professional_pilot_corps.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_BEN_professional_pilot_corps.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
 }

@@ -5,11 +5,15 @@ focus_tree = {
 		factor = 0
 		modifier = {
 			add = 10
-			original_tag = BEN
+			OR = {
+				tag = BEN
+				original_tag = BEN
+			}
 		}
 	}
 
 	default = no
+	reset_on_civilwar = no
 
 	continuous_focus_position = {
 		x = 50
@@ -17,21 +21,693 @@ focus_tree = {
 	}
 
 	# ============================================================
-	# ECONOMIC RECOVERY BRANCH (Left: x = 2)
+	# BRANCH 1: ARMY (11 Focuses -- Multi-Column Layout)
+	# ============================================================
+
+	focus = {
+		id = ben_inventory_the_armories
+		icon = GFX_focus_BEN_inventory_the_armories
+		x = 4
+		y = 2
+		cost = 10
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			army_experience = 10
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 150
+			}
+		}
+	}
+
+	focus = {
+		id = ben_count_every_rifle
+		icon = GFX_focus_BEN_count_every_rifle
+		prerequisite = { focus = ben_inventory_the_armories }
+		x = 4
+		y = 3
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 100
+			}
+			add_political_power = 20
+		}
+	}
+
+	focus = {
+		id = ben_organize_the_garrison
+		icon = GFX_focus_BEN_organize_the_garrison
+		prerequisite = { focus = ben_count_every_rifle }
+		x = 4
+		y = 4
+		cost = 10
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = ben_untrained_local_militia }
+				swap_ideas = {
+					remove_idea = ben_untrained_local_militia
+					add_idea = ben_partially_trained_garrison
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ben_begin_proper_drills
+		icon = GFX_focus_BEN_begin_proper_drills
+		prerequisite = { focus = ben_organize_the_garrison }
+		x = 3
+		y = 5
+		cost = 10
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			army_experience = 15
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = ben_create_an_officer_cadre
+		icon = GFX_focus_BEN_create_an_officer_cadre
+		prerequisite = { focus = ben_organize_the_garrison }
+		x = 5
+		y = 5
+		cost = 10
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = ben_no_officer_corps }
+				swap_ideas = {
+					remove_idea = ben_no_officer_corps
+					add_idea = ben_inexperienced_officer_corps
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ben_local_supply_depots
+		icon = GFX_focus_BEN_local_supply_depots
+		prerequisite = { focus = ben_begin_proper_drills }
+		prerequisite = { focus = ben_create_an_officer_cadre }
+		x = 4
+		y = 6
+		cost = 10
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = ben_army_without_supply_system }
+				swap_ideas = {
+					remove_idea = ben_army_without_supply_system
+					add_idea = ben_improvised_supply_system
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ben_establish_a_quartermaster_corps
+		icon = GFX_focus_BEN_establish_a_quartermaster_corps
+		prerequisite = { focus = ben_local_supply_depots }
+		x = 5
+		y = 7
+		cost = 10
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = ben_improvised_supply_system }
+				remove_ideas = ben_improvised_supply_system
+			}
+			if = {
+				limit = { has_idea = ben_army_without_supply_system }
+				remove_ideas = ben_army_without_supply_system
+			}
+			army_experience = 10
+		}
+	}
+
+	focus = {
+		id = ben_standardize_the_infantry
+		icon = GFX_focus_BEN_standardize_the_infantry
+		prerequisite = { focus = ben_establish_a_quartermaster_corps }
+		x = 4
+		y = 8
+		cost = 10
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = ben_partially_trained_garrison }
+				remove_ideas = ben_partially_trained_garrison
+			}
+			if = {
+				limit = { has_idea = ben_untrained_local_militia }
+				remove_ideas = ben_untrained_local_militia
+			}
+			army_experience = 15
+		}
+	}
+
+	focus = {
+		id = ben_rewrite_the_field_manuals
+		icon = GFX_focus_BEN_rewrite_the_field_manuals
+		prerequisite = { focus = ben_standardize_the_infantry }
+		x = 5
+		y = 9
+		cost = 10
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = ben_inexperienced_officer_corps }
+				remove_ideas = ben_inexperienced_officer_corps
+			}
+			if = {
+				limit = { has_idea = ben_no_officer_corps }
+				remove_ideas = ben_no_officer_corps
+			}
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = ben_professionalize_the_garrison
+		icon = GFX_focus_BEN_professionalize_the_garrison
+		prerequisite = { focus = ben_rewrite_the_field_manuals }
+		x = 4
+		y = 10
+		cost = 10
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_XP }
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			army_experience = 20
+			add_manpower = 1000
+		}
+	}
+
+	focus = {
+		id = ben_army_that_can_fight
+		icon = GFX_focus_BEN_army_that_can_fight
+		prerequisite = { focus = ben_professionalize_the_garrison }
+		x = 4
+		y = 11
+		cost = 10
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = ben_untrained_local_militia }
+				remove_ideas = ben_untrained_local_militia
+			}
+			if = {
+				limit = { has_idea = ben_partially_trained_garrison }
+				remove_ideas = ben_partially_trained_garrison
+			}
+			if = {
+				limit = { has_idea = ben_army_without_supply_system }
+				remove_ideas = ben_army_without_supply_system
+			}
+			if = {
+				limit = { has_idea = ben_improvised_supply_system }
+				remove_ideas = ben_improvised_supply_system
+			}
+			if = {
+				limit = { has_idea = ben_no_officer_corps }
+				remove_ideas = ben_no_officer_corps
+			}
+			if = {
+				limit = { has_idea = ben_inexperienced_officer_corps }
+				remove_ideas = ben_inexperienced_officer_corps
+			}
+			add_ideas = ben_reorganized_benesov_army
+			army_experience = 25
+		}
+	}
+
+	# ============================================================
+	# BRANCH 2: AIR (12 Focuses -- Multi-Column Layout)
+	# ============================================================
+
+	focus = {
+		id = ben_survey_the_airfields
+		icon = GFX_focus_BEN_survey_the_airfields
+		x = 9
+		y = 2
+		cost = 10
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			air_experience = 10
+			1093 = {
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ben_clear_the_runways
+		icon = GFX_focus_BEN_clear_the_runways
+		prerequisite = { focus = ben_survey_the_airfields }
+		x = 9
+		y = 3
+		cost = 10
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = ben_improvised_airfields }
+				swap_ideas = {
+					remove_idea = ben_improvised_airfields
+					add_idea = ben_repaired_airfields
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ben_build_a_flight_school
+		icon = GFX_focus_BEN_build_a_flight_school
+		prerequisite = { focus = ben_clear_the_runways }
+		x = 10
+		y = 4
+		cost = 10
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			air_experience = 15
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = ben_train_the_first_pilots
+		icon = GFX_focus_BEN_train_the_first_pilots
+		prerequisite = { focus = ben_build_a_flight_school }
+		x = 12
+		y = 5
+		cost = 10
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = ben_no_trained_pilots }
+				swap_ideas = {
+					remove_idea = ben_no_trained_pilots
+					add_idea = ben_basic_pilot_training
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ben_scrounge_for_aircraft
+		icon = GFX_focus_BEN_scrounge_for_aircraft
+		prerequisite = { focus = ben_train_the_first_pilots }
+		x = 11
+		y = 6
+		cost = 10
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = ben_air_force_in_name_only }
+				swap_ideas = {
+					remove_idea = ben_air_force_in_name_only
+					add_idea = ben_embryonic_air_force
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = fighter_equipment_0
+				amount = 15
+			}
+		}
+	}
+
+	focus = {
+		id = ben_standardize_spare_parts
+		icon = GFX_focus_BEN_standardize_spare_parts
+		prerequisite = { focus = ben_scrounge_for_aircraft }
+		x = 10
+		y = 7
+		cost = 10
+		search_filters = { FOCUS_FILTER_AIR_XP FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = ben_no_aviation_industry }
+				swap_ideas = {
+					remove_idea = ben_no_aviation_industry
+					add_idea = ben_small_aviation_workshops
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ben_rebuild_the_hangars
+		icon = GFX_focus_BEN_rebuild_the_hangars
+		prerequisite = { focus = ben_scrounge_for_aircraft }
+		x = 12
+		y = 7
+		cost = 10
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			1093 = {
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ben_benesov_air_command
+		icon = GFX_focus_BEN_benesov_air_command
+		prerequisite = { focus = ben_standardize_spare_parts }
+		prerequisite = { focus = ben_rebuild_the_hangars }
+		x = 11
+		y = 8
+		cost = 10
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			air_experience = 15
+		}
+	}
+
+	focus = {
+		id = ben_organize_fighter_squadrons
+		icon = GFX_focus_BEN_organize_fighter_squadrons
+		prerequisite = { focus = ben_benesov_air_command }
+		x = 12
+		y = 9
+		cost = 10
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			air_experience = 10
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = ben_domestic_aircraft_workshops
+		icon = GFX_focus_BEN_domestic_aircraft_workshops
+		prerequisite = { focus = ben_organize_fighter_squadrons }
+		x = 12
+		y = 10
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_AIR_XP }
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = ben_small_aviation_workshops }
+				remove_ideas = ben_small_aviation_workshops
+			}
+			if = {
+				limit = { has_idea = ben_no_aviation_industry }
+				remove_ideas = ben_no_aviation_industry
+			}
+			add_equipment_to_stockpile = {
+				type = fighter_equipment_0
+				amount = 10
+			}
+		}
+	}
+
+	focus = {
+		id = ben_professional_pilot_corps
+		icon = GFX_focus_BEN_professional_pilot_corps
+		prerequisite = { focus = ben_domestic_aircraft_workshops }
+		x = 11
+		y = 11
+		cost = 10
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = ben_basic_pilot_training }
+				remove_ideas = ben_basic_pilot_training
+			}
+			if = {
+				limit = { has_idea = ben_no_trained_pilots }
+				remove_ideas = ben_no_trained_pilots
+			}
+			air_experience = 15
+		}
+	}
+
+	focus = {
+		id = ben_air_force_of_our_own
+		icon = GFX_focus_BEN_air_force_of_our_own
+		prerequisite = { focus = ben_professional_pilot_corps }
+		x = 11
+		y = 12
+		cost = 10
+		search_filters = { FOCUS_FILTER_AIR_XP }
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = ben_air_force_in_name_only }
+				remove_ideas = ben_air_force_in_name_only
+			}
+			if = {
+				limit = { has_idea = ben_embryonic_air_force }
+				remove_ideas = ben_embryonic_air_force
+			}
+			if = {
+				limit = { has_idea = ben_no_trained_pilots }
+				remove_ideas = ben_no_trained_pilots
+			}
+			if = {
+				limit = { has_idea = ben_basic_pilot_training }
+				remove_ideas = ben_basic_pilot_training
+			}
+			if = {
+				limit = { has_idea = ben_no_aviation_industry }
+				remove_ideas = ben_no_aviation_industry
+			}
+			if = {
+				limit = { has_idea = ben_small_aviation_workshops }
+				remove_ideas = ben_small_aviation_workshops
+			}
+			if = {
+				limit = { has_idea = ben_improvised_airfields }
+				remove_ideas = ben_improvised_airfields
+			}
+			if = {
+				limit = { has_idea = ben_repaired_airfields }
+				remove_ideas = ben_repaired_airfields
+			}
+			add_ideas = ben_reorganized_air_command
+			air_experience = 25
+		}
+	}
+
+	# ============================================================
+	# BRANCH 3A: THE GREAT BENESHOV DEPRESSION (5 Recovery Focuses)
+	# ============================================================
+
+	focus = {
+		id = ben_emergency_accounting
+		icon = GFX_focus_BEN_count_what_remains
+		prerequisite = { focus = ben_restore_basic_infrastructure }
+		x = 21
+		y = 5
+		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+		ai_will_do = { factor = 5 }
+
+		available = {
+			has_political_power > 149
+		}
+
+		completion_reward = {
+			add_political_power = -150
+			set_country_flag = { flag = ben_depression_recovery_cooldown days = 120 value = 1 }
+			swap_ideas = {
+				remove_idea = ben_great_beneshov_depression_1
+				add_idea = ben_great_beneshov_depression_2
+			}
+		}
+	}
+
+	focus = {
+		id = ben_stabilize_the_treasury
+		icon = GFX_focus_BEN_stepans_distribution_network
+		prerequisite = { focus = ben_emergency_accounting }
+		x = 21
+		y = 6
+		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+		ai_will_do = { factor = 5 }
+
+		available = {
+			has_political_power > 299
+			custom_trigger_tooltip = {
+				tooltip = ben_depression_recovery_cooldown_tt
+				NOT = { has_country_flag = ben_depression_recovery_cooldown }
+			}
+		}
+
+		completion_reward = {
+			add_political_power = -300
+			set_country_flag = { flag = ben_depression_recovery_cooldown days = 120 value = 1 }
+			swap_ideas = {
+				remove_idea = ben_great_beneshov_depression_2
+				add_idea = ben_great_beneshov_depression_3
+			}
+		}
+	}
+
+	focus = {
+		id = ben_restore_domestic_credit
+		icon = GFX_focus_BEN_reopen_local_workshops
+		prerequisite = { focus = ben_stabilize_the_treasury }
+		x = 21
+		y = 7
+		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+		ai_will_do = { factor = 5 }
+
+		available = {
+			has_political_power > 399
+			custom_trigger_tooltip = {
+				tooltip = ben_depression_recovery_cooldown_tt
+				NOT = { has_country_flag = ben_depression_recovery_cooldown }
+			}
+		}
+
+		completion_reward = {
+			add_political_power = -400
+			set_country_flag = { flag = ben_depression_recovery_cooldown days = 120 value = 1 }
+			swap_ideas = {
+				remove_idea = ben_great_beneshov_depression_3
+				add_idea = ben_great_beneshov_depression_4
+			}
+		}
+	}
+
+	focus = {
+		id = ben_rebuild_industrial_confidence
+		icon = GFX_focus_BEN_benesov_works_again
+		prerequisite = { focus = ben_restore_domestic_credit }
+		x = 21
+		y = 8
+		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+		ai_will_do = { factor = 5 }
+
+		available = {
+			has_political_power > 499
+			custom_trigger_tooltip = {
+				tooltip = ben_depression_recovery_cooldown_tt
+				NOT = { has_country_flag = ben_depression_recovery_cooldown }
+			}
+		}
+
+		completion_reward = {
+			add_political_power = -500
+			set_country_flag = { flag = ben_depression_recovery_cooldown days = 120 value = 1 }
+			swap_ideas = {
+				remove_idea = ben_great_beneshov_depression_4
+				add_idea = ben_great_beneshov_depression_5
+			}
+		}
+	}
+
+	focus = {
+		id = ben_end_the_great_beneshov_depression
+		icon = GFX_focus_BEN_economic_recovery
+		prerequisite = { focus = ben_rebuild_industrial_confidence }
+		x = 21
+		y = 9
+		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+		ai_will_do = { factor = 5 }
+
+		available = {
+			has_political_power > 599
+			custom_trigger_tooltip = {
+				tooltip = ben_depression_recovery_cooldown_tt
+				NOT = { has_country_flag = ben_depression_recovery_cooldown }
+			}
+		}
+
+		completion_reward = {
+			add_political_power = -600
+			remove_ideas = ben_great_beneshov_depression_5
+			add_stability = 0.10
+		}
+	}
+
+	# ============================================================
+	# BRANCH 3B: PHYSICAL INDUSTRY (13 Focuses -- Multi-Column Layout)
 	# ============================================================
 
 	focus = {
 		id = ben_count_what_remains
 		icon = GFX_focus_BEN_count_what_remains
-		x = 8
-		y = 1
+		x = 23
+		y = 2
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 5 }
 
 		completion_reward = {
 			add_political_power = 25
-			add_stability = 0.025
+			add_stability = 0.05
 		}
 	}
 
@@ -39,8 +715,108 @@ focus_tree = {
 		id = ben_reopen_local_workshops
 		icon = GFX_focus_BEN_reopen_local_workshops
 		prerequisite = { focus = ben_count_what_remains }
-		x = 8
-		y = 2
+		x = 23
+		y = 3
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			1093 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = ben_restore_basic_infrastructure
+		icon = GFX_focus_BEN_restore_basic_infrastructure
+		prerequisite = { focus = ben_reopen_local_workshops }
+		x = 23
+		y = 4
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			1093 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ben_localize_supply_contracts
+		icon = GFX_focus_BEN_localize_supply_contracts
+		prerequisite = { focus = ben_restore_basic_infrastructure }
+		x = 25
+		y = 5
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = ben_standardize_local_production
+		icon = GFX_focus_BEN_standardize_local_production
+		prerequisite = { focus = ben_localize_supply_contracts }
+		x = 25
+		y = 6
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = standardization_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = ben_benesov_works_again
+		icon = GFX_focus_BEN_benesov_works_again
+		prerequisite = { focus = ben_standardize_local_production }
+		x = 25
+		y = 7
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			add_political_power = 25
+			1093 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	# --- Civilian Sub-branch ---
+
+	focus = {
+		id = ben_rebuild_civilian_industry
+		icon = GFX_focus_BEN_rebuild_civilian_industry
+		prerequisite = { focus = ben_benesov_works_again }
+		x = 24
+		y = 8
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		ai_will_do = { factor = 5 }
@@ -54,43 +830,59 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			swap_ideas = {
-				remove_idea = ben_collapsed_local_economy
-				add_idea = ben_struggling_local_economy
-			}
 		}
 	}
 
 	focus = {
-		id = ben_localize_supply_contracts
-		icon = GFX_focus_BEN_localize_supply_contracts
-		prerequisite = { focus = ben_reopen_local_workshops }
-		x = 8
-		y = 3
+		id = ben_expand_local_construction
+		icon = GFX_focus_BEN_expand_local_construction
+		prerequisite = { focus = ben_rebuild_civilian_industry }
+		x = 24
+		y = 9
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		ai_will_do = { factor = 5 }
 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = ben_dependent_on_czech_deliveries
-				add_idea = ben_reduced_czech_dependency
+			add_political_power = 25
+			add_stability = 0.03
+			1093 = {
+				add_extra_state_shared_building_slots = 1
 			}
 		}
 	}
 
 	focus = {
-		id = ben_benesov_works_again
-		icon = GFX_focus_BEN_benesov_works_again
-		prerequisite = { focus = ben_localize_supply_contracts }
-		x = 8
-		y = 4
+		id = ben_a_civilian_economy_again
+		icon = GFX_focus_BEN_a_civilian_economy_again
+		prerequisite = { focus = ben_expand_local_construction }
+		x = 24
+		y = 10
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		ai_will_do = { factor = 5 }
 
 		completion_reward = {
-			remove_ideas = ben_struggling_local_economy
+			add_stability = 0.05
+			1093 = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	# --- Military Arms Sub-branch ---
+
+	focus = {
+		id = ben_convert_the_workshops
+		icon = GFX_focus_BEN_convert_the_workshops
+		prerequisite = { focus = ben_benesov_works_again }
+		x = 26
+		y = 8
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
 			1093 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -99,42 +891,76 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			add_political_power = 25
 		}
 	}
 
 	focus = {
-		id = ben_economic_recovery
-		icon = GFX_focus_BEN_economic_recovery
-		prerequisite = { focus = ben_benesov_works_again }
-		x = 8
-		y = 5
+		id = ben_expand_arms_production
+		icon = GFX_focus_BEN_expand_arms_production
+		prerequisite = { focus = ben_convert_the_workshops }
+		x = 26
+		y = 9
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		ai_will_do = { factor = 5 }
 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = ben_reduced_czech_dependency
-				add_idea = ben_recovered_local_economy
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 250
 			}
 		}
 	}
 
+	focus = {
+		id = ben_benesov_arsenal
+		icon = GFX_focus_BEN_benesov_arsenal
+		prerequisite = { focus = ben_expand_arms_production }
+		x = 26
+		y = 10
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			1093 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	# --- Economy Climax Capstone ---
+
+	focus = {
+		id = ben_economic_recovery
+		icon = GFX_focus_BEN_economic_recovery
+		prerequisite = { focus = ben_a_civilian_economy_again }
+		prerequisite = { focus = ben_benesov_arsenal }
+		x = 25
+		y = 11
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			add_ideas = ben_recovered_local_economy
+		}
+	}
 
 	# ============================================================
-	# MAIN POLITICAL / LORE BRANCH (Center: x = 10 to 18)
+	# BRANCH 4: MAIN LORE / POLITICS (26 Baseline Focuses)
 	# ============================================================
-
-	# ------------------------------------------------------------
-	# ROOT FOCUS
-	# ------------------------------------------------------------
 
 	focus = {
 		id = ben_the_benesov_question
 		icon = GFX_focus_BEN_the_benesov_question
-		x = 28
-		y = 0
+		x = 36
+		y = 2
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 10 }
@@ -145,28 +971,22 @@ focus_tree = {
 		}
 	}
 
-	# ------------------------------------------------------------
-	# THE FIRST CHOICE: LOYALIST ROUTE (Left: x = 10)
-	# ------------------------------------------------------------
+	# --- Loyalist Alternative Branch (Right Flank: x = 39) ---
 
 	focus = {
 		id = ben_we_still_need_the_republic
 		icon = GFX_focus_BEN_we_still_need_the_republic
 		prerequisite = { focus = ben_the_benesov_question }
 		mutually_exclusive = { focus = ben_benesov_can_stand_alone }
-		x = 36
-		y = 1
+		x = 39
+		y = 3
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		ai_will_do = { factor = 2 }
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 50
 			add_stability = 0.05
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.05
-			}
 		}
 	}
 
@@ -174,11 +994,11 @@ focus_tree = {
 		id = ben_restore_czech_deliveries
 		icon = GFX_focus_BEN_restore_czech_deliveries
 		prerequisite = { focus = ben_we_still_need_the_republic }
-		x = 36
-		y = 2
+		x = 39
+		y = 4
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY }
-		ai_will_do = { factor = 5 }
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			1093 = {
@@ -189,13 +1009,8 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			if = {
-				limit = { has_idea = ben_dependent_on_czech_deliveries }
-				swap_ideas = {
-					remove_idea = ben_dependent_on_czech_deliveries
-					add_idea = ben_reduced_czech_dependency
-				}
-			}
+			add_political_power = 50
+			add_stability = 0.05
 		}
 	}
 
@@ -203,18 +1018,18 @@ focus_tree = {
 		id = ben_reaffirm_the_prague_compact
 		icon = GFX_focus_BEN_reaffirm_the_prague_compact
 		prerequisite = { focus = ben_restore_czech_deliveries }
-		x = 36
-		y = 3
+		x = 39
+		y = 5
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		ai_will_do = { factor = 5 }
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
-			add_political_power = 25
-			CZE = {
+			add_political_power = 75
+			PRA = {
 				add_opinion_modifier = {
 					target = ROOT
-					modifier = ben_reaffirmed_czech_ties
+					modifier = ben_loyal_to_republic
 				}
 			}
 		}
@@ -224,41 +1039,36 @@ focus_tree = {
 		id = ben_return_to_the_republic
 		icon = GFX_focus_BEN_return_to_the_republic
 		prerequisite = { focus = ben_reaffirm_the_prague_compact }
-		x = 36
-		y = 4
+		x = 39
+		y = 6
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 1 }
 
 		completion_reward = {
-			news_event = { id = benesov_news.1 hours = 6 }
-			CZE = {
-				annex_country = {
-					target = BEN
-					transfer_troops = yes
-				}
-			}
+			add_political_power = 100
+			country_event = { id = benesov.3 hours = 6 }
 		}
 	}
 
-	# ------------------------------------------------------------
-	# THE FIRST CHOICE: INDEPENDENCE ROUTE (Right: x = 16)
-	# ------------------------------------------------------------
+	# --- Independence / Dvorak Municipal Administration (Center: x = 33) ---
 
 	focus = {
 		id = ben_benesov_can_stand_alone
 		icon = GFX_focus_BEN_benesov_can_stand_alone
 		prerequisite = { focus = ben_the_benesov_question }
 		mutually_exclusive = { focus = ben_we_still_need_the_republic }
-		x = 20
-		y = 1
+		x = 33
+		y = 3
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		ai_will_do = { factor = 8 }
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
-			add_political_power = 25
+			add_stability = -0.05
 			add_war_support = 0.05
+			add_political_power = 50
+			country_event = { id = benesov.2 hours = 6 }
 		}
 	}
 
@@ -266,43 +1076,45 @@ focus_tree = {
 		id = ben_cut_the_last_czech_ties
 		icon = GFX_focus_BEN_cut_the_last_czech_ties
 		prerequisite = { focus = ben_benesov_can_stand_alone }
-		x = 20
-		y = 2
+		x = 33
+		y = 4
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 10 }
 
 		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.05
+			if = {
+				limit = { is_subject = yes }
+				OVERLORD = {
+					end_puppet = ROOT
+				}
+			}
 			CZE = {
 				end_puppet = ROOT
 				add_opinion_modifier = {
 					target = ROOT
-					modifier = ben_declared_independence_opinion
+					modifier = ben_cut_ties
 				}
 			}
-			set_country_flag = ben_declared_independence
-			country_event = { id = benesov.2 hours = 6 }
-			news_event = { id = benesov_news.2 hours = 6 }
+			country_event = { id = benesov.2 }
 		}
 	}
-
-	# ------------------------------------------------------------
-	# DVOŘÁK'S INDEPENDENCE CRISIS (x = 16)
-	# ------------------------------------------------------------
 
 	focus = {
 		id = ben_the_deliveries_have_stopped
 		icon = GFX_focus_BEN_the_deliveries_have_stopped
 		prerequisite = { focus = ben_cut_the_last_czech_ties }
-		x = 20
-		y = 3
+		x = 33
+		y = 5
 		cost = 10
-		search_filters = { FOCUS_FILTER_STABILITY }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			add_stability = -0.05
-			add_political_power = -20
+			country_event = { id = benesov.4 hours = 6 }
 		}
 	}
 
@@ -310,15 +1122,15 @@ focus_tree = {
 		id = ben_dvorak_promises_recovery
 		icon = GFX_focus_BEN_dvorak_promises_recovery
 		prerequisite = { focus = ben_the_deliveries_have_stopped }
-		x = 20
-		y = 4
+		x = 33
+		y = 6
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			add_political_power = 25
-			add_stability = 0.05
+			add_stability = 0.03
 		}
 	}
 
@@ -326,35 +1138,34 @@ focus_tree = {
 		id = ben_the_beer_rationing_question
 		icon = GFX_focus_BEN_the_beer_rationing_question
 		prerequisite = { focus = ben_dvorak_promises_recovery }
-		x = 20
-		y = 5
-		cost = 10
-		search_filters = { FOCUS_FILTER_STABILITY }
-		ai_will_do = { factor = 10 }
-
-		completion_reward = {
-			add_ideas = ben_public_morale_program
-			country_event = { id = benesov.3 hours = 6 }
-		}
-	}
-
-	# ------------------------------------------------------------
-	# ŠTĚPÁN & WORKER MOBILIZATION (x = 16)
-	# ------------------------------------------------------------
-
-	focus = {
-		id = ben_stepan_knows_everyone
-		icon = GFX_focus_BEN_stepan_knows_everyone
-		prerequisite = { focus = ben_the_beer_rationing_question }
-		x = 20
-		y = 6
+		x = 33
+		y = 7
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 10 }
 
 		completion_reward = {
-			set_country_flag = ben_stepan_recruited
-			add_political_power = 25
+			add_ideas = ben_public_morale_program
+			add_stability = 0.05
+		}
+	}
+
+	# --- The Pospisil Revolution (Flanked: x = 30 and x = 36) ---
+
+	focus = {
+		id = ben_stepan_knows_everyone
+		icon = GFX_focus_BEN_stepan_knows_everyone
+		prerequisite = { focus = ben_the_beer_rationing_question }
+		x = 32
+		y = 8
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = { factor = 10 }
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = -0.03
+			set_country_flag = ben_stepan_active
 		}
 	}
 
@@ -362,8 +1173,8 @@ focus_tree = {
 		id = ben_workers_in_the_back_rooms
 		icon = GFX_focus_BEN_workers_in_the_back_rooms
 		prerequisite = { focus = ben_stepan_knows_everyone }
-		x = 20
-		y = 7
+		x = 33
+		y = 9
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 10 }
@@ -373,31 +1184,24 @@ focus_tree = {
 				ideology = communism
 				popularity = 0.10
 			}
-			add_political_power = 25
+			add_stability = -0.05
 		}
 	}
-
-	# ------------------------------------------------------------
-	# ADAM POSPÍŠIL'S RISE (x = 16)
-	# ------------------------------------------------------------
 
 	focus = {
 		id = ben_the_strategist_of_benesov
 		icon = GFX_focus_BEN_the_strategist_of_benesov
 		prerequisite = { focus = ben_workers_in_the_back_rooms }
-		x = 20
-		y = 8
+		x = 34
+		y = 10
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 10 }
 
 		completion_reward = {
-			add_popularity = {
-				ideology = communism
-				popularity = 0.05
-			}
 			add_political_power = 25
-			country_event = { id = benesov.4 hours = 6 }
+			add_ideas = ben_pospisil_strategic_theory
+			country_event = { id = benesov.5 hours = 6 }
 		}
 	}
 
@@ -405,10 +1209,10 @@ focus_tree = {
 		id = ben_a_thousand_hours_of_experience
 		icon = GFX_focus_BEN_a_thousand_hours_of_experience
 		prerequisite = { focus = ben_the_strategist_of_benesov }
-		x = 20
-		y = 9
+		x = 35
+		y = 11
 		cost = 10
-		search_filters = { FOCUS_FILTER_ARMY_XP }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 10 }
 
 		completion_reward = {
@@ -418,11 +1222,7 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			army_experience = 5
-			add_popularity = {
-				ideology = communism
-				popularity = 0.05
-			}
+			army_experience = 15
 		}
 	}
 
@@ -430,19 +1230,18 @@ focus_tree = {
 		id = ben_the_benesov_workers_congress
 		icon = GFX_focus_BEN_the_benesov_workers_congress
 		prerequisite = { focus = ben_a_thousand_hours_of_experience }
-		x = 20
-		y = 10
+		x = 33
+		y = 12
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 10 }
 
 		completion_reward = {
-			set_country_flag = ben_workers_congress_convened
-			add_political_power = 25
 			add_popularity = {
 				ideology = communism
-				popularity = 0.10
+				popularity = 0.15
 			}
+			add_stability = -0.05
 		}
 	}
 
@@ -450,36 +1249,25 @@ focus_tree = {
 		id = ben_dvorak_has_lost_the_streets
 		icon = GFX_focus_BEN_dvorak_has_lost_the_streets
 		prerequisite = { focus = ben_the_benesov_workers_congress }
-		x = 20
-		y = 11
+		x = 33
+		y = 13
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			add_stability = -0.10
-			add_popularity = {
-				ideology = democratic
-				popularity = -0.15
-			}
-			add_popularity = {
-				ideology = communism
-				popularity = 0.15
-			}
-			country_event = { id = benesov.5 hours = 6 }
+			add_political_power = -25
+			country_event = { id = benesov.6 hours = 6 }
 		}
 	}
-
-	# ------------------------------------------------------------
-	# COMMUNIST TAKEOVER (x = 16)
-	# ------------------------------------------------------------
 
 	focus = {
 		id = ben_pospisil_takes_command
 		icon = GFX_focus_BEN_pospisil_takes_command
 		prerequisite = { focus = ben_dvorak_has_lost_the_streets }
-		x = 20
-		y = 12
+		x = 33
+		y = 14
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 10 }
@@ -489,46 +1277,47 @@ focus_tree = {
 				ruling_party = communism
 				elections_allowed = no
 			}
-			promote_character = BEN_adam_pospisil
-			set_country_flag = ben_pospisil_in_power
-			add_political_power = 50
-			country_event = { id = benesov.6 hours = 6 }
+			country_event = { id = benesov.7 hours = 6 }
 		}
 	}
+
+	# --- The People's Republic of Beneshov (Diamond: x = 30 and x = 36) ---
 
 	focus = {
 		id = ben_the_peoples_republic_of_benesov
 		icon = GFX_focus_BEN_the_peoples_republic_of_benesov
 		prerequisite = { focus = ben_pospisil_takes_command }
-		x = 20
-		y = 13
+		x = 33
+		y = 15
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 10 }
 
 		completion_reward = {
-			add_stability = 0.10
+			add_stability = 0.15
 			add_war_support = 0.10
 			add_political_power = 50
 		}
 	}
 
-	# ------------------------------------------------------------
-	# POST-TAKEOVER: STRATEGIC SUB-BRANCH (Left: x = 14)
-	# ------------------------------------------------------------
-
 	focus = {
 		id = ben_we_have_read_the_meta
 		icon = GFX_focus_BEN_we_have_read_the_meta
 		prerequisite = { focus = ben_the_peoples_republic_of_benesov }
-		x = 21
-		y = 14
+		x = 32
+		y = 16
 		cost = 10
 		search_filters = { FOCUS_FILTER_RESEARCH }
-		ai_will_do = { factor = 7 }
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
-			add_ideas = ben_pospisil_strategic_theory
+			add_doctrine_cost_reduction = {
+				name = all_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			army_experience = 25
 		}
 	}
 
@@ -536,30 +1325,27 @@ focus_tree = {
 		id = ben_every_citizen_a_strategist
 		icon = GFX_focus_BEN_every_citizen_a_strategist
 		prerequisite = { focus = ben_we_have_read_the_meta }
-		x = 21
-		y = 15
+		x = 32
+		y = 17
 		cost = 10
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-		ai_will_do = { factor = 7 }
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			add_ideas = ben_state_strategic_education
+			add_manpower = 500
 		}
 	}
-
-	# ------------------------------------------------------------
-	# POST-TAKEOVER: ORGANIZATION SUB-BRANCH (Right: x = 18)
-	# ------------------------------------------------------------
 
 	focus = {
 		id = ben_stepans_distribution_network
 		icon = GFX_focus_BEN_stepans_distribution_network
 		prerequisite = { focus = ben_the_peoples_republic_of_benesov }
-		x = 25
-		y = 14
+		x = 34
+		y = 16
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY }
-		ai_will_do = { factor = 7 }
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			add_ideas = ben_stepans_distribution_network
@@ -570,35 +1356,32 @@ focus_tree = {
 		id = ben_a_government_worthy_of_bohemia
 		icon = GFX_focus_BEN_a_government_worthy_of_bohemia
 		prerequisite = { focus = ben_stepans_distribution_network }
-		x = 25
-		y = 15
+		x = 34
+		y = 17
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		ai_will_do = { factor = 7 }
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
+			add_political_power = 75
 			add_stability = 0.05
-			add_political_power = 30
 		}
 	}
-
-	# ------------------------------------------------------------
-	# CONVERGENCE & FINAL EXPANSION GATE (Center: x = 16)
-	# ------------------------------------------------------------
 
 	focus = {
 		id = ben_the_pospisil_doctrine
 		icon = GFX_focus_BEN_the_pospisil_doctrine
 		prerequisite = { focus = ben_every_citizen_a_strategist }
 		prerequisite = { focus = ben_a_government_worthy_of_bohemia }
-		x = 23
-		y = 16
+		x = 33
+		y = 18
 		cost = 10
 		search_filters = { FOCUS_FILTER_ARMY_XP }
-		ai_will_do = { factor = 9 }
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			add_ideas = ben_pospisil_doctrine
+			army_experience = 25
 		}
 	}
 
@@ -606,8 +1389,8 @@ focus_tree = {
 		id = ben_the_failure_of_the_old_republic
 		icon = GFX_focus_BEN_the_failure_of_the_old_republic
 		prerequisite = { focus = ben_the_pospisil_doctrine }
-		x = 23
-		y = 17
+		x = 33
+		y = 19
 		cost = 10
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 8 }
@@ -628,8 +1411,8 @@ focus_tree = {
 		id = ben_benesov_will_not_remain_small
 		icon = GFX_focus_BEN_benesov_will_not_remain_small
 		prerequisite = { focus = ben_the_failure_of_the_old_republic }
-		x = 23
-		y = 18
+		x = 34
+		y = 20
 		cost = 10
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 10 }
@@ -643,9 +1426,9 @@ focus_tree = {
 	focus = {
 		id = ben_liberate_the_czech_workers
 		icon = GFX_focus_BEN_liberate_the_czech_workers
-		prerequisite = { focus = ben_benesov_will_not_remain_small }
-		x = 23
-		y = 19
+		prerequisite = { focus = ben_the_failure_of_the_old_republic }
+		x = 32
+		y = 20
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 10 }
@@ -656,203 +1439,262 @@ focus_tree = {
 		}
 	}
 
-
 	# ============================================================
-	# ARMY BRANCH (Right: x = 21)
-	# ============================================================
-
-	focus = {
-		id = ben_inventory_the_armories
-		icon = GFX_focus_BEN_inventory_the_armories
-		x = 0
-		y = 0
-		cost = 10
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-		ai_will_do = { factor = 3 }
-
-		completion_reward = {
-			army_experience = 10
-			add_equipment_to_stockpile = {
-				type = infantry_equipment_0
-				amount = 200
-				producer = BEN
-			}
-		}
-	}
-
-	focus = {
-		id = ben_organize_the_garrison
-		icon = GFX_focus_BEN_organize_the_garrison
-		prerequisite = { focus = ben_inventory_the_armories }
-		x = 0
-		y = 1
-		cost = 10
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-		ai_will_do = { factor = 3 }
-
-		completion_reward = {
-			army_experience = 15
-			add_command_power = 15
-		}
-	}
-
-	focus = {
-		id = ben_local_supply_depots
-		icon = GFX_focus_BEN_local_supply_depots
-		prerequisite = { focus = ben_organize_the_garrison }
-		x = 0
-		y = 2
-		cost = 10
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-		ai_will_do = { factor = 3 }
-
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = ben_army_without_supply_system
-				add_idea = ben_improvised_supply_system
-			}
-		}
-	}
-
-	focus = {
-		id = ben_standardize_the_infantry
-		icon = GFX_focus_BEN_standardize_the_infantry
-		prerequisite = { focus = ben_local_supply_depots }
-		x = 0
-		y = 3
-		cost = 10
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-		ai_will_do = { factor = 3 }
-
-		completion_reward = {
-			army_experience = 25
-			add_equipment_to_stockpile = {
-				type = infantry_equipment_0
-				amount = 250
-				producer = BEN
-			}
-		}
-	}
-
-	focus = {
-		id = ben_army_that_can_fight
-		icon = GFX_focus_BEN_army_that_can_fight
-		prerequisite = { focus = ben_standardize_the_infantry }
-		x = 0
-		y = 4
-		cost = 10
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-		ai_will_do = { factor = 3 }
-
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = ben_improvised_supply_system
-				add_idea = ben_reorganized_benesov_army
-			}
-		}
-	}
-
-	# ============================================================
-	# AIR BRANCH (Far Right: x = 26)
+	# BRANCH 5: POSPISIL EXPANSION (5 New Focuses)
 	# ============================================================
 
 	focus = {
-		id = ben_survey_the_airfields
-		icon = GFX_focus_BEN_survey_the_airfields
-		x = 5
-		y = 0
+		id = ben_claim_the_legacy_of_czechoslovakia
+		icon = GFX_focus_BEN_liberate_the_czech_workers
+		prerequisite = { focus = ben_liberate_the_czech_workers }
+		prerequisite = { focus = ben_benesov_will_not_remain_small }
+		x = 33
+		y = 21
 		cost = 10
-		search_filters = { FOCUS_FILTER_AIR_XP }
-		ai_will_do = { factor = 2 }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+		ai_will_do = { factor = 10 }
+
+		available = {
+			has_government = communism
+		}
 
 		completion_reward = {
-			air_experience = 10
-			1093 = {
-				add_building_construction = {
-					type = air_base
-					level = 1
-					instant_build = yes
+			add_political_power = 50
+			add_war_support = 0.05
+			add_state_claim = 75
+			add_state_claim = 74
+			add_state_claim = 72
+			set_country_flag = ben_czech_claims_declared
+		}
+	}
+
+	focus = {
+		id = ben_reach_out_to_moravian_workers
+		icon = GFX_focus_BEN_workers_in_the_back_rooms
+		prerequisite = { focus = ben_claim_the_legacy_of_czechoslovakia }
+		x = 32
+		y = 22
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+		ai_will_do = { factor = 10 }
+
+		available = {
+			has_government = communism
+		}
+
+		bypass = {
+			OR = {
+				75 = { is_owned_by = ROOT }
+				NOT = { country_exists = CZE }
+				75 = { NOT = { is_owned_by = CZE } }
+			}
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			75 = { add_claim_by = ROOT }
+			custom_effect_tooltip = ben_demand_moravia_tt
+			if = {
+				limit = {
+					country_exists = CZE
+					75 = { is_owned_by = CZE }
+				}
+				CZE = {
+					country_event = { id = benesov.20 days = 2 }
 				}
 			}
 		}
 	}
 
 	focus = {
-		id = ben_build_a_flight_school
-		icon = GFX_focus_BEN_build_a_flight_school
-		prerequisite = { focus = ben_survey_the_airfields }
-		x = 5
-		y = 1
+		id = ben_solidarity_with_eastern_workers
+		icon = GFX_focus_BEN_the_benesov_workers_congress
+		prerequisite = { focus = ben_claim_the_legacy_of_czechoslovakia }
+		x = 34
+		y = 22
 		cost = 10
-		search_filters = { FOCUS_FILTER_AIR_XP }
-		ai_will_do = { factor = 2 }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+		ai_will_do = { factor = 10 }
+
+		available = {
+			has_government = communism
+		}
+
+		bypass = {
+			OR = {
+				AND = {
+					74 = { is_owned_by = ROOT }
+					72 = { is_owned_by = ROOT }
+				}
+				NOT = { country_exists = CZE }
+				AND = {
+					74 = { NOT = { is_owned_by = CZE } }
+					72 = { NOT = { is_owned_by = CZE } }
+				}
+			}
+		}
 
 		completion_reward = {
-			air_experience = 15
-			add_doctrine_cost_reduction = {
-				name = ben_flight_school_bonus
-				category = air_doctrine
-				cost_reduction = 0.5
-				uses = 1
+			add_political_power = 25
+			74 = { add_claim_by = ROOT }
+			72 = { add_claim_by = ROOT }
+			custom_effect_tooltip = ben_demand_silesia_tt
+			if = {
+				limit = {
+					country_exists = CZE
+					OR = {
+						74 = { is_owned_by = CZE }
+						72 = { is_owned_by = CZE }
+					}
+				}
+				CZE = {
+					country_event = { id = benesov.23 days = 2 }
+				}
 			}
 		}
 	}
 
 	focus = {
-		id = ben_scrounge_for_aircraft
-		icon = GFX_focus_BEN_scrounge_for_aircraft
-		prerequisite = { focus = ben_build_a_flight_school }
-		x = 5
-		y = 2
+		id = ben_workers_of_the_former_republic
+		icon = GFX_focus_BEN_every_citizen_a_strategist
+		prerequisite = { focus = ben_reach_out_to_moravian_workers }
+		prerequisite = { focus = ben_solidarity_with_eastern_workers }
+		x = 33
+		y = 23
 		cost = 10
-		search_filters = { FOCUS_FILTER_AIR_XP }
-		ai_will_do = { factor = 2 }
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
+		ai_will_do = { factor = 10 }
+
+		available = {
+			has_government = communism
+			owns_state = 75
+			owns_state = 74
+			owns_state = 72
+		}
 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = ben_air_force_in_name_only
-				add_idea = ben_embryonic_air_force
+			add_manpower = 5000
+			add_stability = 0.05
+			add_war_support = 0.05
+			75 = { add_core_of = ROOT }
+			74 = { add_core_of = ROOT }
+			72 = { add_core_of = ROOT }
+			set_country_flag = ben_czech_consolidation_complete
+		}
+	}
+
+	focus = {
+		id = ben_the_czechoslovak_workers_mandate
+		icon = GFX_focus_BEN_the_benesov_workers_congress
+		prerequisite = { focus = ben_workers_of_the_former_republic }
+		x = 33
+		y = 24
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+		ai_will_do = { factor = 10 }
+
+		available = {
+			has_government = communism
+			has_country_flag = ben_czech_consolidation_complete
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.05
+			70 = { add_core_of = ROOT }
+			71 = { add_core_of = ROOT }
+			664 = { add_core_of = ROOT }
+			set_country_flag = ben_slovak_mandate_proclaimed
+		}
+	}
+
+	focus = {
+		id = ben_enforce_the_workers_mandate
+		icon = GFX_focus_BEN_liberate_the_czech_workers
+		prerequisite = { focus = ben_the_czechoslovak_workers_mandate }
+		x = 33
+		y = 25
+		cost = 10
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
+		ai_will_do = { factor = 10 }
+
+		available = {
+			has_government = communism
+			has_country_flag = ben_slovak_mandate_proclaimed
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_war_support = 0.10
+			if = {
+				limit = {
+					country_exists = CZE
+					OR = {
+						70 = { is_owned_by = CZE }
+						71 = { is_owned_by = CZE }
+						664 = { is_owned_by = CZE }
+					}
+					NOT = { has_war_with = CZE }
+				}
+				create_wargoal = {
+					type = take_core_state
+					target = CZE
+					generator = { 70 71 664 }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = SLO
+					OR = {
+						70 = { is_owned_by = SLO }
+						71 = { is_owned_by = SLO }
+						664 = { is_owned_by = SLO }
+					}
+					NOT = { has_war_with = SLO }
+				}
+				create_wargoal = {
+					type = take_core_state
+					target = SLO
+					generator = { 70 71 664 }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = HUN
+					664 = { is_owned_by = HUN }
+					NOT = { has_war_with = HUN }
+				}
+				create_wargoal = {
+					type = take_core_state
+					target = HUN
+					generator = { 664 }
+				}
 			}
 		}
 	}
 
 	focus = {
-		id = ben_benesov_air_command
-		icon = GFX_focus_BEN_benesov_air_command
-		prerequisite = { focus = ben_scrounge_for_aircraft }
-		x = 5
-		y = 3
+		id = ben_the_beneshov_successor_state
+		icon = GFX_focus_BEN_a_government_worthy_of_bohemia
+		prerequisite = { focus = ben_enforce_the_workers_mandate }
+		x = 33
+		y = 26
 		cost = 10
-		search_filters = { FOCUS_FILTER_AIR_XP }
-		ai_will_do = { factor = 2 }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
 
-		completion_reward = {
-			air_experience = 25
-			add_doctrine_cost_reduction = {
-				name = ben_air_command_doctrine
-				category = air_doctrine
-				cost_reduction = 0.5
-				uses = 1
-			}
+		available = {
+			has_government = communism
+			controls_state = 70
+			controls_state = 71
+			controls_state = 664
 		}
-	}
-
-	focus = {
-		id = ben_air_force_of_our_own
-		icon = GFX_focus_BEN_air_force_of_our_own
-		prerequisite = { focus = ben_benesov_air_command }
-		x = 5
-		y = 4
-		cost = 10
-		search_filters = { FOCUS_FILTER_AIR_XP }
-		ai_will_do = { factor = 2 }
 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = ben_embryonic_air_force
-				add_idea = ben_reorganized_air_command
-			}
+			add_political_power = 100
+			add_stability = 0.15
+			add_war_support = 0.10
+			add_ideas = ben_socialist_successor_federation
 		}
 	}
 }
-

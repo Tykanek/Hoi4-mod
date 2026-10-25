@@ -1,45 +1,104 @@
-﻿﻿l_english:
+﻿l_english:
+ ben_great_beneshov_depression_1:0 "The Great Beneshov Depression"
+ ben_great_beneshov_depression_1_desc:0 "Beneshov is engulfed in its own self-declared Great Depression. Severed from federal supply routes, factories sit idle, workers demand wages in grain, and municipal ledgers have completely collapsed into chaos."
+ ben_great_beneshov_depression_2:0 "The Great Beneshov Depression"
+ ben_great_beneshov_depression_2_desc:0 "Emergency accounting commissions have begun auditing Town Hall archives. While the worst municipal fraud has been halted, cash reserves remain empty and commercial trade is virtually paralyzed."
+ ben_great_beneshov_depression_3:0 "The Great Beneshov Depression"
+ ben_great_beneshov_depression_3_desc:0 "The municipal treasury has stabilized basic fiscal reserves, but local commercial credit remains frozen. Workshops operate on barter and short-term IOUs."
+ ben_great_beneshov_depression_4:0 "The Great Beneshov Depression"
+ ben_great_beneshov_depression_4_desc:0 "Domestic credit guarantees have restored basic lending between municipal banks and artisan cooperatives. Factory owners are cautiously resuming small-scale capital investment."
+ ben_great_beneshov_depression_5:0 "The Great Beneshov Depression"
+ ben_great_beneshov_depression_5_desc:0 "Industrial confidence has substantially recovered across Beneshov. Only final administrative debt cancellations remain before the depression can be declared formally ended."
+ ben_depression_recovery_cooldown_tt:0 "Another major economic reform cannot begin for 120 days."
  ben_dependent_on_czech_deliveries:0 "Dependent on Czech Deliveries"
- ben_dependent_on_czech_deliveries_desc:0 "Benešov's economy was never designed to function independently. Machinery, industrial inputs, replacement parts, and essential goods previously arrived through the Czechoslovak economic network, leaving local production severely impaired by trade disruptions."
+ ben_dependent_on_czech_deliveries_desc:0 "Beneshov's economy was never designed to function independently. Raw coal, steel ingots, machine lubricants, and replacement parts previously arrived daily through the federal Czechoslovak transport network, leaving our workshops paralyzed whenever rail deliveries are interrupted."
 
  ben_collapsed_local_economy:0 "Collapsed Local Economy"
- ben_collapsed_local_economy_desc:0 "Benešov lacks the industrial base, financial institutions, and skilled workforce required to sustain an autonomous economy. Workshops are shuttered and construction efforts are crippled."
+ ben_collapsed_local_economy_desc:0 "With outside credit frozen and state contracts cancelled, the district lacks the liquidity, commercial banking, and raw material stockpiles necessary to sustain normal commerce. Shuttered shopfronts and idle brickyards reflect the severe contraction of our domestic economy."
+
+ ben_broken_production_system:0 "Broken Production System"
+ ben_broken_production_system_desc:0 "Mismatched artisanal tooling, fragmented workshop layouts, and erratic raw material deliveries create constant assembly bottlenecks. Workers spend more time adapting improper fittings by hand than completing manufactured goods."
 
  ben_struggling_local_economy:0 "Struggling Local Economy"
- ben_struggling_local_economy_desc:0 "Workshops are reopening and basic tools have been returned to service, but local production remains fragile and functions below capacity."
+ ben_struggling_local_economy_desc:0 "Emergency municipal credits and cleared barter routes have allowed basic commercial life to resume across Beneshov. While acute municipal bankruptcy has been averted, capital reserves remain dangerously thin."
 
  ben_reduced_czech_dependency:0 "Reduced Czech Dependency"
- ben_reduced_czech_dependency_desc:0 "Local contracts and municipal workshops have replaced several critical external suppliers, significantly cushioning the impact of disrupted deliveries."
+ ben_reduced_czech_dependency_desc:0 "Negotiated regional supply pacts and reopened town workshops have replaced several critical federal supply lines, steadily diminishing Prague's economic leverage over the district."
+
+ ben_disorganized_production:0 "Disorganized Production"
+ ben_disorganized_production_desc:0 "Standardized gauges and unified toolboxes have been distributed to municipal workshops, reducing manufacturing discrepancies. Output is growing, though workshop coordination and floor supervision remain uneven."
 
  ben_recovered_local_economy:0 "Recovered Local Economy"
- ben_recovered_local_economy_desc:0 "Benešov has stabilized its public finances, reorganized municipal workshops, and built a resilient, self-sufficient economic baseline."
+ ben_recovered_local_economy_desc:0 "Through rigorous fiscal administration, standardized municipal cooperatives, and expanded municipal construction, Beneshov has stabilized its economic baseline. While far from an industrial titan, our district possesses a durable, self-sufficient manufacturing base."
 
- ben_army_without_supply_system:0 "An Army Without a Supply System"
- ben_army_without_supply_system_desc:0 "The garrison possesses rifles and uniforms, but almost none of the logistical infrastructure expected of an independent army. Ammunition distribution and field logistics remain severely degraded."
+ ben_army_without_supply_system:0 "Army Without a Supply System"
+ ben_army_without_supply_system_desc:0 "The local garrison possesses uniforms and service rifles, but almost none of the motorized transport, forward depots, or inventory manifests required to sustain troops in the field. Even a minor deployment rapidly results in acute ammunition and ration shortages."
+
+ ben_untrained_local_militia:0 "Untrained Local Militia"
+ ben_untrained_local_militia_desc:0 "Composed largely of municipal night watchmen, volunteer firemen, and conscripted factory hands, our forces possess commendable civic loyalty but virtually no formal combat training or battlefield cohesion."
+
+ ben_no_officer_corps:0 "No Officer Corps"
+ ben_no_officer_corps_desc:0 "Following the withdrawal of Czechoslovak army personnel, Beneshov was left without trained staff officers or experienced operational planners. Company commanders must improvise basic maneuvers without higher staff coordination."
 
  ben_improvised_supply_system:0 "Improvised Supply System"
- ben_improvised_supply_system_desc:0 "Decentralized district depots and local transport coordination now ensure a reliable supply flow, reducing acute field shortages."
+ ben_improvised_supply_system_desc:0 "Decentralized district depots, horse-drawn carts, and volunteer railway crews have created an ad-hoc supply network, ensuring frontline defense units receive essential rations and small-arms ammunition on schedule."
 
- ben_reorganized_benesov_army:0 "Reorganized Benešov Army"
- ben_reorganized_benesov_army_desc:0 "With standardized field equipment, dependable logistics, and unified command procedures, the Benešov armed forces have achieved true combat readiness."
+ ben_partially_trained_garrison:0 "Partially Trained Garrison"
+ ben_partially_trained_garrison_desc:0 "Rigorous parade-ground drilling and mandatory rifle range practice have hardened our militia recruits into cohesive squads, though battalion-level maneuver and combined-arms tactics remain unpracticed."
+
+ ben_inexperienced_officer_corps:0 "Inexperienced Officer Cadre"
+ ben_inexperienced_officer_corps_desc:0 "A newly commissioned corps of junior officers and promoted veterans has taken command of our companies. While their tactical understanding is improving daily, large-scale operational planning remains cautious and unproven."
+
+ ben_reorganized_benesov_army:0 "Reorganized Beneshov Army"
+ ben_reorganized_benesov_army_desc:0 "Standardized infantry weaponry, formal quartermaster logistics, and a disciplined officer corps provide Beneshov with a dependable, professional defense force ready to defend district borders against all aggression."
 
  ben_air_force_in_name_only:0 "An Air Force in Name Only"
- ben_air_force_in_name_only_desc:0 "Benešov inherited neither a meaningful aircraft inventory nor the technical organization required to operate one, leaving its airspace entirely unprotected."
+ ben_air_force_in_name_only_desc:0 "Beneshov inherited neither military combat aircraft nor an operational air staff. A handful of grounded civilian sporting biplanes and agricultural trainers represent the entirety of our district's air assets."
+
+ ben_no_trained_pilots:0 "No Trained Pilots"
+ ben_no_trained_pilots_desc:0 "There are virtually no military-rated aviators in the district. Flight training is nonexistent, and the few civilian hobbyists available lack any instruction in aerial navigation, formation flight, or aerial gunnery."
+
+ ben_no_aviation_industry:0 "No Aviation Industry"
+ ben_no_aviation_industry_desc:0 "Local workshops possess neither the specialized tooling nor the metallurgical know-how required to manufacture aero engines, airframes, or precision flight instruments, leaving any air arm dependent on scrounged parts."
+
+ ben_improvised_airfields:0 "Improvised Airfields"
+ ben_improvised_airfields_desc:0 "Our few aircraft must take off and land on uneven pasture strips and cleared meadows devoid of hangars, perimeter drainage, or fueling facilities, resulting in frequent airframe damage and ground mishaps."
 
  ben_embryonic_air_force:0 "Embryonic Air Force"
- ben_embryonic_air_force_desc:0 "A handful of repaired training biplanes and a nascent flight school provide Benešov with its first rudimentary aviation capability."
+ ben_embryonic_air_force_desc:0 "A handful of patched trainer airframes and a small municipal flight school have provided Beneshov with its first rudimentary air detachment, proving that flight operations from our soil are possible."
+
+ ben_basic_pilot_training:0 "Rudimentary Flight Training"
+ ben_basic_pilot_training_desc:0 "Under the guidance of veteran civilian pilots and retired instructors, cadets are mastering basic stick-and-rudder handling, weather observation, and traffic patterns, building our first cadre of military aviators."
+
+ ben_small_aviation_workshops:0 "Small Aviation Workshops"
+ ben_small_aviation_workshops_desc:0 "Retrofitted municipal carpenter shops and metal works have begun fabricating replacement struts, wing ribs, and engine cowlings, significantly reducing the downtime of grounded training craft."
+
+ ben_repaired_airfields:0 "Repaired Airfields"
+ ben_repaired_airfields_desc:0 "Runways have been graded and compacted with heavy rollers, drainage ditches cleared, and basic weather vanes erected, transforming cow pastures into stable, dependable flight strips."
 
  ben_reorganized_air_command:0 "Reorganized Air Command"
- ben_reorganized_air_command_desc:0 "Dedicated maintenance facilities, trained pilots, and an established air command now coordinate air defense operations across Benešov."
-ben_public_morale_program:0 "Public Morale Programme"
- ben_public_morale_program_desc:0 "Subsidized municipal tavern rations and communal beer supplies help maintain civilian spirits during times of economic isolation, though diverting a modest share of consumer goods."
- ben_pospisil_strategic_theory:0 "Pospíšil's Strategic Theory"
- ben_pospisil_strategic_theory_desc:0 "Heavily influenced by rigorous tabletop military simulations and grand operational treatises, the revolutionary leadership emphasizes meticulous planning and calculated battlefield maneuvers."
+ ben_reorganized_air_command_desc:0 "With dedicated repair hangars, trained flight crews, and a unified district air headquarters, Beneshov coordinates tactical reconnaissance and territorial air defense with professional competence."
+
+ ben_public_morale_program:0 "Public Morale Programme"
+ ben_public_morale_program_desc:0 "Subsidized municipal brewery distributions and communal tavern rations maintain civilian spirits during times of economic isolation, ensuring that anxious citizens find solace in affordable beer."
+
+ ben_pospisil_strategic_theory:0 "Pospisil's Strategic Theory"
+ ben_pospisil_strategic_theory_desc:0 "Rooted in meticulous grand-strategy simulation and operational mathematics, Pospisil's strategic doctrine prioritizes geometric efficiency, calculated force ratios, and decisive maneuvering over conventional military tradition."
+
  ben_state_strategic_education:0 "State Strategic Education"
- ben_state_strategic_education_desc:0 "Comprehensive military-theoretical training across public schools and union halls equips conscripts and junior officers with an acute awareness of operational geometry."
- ben_stepans_distribution_network:0 "Štěpán's Distribution Network"
- ben_stepans_distribution_network_desc:0 "Run by Štěpán Pospíšil, this pragmatic logistics apparatus coordinates brewery transport lines, regional warehouses, and repair workshops to accelerate public construction and keep supply lines flowing."
- ben_pospisil_doctrine:0 "The Pospíšil Doctrine"
- ben_pospisil_doctrine_desc:0 "An all-encompassing military philosophy that pairs aggressive operational planning with hyper-optimized squad organization, turning the Benešov army into a formidable tactical instrument."
+ ben_state_strategic_education_desc:0 "Public classrooms, trade unions, and youth clubs conduct regular seminars in military-theoretical planning, cultivating a population thoroughly versed in logistics calculations and operational thinking."
+
+ ben_stepans_distribution_network:0 "Stepan's Distribution Network"
+ ben_stepans_distribution_network_desc:0 "Under Stepan Pospisil's supervision, informal tavern connections and railway yard contacts form an agile supply apparatus, accelerating public works and keeping fuel and food moving without bureaucratic delay."
+
+ ben_pospisil_doctrine:0 "The Pospisil Doctrine"
+ ben_pospisil_doctrine_desc:0 "An all-encompassing military philosophy that unites mathematical force concentrations with decentralized squad initiative, turning the Beneshov army into a formidable, optimized combat instrument."
+
  ben_claimant_to_czech_leadership:0 "Claimant to Czech Leadership"
- ben_claimant_to_czech_leadership_desc:0 "Benešov openly asserts moral and political primacy over the historical Czech lands, justifying swift military intervention against rival regimes to liberate the working class."
+ ben_claimant_to_czech_leadership_desc:0 "The People's Republic of Beneshov asserts moral and political primacy over the historical Czech lands, declaring its mission to liberate the working class from reactionary regional splinter regimes."
+
+ ben_matej_dvorak_getting_everyone_drunk:0 "Matej Dvorak Responsible for Getting Everyone Drunk"
+ ben_matej_dvorak_getting_everyone_drunk_desc:0 "Under the official pretext of maintaining civil stability during economic crisis, Mayor Dvorak's administration has heavily subsidized municipal brewery distributions. While tavern spirits remain high, civic sobriety and daily industrial productivity have suffered considerably."
+
+ ben_socialist_successor_federation:0 "Socialist Successor Federation"
+ ben_socialist_successor_federation_desc:0 "Through relentless revolutionary struggle and the liberation of Czech and Slovak workers alike, Beneshov has forged a new, unified socialist Czechoslovak federation. Central planning, regional workers' councils, and unwavering popular legitimacy secure our triumphant state."

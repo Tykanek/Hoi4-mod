@@ -1,32 +1,58 @@
 ﻿l_english:
- benesov.1.t:0 "The Fate of Benešov"
- benesov.1.d:0 "As Czechoslovak authority weakens across the provinces, the municipal leadership of Benešov finds itself at an existential crossroads. Mayor Matěj Dvořák argues that our small district lacks the industry and manpower to survive on its own, urging the council to reaffirm loyal ties with Prague. However, local shopkeepers, veterans, and municipal councilors increasingly demand that Benešov stand alone, calling for an immediate break from the republic."
+ benesov.1.t:0 "The Fate of Beneshov"
+ benesov.1.d:0 "As Czechoslovak authority weakens across the provinces, the municipal leadership of Beneshov finds itself at an existential crossroads. Mayor Matej Dvorak argues that our small district lacks the industry, finance, and manpower to survive on its own, urging the council to reaffirm loyal ties with Prague. However, local shopkeepers, veterans, and municipal councilors increasingly demand that Beneshov stand alone, calling for an immediate break from the republic."
  benesov.1.a:0 "The council must weigh its options."
 
- benesov.2.t:0 "Benešov Declares Independence"
- benesov.2.d:0 "Led by Mayor Matěj Dvořák, the Benešov municipal council has taken the historic step of terminating all autonomous protectorate ties with Czechoslovakia. Federal customs agents and military observers have been formally escorted to the district border. While cheering citizens crowd Masaryk Square under local banners, the sudden cessation of national trade and supply deliveries promises severe economic hardship in the days ahead."
- benesov.2.a:0 "Benešov stands on its own feet."
+ benesov.2.t:0 "Beneshov Declares Independence"
+ benesov.2.d:0 "Led by Mayor Matej Dvorak, the Beneshov municipal council has taken the historic step of terminating all autonomous protectorate ties with Czechoslovakia. Federal customs agents and military observers have been formally escorted to the district border. While cheering citizens crowd Masaryk Square under local banners, the sudden cessation of national trade and supply deliveries promises severe economic hardship in the days ahead."
+ benesov.2.a:0 "Beneshov stands on its own feet."
 
  benesov.3.t:0 "The Beer Rationing Debate"
- benesov.3.d:0 "The economic shock of independence has hit Benešov quickly, with stockpiles of coal, flour, and industrial raw materials dwindling. In an emergency town meeting, councilors have locked horns over how to maintain civilian order. Rejecting calls for strict rationing, Dvořák's government has introduced the Public Morale Programme, heavily subsidizing municipal tavern rations to ensure that cheap beer keeps the anxious population calm."
+ benesov.3.d:0 "The economic shock of independence has hit Beneshov quickly, with stockpiles of coal, flour, and industrial raw materials dwindling. In an emergency town meeting, councilors have locked horns over how to maintain civilian order. Rejecting calls for strict police rationing, Dvorak's government has introduced the Public Morale Programme, heavily subsidizing municipal tavern rations to ensure that cheap beer keeps the anxious population calm."
  benesov.3.a:0 "Keep the beer flowing."
 
- benesov.4.t:0 "The Strategist of Benešov"
- benesov.4.d:0 "In the back rooms of municipal taverns and working-class meeting halls, a charismatic young organizer named Adam Pospíšil has begun drawing devoted crowds. Surrounding himself with detailed operational charts, logistics formulas, and grand military treatises, Pospíšil delivers scathing critiques of Dvořák's liberal paralysis. He argues that Benešov's crisis cannot be solved by beer subsidies, but only through rigorous scientific planning and the revolutionary mobilization of the working class."
+ benesov.4.t:0 "The Strategist of Beneshov"
+ benesov.4.d:0 "In the back rooms of municipal taverns and working-class meeting halls, a charismatic young organizer named Adam Pospisil has begun drawing devoted crowds. Surrounding himself with detailed operational charts, logistics formulas, and grand military treatises, Pospisil delivers scathing critiques of Dvorak's liberal paralysis. He argues that Beneshov's crisis cannot be solved by beer subsidies, but only through rigorous scientific planning and the revolutionary mobilization of the working class."
  benesov.4.a:0 "His arguments carry undeniable weight."
 
- benesov.5.t:0 "Dvořák Has Lost the Streets"
- benesov.5.d:0 "A wave of mass strikes, organized through tavern networks and railway yards, has brought Benešov to a complete standstill. Local police detachments have refused Mayor Dvořák's orders to disperse demonstrators, instead joining the strike committees. With Town Hall surrounded and revolutionary delegates running neighbourhood distribution points, it is clear that Dvořák's democratic administration has lost control of the streets."
+ benesov.5.t:0 "Dvorak Has Lost the Streets"
+ benesov.5.d:0 "A wave of mass strikes, organized through tavern networks and railway yards, has brought Beneshov to a complete standstill. Local police detachments have refused Mayor Dvorak's orders to disperse demonstrators, instead joining the strike committees. With Town Hall surrounded and revolutionary delegates running neighbourhood distribution points, it is clear that Dvorak's democratic administration has lost control of the streets."
  benesov.5.a:0 "The old administration has collapsed."
 
  benesov.6.t:0 "Proclamation of the People's Republic"
- benesov.6.d:0 "Red banners now drape the municipal building as Adam Pospíšil steps onto the town hall balcony to address a jubilant assembly of armed workers and citizens. Formally assuming executive authority, Pospíšil proclaims the People's Republic of Benešov, pledging to sweep away bourgeois stagnation, mobilize regional industry, and construct a scientific socialist stronghold in the heart of Bohemia."
+ benesov.6.d:0 "Red banners now drape the municipal building as Adam Pospisil steps onto the town hall balcony to address a jubilant assembly of armed workers and citizens. Formally assuming executive authority, Pospisil proclaims the People's Republic of Beneshov, pledging to sweep away bourgeois stagnation, mobilize regional industry, and construct a scientific socialist stronghold in the heart of Bohemia."
  benesov.6.a:0 "Long live the People's Republic!"
 
- benesov_news.1.t:0 "Benešov Returns to Czechoslovakia"
- benesov_news.1.d:0 "Following constructive negotiations between Prague and municipal leaders under Matěj Dvořák, the autonomous territory of Benešov has formally surrendered its separate status and rejoined the Czechoslovak Republic as a fully integrated district. The peaceful reintegration has been welcomed in Prague as a vital reaffirmation of national unity."
+ benesov_news.1.t:0 "Beneshov Returns to Czechoslovakia"
+ benesov_news.1.d:0 "Following constructive negotiations between Prague and municipal leaders under Matej Dvorak, the autonomous territory of Beneshov has formally surrendered its separate status and rejoined the Czechoslovak Republic as a fully integrated district. The peaceful reintegration has been welcomed in Prague as a vital reaffirmation of national unity."
  benesov_news.1.a:0 "The republic remains whole."
 
- benesov_news.2.t:0 "Benešov Declares Independence"
- benesov_news.2.d:0 "The autonomous district of Benešov has officially declared its complete independence from the Czechoslovak Republic. Municipal authorities under Mayor Matěj Dvořák have expelled federal supervisors, established border posts, and proclaimed full district sovereignty. Observers in Prague have protested the secession, warning that the small landlocked territory cannot long survive without access to federal supply networks."
+ benesov_news.2.t:0 "Beneshov Declares Independence"
+ benesov_news.2.d:0 "The autonomous district of Beneshov has officially declared its complete independence from the Czechoslovak Republic. Municipal authorities under Mayor Matej Dvorak have expelled federal supervisors, established border posts, and proclaimed full district sovereignty. Observers in Prague have protested the secession, warning that the small landlocked territory cannot long survive without access to federal supply networks."
  benesov_news.2.a:0 "An unexpected fracture in Central Europe."
+
+ benesov.20.t:0 "Beneshov Demands Moravia"
+ benesov.20.d:0 "The revolutionary council in Beneshov has issued a formal ultimatum demanding the immediate handover of Moravia. Adam Pospisil asserts that the central government has abandoned the Moravian working class and that Beneshov is the sole legitimate revolutionary authority to govern the district."
+ benesov.20.a:0 "We cannot resist two competing capitals. (Cede Moravia)"
+ benesov.20.b:0 "Moravia remains part of the Republic! (Reject Ultimatum)"
+
+ benesov.21.t:0 "Czechoslovakia Cedes Moravia"
+ benesov.21.d:0 "Faced with our revolutionary mobilization and unable to defend its authority, the collapsing regime in Czechoslovakia has conceded the administration of Moravia to Beneshov. Our red flags now fly over Brno."
+ benesov.21.a:0 "The Moravian workers join our revolution."
+
+ benesov.22.t:0 "Czechoslovakia Rejects the Moravian Ultimatum"
+ benesov.22.d:0 "The remnant government in Czechoslovakia has defiantly refused our demand to transfer Moravia. Adam Pospisil has declared this a direct betrayal of the working class and ordered the military to prepare for revolutionary intervention."
+ benesov.22.a:0 "Then Moravia will be liberated by arms."
+
+ benesov.23.t:0 "Beneshov Demands Silesia and Zaolzie"
+ benesov.23.d:0 "The People's Republic of Beneshov has presented another sweeping demand, insisting that the industrial districts of Sudeten Silesia and Zaolzie be surrendered to Beneshov administration. Pospisil warns that any resistance will be met with revolutionary force."
+ benesov.23.a:0 "We have no choice but to yield the eastern borders. (Cede Districts)"
+ benesov.23.b:0 "We will not surrender our border industry! (Reject Ultimatum)"
+
+ benesov.24.t:0 "Czechoslovakia Cedes Silesia and Zaolzie"
+ benesov.24.d:0 "The Czechoslovak government has bowed to our demands and withdrawn its garrisons from Sudeten Silesia and Zaolzie. The heavy industry of the eastern borderlands is now under Beneshov control."
+ benesov.24.a:0 "The Silesian workers are welcomed into the fold."
+
+ benesov.25.t:0 "Czechoslovakia Rejects the Silesian Ultimatum"
+ benesov.25.d:0 "The Czechoslovak state has refused to concede Sudeten Silesia and Zaolzie. The reactionaries have entrenched themselves along the border, defying the revolutionary mandate."
+ benesov.25.a:0 "We shall take the coalfields by force."

@@ -1,4 +1,5 @@
 spriteTypes = {
+	# Economic Spirits
 	spriteType = {
 		name = "GFX_idea_ben_dependent_on_czech_deliveries"
 		texturefile = "gfx/interface/ideas/idea_ben_dependent_on_czech_deliveries.dds"
@@ -6,6 +7,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_ben_collapsed_local_economy"
 		texturefile = "gfx/interface/ideas/idea_ben_collapsed_local_economy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ben_broken_production_system"
+		texturefile = "gfx/interface/ideas/idea_ben_broken_production_system.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_ben_struggling_local_economy"
@@ -16,33 +21,83 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_ben_reduced_czech_dependency.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_ben_disorganized_production"
+		texturefile = "gfx/interface/ideas/idea_ben_disorganized_production.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_ben_recovered_local_economy"
 		texturefile = "gfx/interface/ideas/idea_ben_recovered_local_economy.dds"
 	}
+
+	# Army Spirits
 	spriteType = {
 		name = "GFX_idea_ben_army_without_supply_system"
 		texturefile = "gfx/interface/ideas/idea_ben_army_without_supply_system.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ben_untrained_local_militia"
+		texturefile = "gfx/interface/ideas/idea_ben_untrained_local_militia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ben_no_officer_corps"
+		texturefile = "gfx/interface/ideas/idea_ben_no_officer_corps.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_ben_improvised_supply_system"
 		texturefile = "gfx/interface/ideas/idea_ben_improvised_supply_system.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_ben_partially_trained_garrison"
+		texturefile = "gfx/interface/ideas/idea_ben_partially_trained_garrison.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ben_inexperienced_officer_corps"
+		texturefile = "gfx/interface/ideas/idea_ben_inexperienced_officer_corps.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_ben_reorganized_benesov_army"
 		texturefile = "gfx/interface/ideas/idea_ben_reorganized_benesov_army.dds"
 	}
+
+	# Air Spirits
 	spriteType = {
 		name = "GFX_idea_ben_air_force_in_name_only"
 		texturefile = "gfx/interface/ideas/idea_ben_air_force_in_name_only.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ben_no_trained_pilots"
+		texturefile = "gfx/interface/ideas/idea_ben_no_trained_pilots.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ben_no_aviation_industry"
+		texturefile = "gfx/interface/ideas/idea_ben_no_aviation_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ben_improvised_airfields"
+		texturefile = "gfx/interface/ideas/idea_ben_improvised_airfields.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_ben_embryonic_air_force"
 		texturefile = "gfx/interface/ideas/idea_ben_embryonic_air_force.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_ben_basic_pilot_training"
+		texturefile = "gfx/interface/ideas/idea_ben_basic_pilot_training.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ben_small_aviation_workshops"
+		texturefile = "gfx/interface/ideas/idea_ben_small_aviation_workshops.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ben_repaired_airfields"
+		texturefile = "gfx/interface/ideas/idea_ben_repaired_airfields.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_ben_reorganized_air_command"
 		texturefile = "gfx/interface/ideas/idea_ben_reorganized_air_command.dds"
 	}
+
+	# Phase 3 Political Lore Spirits (Preserved)
 	spriteType = {
 		name = "GFX_idea_ben_public_morale_program"
 		texturefile = "gfx/interface/ideas/idea_ben_public_morale_program.dds"

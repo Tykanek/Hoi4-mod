@@ -34,7 +34,7 @@
  pra_prague_air_watch_1: "Prague Air Command"
  pra_prague_air_watch_1_desc: "Rooftop observers, telephone posts and hurried reports form Prague's first warning net against air raids."
  pra_prague_air_watch_2: "Prague Air Command"
- pra_prague_air_watch_2_desc: "Expanded posts around Letňany and Kbely give the capital more time to scramble its aircraft and warn its anti-aircraft crews."
+ pra_prague_air_watch_2_desc: "Expanded posts around Letnany and Kbely give the capital more time to scramble its aircraft and warn its anti-aircraft crews."
  pra_integrated_prague_air_defence: "Prague Air Command"
  pra_integrated_prague_air_defence_desc: "Observers, fighters and anti-aircraft batteries now answer to one command, creating an integrated shield over the capital."
 
@@ -60,5 +60,5 @@
  # ========================================================
  # BENEŠOV SABOTAGE SPIRITS
  # ========================================================
- ben_matej_dvorak_getting_everyone_drunk:0 "Matěj Dvořák Responsible for Getting Everyone Drunk"
- ben_matej_dvorak_getting_everyone_drunk_desc:0 "A systematic investigation has concluded that Matěj Dvořák bears direct responsibility for an alarming decline in sobriety across Benešov. The resulting demographic consequences are considered severe."
+ ben_matej_dvorak_getting_everyone_drunk:0 "Matej Dvorak Responsible for Getting Everyone Drunk"
+ ben_matej_dvorak_getting_everyone_drunk_desc:0 "A systematic investigation has concluded that Matej Dvorak bears direct responsibility for an alarming decline in sobriety across Beneshov. The resulting demographic consequences are considered severe."
