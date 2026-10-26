@@ -337,7 +337,7 @@ focus_tree = {
 		id = ben_train_the_first_pilots
 		icon = GFX_focus_BEN_train_the_first_pilots
 		prerequisite = { focus = ben_build_a_flight_school }
-		x = 12
+		x = 11
 		y = 5
 		cost = 10
 		search_filters = { FOCUS_FILTER_AIR_XP }
@@ -563,7 +563,8 @@ focus_tree = {
 		id = ben_emergency_accounting
 		icon = GFX_focus_BEN_count_what_remains
 		prerequisite = { focus = ben_restore_basic_infrastructure }
-		x = 21
+		prerequisite = { focus = ben_cut_the_last_czech_ties }
+		x = 22
 		y = 5
 		cost = 5
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
@@ -587,7 +588,7 @@ focus_tree = {
 		id = ben_stabilize_the_treasury
 		icon = GFX_focus_BEN_stepans_distribution_network
 		prerequisite = { focus = ben_emergency_accounting }
-		x = 21
+		x = 22
 		y = 6
 		cost = 5
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
@@ -615,7 +616,7 @@ focus_tree = {
 		id = ben_restore_domestic_credit
 		icon = GFX_focus_BEN_reopen_local_workshops
 		prerequisite = { focus = ben_stabilize_the_treasury }
-		x = 21
+		x = 22
 		y = 7
 		cost = 5
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
@@ -643,7 +644,7 @@ focus_tree = {
 		id = ben_rebuild_industrial_confidence
 		icon = GFX_focus_BEN_benesov_works_again
 		prerequisite = { focus = ben_restore_domestic_credit }
-		x = 21
+		x = 22
 		y = 8
 		cost = 5
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
@@ -671,7 +672,7 @@ focus_tree = {
 		id = ben_end_the_great_beneshov_depression
 		icon = GFX_focus_BEN_economic_recovery
 		prerequisite = { focus = ben_rebuild_industrial_confidence }
-		x = 21
+		x = 22
 		y = 9
 		cost = 5
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
@@ -699,7 +700,7 @@ focus_tree = {
 	focus = {
 		id = ben_count_what_remains
 		icon = GFX_focus_BEN_count_what_remains
-		x = 23
+		x = 18
 		y = 2
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
@@ -715,7 +716,7 @@ focus_tree = {
 		id = ben_reopen_local_workshops
 		icon = GFX_focus_BEN_reopen_local_workshops
 		prerequisite = { focus = ben_count_what_remains }
-		x = 23
+		x = 18
 		y = 3
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -733,7 +734,7 @@ focus_tree = {
 		id = ben_restore_basic_infrastructure
 		icon = GFX_focus_BEN_restore_basic_infrastructure
 		prerequisite = { focus = ben_reopen_local_workshops }
-		x = 23
+		x = 18
 		y = 4
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -754,7 +755,7 @@ focus_tree = {
 		id = ben_localize_supply_contracts
 		icon = GFX_focus_BEN_localize_supply_contracts
 		prerequisite = { focus = ben_restore_basic_infrastructure }
-		x = 25
+		x = 18
 		y = 5
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -770,7 +771,7 @@ focus_tree = {
 		id = ben_standardize_local_production
 		icon = GFX_focus_BEN_standardize_local_production
 		prerequisite = { focus = ben_localize_supply_contracts }
-		x = 25
+		x = 18
 		y = 6
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -790,7 +791,7 @@ focus_tree = {
 		id = ben_benesov_works_again
 		icon = GFX_focus_BEN_benesov_works_again
 		prerequisite = { focus = ben_standardize_local_production }
-		x = 25
+		x = 18
 		y = 7
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -815,7 +816,7 @@ focus_tree = {
 		id = ben_rebuild_civilian_industry
 		icon = GFX_focus_BEN_rebuild_civilian_industry
 		prerequisite = { focus = ben_benesov_works_again }
-		x = 24
+		x = 17
 		y = 8
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -837,7 +838,7 @@ focus_tree = {
 		id = ben_expand_local_construction
 		icon = GFX_focus_BEN_expand_local_construction
 		prerequisite = { focus = ben_rebuild_civilian_industry }
-		x = 24
+		x = 17
 		y = 9
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -856,7 +857,7 @@ focus_tree = {
 		id = ben_a_civilian_economy_again
 		icon = GFX_focus_BEN_a_civilian_economy_again
 		prerequisite = { focus = ben_expand_local_construction }
-		x = 24
+		x = 17
 		y = 10
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -876,7 +877,7 @@ focus_tree = {
 		id = ben_convert_the_workshops
 		icon = GFX_focus_BEN_convert_the_workshops
 		prerequisite = { focus = ben_benesov_works_again }
-		x = 26
+		x = 19
 		y = 8
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -898,7 +899,7 @@ focus_tree = {
 		id = ben_expand_arms_production
 		icon = GFX_focus_BEN_expand_arms_production
 		prerequisite = { focus = ben_convert_the_workshops }
-		x = 26
+		x = 19
 		y = 9
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -916,7 +917,7 @@ focus_tree = {
 		id = ben_benesov_arsenal
 		icon = GFX_focus_BEN_benesov_arsenal
 		prerequisite = { focus = ben_expand_arms_production }
-		x = 26
+		x = 19
 		y = 10
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -941,7 +942,7 @@ focus_tree = {
 		icon = GFX_focus_BEN_economic_recovery
 		prerequisite = { focus = ben_a_civilian_economy_again }
 		prerequisite = { focus = ben_benesov_arsenal }
-		x = 25
+		x = 18
 		y = 11
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -959,7 +960,7 @@ focus_tree = {
 	focus = {
 		id = ben_the_benesov_question
 		icon = GFX_focus_BEN_the_benesov_question
-		x = 36
+		x = 30
 		y = 2
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -978,7 +979,7 @@ focus_tree = {
 		icon = GFX_focus_BEN_we_still_need_the_republic
 		prerequisite = { focus = ben_the_benesov_question }
 		mutually_exclusive = { focus = ben_benesov_can_stand_alone }
-		x = 39
+		x = 33
 		y = 3
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -994,7 +995,7 @@ focus_tree = {
 		id = ben_restore_czech_deliveries
 		icon = GFX_focus_BEN_restore_czech_deliveries
 		prerequisite = { focus = ben_we_still_need_the_republic }
-		x = 39
+		x = 33
 		y = 4
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1018,7 +1019,7 @@ focus_tree = {
 		id = ben_reaffirm_the_prague_compact
 		icon = GFX_focus_BEN_reaffirm_the_prague_compact
 		prerequisite = { focus = ben_restore_czech_deliveries }
-		x = 39
+		x = 33
 		y = 5
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1026,10 +1027,20 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 75
-			PRA = {
+			set_country_flag = ben_loyal_to_republic
+			CZE = {
 				add_opinion_modifier = {
 					target = ROOT
-					modifier = ben_loyal_to_republic
+					modifier = ben_reaffirmed_czech_ties
+				}
+			}
+			if = {
+				limit = { country_exists = PRA }
+				PRA = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ben_reaffirmed_czech_ties
+					}
 				}
 			}
 		}
@@ -1039,7 +1050,7 @@ focus_tree = {
 		id = ben_return_to_the_republic
 		icon = GFX_focus_BEN_return_to_the_republic
 		prerequisite = { focus = ben_reaffirm_the_prague_compact }
-		x = 39
+		x = 33
 		y = 6
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1047,7 +1058,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 100
-			country_event = { id = benesov.3 hours = 6 }
+			news_event = { id = benesov_news.1 hours = 6 }
 		}
 	}
 
@@ -1058,7 +1069,7 @@ focus_tree = {
 		icon = GFX_focus_BEN_benesov_can_stand_alone
 		prerequisite = { focus = ben_the_benesov_question }
 		mutually_exclusive = { focus = ben_we_still_need_the_republic }
-		x = 33
+		x = 27
 		y = 3
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1076,7 +1087,7 @@ focus_tree = {
 		id = ben_cut_the_last_czech_ties
 		icon = GFX_focus_BEN_cut_the_last_czech_ties
 		prerequisite = { focus = ben_benesov_can_stand_alone }
-		x = 33
+		x = 27
 		y = 4
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1098,6 +1109,7 @@ focus_tree = {
 					modifier = ben_cut_ties
 				}
 			}
+			add_ideas = ben_great_beneshov_depression_1
 			country_event = { id = benesov.2 }
 		}
 	}
@@ -1106,7 +1118,7 @@ focus_tree = {
 		id = ben_the_deliveries_have_stopped
 		icon = GFX_focus_BEN_the_deliveries_have_stopped
 		prerequisite = { focus = ben_cut_the_last_czech_ties }
-		x = 33
+		x = 27
 		y = 5
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1114,7 +1126,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_stability = -0.05
-			country_event = { id = benesov.4 hours = 6 }
 		}
 	}
 
@@ -1122,7 +1133,7 @@ focus_tree = {
 		id = ben_dvorak_promises_recovery
 		icon = GFX_focus_BEN_dvorak_promises_recovery
 		prerequisite = { focus = ben_the_deliveries_have_stopped }
-		x = 33
+		x = 27
 		y = 6
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1138,7 +1149,7 @@ focus_tree = {
 		id = ben_the_beer_rationing_question
 		icon = GFX_focus_BEN_the_beer_rationing_question
 		prerequisite = { focus = ben_dvorak_promises_recovery }
-		x = 33
+		x = 27
 		y = 7
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1147,6 +1158,7 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = ben_public_morale_program
 			add_stability = 0.05
+			country_event = { id = benesov.3 hours = 6 }
 		}
 	}
 
@@ -1156,7 +1168,7 @@ focus_tree = {
 		id = ben_stepan_knows_everyone
 		icon = GFX_focus_BEN_stepan_knows_everyone
 		prerequisite = { focus = ben_the_beer_rationing_question }
-		x = 32
+		x = 26
 		y = 8
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1173,7 +1185,7 @@ focus_tree = {
 		id = ben_workers_in_the_back_rooms
 		icon = GFX_focus_BEN_workers_in_the_back_rooms
 		prerequisite = { focus = ben_stepan_knows_everyone }
-		x = 33
+		x = 26
 		y = 9
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1192,7 +1204,7 @@ focus_tree = {
 		id = ben_the_strategist_of_benesov
 		icon = GFX_focus_BEN_the_strategist_of_benesov
 		prerequisite = { focus = ben_workers_in_the_back_rooms }
-		x = 34
+		x = 26
 		y = 10
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1201,7 +1213,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 25
 			add_ideas = ben_pospisil_strategic_theory
-			country_event = { id = benesov.5 hours = 6 }
+			country_event = { id = benesov.4 hours = 6 }
 		}
 	}
 
@@ -1209,7 +1221,7 @@ focus_tree = {
 		id = ben_a_thousand_hours_of_experience
 		icon = GFX_focus_BEN_a_thousand_hours_of_experience
 		prerequisite = { focus = ben_the_strategist_of_benesov }
-		x = 35
+		x = 26
 		y = 11
 		cost = 10
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1230,7 +1242,7 @@ focus_tree = {
 		id = ben_the_benesov_workers_congress
 		icon = GFX_focus_BEN_the_benesov_workers_congress
 		prerequisite = { focus = ben_a_thousand_hours_of_experience }
-		x = 33
+		x = 24
 		y = 12
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1249,7 +1261,7 @@ focus_tree = {
 		id = ben_dvorak_has_lost_the_streets
 		icon = GFX_focus_BEN_dvorak_has_lost_the_streets
 		prerequisite = { focus = ben_the_benesov_workers_congress }
-		x = 33
+		x = 23
 		y = 13
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1258,7 +1270,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = -0.10
 			add_political_power = -25
-			country_event = { id = benesov.6 hours = 6 }
+			country_event = { id = benesov.5 hours = 6 }
 		}
 	}
 
@@ -1266,7 +1278,7 @@ focus_tree = {
 		id = ben_pospisil_takes_command
 		icon = GFX_focus_BEN_pospisil_takes_command
 		prerequisite = { focus = ben_dvorak_has_lost_the_streets }
-		x = 33
+		x = 22
 		y = 14
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1277,7 +1289,7 @@ focus_tree = {
 				ruling_party = communism
 				elections_allowed = no
 			}
-			country_event = { id = benesov.7 hours = 6 }
+			country_event = { id = benesov.6 hours = 6 }
 		}
 	}
 
@@ -1287,7 +1299,7 @@ focus_tree = {
 		id = ben_the_peoples_republic_of_benesov
 		icon = GFX_focus_BEN_the_peoples_republic_of_benesov
 		prerequisite = { focus = ben_pospisil_takes_command }
-		x = 33
+		x = 22
 		y = 15
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1304,7 +1316,7 @@ focus_tree = {
 		id = ben_we_have_read_the_meta
 		icon = GFX_focus_BEN_we_have_read_the_meta
 		prerequisite = { focus = ben_the_peoples_republic_of_benesov }
-		x = 32
+		x = 21
 		y = 16
 		cost = 10
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1325,7 +1337,7 @@ focus_tree = {
 		id = ben_every_citizen_a_strategist
 		icon = GFX_focus_BEN_every_citizen_a_strategist
 		prerequisite = { focus = ben_we_have_read_the_meta }
-		x = 32
+		x = 21
 		y = 17
 		cost = 10
 		search_filters = { FOCUS_FILTER_MANPOWER }
@@ -1341,7 +1353,7 @@ focus_tree = {
 		id = ben_stepans_distribution_network
 		icon = GFX_focus_BEN_stepans_distribution_network
 		prerequisite = { focus = ben_the_peoples_republic_of_benesov }
-		x = 34
+		x = 23
 		y = 16
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1356,7 +1368,7 @@ focus_tree = {
 		id = ben_a_government_worthy_of_bohemia
 		icon = GFX_focus_BEN_a_government_worthy_of_bohemia
 		prerequisite = { focus = ben_stepans_distribution_network }
-		x = 34
+		x = 23
 		y = 17
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1373,7 +1385,7 @@ focus_tree = {
 		icon = GFX_focus_BEN_the_pospisil_doctrine
 		prerequisite = { focus = ben_every_citizen_a_strategist }
 		prerequisite = { focus = ben_a_government_worthy_of_bohemia }
-		x = 33
+		x = 22
 		y = 18
 		cost = 10
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -1389,7 +1401,7 @@ focus_tree = {
 		id = ben_the_failure_of_the_old_republic
 		icon = GFX_focus_BEN_the_failure_of_the_old_republic
 		prerequisite = { focus = ben_the_pospisil_doctrine }
-		x = 33
+		x = 22
 		y = 19
 		cost = 10
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
@@ -1411,7 +1423,7 @@ focus_tree = {
 		id = ben_benesov_will_not_remain_small
 		icon = GFX_focus_BEN_benesov_will_not_remain_small
 		prerequisite = { focus = ben_the_failure_of_the_old_republic }
-		x = 34
+		x = 23
 		y = 20
 		cost = 10
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1427,7 +1439,7 @@ focus_tree = {
 		id = ben_liberate_the_czech_workers
 		icon = GFX_focus_BEN_liberate_the_czech_workers
 		prerequisite = { focus = ben_the_failure_of_the_old_republic }
-		x = 32
+		x = 21
 		y = 20
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1448,7 +1460,7 @@ focus_tree = {
 		icon = GFX_focus_BEN_claim_the_legacy_of_czechoslovakia
 		prerequisite = { focus = ben_liberate_the_czech_workers }
 		prerequisite = { focus = ben_benesov_will_not_remain_small }
-		x = 33
+		x = 22
 		y = 21
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
@@ -1472,7 +1484,7 @@ focus_tree = {
 		id = ben_reach_out_to_moravian_workers
 		icon = GFX_focus_BEN_reach_out_to_moravian_workers
 		prerequisite = { focus = ben_claim_the_legacy_of_czechoslovakia }
-		x = 32
+		x = 21
 		y = 22
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
@@ -1510,7 +1522,7 @@ focus_tree = {
 		id = ben_solidarity_with_eastern_workers
 		icon = GFX_focus_BEN_solidarity_with_eastern_workers
 		prerequisite = { focus = ben_claim_the_legacy_of_czechoslovakia }
-		x = 34
+		x = 23
 		y = 22
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
@@ -1559,7 +1571,7 @@ focus_tree = {
 		icon = GFX_focus_BEN_workers_of_the_former_republic
 		prerequisite = { focus = ben_reach_out_to_moravian_workers }
 		prerequisite = { focus = ben_solidarity_with_eastern_workers }
-		x = 33
+		x = 22
 		y = 23
 		cost = 10
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
@@ -1587,7 +1599,7 @@ focus_tree = {
 		id = ben_the_czechoslovak_workers_mandate
 		icon = GFX_focus_BEN_the_czechoslovak_workers_mandate
 		prerequisite = { focus = ben_workers_of_the_former_republic }
-		x = 33
+		x = 22
 		y = 24
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
@@ -1612,7 +1624,7 @@ focus_tree = {
 		id = ben_enforce_the_workers_mandate
 		icon = GFX_focus_BEN_enforce_the_workers_mandate
 		prerequisite = { focus = ben_the_czechoslovak_workers_mandate }
-		x = 33
+		x = 22
 		y = 25
 		cost = 10
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
@@ -1677,7 +1689,7 @@ focus_tree = {
 		id = ben_the_beneshov_successor_state
 		icon = GFX_focus_BEN_the_beneshov_successor_state
 		prerequisite = { focus = ben_enforce_the_workers_mandate }
-		x = 33
+		x = 22
 		y = 26
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }

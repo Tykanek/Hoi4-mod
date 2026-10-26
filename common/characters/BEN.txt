@@ -3,8 +3,8 @@ characters = {
 		name = BEN_matej_dvorak
 		portraits = {
 			civilian = {
-				large = "GFX_Portrait_Europe_Generic_1"
-				small = "GFX_Portrait_Europe_Generic_1_small"
+				large = "GFX_portrait_BEN_matej_dvorak"
+				small = "GFX_portrait_BEN_matej_dvorak_small"
 			}
 		}
 		country_leader = {

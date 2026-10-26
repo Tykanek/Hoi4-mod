@@ -19,4 +19,12 @@ spritetypes = {
 		name = "GFX_portrait_BEN_adam_pospisil_small"
 		texturefile = "gfx/leaders/BEN/BEN_adam_pospisil_small.dds"
 	}
+	spriteType = {
+		name = "GFX_portrait_BEN_matej_dvorak"
+		texturefile = "gfx/leaders/BEN/BEN_matej_dvorak.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_BEN_matej_dvorak_small"
+		texturefile = "gfx/leaders/BEN/BEN_matej_dvorak_small.dds"
+	}
 }
