@@ -49,7 +49,7 @@ country_event = {
 	id = benesov.4
 	title = benesov.4.t
 	desc = benesov.4.d
-	picture = GFX_report_event_generic_read_write
+	picture = GFX_report_event_BEN_adam_strategist
 	is_triggered_only = yes
 
 	option = {
@@ -75,7 +75,7 @@ country_event = {
 	id = benesov.6
 	title = benesov.6.t
 	desc = benesov.6.d
-	picture = GFX_report_event_crowd_cheering
+	picture = GFX_report_event_BEN_adam_proclamation
 	is_triggered_only = yes
 
 	option = {
@@ -136,7 +136,7 @@ country_event = {
 	id = benesov.21
 	title = benesov.21.t
 	desc = benesov.21.d
-	picture = GFX_report_event_crowd_cheering
+	picture = GFX_report_event_BEN_adam_war_order
 	is_triggered_only = yes
 
 	option = {
@@ -152,7 +152,7 @@ country_event = {
 	id = benesov.22
 	title = benesov.22.t
 	desc = benesov.22.d
-	picture = GFX_report_event_gathering_protest
+	picture = GFX_report_event_BEN_adam_war_order
 	is_triggered_only = yes
 
 	option = {

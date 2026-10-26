@@ -1,0 +1,14 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_report_event_BEN_adam_strategist"
+		texturefile = "gfx/event_pictures/report_event_BEN_adam_strategist.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_BEN_adam_proclamation"
+		texturefile = "gfx/event_pictures/report_event_BEN_adam_proclamation.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_BEN_adam_war_order"
+		texturefile = "gfx/event_pictures/report_event_BEN_adam_war_order.dds"
+	}
+}

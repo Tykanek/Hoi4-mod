@@ -18,8 +18,8 @@ characters = {
 		name = BEN_adam_pospisil
 		portraits = {
 			civilian = {
-				large = "GFX_Portrait_Europe_Generic_2"
-				small = "GFX_Portrait_Europe_Generic_2_small"
+				large = "GFX_portrait_BEN_adam_pospisil"
+				small = "GFX_portrait_BEN_adam_pospisil_small"
 			}
 		}
 		country_leader = {

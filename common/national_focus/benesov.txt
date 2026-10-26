@@ -1445,7 +1445,7 @@ focus_tree = {
 
 	focus = {
 		id = ben_claim_the_legacy_of_czechoslovakia
-		icon = GFX_focus_BEN_liberate_the_czech_workers
+		icon = GFX_focus_BEN_claim_the_legacy_of_czechoslovakia
 		prerequisite = { focus = ben_liberate_the_czech_workers }
 		prerequisite = { focus = ben_benesov_will_not_remain_small }
 		x = 33
@@ -1470,7 +1470,7 @@ focus_tree = {
 
 	focus = {
 		id = ben_reach_out_to_moravian_workers
-		icon = GFX_focus_BEN_workers_in_the_back_rooms
+		icon = GFX_focus_BEN_reach_out_to_moravian_workers
 		prerequisite = { focus = ben_claim_the_legacy_of_czechoslovakia }
 		x = 32
 		y = 22
@@ -1508,7 +1508,7 @@ focus_tree = {
 
 	focus = {
 		id = ben_solidarity_with_eastern_workers
-		icon = GFX_focus_BEN_the_benesov_workers_congress
+		icon = GFX_focus_BEN_solidarity_with_eastern_workers
 		prerequisite = { focus = ben_claim_the_legacy_of_czechoslovakia }
 		x = 34
 		y = 22
@@ -1556,7 +1556,7 @@ focus_tree = {
 
 	focus = {
 		id = ben_workers_of_the_former_republic
-		icon = GFX_focus_BEN_every_citizen_a_strategist
+		icon = GFX_focus_BEN_workers_of_the_former_republic
 		prerequisite = { focus = ben_reach_out_to_moravian_workers }
 		prerequisite = { focus = ben_solidarity_with_eastern_workers }
 		x = 33
@@ -1585,7 +1585,7 @@ focus_tree = {
 
 	focus = {
 		id = ben_the_czechoslovak_workers_mandate
-		icon = GFX_focus_BEN_the_benesov_workers_congress
+		icon = GFX_focus_BEN_the_czechoslovak_workers_mandate
 		prerequisite = { focus = ben_workers_of_the_former_republic }
 		x = 33
 		y = 24
@@ -1610,7 +1610,7 @@ focus_tree = {
 
 	focus = {
 		id = ben_enforce_the_workers_mandate
-		icon = GFX_focus_BEN_liberate_the_czech_workers
+		icon = GFX_focus_BEN_enforce_the_workers_mandate
 		prerequisite = { focus = ben_the_czechoslovak_workers_mandate }
 		x = 33
 		y = 25
@@ -1675,7 +1675,7 @@ focus_tree = {
 
 	focus = {
 		id = ben_the_beneshov_successor_state
-		icon = GFX_focus_BEN_a_government_worthy_of_bohemia
+		icon = GFX_focus_BEN_the_beneshov_successor_state
 		prerequisite = { focus = ben_enforce_the_workers_mandate }
 		x = 33
 		y = 26
