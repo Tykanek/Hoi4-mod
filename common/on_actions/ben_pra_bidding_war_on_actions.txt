@@ -1,0 +1,37 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			if = {
+				limit = {
+					NOT = { has_global_flag = pra_ben_bidding_war_initialized }
+				}
+				set_global_flag = pra_ben_bidding_war_initialized
+				set_variable = { global.pra_bidding_offer = 0 }
+				set_variable = { global.ben_bidding_offer = 0 }
+				set_variable = { global.pra_ben_bidding_balance = 0 }
+				if = {
+					limit = { country_exists = PRA }
+					PRA = { set_variable = { var = pra_bidding_offer value = 0 } }
+				}
+				if = {
+					limit = { country_exists = BEN }
+					BEN = { set_variable = { var = ben_bidding_offer value = 0 } }
+				}
+			}
+		}
+	}
+
+	on_daily = {
+		effect = {
+			if = {
+				limit = {
+					date > 1939.8.31
+					NOT = { has_global_flag = pra_ben_bidding_war_resolved }
+				}
+				set_global_flag = pra_ben_bidding_war_resolved
+				pra_ben_resolve_bidding_war_effect = yes
+			}
+		}
+	}
+}
+

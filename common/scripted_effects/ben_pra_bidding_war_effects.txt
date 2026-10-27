@@ -1,0 +1,57 @@
+pra_ben_resolve_bidding_war_effect = {
+	# PRA wins: Both exist and PRA offered more, OR PRA exists and BEN does not
+	if = {
+		limit = {
+			country_exists = PRA
+			OR = {
+				NOT = { country_exists = BEN }
+				check_variable = { var = global.pra_ben_bidding_balance value = 0 compare = greater_than }
+			}
+		}
+		PRA = {
+			if = {
+				limit = { NOT = { has_character = PRA_BEN_shared_field_marshal } }
+				recruit_character = PRA_BEN_shared_field_marshal
+			}
+			country_event = { id = pra_ben_bidding_war.1 }
+		}
+		if = {
+			limit = { country_exists = BEN }
+			BEN = { country_event = { id = pra_ben_bidding_war.2 } }
+		}
+	}
+
+	# BEN wins: Both exist and BEN offered more, OR BEN exists and PRA does not
+	if = {
+		limit = {
+			country_exists = BEN
+			OR = {
+				NOT = { country_exists = PRA }
+				check_variable = { var = global.pra_ben_bidding_balance value = 0 compare = less_than }
+			}
+		}
+		BEN = {
+			if = {
+				limit = { NOT = { has_character = PRA_BEN_shared_field_marshal } }
+				recruit_character = PRA_BEN_shared_field_marshal
+			}
+			country_event = { id = pra_ben_bidding_war.3 }
+		}
+		if = {
+			limit = { country_exists = PRA }
+			PRA = { country_event = { id = pra_ben_bidding_war.4 } }
+		}
+	}
+
+	# Tie: Both exist and offers are equal
+	if = {
+		limit = {
+			country_exists = PRA
+			country_exists = BEN
+			check_variable = { var = global.pra_ben_bidding_balance value = 0 compare = equals }
+		}
+		PRA = { country_event = { id = pra_ben_bidding_war.5 } }
+		BEN = { country_event = { id = pra_ben_bidding_war.5 } }
+	}
+}
+

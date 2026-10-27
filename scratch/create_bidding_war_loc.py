@@ -1,0 +1,60 @@
+import os
+
+path = r'localisation\english\ben_pra_bidding_war_l_english.yml'
+
+content_lines = [
+    'l_english:',
+    ' pra_ben_bidding_war_category:0 "The Bidding War"',
+    ' pra_ben_bidding_war_category_desc:0 "Both Prague and Beneshov have independently concluded that exceptional military talent can be acquired through sufficiently irresponsible public spending. Neither government intends to lose, and the submitted contract offers have already ceased to resemble realistic state finances.\\n\\nPrague Offer: [?global.pra_bidding_offer|0] Billion\\nBeneshov Offer: [?global.ben_bidding_offer|0] Billion\\n\\nStatus: [GetBiddingWarLeaderStatus]\\n\\nThe bidding closes on 1 September 1939."',
+    '',
+    ' pra_bidding_war_pra_icon_val:0 "[?global.pra_bidding_offer|0]B"',
+    ' pra_bidding_war_pra_icon_desc:0 "Prague\'s current contract offer stands at [?global.pra_bidding_offer|0] Billion."',
+    ' pra_bidding_war_ben_icon_val:0 "[?global.ben_bidding_offer|0]B"',
+    ' pra_bidding_war_ben_icon_desc:0 "Beneshov\'s current contract offer stands at [?global.ben_bidding_offer|0] Billion."',
+    '',
+    ' pra_bidding_war_pra_leads:0 "Prague currently leads the bidding."',
+    ' pra_bidding_war_ben_leads:0 "Beneshov currently leads the bidding."',
+    ' pra_bidding_war_tied:0 "The offers are currently tied."',
+    '',
+    ' pra_increase_bidding_offer:0 "Raise Prague\'s Offer"',
+    ' pra_increase_bidding_offer_desc:0 "Our rival has shown no intention of withdrawing. Another five billion should demonstrate the seriousness of our commitment."',
+    ' ben_increase_bidding_offer:0 "Raise Beneshov\'s Offer"',
+    ' ben_increase_bidding_offer_desc:0 "Our rival has shown no intention of withdrawing. Another five billion should demonstrate the seriousness of our commitment."',
+    '',
+    ' pra_bidding_offer_increase_tt:0 "Our offer increases by 5 billion."',
+    ' ben_bidding_offer_increase_tt:0 "Our offer increases by 5 billion."',
+    '',
+    ' PRA_BEN_shared_field_marshal:0 "Jaroslav Horak"',
+    ' PRA_BEN_shared_field_marshal_desc:0 "A renowned military strategist whose mastery of deep operational planning and logistics made his contract the subject of an unprecedented financial bidding war between Prague and Beneshov."',
+    '',
+    ' pra_ben_bidding_war.1.t:0 "The Most Expensive Marshal in Europe"',
+    ' pra_ben_bidding_war.1.d:0 "Prague has won the bidding war. Following intense competition with Beneshov, the final contract has been signed at [?global.pra_bidding_offer|0] Billion compared to Beneshov\'s [?global.ben_bidding_offer|0] Billion. The Directorate has declined to explain where the money came from, but the Field Marshal now officially enters Prague\'s service."',
+    ' pra_ben_bidding_war.1.a:0 "A sound strategic investment."',
+    '',
+    ' pra_ben_bidding_war.2.t:0 "Outbid in the Marshal Auction"',
+    ' pra_ben_bidding_war.2.d:0 "The bidding war for the Field Marshal has concluded. Prague submitted a final offer of [?global.pra_bidding_offer|0] Billion, surpassing our offer of [?global.ben_bidding_offer|0] Billion. The strategist has accepted Prague\'s contract and will not be entering our service."',
+    ' pra_ben_bidding_war.2.a:0 "Unfortunate, but our municipal treasury was already in ruins."',
+    '',
+    ' pra_ben_bidding_war.3.t:0 "The Most Expensive Marshal in Europe"',
+    ' pra_ben_bidding_war.3.d:0 "Against all economic reason, Beneshov has submitted the highest offer. With a final bid of [?global.ben_bidding_offer|0] Billion to Prague\'s [?global.pra_bidding_offer|0] Billion, the contract has been secured. The municipal treasury has questions, but the government does not. The Field Marshal enters Beneshov\'s service."',
+    ' pra_ben_bidding_war.3.a:0 "Victory belongs to those who bid the highest."',
+    '',
+    ' pra_ben_bidding_war.4.t:0 "Outbid in the Marshal Auction"',
+    ' pra_ben_bidding_war.4.d:0 "The bidding war for the Field Marshal has concluded. Beneshov submitted an astronomical final offer of [?global.ben_bidding_offer|0] Billion, outbidding our [?global.pra_bidding_offer|0] Billion. The strategist has departed for Beneshov."',
+    ' pra_ben_bidding_war.4.a:0 "How did a provincial town outbid our capital?"',
+    '',
+    ' pra_ben_bidding_war.5.t:0 "Neither Side Has Convinced Him"',
+    ' pra_ben_bidding_war.5.d:0 "After years of escalating offers, Prague and Beneshov have somehow arrived at exactly the same number: [?global.pra_bidding_offer|0] Billion each. Rather than choose between two equally irresponsible governments, the strategist has declined both contracts and refused to take service under either flag. The auction has closed permanently."',
+    ' pra_ben_bidding_war.5.a:0 "A waste of everyone\'s time and paper."',
+    ''
+]
+
+raw_bytes = b'\xef\xbb\xbf' + b'\r\n'.join(line.encode('utf-8') for line in content_lines)
+
+with open(path, 'wb') as f:
+    f.write(raw_bytes)
+
+print(f"Created {path} with {len(raw_bytes)} bytes.")
+print("BOM check:", raw_bytes.startswith(b'\xef\xbb\xbf'))
+print("Ends with CRLF:", raw_bytes.endswith(b'\r\n'))
+

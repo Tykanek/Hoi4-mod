@@ -1,0 +1,101 @@
+pra_ben_bidding_war_category = {
+
+	pra_increase_bidding_offer = {
+		icon = generic_propaganda
+
+		allowed = {
+			original_tag = PRA
+		}
+
+		available = {
+			date < 1939.9.1
+			NOT = { has_global_flag = pra_ben_bidding_war_resolved }
+		}
+
+		visible = {
+			original_tag = PRA
+			date < 1939.9.1
+			NOT = { has_global_flag = pra_ben_bidding_war_resolved }
+		}
+
+		days_re_enable = 30
+
+		cost = 25
+
+		fire_only_once = no
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_political_power < 30
+			}
+			modifier = {
+				factor = 0
+				has_war = yes
+				has_political_power < 50
+			}
+			modifier = {
+				factor = 2
+				check_variable = { var = global.pra_ben_bidding_balance value = 0 compare = less_than }
+			}
+		}
+
+		complete_effect = {
+			add_to_variable = { var = pra_bidding_offer value = 5 }
+			add_to_variable = { var = global.pra_bidding_offer value = 5 }
+			add_to_variable = { var = global.pra_ben_bidding_balance value = 5 }
+			custom_effect_tooltip = pra_bidding_offer_increase_tt
+		}
+	}
+
+	ben_increase_bidding_offer = {
+		icon = generic_propaganda
+
+		allowed = {
+			original_tag = BEN
+		}
+
+		available = {
+			date < 1939.9.1
+			NOT = { has_global_flag = pra_ben_bidding_war_resolved }
+		}
+
+		visible = {
+			original_tag = BEN
+			date < 1939.9.1
+			NOT = { has_global_flag = pra_ben_bidding_war_resolved }
+		}
+
+		days_re_enable = 30
+
+		cost = 25
+
+		fire_only_once = no
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_political_power < 30
+			}
+			modifier = {
+				factor = 0
+				has_war = yes
+				has_political_power < 50
+			}
+			modifier = {
+				factor = 2
+				check_variable = { var = global.pra_ben_bidding_balance value = 0 compare = greater_than }
+			}
+		}
+
+		complete_effect = {
+			add_to_variable = { var = ben_bidding_offer value = 5 }
+			add_to_variable = { var = global.ben_bidding_offer value = 5 }
+			subtract_from_variable = { var = global.pra_ben_bidding_balance value = 5 }
+			custom_effect_tooltip = ben_bidding_offer_increase_tt
+		}
+	}
+}
+

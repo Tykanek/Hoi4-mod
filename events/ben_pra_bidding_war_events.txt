@@ -1,0 +1,72 @@
+add_namespace = pra_ben_bidding_war
+
+# Event 1: PRA Victory (received by PRA)
+country_event = {
+	id = pra_ben_bidding_war.1
+	title = pra_ben_bidding_war.1.t
+	desc = pra_ben_bidding_war.1.d
+	picture = GFX_report_event_military_planning
+
+	is_triggered_only = yes
+
+	option = {
+		name = pra_ben_bidding_war.1.a
+	}
+}
+
+# Event 2: BEN Loss (received by BEN when PRA wins)
+country_event = {
+	id = pra_ben_bidding_war.2
+	title = pra_ben_bidding_war.2.t
+	desc = pra_ben_bidding_war.2.d
+	picture = GFX_report_event_generic_conference
+
+	is_triggered_only = yes
+
+	option = {
+		name = pra_ben_bidding_war.2.a
+	}
+}
+
+# Event 3: BEN Victory (received by BEN)
+country_event = {
+	id = pra_ben_bidding_war.3
+	title = pra_ben_bidding_war.3.t
+	desc = pra_ben_bidding_war.3.d
+	picture = GFX_report_event_military_planning
+
+	is_triggered_only = yes
+
+	option = {
+		name = pra_ben_bidding_war.3.a
+	}
+}
+
+# Event 4: PRA Loss (received by PRA when BEN wins)
+country_event = {
+	id = pra_ben_bidding_war.4
+	title = pra_ben_bidding_war.4.t
+	desc = pra_ben_bidding_war.4.d
+	picture = GFX_report_event_generic_conference
+
+	is_triggered_only = yes
+
+	option = {
+		name = pra_ben_bidding_war.4.a
+	}
+}
+
+# Event 5: Tie (received by PRA and BEN)
+country_event = {
+	id = pra_ben_bidding_war.5
+	title = pra_ben_bidding_war.5.t
+	desc = pra_ben_bidding_war.5.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = pra_ben_bidding_war.5.a
+	}
+}
+

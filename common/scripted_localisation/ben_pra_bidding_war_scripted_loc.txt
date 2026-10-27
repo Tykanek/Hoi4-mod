@@ -1,0 +1,19 @@
+defined_text = {
+	name = GetBiddingWarLeaderStatus
+	text = {
+		trigger = {
+			check_variable = { var = global.pra_ben_bidding_balance value = 0 compare = greater_than }
+		}
+		localization_key = pra_bidding_war_pra_leads
+	}
+	text = {
+		trigger = {
+			check_variable = { var = global.pra_ben_bidding_balance value = 0 compare = less_than }
+		}
+		localization_key = pra_bidding_war_ben_leads
+	}
+	text = {
+		localization_key = pra_bidding_war_tied
+	}
+}
+

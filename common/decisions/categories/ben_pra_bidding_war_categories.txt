@@ -1,0 +1,45 @@
+pra_ben_bidding_war_category = {
+	icon = generic_political_actions
+	picture = GFX_decision_cat_picture_gateway_to_europe
+
+	allowed = {
+		OR = {
+			original_tag = PRA
+			original_tag = BEN
+		}
+	}
+
+	visible_when_empty = yes
+
+	visible = {
+		OR = {
+			original_tag = PRA
+			original_tag = BEN
+		}
+		date < 1939.9.1
+		NOT = { has_global_flag = pra_ben_bidding_war_resolved }
+	}
+
+	priority = {
+		base = 10
+	}
+
+	custom_icon = {
+		tag = PRA
+		value = pra_bidding_war_pra_icon_val
+		desc = pra_bidding_war_pra_icon_desc
+		visible = {
+			country_exists = PRA
+		}
+	}
+
+	custom_icon = {
+		tag = BEN
+		value = pra_bidding_war_ben_icon_val
+		desc = pra_bidding_war_ben_icon_desc
+		visible = {
+			country_exists = BEN
+		}
+	}
+}
+
