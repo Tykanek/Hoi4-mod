@@ -1278,6 +1278,9 @@ focus_tree = {
 		id = ben_pospisil_takes_command
 		icon = GFX_focus_BEN_pospisil_takes_command
 		prerequisite = { focus = ben_dvorak_has_lost_the_streets }
+		available = {
+			communism > 0.40
+		}
 		x = 22
 		y = 14
 		cost = 10

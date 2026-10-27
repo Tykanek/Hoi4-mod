@@ -133,6 +133,11 @@
  ben_loyal_to_republic_desc:0 "Beneshov has reaffirmed its commitment and loyalty to the Republic."
  ben_declared_independence_opinion:0 "Declared Independence"
  ben_denounced_old_republic:0 "Denounced the Old Republic"
+ ben_cut_ties:0 "Severed Czechoslovak Ties"
+ ben_cze_conceded_moravia:0 "Conceded Moravia"
+ ben_cze_rejected_moravia:0 "Refused to Cede Moravia"
+ ben_cze_conceded_silesia:0 "Conceded Sudeten Silesia"
+ ben_cze_rejected_silesia:0 "Refused to Cede Sudeten Silesia"
 
  # ============================================================
  # THE GREAT BENESHOV DEPRESSION RECOVERY FOCUSES (5)
@@ -168,5 +173,5 @@
  ben_enforce_the_workers_mandate:0 "Enforce the Workers' Mandate"
  ben_enforce_the_workers_mandate_desc:0 "Declarations on paper will not free the Slovak workers from their oppressors. We must mobilize the armed forces of the People's Republic and march east to break the reactionary grip on Bratislava, Kosice, and the southern plains. Every brigade is issued their battle standards: the liberation of Slovakia begins now."
 
- ben_demand_moravia_tt:0 "Sends a formal demand to Â§YCzechoslovakiaÂ§! to cede Â§YMoraviaÂ§! to Beneshov."
- ben_demand_silesia_tt:0 "Sends a formal demand to Â§YCzechoslovakiaÂ§! to cede Â§YSudeten SilesiaÂ§! and Â§YZaolzieÂ§! to Beneshov."
+ ben_demand_moravia_tt:0 "Sends a formal demand to Czechoslovakia to cede Moravia to Beneshov."
+ ben_demand_silesia_tt:0 "Sends a formal demand to Czechoslovakia to cede Sudeten Silesia and Zaolzie to Beneshov."

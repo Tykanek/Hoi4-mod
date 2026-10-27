@@ -5,6 +5,10 @@ oob = "BEN_1936"
 recruit_character = BEN_matej_dvorak
 recruit_character = BEN_adam_pospisil
 recruit_character = BEN_stepan_pospisil
+recruit_character = BEN_romango2borec
+recruit_character = BEN_mia
+recruit_character = BEN_pecka
+recruit_character = BEN_ice
 
 # Starting national debuffs
 add_ideas = {

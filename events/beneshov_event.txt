@@ -62,7 +62,7 @@ country_event = {
 	id = benesov.5
 	title = benesov.5.t
 	desc = benesov.5.d
-	picture = GFX_report_event_gathering_protest
+	picture = GFX_report_event_BEN_stepan_lost_streets
 	is_triggered_only = yes
 
 	option = {

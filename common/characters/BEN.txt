@@ -6,11 +6,36 @@ characters = {
 				large = "GFX_portrait_BEN_matej_dvorak"
 				small = "GFX_portrait_BEN_matej_dvorak_small"
 			}
+			army = {
+				large = "GFX_portrait_BEN_matej_dvorak"
+				small = GFX_idea_BEN_matej_dvorak
+			}
 		}
 		country_leader = {
 			ideology = liberalism
 			traits = { }
 			expire = "1965.1.1"
+		}
+		advisor = {
+			slot = high_command
+			ledger = army
+			idea_token = BEN_matej_dvorak
+			allowed = {
+				original_tag = BEN
+			}
+			visible = {
+				NOT = { has_government = democratic }
+			}
+			available = {
+				NOT = { has_government = democratic }
+			}
+			traits = {
+				ben_matej_high_command
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
 		}
 	}
 
@@ -33,8 +58,8 @@ characters = {
 		name = BEN_stepan_pospisil
 		portraits = {
 			civilian = {
-				large = "GFX_Portrait_Europe_Generic_3"
-				small = "GFX_Portrait_Europe_Generic_3_small"
+				large = "GFX_portrait_BEN_stepan_pospisil"
+				small = "GFX_portrait_BEN_stepan_pospisil_small"
 			}
 		}
 		advisor = {
@@ -43,13 +68,124 @@ characters = {
 			allowed = {
 				original_tag = BEN
 			}
+			visible = {
+				has_country_flag = ben_stepan_active
+			}
 			available = {
-				has_country_flag = ben_stepan_recruited
+				has_country_flag = ben_stepan_active
 			}
 			traits = {
 				ben_informal_distribution_network
 			}
 			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	BEN_romango2borec = {
+		name = BEN_romango2borec
+		portraits = {
+			civilian = {
+				small = "GFX_idea_generic_political_advisor_europe_1"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = BEN_romango2borec
+			allowed = {
+				original_tag = BEN
+				has_dlc = "La Resistance"
+			}
+			available = {
+				has_intelligence_agency = yes
+			}
+			traits = {
+				head_of_intelligence
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					has_intelligence_agency = no
+					factor = 0
+				}
+			}
+		}
+	}
+
+	BEN_mia = {
+		name = BEN_mia
+		portraits = {
+			civilian = {
+				small = "GFX_idea_generic_political_advisor_europe_2"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = BEN_mia
+			allowed = {
+				original_tag = BEN
+			}
+			available = {
+				NOT = { has_country_flag = ben_loyal_to_republic }
+				NOT = { has_completed_focus = ben_we_still_need_the_republic }
+				IF = {
+					limit = { has_dlc = "Man the Guns" }
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
+			}
+			traits = {
+				communist_revolutionary
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	BEN_pecka = {
+		name = BEN_pecka
+		portraits = {
+			civilian = {
+				small = "GFX_idea_generic_political_advisor_europe_3"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = BEN_pecka
+			allowed = {
+				original_tag = BEN
+			}
+			traits = {
+				captain_of_industry
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	BEN_ice = {
+		name = BEN_ice
+		portraits = {
+			civilian = {
+				small = "GFX_idea_generic_political_advisor_europe_1"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = BEN_ice
+			allowed = {
+				original_tag = BEN
+			}
+			traits = {
+				ben_ice_club
+			}
+			cost = 150
 			ai_will_do = {
 				factor = 1
 			}

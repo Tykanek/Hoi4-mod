@@ -1,4 +1,4 @@
-spritetypes = {
+spriteTypes = {
 	spriteType = {
 		name = "GFX_portrait_PRA_peter_mohammedis"
 		texturefile = "gfx/leaders/PRA/PRA_peter_mohammedis.dds"
@@ -26,5 +26,21 @@ spritetypes = {
 	spriteType = {
 		name = "GFX_portrait_BEN_matej_dvorak_small"
 		texturefile = "gfx/leaders/BEN/BEN_matej_dvorak_small.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BEN_matej_dvorak"
+		texturefile = "gfx/leaders/BEN/BEN_matej_dvorak_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_BEN_stepan_pospisil"
+		texturefile = "gfx/leaders/BEN/BEN_stepan_pospisil.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_BEN_stepan_pospisil_small"
+		texturefile = "gfx/leaders/BEN/BEN_stepan_pospisil_small.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BEN_stepan_pospisil"
+		texturefile = "gfx/leaders/BEN/BEN_stepan_pospisil_small.dds"
 	}
 }

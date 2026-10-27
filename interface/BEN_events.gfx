@@ -11,4 +11,8 @@ spriteTypes = {
 		name = "GFX_report_event_BEN_adam_war_order"
 		texturefile = "gfx/event_pictures/report_event_BEN_adam_war_order.dds"
 	}
+	spriteType = {
+		name = "GFX_report_event_BEN_stepan_lost_streets"
+		texturefile = "gfx/event_pictures/report_event_BEN_stepan_lost_streets.dds"
+	}
 }

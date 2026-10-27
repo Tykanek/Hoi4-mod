@@ -1,0 +1,427 @@
+<USER_REQUEST>
+AUDIT AND COMPLETE ALL MISSING BENESHOV LOCALIZATION
+
+PROJECT:
+German-Czech Advanced
+HOI4 1.19.3
+
+TASK:
+Find every player-visible BEN / Beneshov localization key that is currently missing, incomplete, duplicated incorrectly, or still displayed as a raw internal key in-game, and complete it.
+
+This is primarily a BENESHOV localization task.
+
+Do NOT modify unrelated PRA, GRA, vanilla, map, or gameplay content.
+
+============================================================
+1. START WITH A FULL BEN LOCALIZATION AUDIT
+============================================================
+
+Before editing:
+
+git status --short
+git diff
+
+Then audit all BEN-related script/content files and determine every player-visible localization key they require.
+
+Inspect at minimum:
+
+common/national_focus/benesov.txt
+common/characters/BEN.txt
+common/country_leader/ben_traits.txt
+common/ideas/
+common/opinion_modifiers/benesov.txt
+common/decisions/
+common/decision_categories/
+events/beneshov_event.txt
+history/countries/BEN - Benesov.txt
+common/countries/
+common/country_tags/
+interface files only where relevant to naming
+all localisation/english/*.yml files containing BEN / ben_ / benesov references
+
+Also search the entire mod repository for:
+
+BEN_
+ben_
+benesov
+Beneshov
+Pospisil
+Dvorak
+Stepan
+Adam
+
+but distinguish carefully between:
+- internal script IDs
+- player-visible localization keys
+
+Do NOT localize internal-only IDs that are never shown to the player.
+
+============================================================
+2. CHECK ALL PLAYER-VISIBLE CONTENT TYPES
+============================================================
+
+Audit localization for every BEN item in these categories:
+
+FOCUSES
+For every BEN focus verify both:
+
+<focus_id>:0 "Visible Name"
+<focus_id>_desc:0 "Description"
+
+No raw focus IDs should appear in-game.
+
+EVENTS
+For every BEN event verify:
+
+event title
+event description
+every option/button
+
+For example keys such as:
+
+benesov.X.t
+benesov.X.d
+benesov.X.a
+benesov.X.b
+
+Use the ACTUAL current event keys from the files.
+
+Do not invent event numbers.
+
+IDEAS / NATIONAL SPIRITS
+Verify:
+
+idea name
+idea description
+
+including all stages of:
+
+Great Beneshov Depression
+
+and all BEN economy, military, political and lore spirits.
+
+CHARACTERS
+Verify visible names for:
+
+Matej Dvorak
+Adam Pospisil
+Stepan Pospisil
+Romango2borec
+Mia
+Pecka
+ICE
+
+and any other BEN characters currently defined.
+
+ADVISOR TRAITS
+Verify every custom BEN trait has:
+
+visible name
+description if HOI4 uses one for that trait type
+
+Examples include:
+
+ben_informal_distribution_network
+ben_matej_high_command
+ben_ice_club
+
+and every other custom BEN trait actually present.
+
+Do NOT assume this example list is complete.
+
+OPINION MODIFIERS
+Verify all BEN opinion modifiers have localization.
+
+TOOLTIPS
+Search for every:
+
+custom_effect_tooltip
+custom_trigger_tooltip
+
+used by BEN and verify the referenced localization key exists.
+
+DECISIONS
+If BEN has any decisions/categories, verify:
+
+category names
+decision names
+descriptions
+tooltips
+
+COUNTRY NAME
+Verify the BEN country has appropriate visible localization for relevant ideology types where needed:
+
+BEN
+BEN_DEF
+BEN_ADJ
+
+and ideology-specific variants if the mod uses them, including:
+
+democratic
+communism
+fascism
+neutrality
+monarchism
+
+Do NOT redesign country naming unless keys are actually missing.
+
+============================================================
+3. DETECT RAW / MISSING KEYS SYSTEMATICALLY
+============================================================
+
+Do not rely only on visual inspection.
+
+Build a static audit that:
+
+1. extracts localization-like keys referenced by BEN scripts,
+2. extracts all defined English localization keys,
+3. compares them,
+4. identifies references with no matching localization.
+
+Also detect likely incomplete entries such as:
+
+key:0 ""
+key:0 "TODO"
+key:0 "TBD"
+key:0 "PLACEHOLDER"
+key:0 "..."
+temporary descriptions
+raw internal IDs accidentally used as visible text
+
+Report these before editing.
+
+============================================================
+4. CHECK FOR DUPLICATE LOCALIZATION KEYS
+============================================================
+
+Search ALL English localization files for duplicate BEN keys.
+
+We previously had duplicate localization collisions.
+
+For every duplicate:
+
+- identify all definitions,
+- determine which file should remain canonical,
+- remove only the redundant duplicate,
+- preserve the intended current visible text.
+
+Do NOT silently overwrite conflicting meanings.
+
+If two duplicates contain different text, inspect the script usage and choose the correct canonical definition based on current BEN content.
+
+============================================================
+5. WRITE MISSING LOCALIZATION
+============================================================
+
+Complete every genuinely missing BEN player-visible localization entry.
+
+LANGUAGE:
+English.
+
+STYLE:
+Match the existing BEN writing style:
+
+- serious alternate-history presentation
+- dry absurdity treated seriously
+- concise HOI4-style focus titles
+- atmospheric but readable descriptions
+- consistent lore
+
+Important lore distinctions:
+
+Matej Dvorak:
+democratic Beneshov leader.
+
+Stepan Pospisil:
+grassroots organizer, logistics, workers, pubs, breweries, warehouses, contacts.
+
+Adam Pospisil:
+strategist / self-proclaimed HOI4 player, communist leader, political and military strategy.
+
+Do NOT confuse Adam and Stepan.
+
+============================================================
+6. ASCII-ONLY VISIBLE ENGLISH
+============================================================
+
+CRITICAL:
+
+All player-visible English must remain ASCII-only.
+
+Use:
+
+Beneshov
+Matej Dvorak
+Adam Pospisil
+Stepan Pospisil
+
+Do NOT use:
+
+Benešov
+Matěj
+Dvořák
+Štěpán
+Pospíšil
+
+No Czech diacritics anywhere in player-visible English localization.
+
+Also scan for mojibake / corrupted characters such as:
+
+Ã
+Ä
+Å
+� 
+
+and remove/fix them in BEN localization.
+
+============================================================
+7. PRESERVE LOCALIZATION FILE FORMAT
+============================================================
+
+Every edited English .yml localization file must have:
+
+- physical UTF-8 BOM
+- CRLF line endings
+- first logical line:
+  l_english:
+
+Byte-verify the BOM.
+
+Do NOT merely claim UTF-8 BOM based on editor settings.
+
+Verify the first bytes are:
+
+EF BB BF
+
+No accidental LF-only localization files.
+
+============================================================
+8. DO NOT CHANGE GAMEPLAY
+============================================================
+
+This task is localization only.
+
+DO NOT change:
+
+focus effects
+focus prerequisites
+focus coordinates
+focus count
+events logic
+character mechanics
+advisor availability
+advisor visibility
+traits/modifiers
+ideas/modifiers
+Great Beneshov Depression mechanics
+territorial expansion
+flags
+portraits
+DDS files
+GFX wiring
+map/buildings
+
+Do NOT launch HOI4.
+
+============================================================
+9. VALIDATE CURRENT RECENT CONTENT ESPECIALLY
+============================================================
+
+Pay special attention to localization added or affected recently:
+
+- Pospisil Takes Command
+- communism > 40% requirement tooltip if any custom text is used
+- Stepan Pospisil content
+- Matej Dvorak High Command trait
+- Romango2borec
+- Mia
+- Pecka
+- ICE
+- Great Beneshov Depression stages
+- independence / Cut the Last Czech Ties
+- Czech expansion focuses
+- Slovak / Czechoslovak Workers' Mandate content
+- all recent Adam Pospisil focuses
+- Beneshov successor-state content
+
+Do NOT assume these are the only missing areas.
+
+============================================================
+10. FINAL STATIC VALIDATION
+============================================================
+
+After editing, verify:
+
+1. Every BEN focus has a localized name.
+2. Every BEN focus has a localized description.
+3. Every BEN event has title + description + all used options localized.
+4. Every BEN idea/national spirit has required localization.
+5. Every BEN character has a visible localized name.
+6. Every custom BEN advisor trait has required localization.
+7. Every BEN opinion modifier has localization.
+8. Every BEN custom tooltip key exists.
+9. Every BEN decision/category has localization if present.
+10. No unresolved player-visible BEN localization references remain.
+11. No duplicate BEN localization keys remain.
+12. No TODO/TBD/placeholder BEN text remains.
+13. No Czech diacritics remain in BEN English localization.
+14. No mojibake remains.
+15. Every edited English YML has physical UTF-8 BOM.
+16. Every edited English YML uses CRLF.
+17. Focus count remains exactly 74.
+18. common/national_focus/benesov.txt is not modified unless absolutely necessary for correcting a localization reference typo.
+19. git diff --check passes.
+
+============================================================
+FINAL REPORT
+============================================================
+
+Report:
+
+1. Complete list of missing localization keys found BEFORE editing.
+2. Complete list of incomplete/placeholder entries found.
+3. Complete list of duplicate BEN localization keys found.
+4. Exact localization text added or corrected for each item.
+5. Any raw internal keys that would previously have appeared in-game.
+6. Exact files modified.
+7. Confirmation all player-visible English is ASCII-only.
+8. BOM verification for every edited YML file.
+9. CRLF verification for every edited YML file.
+10. Number of unresolved BEN localization references after the fix.
+11. Number of duplicate BEN localization keys after the fix.
+12. Final BEN focus count.
+13. git diff --check result.
+
+Explicitly confirm:
+
+"All player-visible BEN localization references found by the audit are now resolved."
+
+"No raw BEN localization keys should remain visible to the player."
+
+"All BEN focus names and descriptions are localized."
+
+"All BEN event titles, descriptions, and used options are localized."
+
+"All BEN ideas, traits, characters, opinion modifiers, decisions, and custom tooltips found by the audit are localized."
+
+"All player-visible BEN English text is ASCII-only."
+
+"All edited English localization files retain physical UTF-8 BOM and CRLF line endings."
+
+"No gameplay mechanics were changed."
+
+"All 74 BEN focuses remain."
+
+"HOI4 and Paradox Launcher were not launched."
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-27T10:31:06+01:00.
+
+The user's current state is as follows:
+Other open documents:
+- c:\Users\lukas\Documents\Paradox Interactive\Hearts of Iron IV\mod\Hoi4-mod\common\national_focus\benesov.txt (LANGUAGE_UNSPECIFIED)
+- c:\Users\lukas\Documents\Paradox Interactive\Hearts of Iron IV\mod\Hoi4-mod\common\national_focus\prague.txt (LANGUAGE_UNSPECIFIED)
+- c:\Users\lukas\Documents\Paradox Interactive\Hearts of Iron IV\mod\Hoi4-mod\history\units\BEN_1936.txt (LANGUAGE_UNSPECIFIED)
+- c:\Users\lukas\Documents\Paradox Interactive\Hearts of Iron IV\mod\Hoi4-mod\history\units\CZE_1936.txt (LANGUAGE_UNSPECIFIED)
+- c:\Users\lukas\Documents\Paradox Interactive\Hearts of Iron IV\mod\Hoi4-mod\localisation\english\state_names_l_english.yml (LANGUAGE_UNSPECIFIED)
+</ADDITIONAL_METADATA>
