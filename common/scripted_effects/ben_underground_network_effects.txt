@@ -1,0 +1,83 @@
+ben_refresh_underground_network = {
+	if = {
+		limit = {
+			check_variable = { ben_underground_network > 100 }
+		}
+		set_variable = { ben_underground_network = 100 }
+	}
+	if = {
+		limit = {
+			check_variable = { ben_underground_network < 0 }
+		}
+		set_variable = { ben_underground_network = 0 }
+	}
+
+	remove_ideas = ben_underground_network_spirit_1
+	remove_ideas = ben_underground_network_spirit_2
+	remove_ideas = ben_underground_network_spirit_3
+	remove_ideas = ben_underground_network_spirit_4
+	remove_ideas = ben_underground_network_spirit_5
+
+	if = {
+		limit = {
+			check_variable = { ben_underground_network < 20 }
+		}
+		add_ideas = ben_underground_network_spirit_1
+	}
+	else_if = {
+		limit = {
+			check_variable = { ben_underground_network < 40 }
+		}
+		add_ideas = ben_underground_network_spirit_2
+	}
+	else_if = {
+		limit = {
+			check_variable = { ben_underground_network < 60 }
+		}
+		add_ideas = ben_underground_network_spirit_3
+	}
+	else_if = {
+		limit = {
+			check_variable = { ben_underground_network < 80 }
+		}
+		add_ideas = ben_underground_network_spirit_4
+	}
+	else = {
+		add_ideas = ben_underground_network_spirit_5
+	}
+
+	# Flavor Milestones
+	if = {
+		limit = {
+			check_variable = { ben_underground_network > 24 }
+			NOT = { has_country_flag = ben_flavor_9_fired }
+		}
+		set_country_flag = ben_flavor_9_fired
+		country_event = { id = ben_flavor.9 days = 1 }
+	}
+	if = {
+		limit = {
+			check_variable = { ben_underground_network > 49 }
+			NOT = { has_country_flag = ben_flavor_10_fired }
+		}
+		set_country_flag = ben_flavor_10_fired
+		country_event = { id = ben_flavor.10 days = 1 }
+	}
+	if = {
+		limit = {
+			check_variable = { ben_underground_network > 74 }
+			NOT = { has_country_flag = ben_flavor_11_fired }
+		}
+		set_country_flag = ben_flavor_11_fired
+		country_event = { id = ben_flavor.11 days = 1 }
+	}
+	if = {
+		limit = {
+			check_variable = { ben_underground_network > 99 }
+			NOT = { has_country_flag = ben_flavor_12_fired }
+		}
+		set_country_flag = ben_flavor_12_fired
+		country_event = { id = ben_flavor.12 days = 1 }
+	}
+}
+

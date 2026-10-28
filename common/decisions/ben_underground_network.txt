@@ -1,0 +1,358 @@
+ben_underground_network_category = {
+
+	# ============================================================
+	# NETWORK DEVELOPMENT DECISIONS
+	# ============================================================
+
+	ben_recruit_pub_contacts = {
+		icon = generic_morale
+		cost = 25
+		days_re_enable = 90
+
+		visible = {
+			original_tag = BEN
+		}
+
+		available = {
+			check_variable = { ben_underground_network < 96 }
+		}
+
+		complete_effect = {
+			add_to_variable = { ben_underground_network = 5 }
+			ben_refresh_underground_network = yes
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				check_variable = { ben_underground_network < 40 }
+			}
+			modifier = {
+				factor = 0
+				has_political_power < 40
+			}
+			modifier = {
+				factor = 0
+				check_variable = { ben_underground_network > 79 }
+			}
+		}
+	}
+
+	ben_organize_warehouse_cells = {
+		icon = generic_industry
+		cost = 40
+		days_re_enable = 120
+
+		visible = {
+			original_tag = BEN
+		}
+
+		available = {
+			check_variable = { ben_underground_network > 19 }
+			check_variable = { ben_underground_network < 91 }
+		}
+
+		complete_effect = {
+			add_to_variable = { ben_underground_network = 10 }
+			ben_refresh_underground_network = yes
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_political_power < 60
+			}
+			modifier = {
+				factor = 0
+				check_variable = { ben_underground_network > 79 }
+			}
+		}
+	}
+
+	ben_recruit_railway_workers = {
+		icon = generic_prepare_civil_war
+		cost = 40
+		days_re_enable = 120
+
+		visible = {
+			original_tag = BEN
+		}
+
+		available = {
+			check_variable = { ben_underground_network > 29 }
+			check_variable = { ben_underground_network < 91 }
+			NOT = { has_idea = ben_railway_workers_spirit }
+		}
+
+		complete_effect = {
+			add_to_variable = { ben_underground_network = 10 }
+			add_timed_idea = {
+				idea = ben_railway_workers_spirit
+				days = 120
+			}
+			ben_refresh_underground_network = yes
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_political_power < 60
+			}
+		}
+	}
+
+	ben_establish_factory_committees = {
+		icon = generic_industry
+		cost = 50
+		days_re_enable = 150
+
+		visible = {
+			original_tag = BEN
+		}
+
+		available = {
+			check_variable = { ben_underground_network > 39 }
+			check_variable = { ben_underground_network < 91 }
+			NOT = { has_idea = ben_factory_committees_spirit }
+		}
+
+		complete_effect = {
+			add_to_variable = { ben_underground_network = 10 }
+			add_timed_idea = {
+				idea = ben_factory_committees_spirit
+				days = 120
+			}
+			ben_refresh_underground_network = yes
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_political_power < 75
+			}
+		}
+	}
+
+	ben_cultivate_army_contacts = {
+		icon = generic_army_support
+		cost = 60
+		days_re_enable = 180
+
+		visible = {
+			original_tag = BEN
+		}
+
+		available = {
+			check_variable = { ben_underground_network > 49 }
+			check_variable = { ben_underground_network < 86 }
+			OR = {
+				has_completed_focus = ben_pospisil_takes_command
+				is_subject = no
+			}
+		}
+
+		complete_effect = {
+			add_to_variable = { ben_underground_network = 15 }
+			army_experience = 5
+			ben_refresh_underground_network = yes
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_political_power < 80
+			}
+		}
+	}
+
+	ben_map_cze_supply_routes = {
+		icon = generic_intel_bonus
+		cost = 40
+		fire_only_once = yes
+
+		visible = {
+			original_tag = BEN
+			country_exists = CZE
+		}
+
+		available = {
+			check_variable = { ben_underground_network < 91 }
+		}
+
+		complete_effect = {
+			add_to_variable = { ben_underground_network = 10 }
+			ben_refresh_underground_network = yes
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_political_power < 50
+			}
+		}
+	}
+
+	# ============================================================
+	# NETWORK OPERATIONS AGAINST CZECHOSLOVAKIA
+	# ============================================================
+
+	ben_sabotage_railway_junctions = {
+		icon = generic_ignite_civil_war
+		cost = 30
+		days_re_enable = 120
+
+		visible = {
+			original_tag = BEN
+			country_exists = CZE
+		}
+
+		available = {
+			check_variable = { ben_underground_network > 29 }
+			CZE = {
+				NOT = { is_in_faction_with = ROOT }
+				NOT = { has_idea = ben_cze_railway_sabotage_debuff }
+			}
+		}
+
+		complete_effect = {
+			subtract_from_variable = { ben_underground_network = 15 }
+			ben_refresh_underground_network = yes
+			CZE = {
+				add_timed_idea = {
+					idea = ben_cze_railway_sabotage_debuff
+					days = 90
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				factor = 2
+				has_war_with = CZE
+			}
+		}
+	}
+
+	ben_spread_mobilization_confusion = {
+		icon = generic_propaganda
+		cost = 40
+		days_re_enable = 120
+
+		visible = {
+			original_tag = BEN
+			country_exists = CZE
+		}
+
+		available = {
+			check_variable = { ben_underground_network > 39 }
+			CZE = {
+				NOT = { is_in_faction_with = ROOT }
+				NOT = { has_idea = ben_cze_mobilization_confusion_debuff }
+			}
+		}
+
+		complete_effect = {
+			subtract_from_variable = { ben_underground_network = 20 }
+			ben_refresh_underground_network = yes
+			CZE = {
+				add_timed_idea = {
+					idea = ben_cze_mobilization_confusion_debuff
+					days = 90
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				factor = 2
+				has_war_with = CZE
+			}
+		}
+	}
+
+	ben_disrupt_military_warehouses = {
+		icon = generic_operation
+		cost = 50
+		days_re_enable = 150
+
+		visible = {
+			original_tag = BEN
+			country_exists = CZE
+		}
+
+		available = {
+			check_variable = { ben_underground_network > 49 }
+			CZE = {
+				NOT = { is_in_faction_with = ROOT }
+				NOT = { has_idea = ben_cze_warehouse_disruption_debuff }
+			}
+		}
+
+		complete_effect = {
+			subtract_from_variable = { ben_underground_network = 25 }
+			ben_refresh_underground_network = yes
+			CZE = {
+				add_timed_idea = {
+					idea = ben_cze_warehouse_disruption_debuff
+					days = 90
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				factor = 2
+				has_war_with = CZE
+			}
+		}
+	}
+
+	ben_prepare_local_committees = {
+		icon = generic_intel_bonus
+		cost = 30
+		days_remove = 45
+
+		state_target = yes
+		targets = { 72 74 75 70 71 664 }
+
+		target_trigger = {
+			FROM = {
+				NOT = { is_core_of = ROOT }
+				NOT = { has_state_flag = ben_local_committee_prepared }
+			}
+		}
+
+		visible = {
+			original_tag = BEN
+		}
+
+		available = {
+			check_variable = { ben_underground_network > 29 }
+		}
+
+		remove_effect = {
+			subtract_from_variable = { ben_underground_network = 15 }
+			ben_refresh_underground_network = yes
+			FROM = {
+				set_state_flag = ben_local_committee_prepared
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				has_war_with = CZE
+			}
+		}
+	}
+}

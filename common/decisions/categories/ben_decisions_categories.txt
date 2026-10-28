@@ -1,0 +1,91 @@
+ben_underground_network_category = {
+	icon = generic_intel_bonus
+
+	allowed = {
+		original_tag = BEN
+	}
+
+	visible_when_empty = yes
+
+	visible = {
+		original_tag = BEN
+	}
+
+	priority = {
+		base = 25
+	}
+}
+
+ben_emergency_economy_category = {
+	icon = generic_industry
+
+	allowed = {
+		original_tag = BEN
+	}
+
+	visible_when_empty = yes
+
+	visible = {
+		original_tag = BEN
+	}
+
+	priority = {
+		base = 20
+	}
+}
+
+ben_information_office_category = {
+	icon = generic_propaganda
+
+	allowed = {
+		original_tag = BEN
+	}
+
+	visible_when_empty = yes
+
+	visible = {
+		original_tag = BEN
+	}
+
+	priority = {
+		base = 15
+	}
+}
+
+ben_pra_rivalry_category = {
+	icon = generic_crisis
+
+	allowed = {
+		original_tag = BEN
+	}
+
+	visible_when_empty = no
+
+	visible = {
+		original_tag = BEN
+		country_exists = PRA
+	}
+
+	priority = {
+		base = 12
+	}
+}
+
+ben_integration_category = {
+	icon = generic_nationalism
+
+	allowed = {
+		original_tag = BEN
+	}
+
+	visible_when_empty = yes
+
+	visible = {
+		original_tag = BEN
+	}
+
+	priority = {
+		base = 10
+	}
+}
+

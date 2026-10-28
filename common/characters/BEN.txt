@@ -59,7 +59,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "GFX_portrait_BEN_stepan_pospisil"
-				small = "GFX_portrait_BEN_stepan_pospisil_small"
+				small = GFX_idea_BEN_stepan_pospisil
 			}
 		}
 		advisor = {
@@ -88,7 +88,8 @@ characters = {
 		name = BEN_romango2borec
 		portraits = {
 			civilian = {
-				small = "GFX_idea_generic_political_advisor_europe_1"
+				large = "GFX_portrait_BEN_romango2borec"
+				small = GFX_idea_BEN_romango2borec
 			}
 		}
 		advisor = {
@@ -119,7 +120,8 @@ characters = {
 		name = BEN_mia
 		portraits = {
 			civilian = {
-				small = "GFX_idea_generic_political_advisor_europe_2"
+				large = "GFX_portrait_BEN_mia"
+				small = GFX_idea_BEN_mia
 			}
 		}
 		advisor = {
@@ -150,7 +152,7 @@ characters = {
 		name = BEN_pecka
 		portraits = {
 			civilian = {
-				small = "GFX_idea_generic_political_advisor_europe_3"
+				small = GFX_idea_BEN_pecka
 			}
 		}
 		advisor = {
@@ -173,7 +175,7 @@ characters = {
 		name = BEN_ice
 		portraits = {
 			civilian = {
-				small = "GFX_idea_generic_political_advisor_europe_1"
+				small = GFX_idea_BEN_ice
 			}
 		}
 		advisor = {
@@ -184,6 +186,35 @@ characters = {
 			}
 			traits = {
 				ben_ice_club
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	BEN_andrej_babis = {
+		name = BEN_andrej_babis
+		portraits = {
+			civilian = {
+				small = GFX_idea_BEN_andrej_babis
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = BEN_andrej_babis
+			allowed = {
+				original_tag = BEN
+			}
+			available = {
+				IF = {
+					limit = { has_dlc = "Man the Guns" }
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
+			}
+			traits = {
+				fascist_demagogue
 			}
 			cost = 150
 			ai_will_do = {

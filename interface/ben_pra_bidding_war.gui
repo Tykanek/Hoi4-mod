@@ -1,0 +1,40 @@
+guiTypes = {
+	containerWindowType = {
+		name = "pra_ben_bidding_war_ui_window"
+		position = { x = 0 y = 0 }
+		size = { width = 100% height = 36 }
+
+		instantTextBoxType = {
+			name = "pra_offer_text"
+			position = { x = 15 y = 6 }
+			font = "hoi_18mbs"
+			text = "pra_bidding_war_pra_offer_display"
+			format = right
+			maxWidth = 205
+			maxHeight = 24
+			pdx_tooltip = "pra_bidding_war_pra_icon_desc"
+		}
+
+		instantTextBoxType = {
+			name = "vs_text"
+			position = { x = 225 y = 6 }
+			font = "hoi_18mbs"
+			text = "pra_bidding_war_vs"
+			format = center
+			maxWidth = 60
+			maxHeight = 24
+			pdx_tooltip = "pra_bidding_war_status_tt"
+		}
+
+		instantTextBoxType = {
+			name = "ben_offer_text"
+			position = { x = 290 y = 6 }
+			font = "hoi_18mbs"
+			text = "pra_bidding_war_ben_offer_display"
+			format = left
+			maxWidth = 205
+			maxHeight = 24
+			pdx_tooltip = "pra_bidding_war_ben_icon_desc"
+		}
+	}
+}

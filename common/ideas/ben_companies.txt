@@ -1,0 +1,258 @@
+ideas = {
+	industrial_concern = {
+		BEN_beneshov_construction_directorate = {
+			picture = generic_industrial_concern_1
+			allowed = {
+				original_tag = BEN
+			}
+			cost = 150
+			removal_cost = 10
+			modifier = {
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_infrastructure_factor = 0.10
+			}
+			research_bonus = {
+				industry = 0.10
+			}
+			traits = { industrial_concern }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		BEN_district_railway_authority = {
+			picture = generic_industrial_concern_2
+			allowed = {
+				original_tag = BEN
+			}
+			cost = 150
+			removal_cost = 10
+			modifier = {
+				production_speed_rail_way_factor = 0.15
+				production_speed_supply_node_factor = 0.10
+			}
+			research_bonus = {
+				industry = 0.05
+			}
+			traits = { industrial_concern }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		BEN_beneshov_electrical_works = {
+			picture = generic_industrial_concern_3
+			allowed = {
+				original_tag = BEN
+			}
+			cost = 150
+			removal_cost = 10
+			research_bonus = {
+				electronics = 0.15
+			}
+			traits = { electronics_concern }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		BEN_national_workshop_cooperative = {
+			picture = generic_industrial_concern_1
+			allowed = {
+				original_tag = BEN
+			}
+			cost = 150
+			removal_cost = 10
+			modifier = {
+				production_speed_arms_factory_factor = 0.10
+				production_factory_efficiency_gain_factor = 0.10
+			}
+			research_bonus = {
+				industry = 0.10
+			}
+			traits = { industrial_concern }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	materiel_manufacturer = {
+		BEN_beneshov_arms_works = {
+			picture = generic_materiel_manufacturer_1
+			allowed = {
+				original_tag = BEN
+				NOT = { has_dlc = "Arms Against Tyranny" }
+			}
+			cost = 150
+			removal_cost = 10
+			research_bonus = {
+				infantry_weapons = 0.15
+				artillery = 0.10
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = 0.05
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+			traits = { infantry_equipment_manufacturer }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		BEN_pospisil_engineering_cooperative = {
+			picture = generic_materiel_manufacturer_2
+			allowed = {
+				original_tag = BEN
+				NOT = { has_dlc = "Arms Against Tyranny" }
+			}
+			cost = 150
+			removal_cost = 10
+			research_bonus = {
+				motorized_equipment = 0.15
+				support_tech = 0.10
+			}
+			equipment_bonus = {
+				motorized_equipment = {
+					reliability = 0.05
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+			traits = { motorized_equipment_manufacturer }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	tank_manufacturer = {
+		BEN_pecka_industrial_combine = {
+			picture = generic_tank_manufacturer_1
+			allowed = {
+				original_tag = BEN
+				NOT = { has_dlc = "Arms Against Tyranny" }
+			}
+			cost = 150
+			removal_cost = 10
+			research_bonus = {
+				armor = 0.15
+			}
+			equipment_bonus = {
+				armor = {
+					armor_value = 0.05
+					reliability = 0.05
+					instant = yes
+				}
+			}
+			traits = { medium_tank_manufacturer }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	aircraft_manufacturer = {
+		BEN_beneshov_aviation_workshops = {
+			picture = generic_air_manufacturer_1
+			allowed = {
+				original_tag = BEN
+				NOT = { has_dlc = "Arms Against Tyranny" }
+			}
+			cost = 150
+			removal_cost = 10
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			equipment_bonus = {
+				small_plane_airframe = {
+					air_agility = 0.05
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+			traits = { light_aircraft_manufacturer }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	theorist = {
+		BEN_workers_strategic_institute = {
+			picture = generic_theorist_1
+			allowed = {
+				original_tag = BEN
+			}
+			cost = 100
+			removal_cost = 10
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+			modifier = {
+				experience_gain_army = 0.05
+			}
+			traits = { military_theorist }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		BEN_beneshov_logistics_school = {
+			picture = generic_theorist_2
+			allowed = {
+				original_tag = BEN
+			}
+			cost = 100
+			removal_cost = 10
+			modifier = {
+				supply_consumption_factor = -0.05
+				experience_gain_army = 0.05
+			}
+			traits = { military_theorist }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		BEN_district_aviation_committee = {
+			picture = generic_air_theorist
+			allowed = {
+				original_tag = BEN
+			}
+			cost = 100
+			removal_cost = 10
+			research_bonus = {
+				air_doctrine = 0.10
+			}
+			modifier = {
+				experience_gain_air = 0.05
+			}
+			traits = { air_warfare_theorist }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		BEN_department_of_improvised_warfare = {
+			picture = generic_theorist_1
+			allowed = {
+				original_tag = BEN
+			}
+			cost = 100
+			removal_cost = 10
+			modifier = {
+				planning_speed = 0.10
+				max_dig_in = 5
+				experience_gain_army = 0.05
+			}
+			traits = { military_theorist }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}

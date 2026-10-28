@@ -1,0 +1,6 @@
+scripted_gui = {
+	pra_ben_bidding_war_ui = {
+		context_type = decision_category
+		window_name = "pra_ben_bidding_war_ui_window"
+	}
+}

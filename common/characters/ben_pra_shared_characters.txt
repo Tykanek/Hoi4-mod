@@ -15,7 +15,9 @@ characters = {
 			planning_skill = 5
 			logistics_skill = 5
 			legacy_id = -1
+			visible = {
+				has_character_flag = pra_ben_elbl_contract_signed
+			}
 		}
 	}
 }
-

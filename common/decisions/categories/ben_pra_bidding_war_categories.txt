@@ -1,6 +1,6 @@
 pra_ben_bidding_war_category = {
-	icon = generic_political_actions
-	picture = GFX_decision_cat_picture_gateway_to_europe
+	icon = military_operation
+	picture = GFX_decision_cat_picture_lukas_elbl
 
 	allowed = {
 		OR = {
@@ -24,22 +24,5 @@ pra_ben_bidding_war_category = {
 		base = 10
 	}
 
-	custom_icon = {
-		tag = PRA
-		value = pra_bidding_war_pra_icon_val
-		desc = pra_bidding_war_pra_icon_desc
-		visible = {
-			country_exists = PRA
-		}
-	}
-
-	custom_icon = {
-		tag = BEN
-		value = pra_bidding_war_ben_icon_val
-		desc = pra_bidding_war_ben_icon_desc
-		visible = {
-			country_exists = BEN
-		}
-	}
+	scripted_gui = pra_ben_bidding_war_ui
 }
-

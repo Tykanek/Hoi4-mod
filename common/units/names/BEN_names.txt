@@ -1,0 +1,28 @@
+BEN = {
+	air_wing_names_template = AIR_WING_NAME_BEN_FALLBACK
+
+	small_plane_airframe = {
+		prefix = ""
+		generic = { "Okresni stihaci perut" }
+		generic_pattern = AIR_WING_NAME_BEN_GENERIC
+		unique = {
+			"1. okresni stihaci perut"
+			"2. okresni stihaci perut"
+			"3. okresni stihaci perut"
+			"4. okresni stihaci perut"
+			"5. okresni stihaci perut"
+		}
+	}
+
+	small_plane_cas_airframe = {
+		prefix = ""
+		generic = { "Okresni bitevni perut" }
+		generic_pattern = AIR_WING_NAME_BEN_GENERIC
+		unique = {
+			"1. okresni bitevni perut"
+			"2. okresni bitevni perut"
+			"3. okresni bitevni perut"
+		}
+	}
+}
+

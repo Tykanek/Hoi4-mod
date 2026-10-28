@@ -41,6 +41,42 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_idea_BEN_stepan_pospisil"
-		texturefile = "gfx/leaders/BEN/BEN_stepan_pospisil_small.dds"
+		texturefile = "gfx/interface/ideas/idea_BEN_stepan_pospisil.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_BEN_mia"
+		texturefile = "gfx/leaders/BEN/BEN_mia.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_BEN_mia_small"
+		texturefile = "gfx/leaders/BEN/BEN_mia_small.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BEN_mia"
+		texturefile = "gfx/interface/ideas/idea_BEN_mia.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_BEN_romango2borec"
+		texturefile = "gfx/leaders/BEN/BEN_romango2borec.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_BEN_romango2borec_small"
+		texturefile = "gfx/leaders/BEN/BEN_romango2borec_small.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BEN_romango2borec"
+		texturefile = "gfx/interface/ideas/idea_BEN_romango2borec.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BEN_ice"
+		texturefile = "gfx/interface/ideas/idea_BEN_ice.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BEN_pecka"
+		texturefile = "gfx/interface/ideas/idea_BEN_pecka.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BEN_andrej_babis"
+		texturefile = "gfx/interface/ideas/idea_BEN_andrej_babis.dds"
 	}
 }

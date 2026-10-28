@@ -1,0 +1,35 @@
+BEN_beneshov_arms_works_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_generic_materiel_manufacturer_1
+	allowed = {
+		tag = BEN
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+
+BEN_pospisil_engineering_cooperative_organization = {
+	include = generic_motorized_mechanized_organization
+	icon = GFX_idea_generic_materiel_manufacturer_2
+	allowed = {
+		tag = BEN
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+
+BEN_beneshov_aviation_workshops_organization = {
+	include = generic_light_aircraft_organization
+	icon = GFX_idea_generic_air_manufacturer_1
+	allowed = {
+		tag = BEN
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+
+BEN_pecka_industrial_combine_organization = {
+	include = generic_tank_organization
+	icon = GFX_idea_generic_tank_manufacturer_1
+	allowed = {
+		tag = BEN
+		has_dlc = "Arms Against Tyranny"
+	}
+}

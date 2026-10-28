@@ -122,4 +122,78 @@ spriteTypes = {
 		name = "GFX_idea_ben_claimant_to_czech_leadership"
 		texturefile = "gfx/interface/ideas/idea_ben_claimant_to_czech_leadership.dds"
 	}
+
+	# Design Companies & Industrial Concerns
+	spriteType = {
+		name = "GFX_idea_BEN_beneshov_construction_directorate"
+		texturefile = "gfx/interface/ideas/idea_generic_build_infrastructure.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BEN_district_railway_authority"
+		texturefile = "gfx/interface/ideas/idea_generic_foreign_capital.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BEN_beneshov_electrical_works"
+		texturefile = "gfx/interface/ideas/idea_generic_industrial_concern_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BEN_national_workshop_cooperative"
+		texturefile = "gfx/interface/ideas/idea_generic_local_self_management.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BEN_beneshov_arms_works"
+		texturefile = "gfx/interface/ideas/idea_generic_infantry_equipment_manufacturer_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BEN_pospisil_engineering_cooperative"
+		texturefile = "gfx/interface/ideas/idea_generic_motorized_equipment_manufacturer_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BEN_pecka_industrial_combine"
+		texturefile = "gfx/interface/ideas/idea_generic_tank_manufacturer_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BEN_beneshov_aviation_workshops"
+		texturefile = "gfx/interface/ideas/idea_generic_air_manufacturer_1.dds"
+	}
+
+	# Theorists
+	spriteType = {
+		name = "GFX_idea_BEN_workers_strategic_institute"
+		texturefile = "gfx/interface/ideas/idea_ben_pospisil_strategic_theory.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BEN_beneshov_logistics_school"
+		texturefile = "gfx/interface/ideas/idea_ben_stepans_distribution_network.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BEN_district_aviation_committee"
+		texturefile = "gfx/interface/ideas/idea_ben_reorganized_air_command.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BEN_department_of_improvised_warfare"
+		texturefile = "gfx/interface/ideas/idea_ben_pospisil_doctrine.dds"
+	}
+
+	# Evolving Military Spirits
+	spriteType = {
+		name = "GFX_idea_ben_improvised_command"
+		texturefile = "gfx/interface/ideas/idea_ben_inexperienced_officer_corps.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ben_workshop_army"
+		texturefile = "gfx/interface/ideas/idea_ben_reorganized_benesov_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ben_workers_logistics_doctrine"
+		texturefile = "gfx/interface/ideas/idea_ben_improvised_supply_system.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ben_integrated_district_army"
+		texturefile = "gfx/interface/ideas/idea_ben_reorganized_benesov_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ben_pospisil_operational_school"
+		texturefile = "gfx/interface/ideas/idea_ben_pospisil_doctrine.dds"
+	}
 }

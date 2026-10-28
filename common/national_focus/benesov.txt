@@ -1,4 +1,4 @@
-focus_tree = {
+﻿focus_tree = {
 	id = benesov_focus
 
 	country = {
@@ -95,6 +95,11 @@ focus_tree = {
 		completion_reward = {
 			army_experience = 15
 			add_stability = 0.03
+			if = {
+				limit = { NOT = { has_country_flag = ben_flavor_4_fired } }
+				set_country_flag = ben_flavor_4_fired
+				country_event = { id = ben_flavor.4 days = 1 }
+			}
 		}
 	}
 
@@ -116,6 +121,7 @@ focus_tree = {
 					add_idea = ben_inexperienced_officer_corps
 				}
 			}
+			add_ideas = ben_improvised_command
 		}
 	}
 
@@ -160,6 +166,11 @@ focus_tree = {
 				limit = { has_idea = ben_army_without_supply_system }
 				remove_ideas = ben_army_without_supply_system
 			}
+			if = {
+				limit = { has_idea = ben_improvised_command }
+				remove_ideas = ben_improvised_command
+			}
+			add_ideas = ben_workers_logistics_doctrine
 			army_experience = 10
 		}
 	}
@@ -183,6 +194,15 @@ focus_tree = {
 				limit = { has_idea = ben_untrained_local_militia }
 				remove_ideas = ben_untrained_local_militia
 			}
+			if = {
+				limit = { has_idea = ben_workers_logistics_doctrine }
+				remove_ideas = ben_workers_logistics_doctrine
+			}
+			if = {
+				limit = { has_idea = ben_improvised_command }
+				remove_ideas = ben_improvised_command
+			}
+			add_ideas = ben_workshop_army
 			army_experience = 15
 		}
 	}
@@ -266,7 +286,20 @@ focus_tree = {
 				limit = { has_idea = ben_inexperienced_officer_corps }
 				remove_ideas = ben_inexperienced_officer_corps
 			}
+			if = {
+				limit = { has_idea = ben_workshop_army }
+				remove_ideas = ben_workshop_army
+			}
+			if = {
+				limit = { has_idea = ben_workers_logistics_doctrine }
+				remove_ideas = ben_workers_logistics_doctrine
+			}
+			if = {
+				limit = { has_idea = ben_improvised_command }
+				remove_ideas = ben_improvised_command
+			}
 			add_ideas = ben_reorganized_benesov_army
+			add_ideas = ben_integrated_district_army
 			army_experience = 25
 		}
 	}
@@ -552,6 +585,7 @@ focus_tree = {
 			}
 			add_ideas = ben_reorganized_air_command
 			air_experience = 25
+			country_event = { id = ben_flavor.8 days = 1 }
 		}
 	}
 
@@ -690,6 +724,7 @@ focus_tree = {
 			add_political_power = -600
 			remove_ideas = ben_great_beneshov_depression_5
 			add_stability = 0.10
+			country_event = { id = ben_flavor.16 days = 1 }
 		}
 	}
 
@@ -831,6 +866,11 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			if = {
+				limit = { NOT = { has_country_flag = ben_flavor_1_fired } }
+				set_country_flag = ben_flavor_1_fired
+				country_event = { id = ben_flavor.1 days = 1 }
+			}
 		}
 	}
 
@@ -892,6 +932,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			country_event = { id = ben_flavor.5 days = 1 }
 		}
 	}
 
@@ -931,6 +972,11 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
+			}
+			if = {
+				limit = { NOT = { has_country_flag = ben_flavor_2_fired } }
+				set_country_flag = ben_flavor_2_fired
+				country_event = { id = ben_flavor.2 days = 1 }
 			}
 		}
 	}
@@ -1254,6 +1300,7 @@ focus_tree = {
 				popularity = 0.15
 			}
 			add_stability = -0.05
+			country_event = { id = ben_flavor.23 days = 1 }
 		}
 	}
 
@@ -1364,6 +1411,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = ben_stepans_distribution_network
+			country_event = { id = ben_flavor.18 days = 1 }
 		}
 	}
 
@@ -1395,7 +1443,12 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 
 		completion_reward = {
+			if = {
+				limit = { has_idea = ben_integrated_district_army }
+				remove_ideas = ben_integrated_district_army
+			}
 			add_ideas = ben_pospisil_doctrine
+			add_ideas = ben_pospisil_operational_school
 			army_experience = 25
 		}
 	}
@@ -1595,6 +1648,7 @@ focus_tree = {
 			74 = { add_core_of = ROOT }
 			72 = { add_core_of = ROOT }
 			set_country_flag = ben_czech_consolidation_complete
+			country_event = { id = ben_flavor.24 days = 1 }
 		}
 	}
 
@@ -1624,11 +1678,51 @@ focus_tree = {
 	}
 
 	focus = {
-		id = ben_enforce_the_workers_mandate
-		icon = GFX_focus_BEN_enforce_the_workers_mandate
+		id = ben_operation_broken_lion
+		icon = GFX_focus_generic_sabotage
 		prerequisite = { focus = ben_the_czechoslovak_workers_mandate }
 		x = 22
 		y = 25
+		cost = 5
+		search_filters = { FOCUS_FILTER_MILITARY FOCUS_FILTER_POLITICAL }
+		ai_will_do = { factor = 10 }
+
+		available = {
+			has_government = communism
+			has_country_flag = ben_slovak_mandate_proclaimed
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			if = {
+				limit = {
+					country_exists = CZE
+					OR = {
+						70 = { is_owned_by = CZE }
+						71 = { is_owned_by = CZE }
+						664 = { is_owned_by = CZE }
+					}
+				}
+				CZE = {
+					add_stability = -0.10
+					add_war_support = -0.10
+					add_command_power = -25
+					add_timed_idea = {
+						idea = ben_czechoslovak_command_paralysis
+						days = 210
+					}
+					country_event = { id = benesov.26 days = 1 }
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ben_enforce_the_workers_mandate
+		icon = GFX_focus_BEN_enforce_the_workers_mandate
+		prerequisite = { focus = ben_operation_broken_lion }
+		x = 22
+		y = 26
 		cost = 10
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 10 }
@@ -1693,7 +1787,7 @@ focus_tree = {
 		icon = GFX_focus_BEN_the_beneshov_successor_state
 		prerequisite = { focus = ben_enforce_the_workers_mandate }
 		x = 22
-		y = 26
+		y = 27
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 		ai_will_do = { factor = 10 }
@@ -1710,6 +1804,7 @@ focus_tree = {
 			add_stability = 0.15
 			add_war_support = 0.10
 			add_ideas = ben_socialist_successor_federation
+			country_event = { id = ben_flavor.19 days = 1 }
 		}
 	}
 }

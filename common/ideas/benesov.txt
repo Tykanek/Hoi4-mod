@@ -511,5 +511,301 @@ ideas = {
 				industrial_capacity_factory = 0.05
 			}
 		}
+
+		# ============================================================
+		# OPERATION BROKEN LION: CZECHOSLOVAK SABOTAGE
+		# ============================================================
+		ben_czechoslovak_command_paralysis = {
+			picture = generic_army_problems
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = -0.30
+				army_org_regain = -0.25
+				army_defence_factor = -0.15
+				army_attack_factor = -0.15
+				land_reinforce_rate = -0.05
+				planning_speed = -0.40
+				max_planning = -0.20
+				supply_consumption_factor = 0.20
+			}
+		}
+
+		# ============================================================
+		# BENESHOV UNDERGROUND NETWORK (Dynamic Stages 1-5)
+		# ============================================================
+		ben_underground_network_spirit_1 = {
+			picture = generic_intel_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				intel_network_gain_factor = 0.02
+			}
+		}
+
+		ben_underground_network_spirit_2 = {
+			picture = generic_intel_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				intel_network_gain_factor = 0.10
+				supply_consumption_factor = -0.05
+			}
+		}
+
+		ben_underground_network_spirit_3 = {
+			picture = generic_intel_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				intel_network_gain_factor = 0.15
+				supply_consumption_factor = -0.10
+				subversive_activites_upkeep = -0.10
+			}
+		}
+
+		ben_underground_network_spirit_4 = {
+			picture = generic_intel_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				intel_network_gain_factor = 0.20
+				supply_consumption_factor = -0.15
+				planning_speed = 0.10
+				foreign_subversive_activites = 0.10
+			}
+		}
+
+		ben_underground_network_spirit_5 = {
+			picture = generic_intel_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				intel_network_gain_factor = 0.25
+				supply_consumption_factor = -0.20
+				max_planning = 0.10
+				planning_speed = 0.15
+				foreign_subversive_activites = 0.20
+			}
+		}
+
+		# ============================================================
+		# BENESHOV MILITARY SPIRITS (Evolving Army Identity)
+		# ============================================================
+		ben_improvised_command = {
+			picture = ben_inexperienced_officer_corps
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				planning_speed = 0.05
+				max_dig_in = 2
+			}
+		}
+
+		ben_workshop_army = {
+			picture = ben_reorganized_benesov_army
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_org_factor = 0.05
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = 0.10
+					instant = yes
+				}
+			}
+		}
+
+		ben_workers_logistics_doctrine = {
+			picture = ben_improvised_supply_system
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				supply_consumption_factor = -0.10
+				out_of_supply_factor = -0.15
+				attrition = -0.10
+			}
+		}
+
+		ben_integrated_district_army = {
+			picture = ben_reorganized_benesov_army
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				land_reinforce_rate = 0.05
+			}
+		}
+
+		ben_pospisil_operational_school = {
+			picture = ben_pospisil_doctrine
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				planning_speed = 0.15
+				max_planning = 0.10
+				coordination_bonus = 0.05
+				army_org_factor = 0.05
+			}
+		}
+
+		# ============================================================
+		# TEMPORARY ECONOMIC & CRISIS SPIRITS
+		# ============================================================
+		ben_railway_workers_spirit = {
+			picture = generic_goods_red_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				production_speed_rail_way_factor = 0.15
+				supply_factor = 0.05
+			}
+		}
+
+		ben_factory_committees_spirit = {
+			picture = generic_production_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+
+		ben_converted_civilian_workshops_spirit = {
+			picture = generic_production_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.10
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		ben_nationalized_warehouses_spirit = {
+			picture = generic_goods_red_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				supply_consumption_factor = -0.10
+				max_fuel_factor = 0.15
+			}
+		}
+
+		ben_district_bonds_spirit = {
+			picture = generic_economic_increase
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.03
+				stability_factor = -0.03
+			}
+		}
+
+		ben_beer_tax_spirit = {
+			picture = generic_economic_increase
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		ben_ice_nightlife_morale_spirit = {
+			picture = generic_morale_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = -0.02
+			}
+		}
+
+		ben_ice_night_shift_spirit = {
+			picture = generic_production_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.03
+			}
+		}
+
+		ben_factory_celebration_spirit = {
+			picture = generic_production_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+
+		ben_industrial_miracle_spirit = {
+			picture = generic_production_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_speed_industrial_complex_factor = 0.05
+			}
+		}
+
+		ben_adams_notes_spirit = {
+			picture = ben_pospisil_strategic_theory
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				planning_speed = 0.10
+				max_planning = 0.05
+			}
+		}
+
+		ben_praised_railway_spirit = {
+			picture = generic_goods_red_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				production_speed_rail_way_factor = 0.15
+			}
+		}
+
+		# ============================================================
+		# UNDERGROUND SABOTAGE DEBUFFS (Target: CZE)
+		# ============================================================
+		ben_cze_railway_sabotage_debuff = {
+			picture = generic_damage_civil_infrastructure
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				supply_factor = -0.15
+				army_speed_factor = -0.10
+			}
+		}
+
+		ben_cze_mobilization_confusion_debuff = {
+			picture = generic_disruption
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				land_reinforce_rate = -0.05
+				army_org_factor = -0.10
+			}
+		}
+
+		ben_cze_warehouse_disruption_debuff = {
+			picture = generic_army_problems
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				supply_consumption_factor = 0.15
+				attrition = 0.10
+			}
+		}
 	}
 }

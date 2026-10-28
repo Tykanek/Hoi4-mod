@@ -1,0 +1,288 @@
+ben_emergency_economy_category = {
+
+	ben_emergency_rifle_collection = {
+		icon = generic_prepare_civil_war
+		cost = 15
+		days_re_enable = 180
+
+		visible = {
+			original_tag = BEN
+		}
+
+		available = {
+			has_stability > 0.20
+			OR = {
+				has_war = yes
+				has_war_support > 0.15
+			}
+		}
+
+		complete_effect = {
+			add_stability = -0.05
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 120
+				producer = BEN
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				factor = 2
+				has_war = yes
+				has_stability > 0.40
+			}
+		}
+	}
+
+	ben_convert_civilian_workshops = {
+		icon = generic_industry
+		cost = 25
+		days_re_enable = 180
+
+		visible = {
+			original_tag = BEN
+		}
+
+		available = {
+			NOT = { has_idea = ben_converted_civilian_workshops_spirit }
+		}
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = ben_converted_civilian_workshops_spirit
+				days = 120
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_political_power < 50
+			}
+		}
+	}
+
+	ben_nationalize_warehouses = {
+		icon = generic_civil_support
+		cost = 30
+		days_re_enable = 240
+
+		visible = {
+			original_tag = BEN
+		}
+
+		available = {
+			NOT = { has_idea = ben_nationalized_warehouses_spirit }
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = train_equipment_1
+				amount = 5
+				producer = BEN
+			}
+			add_timed_idea = {
+				idea = ben_nationalized_warehouses_spirit
+				days = 180
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_political_power < 60
+			}
+		}
+	}
+
+	ben_district_bonds = {
+		icon = generic_political_discourse
+		cost = 50
+		days_re_enable = 240
+
+		visible = {
+			original_tag = BEN
+		}
+
+		available = {
+			NOT = { has_idea = ben_district_bonds_spirit }
+		}
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = ben_district_bonds_spirit
+				days = 180
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_political_power < 80
+			}
+		}
+	}
+
+	ben_scrap_civilian_vehicles = {
+		icon = generic_motorized
+		cost = 25
+		days_re_enable = 180
+
+		visible = {
+			original_tag = BEN
+		}
+
+		available = {
+			has_war_support > 0.15
+		}
+
+		complete_effect = {
+			add_war_support = -0.05
+			add_equipment_to_stockpile = {
+				type = motorized_equipment_1
+				amount = 40
+				producer = BEN
+			}
+			if = {
+				limit = { NOT = { has_country_flag = ben_flavor_6_fired } }
+				set_country_flag = ben_flavor_6_fired
+				country_event = { id = ben_flavor.6 days = 1 }
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				factor = 1
+				has_war = yes
+				has_war_support > 0.40
+			}
+		}
+	}
+
+	ben_beer_tax = {
+		icon = generic_constitution
+		cost = 0
+		days_re_enable = 180
+
+		visible = {
+			original_tag = BEN
+		}
+
+		available = {
+			has_stability > 0.20
+			NOT = { has_idea = ben_beer_tax_spirit }
+		}
+
+		complete_effect = {
+			add_political_power = 25
+			add_stability = -0.04
+			add_timed_idea = {
+				idea = ben_beer_tax_spirit
+				days = 120
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				factor = 1
+				has_stability > 0.50
+				has_political_power < 20
+			}
+		}
+	}
+
+	ben_keep_the_clubs_open = {
+		icon = generic_morale
+		cost = 25
+		days_re_enable = 240
+
+		visible = {
+			original_tag = BEN
+		}
+
+		available = {
+			NOT = { has_idea = ben_ice_nightlife_morale_spirit }
+		}
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = ben_ice_nightlife_morale_spirit
+				days = 180
+			}
+			country_event = { id = ben_flavor.21 days = 1 }
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_political_power < 50
+			}
+		}
+	}
+
+	ben_night_shift_fundraiser = {
+		icon = generic_coins
+		cost = 25
+		days_re_enable = 180
+
+		visible = {
+			original_tag = BEN
+		}
+
+		available = {
+			NOT = { has_idea = ben_ice_night_shift_spirit }
+		}
+
+		complete_effect = {
+			add_political_power = 10
+			add_timed_idea = {
+				idea = ben_ice_night_shift_spirit
+				days = 90
+			}
+			country_event = { id = ben_flavor.22 days = 1 }
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_political_power < 60
+			}
+		}
+	}
+
+	ben_establish_strategic_pecka_reserve = {
+		icon = generic_flags
+		cost = 20
+		fire_only_once = yes
+
+		visible = {
+			original_tag = BEN
+		}
+
+		available = {
+			always = yes
+		}
+
+		complete_effect = {
+			add_stability = 0.02
+			country_event = { id = ben_flavor.17 days = 1 }
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_political_power < 40
+			}
+		}
+	}
+}

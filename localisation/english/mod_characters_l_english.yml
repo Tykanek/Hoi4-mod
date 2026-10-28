@@ -62,6 +62,8 @@
  BEN_pecka_desc: "The father of Adam and Stepan Pospisil, Pecka brings decades of practical workshop knowledge to district management, ensuring civilian manufacturing lines operate with steady reliability."
  BEN_ice: "ICE"
  BEN_ice_desc: "A prominent Beneshov nightlife establishment. While its lively evening culture drains the district's sober working population, its backroom networks generate substantial political leverage and civic influence."
+ BEN_andrej_babis: "Andrej Babis"
+ BEN_andrej_babis_desc: "An aggressive agro-industrial organizer capable of channeling district discontent toward centralized authoritarian control."
  BEN_matej_dvorak_high_command: "Matej Dvorak"
  BEN_matej_dvorak_high_command_desc: "Having relinquished civilian executive power, the former mayor applies his rigorous administrative talents to infantry battalion organization and mobilization."
  ben_ice_club: "Nightlife Political Machine"

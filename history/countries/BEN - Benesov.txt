@@ -1,4 +1,4 @@
-capital = 1093
+﻿capital = 1093
 oob = "BEN_1936"
 
 # Starting characters
@@ -9,9 +9,15 @@ recruit_character = BEN_romango2borec
 recruit_character = BEN_mia
 recruit_character = BEN_pecka
 recruit_character = BEN_ice
+recruit_character = BEN_andrej_babis
 
-# Starting national debuffs
+# Starting national debuffs and laws
 add_ideas = {
+	# Laws
+	volunteer_only
+	civilian_economy
+	export_focus
+
 	# Army debuffs (3)
 	ben_army_without_supply_system
 	ben_untrained_local_militia
@@ -22,6 +28,9 @@ add_ideas = {
 	ben_no_trained_pilots
 	ben_no_aviation_industry
 	ben_improvised_airfields
+
+	# Underground Network (Stage 1)
+	ben_underground_network_spirit_1
 }
 
 set_stability = 0.30
@@ -29,11 +38,28 @@ set_war_support = 0.05
 
 set_research_slots = 2
 
+# Starting Underground Network
+set_variable = { ben_underground_network = 10 }
+
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
 	tech_support = 1
 	gw_artillery = 1
+	basic_train = 1
+	electronic_mechanical_engineering = 1
+}
+
+# Starting stockpile
+add_equipment_to_stockpile = {
+	type = infantry_equipment_0
+	amount = 150
+	producer = BEN
+}
+add_equipment_to_stockpile = {
+	type = train_equipment_1
+	amount = 5
+	producer = BEN
 }
 
 set_politics = {

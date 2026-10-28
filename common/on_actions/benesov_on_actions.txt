@@ -7,7 +7,10 @@ on_actions = {
 					end_wars = no
 				}
 			}
+			BEN = {
+				set_variable = { ben_underground_network = 10 }
+				ben_refresh_underground_network = yes
+			}
 		}
 	}
 }
-

@@ -1,0 +1,401 @@
+add_namespace = ben_flavor
+
+# 1. The First New Factory
+country_event = {
+	id = ben_flavor.1
+	title = ben_flavor.1.t
+	desc = ben_flavor.1.d
+	picture = GFX_report_event_generic_factory
+
+	is_triggered_only = yes
+
+	option = {
+		name = ben_flavor.1.a
+		add_political_power = 20
+	}
+}
+
+# 2. Arms Production Begins
+country_event = {
+	id = ben_flavor.2
+	title = ben_flavor.2.t
+	desc = ben_flavor.2.d
+	picture = GFX_report_event_generic_factory
+
+	is_triggered_only = yes
+
+	option = {
+		name = ben_flavor.2.a
+		army_experience = 10
+		add_war_support = 0.02
+	}
+}
+
+# 3. The Industrial Threshold
+country_event = {
+	id = ben_flavor.3
+	title = ben_flavor.3.t
+	desc = ben_flavor.3.d
+	picture = GFX_report_event_generic_factory
+
+	is_triggered_only = yes
+
+	option = {
+		name = ben_flavor.3.a
+		add_stability = 0.02
+	}
+}
+
+# 4. Second Division Deployed
+country_event = {
+	id = ben_flavor.4
+	title = ben_flavor.4.t
+	desc = ben_flavor.4.d
+	picture = GFX_report_event_soldiers_marching
+
+	is_triggered_only = yes
+
+	option = {
+		name = ben_flavor.4.a
+		add_manpower = 500
+		add_war_support = 0.02
+	}
+}
+
+# 5. Artillery Workshop Inaugurated
+country_event = {
+	id = ben_flavor.5
+	title = ben_flavor.5.t
+	desc = ben_flavor.5.d
+	picture = GFX_report_event_generic_factory
+
+	is_triggered_only = yes
+
+	option = {
+		name = ben_flavor.5.a
+		add_equipment_to_stockpile = {
+			type = artillery_equipment_1
+			amount = 25
+			producer = BEN
+		}
+		army_experience = 5
+	}
+}
+
+# 6. The First Truck Rolls Out
+country_event = {
+	id = ben_flavor.6
+	title = ben_flavor.6.t
+	desc = ben_flavor.6.d
+	picture = GFX_report_event_generic_factory
+
+	is_triggered_only = yes
+
+	option = {
+		name = ben_flavor.6.a
+		add_equipment_to_stockpile = {
+			type = motorized_equipment_1
+			amount = 15
+			producer = BEN
+		}
+	}
+}
+
+# 7. Beneshov Takes to the Air
+country_event = {
+	id = ben_flavor.7
+	title = ben_flavor.7.t
+	desc = ben_flavor.7.d
+	picture = GFX_report_event_airplane_factory
+
+	is_triggered_only = yes
+
+	option = {
+		name = ben_flavor.7.a
+		air_experience = 10
+		add_war_support = 0.02
+	}
+}
+
+# 8. Air Squadron Assembled
+country_event = {
+	id = ben_flavor.8
+	title = ben_flavor.8.t
+	desc = ben_flavor.8.d
+	picture = GFX_report_event_airplane_factory
+
+	is_triggered_only = yes
+
+	option = {
+		name = ben_flavor.8.a
+		air_experience = 10
+	}
+}
+
+# 9. Underground Network: Pub Contacts Synchronized
+country_event = {
+	id = ben_flavor.9
+	title = ben_flavor.9.t
+	desc = ben_flavor.9.d
+	picture = GFX_report_event_gathering_protest
+
+	is_triggered_only = yes
+
+	option = {
+		name = ben_flavor.9.a
+		add_political_power = 15
+	}
+}
+
+# 10. Underground Network: The Railway Telegraph
+country_event = {
+	id = ben_flavor.10
+	title = ben_flavor.10.t
+	desc = ben_flavor.10.d
+	picture = GFX_report_event_generic_train
+
+	is_triggered_only = yes
+
+	option = {
+		name = ben_flavor.10.a
+		add_political_power = 15
+	}
+}
+
+# 11. Underground Network: District Integration
+country_event = {
+	id = ben_flavor.11
+	title = ben_flavor.11.t
+	desc = ben_flavor.11.d
+	picture = GFX_report_event_gathering_protest
+
+	is_triggered_only = yes
+
+	option = {
+		name = ben_flavor.11.a
+		add_political_power = 20
+		add_stability = 0.02
+	}
+}
+
+# 12. Underground Network: From Pubs to Power
+country_event = {
+	id = ben_flavor.12
+	title = ben_flavor.12.t
+	desc = ben_flavor.12.d
+	picture = GFX_report_event_gathering_protest
+
+	is_triggered_only = yes
+
+	option = {
+		name = ben_flavor.12.a
+		add_political_power = 35
+		add_stability = 0.03
+		add_war_support = 0.02
+	}
+}
+
+# 13. Integrating the Borderlands
+country_event = {
+	id = ben_flavor.13
+	title = ben_flavor.13.t
+	desc = ben_flavor.13.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = ben_flavor.13.a
+		add_political_power = 15
+	}
+}
+
+# 14. The Moravian Assembly
+country_event = {
+	id = ben_flavor.14
+	title = ben_flavor.14.t
+	desc = ben_flavor.14.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = ben_flavor.14.a
+		add_political_power = 20
+		add_stability = 0.02
+	}
+}
+
+# 15. The Slovak Fraternal Bridge
+country_event = {
+	id = ben_flavor.15
+	title = ben_flavor.15.t
+	desc = ben_flavor.15.d
+	picture = GFX_report_event_soldiers_marching
+
+	is_triggered_only = yes
+
+	option = {
+		name = ben_flavor.15.a
+		add_political_power = 20
+		add_manpower = 500
+	}
+}
+
+# 16. Proclamation of Economic Overhaul
+country_event = {
+	id = ben_flavor.16
+	title = ben_flavor.16.t
+	desc = ben_flavor.16.d
+	picture = GFX_report_event_generic_factory
+
+	is_triggered_only = yes
+
+	option = {
+		name = ben_flavor.16.a
+		add_stability = 0.05
+		add_political_power = 25
+	}
+}
+
+# 17. The Strategic Pecka Reserve
+country_event = {
+	id = ben_flavor.17
+	title = ben_flavor.17.t
+	desc = ben_flavor.17.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = ben_flavor.17.a
+		add_political_power = 10
+		add_stability = 0.01
+	}
+}
+
+# 18. Stepan's Railway Timetable
+country_event = {
+	id = ben_flavor.18
+	title = ben_flavor.18.t
+	desc = ben_flavor.18.d
+	picture = GFX_report_event_generic_train
+
+	is_triggered_only = yes
+
+	option = {
+		name = ben_flavor.18.a
+		add_political_power = 15
+	}
+}
+
+# 19. Apparently The Strategy Worked
+country_event = {
+	id = ben_flavor.19
+	title = ben_flavor.19.t
+	desc = ben_flavor.19.d
+	picture = GFX_report_event_soldiers_marching
+
+	is_triggered_only = yes
+
+	option = {
+		name = ben_flavor.19.a
+		add_political_power = 50
+		add_stability = 0.05
+		add_war_support = 0.05
+	}
+}
+
+# 20. No Longer A District
+country_event = {
+	id = ben_flavor.20
+	title = ben_flavor.20.t
+	desc = ben_flavor.20.d
+	picture = GFX_report_event_gathering_protest
+
+	is_triggered_only = yes
+
+	option = {
+		name = ben_flavor.20.a
+		add_political_power = 25
+		add_stability = 0.02
+	}
+}
+
+# 21. Keep the Clubs Open
+country_event = {
+	id = ben_flavor.21
+	title = ben_flavor.21.t
+	desc = ben_flavor.21.d
+	picture = GFX_report_event_gathering_protest
+
+	is_triggered_only = yes
+
+	option = {
+		name = ben_flavor.21.a
+		add_political_power = 10
+	}
+}
+
+# 22. Night Shift Fundraiser
+country_event = {
+	id = ben_flavor.22
+	title = ben_flavor.22.t
+	desc = ben_flavor.22.d
+	picture = GFX_report_event_generic_factory
+
+	is_triggered_only = yes
+
+	option = {
+		name = ben_flavor.22.a
+		add_political_power = 15
+	}
+}
+
+# 23. Workers' Committee National Congress
+country_event = {
+	id = ben_flavor.23
+	title = ben_flavor.23.t
+	desc = ben_flavor.23.d
+	picture = GFX_report_event_gathering_protest
+
+	is_triggered_only = yes
+
+	option = {
+		name = ben_flavor.23.a
+		add_political_power = 20
+		add_stability = 0.02
+	}
+}
+
+# 24. Preparing the Slovak March
+country_event = {
+	id = ben_flavor.24
+	title = ben_flavor.24.t
+	desc = ben_flavor.24.d
+	picture = GFX_report_event_soldiers_marching
+
+	is_triggered_only = yes
+
+	option = {
+		name = ben_flavor.24.a
+		add_political_power = 15
+		add_war_support = 0.02
+	}
+}
+
+# 25. Beneshov Outproduces Prague
+country_event = {
+	id = ben_flavor.25
+	title = ben_flavor.25.t
+	desc = ben_flavor.25.d
+	picture = GFX_report_event_generic_factory
+
+	is_triggered_only = yes
+
+	option = {
+		name = ben_flavor.25.a
+		add_political_power = 25
+		add_stability = 0.02
+	}
+}

@@ -1,7 +1,7 @@
 pra_ben_bidding_war_category = {
 
 	pra_increase_bidding_offer = {
-		icon = generic_propaganda
+		icon = generic_fundraising
 
 		allowed = {
 			original_tag = PRA
@@ -50,7 +50,7 @@ pra_ben_bidding_war_category = {
 	}
 
 	ben_increase_bidding_offer = {
-		icon = generic_propaganda
+		icon = generic_fundraising
 
 		allowed = {
 			original_tag = BEN
@@ -98,4 +98,3 @@ pra_ben_bidding_war_category = {
 		}
 	}
 }
-

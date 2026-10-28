@@ -175,3 +175,6 @@
 
  ben_demand_moravia_tt:0 "Sends a formal demand to Czechoslovakia to cede Moravia to Beneshov."
  ben_demand_silesia_tt:0 "Sends a formal demand to Czechoslovakia to cede Sudeten Silesia and Zaolzie to Beneshov."
+
+ ben_operation_broken_lion:0 "Operation Broken Lion"
+ ben_operation_broken_lion_desc:0 "Czechoslovakia possesses more divisions than Beneshov can hope to match in open preparation. Fortunately, armies depend on railways, depots, clerks, and workers long before they depend on generals. Stepan's networks have spent years learning where the machinery of the republic can be stopped."

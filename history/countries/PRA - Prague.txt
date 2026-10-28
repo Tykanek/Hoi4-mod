@@ -13,6 +13,7 @@ recruit_character = PRA_jaroslav_kral
 recruit_character = PRA_vaclav_sedivy
 recruit_character = PRA_alois_simek
 recruit_character = PRA_octane
+recruit_character = PRA_BEN_shared_field_marshal
 
 set_stability = 0.30
 set_war_support = 0.05

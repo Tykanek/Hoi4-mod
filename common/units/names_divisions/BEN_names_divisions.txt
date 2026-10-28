@@ -1,0 +1,101 @@
+BEN_INF_01 =
+{
+	name = "Beneshov Infantry Divisions"
+
+	for_countries = { BEN }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "%d. benesovska pesi divize"
+
+	ordered =
+	{
+		1 = { "%d. benesovska pesi divize" }
+		2 = { "%d. benesovska pesi divize" }
+		3 = { "%d. benesovska pesi divize" }
+		4 = { "%d. benesovska pesi divize" }
+		5 = { "%d. benesovska pesi divize" }
+		6 = { "%d. benesovska pesi divize" }
+		7 = { "%d. benesovska pesi divize" }
+		8 = { "%d. benesovska pesi divize" }
+		9 = { "%d. benesovska pesi divize" }
+		10 = { "%d. benesovska pesi divize" }
+		11 = { "%d. benesovska pesi divize" }
+		12 = { "%d. benesovska pesi divize" }
+		13 = { "%d. benesovska pesi divize" }
+		14 = { "%d. benesovska pesi divize" }
+		15 = { "%d. benesovska pesi divize" }
+		16 = { "%d. benesovska pesi divize" }
+		17 = { "%d. benesovska pesi divize" }
+		18 = { "%d. benesovska pesi divize" }
+		19 = { "%d. benesovska pesi divize" }
+		20 = { "%d. benesovska pesi divize" }
+	}
+}
+
+BEN_GAR_01 =
+{
+	name = "Beneshov District Garrisons"
+
+	for_countries = { BEN }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "%d. okresni domobrana"
+
+	ordered =
+	{
+		1 = { "%d. okresni domobrana" }
+		2 = { "%d. okresni domobrana" }
+		3 = { "%d. okresni domobrana" }
+		4 = { "%d. okresni domobrana" }
+		5 = { "%d. okresni domobrana" }
+		6 = { "%d. okresni domobrana" }
+		7 = { "%d. okresni domobrana" }
+		8 = { "%d. okresni domobrana" }
+		9 = { "%d. okresni domobrana" }
+		10 = { "%d. okresni domobrana" }
+		11 = { "%d. okresni domobrana" }
+		12 = { "%d. okresni domobrana" }
+		13 = { "%d. okresni domobrana" }
+		14 = { "%d. okresni domobrana" }
+		15 = { "%d. okresni domobrana" }
+		16 = { "%d. okresni domobrana" }
+		17 = { "%d. okresni domobrana" }
+		18 = { "%d. okresni domobrana" }
+		19 = { "%d. okresni domobrana" }
+		20 = { "%d. okresni domobrana" }
+	}
+}
+
+BEN_ELITE_01 =
+{
+	name = "Beneshov Shock Divisions"
+
+	for_countries = { BEN }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "%d. uderna divize"
+
+	ordered =
+	{
+		1 = { "%d. uderna divize" }
+		2 = { "%d. uderna divize" }
+		3 = { "%d. uderna divize" }
+		4 = { "%d. uderna divize" }
+		5 = { "%d. uderna divize" }
+		6 = { "%d. uderna divize" }
+		7 = { "%d. uderna divize" }
+		8 = { "%d. uderna divize" }
+		9 = { "%d. uderna divize" }
+		10 = { "%d. uderna divize" }
+	}
+}
+
