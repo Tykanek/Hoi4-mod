@@ -1,0 +1,8 @@
+﻿l_english:
+ ben_pra_debug.1.t:0 "[DEBUG] Force Beneshov Bidding War Victory"
+ ben_pra_debug.1.d:0 "Developer test event.\n\nSets bidding balance to favor Beneshov (Offer: BEN 25B vs PRA 10B, Balance: -15) and immediately triggers the real Bidding War resolution effect (pra_ben_resolve_bidding_war_effect).\n\nLukas Elbl will be transferred from Prague to Beneshov and unlocked as Field Marshal."
+ ben_pra_debug.1.a:0 "Execute Beneshov Victory Resolution"
+
+ ben_pra_debug.2.t:0 "[DEBUG] Force Prague Bidding War Victory"
+ ben_pra_debug.2.d:0 "Developer test event.\n\nSets bidding balance to favor Prague (Offer: PRA 25B vs BEN 10B, Balance: +15) and immediately triggers the real Bidding War resolution effect (pra_ben_resolve_bidding_war_effect).\n\nLukas Elbl will remain with Prague and be unlocked as Field Marshal."
+ ben_pra_debug.2.a:0 "Execute Prague Victory Resolution"

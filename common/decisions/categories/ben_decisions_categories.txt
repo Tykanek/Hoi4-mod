@@ -1,20 +1,3 @@
-ben_underground_network_category = {
-	icon = generic_intel_bonus
-
-	allowed = {
-		original_tag = BEN
-	}
-
-	visible_when_empty = yes
-
-	visible = {
-		original_tag = BEN
-	}
-
-	priority = {
-		base = 25
-	}
-}
 
 ben_emergency_economy_category = {
 	icon = generic_industry
@@ -30,7 +13,7 @@ ben_emergency_economy_category = {
 	}
 
 	priority = {
-		base = 20
+		base = 180
 	}
 }
 
@@ -48,7 +31,7 @@ ben_information_office_category = {
 	}
 
 	priority = {
-		base = 15
+		base = 170
 	}
 }
 
@@ -67,7 +50,7 @@ ben_pra_rivalry_category = {
 	}
 
 	priority = {
-		base = 12
+		base = 160
 	}
 }
 

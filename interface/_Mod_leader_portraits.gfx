@@ -79,4 +79,32 @@ spriteTypes = {
 		name = "GFX_idea_BEN_andrej_babis"
 		texturefile = "gfx/interface/ideas/idea_BEN_andrej_babis.dds"
 	}
+	spriteType = {
+		name = "GFX_portrait_BEN_joe_biden"
+		texturefile = "gfx/leaders/BEN/BEN_joe_biden.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_BEN_joe_biden_small"
+		texturefile = "gfx/leaders/BEN/BEN_joe_biden_small.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BEN_joe_biden"
+		texturefile = "gfx/interface/ideas/idea_BEN_joe_biden.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_lukas_elbl"
+		texturefile = "gfx/leaders/PRA_BEN/lukas_elbl.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_lukas_elbl_small"
+		texturefile = "gfx/leaders/PRA_BEN/lukas_elbl_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_PRA_BEN_lukas_elbl"
+		texturefile = "gfx/leaders/PRA_BEN/lukas_elbl.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_PRA_BEN_lukas_elbl_small"
+		texturefile = "gfx/leaders/PRA_BEN/lukas_elbl_small.dds"
+	}
 }

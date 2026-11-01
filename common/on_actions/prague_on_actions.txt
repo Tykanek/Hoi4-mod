@@ -47,6 +47,13 @@ on_actions = {
                     1101 = { add_core_of = GER }
                 }
             }
+
+            PRA = {
+                if = {
+                    limit = { is_ai = no }
+                    country_event = { id = pra_intro.1 days = 1 }
+                }
+            }
         }
     }
 

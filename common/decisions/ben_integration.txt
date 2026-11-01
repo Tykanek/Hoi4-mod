@@ -27,12 +27,6 @@ ben_integration_category = {
 		}
 
 		remove_effect = {
-			if = {
-				limit = {
-					FROM = { has_state_flag = ben_local_committee_prepared }
-				}
-				add_political_power = 15
-			}
 			FROM = {
 				set_state_flag = ben_integrated_stage_1
 			}
@@ -126,7 +120,6 @@ ben_integration_category = {
 				set_state_flag = ben_state_fully_integrated
 				clr_state_flag = ben_integrated_stage_1
 				clr_state_flag = ben_integrated_stage_2
-				clr_state_flag = ben_local_committee_prepared
 			}
 			if = {
 				limit = {

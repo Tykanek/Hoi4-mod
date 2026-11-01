@@ -536,63 +536,6 @@ ideas = {
 			}
 		}
 
-		# ============================================================
-		# BENESHOV UNDERGROUND NETWORK (Dynamic Stages 1-5)
-		# ============================================================
-		ben_underground_network_spirit_1 = {
-			picture = generic_intel_bonus
-			allowed = { always = no }
-			removal_cost = -1
-			modifier = {
-				intel_network_gain_factor = 0.02
-			}
-		}
-
-		ben_underground_network_spirit_2 = {
-			picture = generic_intel_bonus
-			allowed = { always = no }
-			removal_cost = -1
-			modifier = {
-				intel_network_gain_factor = 0.10
-				supply_consumption_factor = -0.05
-			}
-		}
-
-		ben_underground_network_spirit_3 = {
-			picture = generic_intel_bonus
-			allowed = { always = no }
-			removal_cost = -1
-			modifier = {
-				intel_network_gain_factor = 0.15
-				supply_consumption_factor = -0.10
-				subversive_activites_upkeep = -0.10
-			}
-		}
-
-		ben_underground_network_spirit_4 = {
-			picture = generic_intel_bonus
-			allowed = { always = no }
-			removal_cost = -1
-			modifier = {
-				intel_network_gain_factor = 0.20
-				supply_consumption_factor = -0.15
-				planning_speed = 0.10
-				foreign_subversive_activites = 0.10
-			}
-		}
-
-		ben_underground_network_spirit_5 = {
-			picture = generic_intel_bonus
-			allowed = { always = no }
-			removal_cost = -1
-			modifier = {
-				intel_network_gain_factor = 0.25
-				supply_consumption_factor = -0.20
-				max_planning = 0.10
-				planning_speed = 0.15
-				foreign_subversive_activites = 0.20
-			}
-		}
 
 		# ============================================================
 		# BENESHOV MILITARY SPIRITS (Evolving Army Identity)
@@ -775,37 +718,6 @@ ideas = {
 			}
 		}
 
-		# ============================================================
-		# UNDERGROUND SABOTAGE DEBUFFS (Target: CZE)
-		# ============================================================
-		ben_cze_railway_sabotage_debuff = {
-			picture = generic_damage_civil_infrastructure
-			allowed = { always = no }
-			removal_cost = -1
-			modifier = {
-				supply_factor = -0.15
-				army_speed_factor = -0.10
-			}
-		}
 
-		ben_cze_mobilization_confusion_debuff = {
-			picture = generic_disruption
-			allowed = { always = no }
-			removal_cost = -1
-			modifier = {
-				land_reinforce_rate = -0.05
-				army_org_factor = -0.10
-			}
-		}
-
-		ben_cze_warehouse_disruption_debuff = {
-			picture = generic_army_problems
-			allowed = { always = no }
-			removal_cost = -1
-			modifier = {
-				supply_consumption_factor = 0.15
-				attrition = 0.10
-			}
-		}
 	}
 }

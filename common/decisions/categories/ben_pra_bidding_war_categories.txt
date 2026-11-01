@@ -21,7 +21,7 @@ pra_ben_bidding_war_category = {
 	}
 
 	priority = {
-		base = 10
+		base = 200
 	}
 
 	scripted_gui = pra_ben_bidding_war_ui

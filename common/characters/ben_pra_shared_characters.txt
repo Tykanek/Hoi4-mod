@@ -2,18 +2,33 @@ characters = {
 	PRA_BEN_shared_field_marshal = {
 		name = PRA_BEN_shared_field_marshal
 		portraits = {
+			civilian = {
+				large = "GFX_portrait_lukas_elbl"
+				small = "GFX_portrait_lukas_elbl_small"
+			}
 			army = {
-				large = "GFX_europe_generic_land_4"
-				small = "GFX_europe_generic_land_4_small"
+				large = "GFX_portrait_lukas_elbl"
+				small = "GFX_portrait_lukas_elbl_small"
 			}
 		}
 		field_marshal = {
-			traits = { thorough_planner fast_planner organisational_leader }
-			skill = 5
-			attack_skill = 4
-			defense_skill = 4
-			planning_skill = 5
-			logistics_skill = 5
+			traits = {
+				brilliant_strategist
+				war_hero
+				logistics_wizard
+				offensive_doctrine
+				thorough_planner
+				organisational_leader
+				inspirational_leader
+				expert_delegator
+				adaptable
+				trickster
+			}
+			skill = 9
+			attack_skill = 9
+			defense_skill = 9
+			planning_skill = 9
+			logistics_skill = 9
 			legacy_id = -1
 			visible = {
 				has_character_flag = pra_ben_elbl_contract_signed

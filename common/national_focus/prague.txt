@@ -25,7 +25,7 @@ focus_tree = {
         icon = GFX_goal_generic_allies_build_infantry
         x = 2
         y = 0
-        cost = 10
+        cost = 4.286
         search_filters = { FOCUS_FILTER_ARMY_XP }
         ai_will_do = { factor = 7 }
 
@@ -55,7 +55,7 @@ focus_tree = {
         relative_position_id = pra_reorganize_prague_garrison
         x = 0
         y = 1
-        cost = 10
+        cost = 4.286
         prerequisite = { focus = pra_reorganize_prague_garrison }
         search_filters = { FOCUS_FILTER_RESEARCH }
 
@@ -79,7 +79,7 @@ focus_tree = {
         relative_position_id = pra_standardize_army_equipment
         x = -1
         y = 1
-        cost = 10
+        cost = 4.286
         prerequisite = { focus = pra_standardize_army_equipment }
         search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
 
@@ -105,7 +105,7 @@ focus_tree = {
         relative_position_id = pra_standardize_army_equipment
         x = 1
         y = 1
-        cost = 10
+        cost = 4.286
         prerequisite = { focus = pra_standardize_army_equipment }
         search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
 
@@ -131,7 +131,7 @@ focus_tree = {
         relative_position_id = pra_standardize_army_equipment
         x = 0
         y = 2
-        cost = 10
+        cost = 4.286
         prerequisite = { focus = pra_artillery_for_the_capital }
         prerequisite = { focus = pra_motorized_reserves }
         search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -154,7 +154,7 @@ focus_tree = {
         icon = GFX_goal_generic_build_airforce
         x = 8
         y = 0
-        cost = 10
+        cost = 4.286
         search_filters = { FOCUS_FILTER_AIR_XP }
 
         completion_reward = {
@@ -176,7 +176,7 @@ focus_tree = {
         relative_position_id = pra_establish_air_command
         x = 0
         y = 1
-        cost = 10
+        cost = 4.286
         prerequisite = { focus = pra_establish_air_command }
         search_filters = { FOCUS_FILTER_AIR_XP }
 
@@ -201,7 +201,7 @@ focus_tree = {
         relative_position_id = pra_expand_letnany_aviation_complex
         x = -1
         y = 1
-        cost = 10
+        cost = 4.286
         prerequisite = { focus = pra_expand_letnany_aviation_complex }
         search_filters = { FOCUS_FILTER_AIR_XP FOCUS_FILTER_RESEARCH }
 
@@ -222,7 +222,7 @@ focus_tree = {
         relative_position_id = pra_expand_letnany_aviation_complex
         x = 1
         y = 1
-        cost = 10
+        cost = 4.286
         prerequisite = { focus = pra_expand_letnany_aviation_complex }
         search_filters = { FOCUS_FILTER_AIR_XP FOCUS_FILTER_RESEARCH }
 
@@ -243,7 +243,7 @@ focus_tree = {
         relative_position_id = pra_expand_letnany_aviation_complex
         x = 0
         y = 2
-        cost = 10
+        cost = 4.286
         prerequisite = { focus = pra_avia_fighter_programme }
         prerequisite = { focus = pra_letov_ground_support_programme }
         search_filters = { FOCUS_FILTER_AIR_XP }
@@ -272,7 +272,7 @@ focus_tree = {
         icon = GFX_focus_PRA_mobilize_prague_industry
         x = 15
         y = 0
-        cost = 10
+        cost = 4.286
         search_filters = { FOCUS_FILTER_INDUSTRY }
 
         completion_reward = {
@@ -303,7 +303,7 @@ focus_tree = {
         relative_position_id = pra_mobilize_prague_industry
         x = 0
         y = 1
-        cost = 10
+        cost = 4.286
         prerequisite = { focus = pra_mobilize_prague_industry }
         search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -324,7 +324,7 @@ focus_tree = {
         relative_position_id = pra_modernize_workshops
         x = -1
         y = 1
-        cost = 10
+        cost = 4.286
         prerequisite = { focus = pra_modernize_workshops }
         search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -346,7 +346,7 @@ focus_tree = {
         relative_position_id = pra_modernize_workshops
         x = 1
         y = 1
-        cost = 10
+        cost = 4.286
         prerequisite = { focus = pra_modernize_workshops }
         search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -368,7 +368,7 @@ focus_tree = {
         relative_position_id = pra_modernize_workshops
         x = 0
         y = 2
-        cost = 10
+        cost = 4.286
         prerequisite = { focus = pra_expand_ckd_works }
         prerequisite = { focus = pra_municipal_works_programme }
         search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -398,7 +398,7 @@ focus_tree = {
         icon = GFX_focus_PRA_declare_independence
         x = 22
         y = 0
-        cost = 10
+        cost = 4.286
         mutually_exclusive = { focus = prague_remain_czech_subject }
         available = { is_subject_of = CZE }
         bypass = { is_subject = no }
@@ -428,7 +428,7 @@ focus_tree = {
         icon = GFX_focus_PRA_remain_czech_subject
         x = 40
         y = 0
-        cost = 10
+        cost = 4.286
         mutually_exclusive = { focus = prague_declare_independence }
         available = { is_subject_of = CZE }
 
@@ -455,7 +455,7 @@ focus_tree = {
         relative_position_id = prague_remain_czech_subject
         x = 0
         y = 1
-        cost = 10
+        cost = 4.286
         available = { is_subject_of = CZE }
         completion_reward = {
             add_autonomy_ratio = { value = -0.20 }
@@ -476,7 +476,7 @@ focus_tree = {
         relative_position_id = pra_czech_supervisors_return
         x = 0
         y = 1
-        cost = 10
+        cost = 4.286
         available = { is_subject_of = CZE }
         completion_reward = {
             add_autonomy_ratio = { value = -0.25 }
@@ -497,7 +497,7 @@ focus_tree = {
         relative_position_id = pra_integrate_municipal_administration
         x = 0
         y = 1
-        cost = 10
+        cost = 4.286
         available = { is_subject_of = CZE }
         completion_reward = {
             custom_effect_tooltip = pra_return_prague_to_republic_tt
@@ -521,7 +521,7 @@ focus_tree = {
         relative_position_id = prague_declare_independence
         x = 0
         y = 1
-        cost = 10
+        cost = 4.286
         available = { has_government = democratic }
 
         completion_reward = {
@@ -562,7 +562,7 @@ focus_tree = {
         relative_position_id = pra_mobilize_vltava_defense_front
         x = -2
         y = 1
-        cost = 10
+        cost = 4.286
         available = { has_government = democratic }
 
         completion_reward = {
@@ -590,7 +590,7 @@ focus_tree = {
         relative_position_id = pra_mobilize_vltava_defense_front
         x = 0
         y = 1
-        cost = 10
+        cost = 4.286
         available = { has_government = democratic }
 
         completion_reward = {
@@ -608,7 +608,7 @@ focus_tree = {
         relative_position_id = pra_mobilize_vltava_defense_front
         x = 2
         y = 1
-        cost = 10
+        cost = 4.286
         available = { has_government = democratic }
 
         completion_reward = {
@@ -634,7 +634,7 @@ focus_tree = {
 
     x = 31
     y = 2
-    cost = 10
+    cost = 4.286
 
     available = {
         has_government = fascism
@@ -674,7 +674,7 @@ focus_tree = {
         relative_position_id = pra_strange_interlude
         x = 0
         y = 1
-        cost = 10
+        cost = 4.286
 
         available = {
             has_government = fascism
@@ -703,7 +703,7 @@ focus_tree = {
         relative_position_id = pra_investigate_benesov_hatred
         x = -4
         y = 1
-        cost = 10
+        cost = 4.286
 
         available = {
             has_opinion = {
@@ -728,7 +728,7 @@ focus_tree = {
         relative_position_id = pra_investigate_benesov_hatred
         x = -2
         y = 1
-        cost = 10
+        cost = 4.286
 
         available = {
             has_opinion = {
@@ -754,7 +754,7 @@ focus_tree = {
         relative_position_id = pra_investigate_benesov_hatred
         x = 0
         y = 1
-        cost = 10
+        cost = 4.286
 
         available = {
             has_opinion = {
@@ -779,7 +779,7 @@ focus_tree = {
         relative_position_id = pra_investigate_benesov_hatred
         x = 2
         y = 1
-        cost = 10
+        cost = 4.286
 
         available = {
             has_opinion = {
@@ -805,7 +805,7 @@ focus_tree = {
         relative_position_id = pra_investigate_benesov_hatred
         x = 4
         y = 1
-        cost = 10
+        cost = 4.286
 
         available = {
             has_opinion = {
@@ -840,7 +840,7 @@ focus_tree = {
         relative_position_id = pra_mobilize_vltava_defense_front
         x = 0
         y = 2
-        cost = 10
+        cost = 4.286
         available = {
             has_government = democratic
             fascism > 0.40
@@ -888,7 +888,7 @@ focus_tree = {
         relative_position_id = pra_mohammedis_overthrows_government
         x = -2
         y = 1
-        cost = 10
+        cost = 4.286
         available = {
             has_government = fascism
             1082 = { is_owned_and_controlled_by = ROOT }
@@ -920,7 +920,7 @@ focus_tree = {
         relative_position_id = pra_mohammedis_overthrows_government
         x = 0
         y = 1
-        cost = 10
+        cost = 4.286
         available = {
             has_government = fascism
             1082 = { is_owned_and_controlled_by = ROOT }
@@ -947,7 +947,7 @@ focus_tree = {
         relative_position_id = pra_mohammedis_overthrows_government
         x = 2
         y = 1
-        cost = 10
+        cost = 4.286
         available = {
             has_government = fascism
             1082 = { is_owned_and_controlled_by = ROOT }
@@ -983,7 +983,7 @@ focus_tree = {
         relative_position_id = pra_prague_general_staff
         x = -2
         y = 1
-        cost = 10
+        cost = 4.286
         completion_reward = {
             add_manpower = 2500
             unlock_decision_category_tooltip = pra_reserve_mobilization
@@ -997,7 +997,7 @@ focus_tree = {
         relative_position_id = pra_thirty_minute_reserve
         x = 0
         y = 1
-        cost = 10
+        cost = 4.286
         completion_reward = {
             army_experience = 25
             add_command_power = 20
@@ -1015,7 +1015,7 @@ focus_tree = {
         relative_position_id = pra_barricade_doctrine
         x = -1
         y = 1
-        cost = 10
+        cost = 4.286
         completion_reward = {
             1082 = {
                 add_building_construction = {
@@ -1036,7 +1036,7 @@ focus_tree = {
         relative_position_id = pra_barricade_doctrine
         x = 1
         y = 1
-        cost = 10
+        cost = 4.286
         completion_reward = {
             army_experience = 25
             add_command_power = 20
@@ -1055,7 +1055,7 @@ focus_tree = {
         relative_position_id = pra_barricade_doctrine
         x = 0
         y = 2
-        cost = 10
+        cost = 4.286
         completion_reward = {
             army_experience = 25
             add_command_power = 20
@@ -1080,7 +1080,7 @@ focus_tree = {
         relative_position_id = pra_metropolitan_assault_groups
         x = -2
         y = 1
-        cost = 10
+        cost = 4.286
         mutually_exclusive = { focus = pra_field_army }
         completion_reward = {
             swap_ideas = {
@@ -1098,7 +1098,7 @@ focus_tree = {
         relative_position_id = pra_metropolitan_assault_groups
         x = 2
         y = 1
-        cost = 10
+        cost = 4.286
         mutually_exclusive = { focus = pra_fortress_army }
         completion_reward = {
             swap_ideas = {
@@ -1120,7 +1120,7 @@ focus_tree = {
         relative_position_id = pra_air_defence_of_prague
         x = -1
         y = 1
-        cost = 10
+        cost = 4.286
         completion_reward = {
             air_experience = 15
             1082 = {
@@ -1140,7 +1140,7 @@ focus_tree = {
         relative_position_id = pra_prague_air_warning_service
         x = 0
         y = 1
-        cost = 10
+        cost = 4.286
         completion_reward = {
             air_experience = 15
             1082 = {
@@ -1160,7 +1160,7 @@ focus_tree = {
         relative_position_id = pra_kbely_command_network
         x = 0
         y = 1
-        cost = 10
+        cost = 4.286
         completion_reward = {
             1082 = {
                 add_extra_state_shared_building_slots = 1
@@ -1181,7 +1181,7 @@ focus_tree = {
         relative_position_id = pra_underground_aircraft_workshops
         x = -2
         y = 1
-        cost = 10
+        cost = 4.286
         mutually_exclusive = { focus = pra_army_cooperation_air }
         completion_reward = {
             swap_ideas = {
@@ -1204,7 +1204,7 @@ focus_tree = {
         relative_position_id = pra_underground_aircraft_workshops
         x = 2
         y = 1
-        cost = 10
+        cost = 4.286
         mutually_exclusive = { focus = pra_interceptor_priority }
         completion_reward = {
             swap_ideas = {
@@ -1231,7 +1231,7 @@ focus_tree = {
         relative_position_id = pra_arsenal_of_prague
         x = -2
         y = 1
-        cost = 10
+        cost = 4.286
         completion_reward = {
             1082 = {
                 add_extra_state_shared_building_slots = 1
@@ -1251,7 +1251,7 @@ focus_tree = {
         relative_position_id = pra_vysocany_subcontractors
         x = 0
         y = 1
-        cost = 10
+        cost = 4.286
         completion_reward = {
             1082 = {
                 add_extra_state_shared_building_slots = 1
@@ -1276,7 +1276,7 @@ focus_tree = {
         relative_position_id = pra_night_shifts_at_ckd
         x = -1
         y = 1
-        cost = 10
+        cost = 4.286
         completion_reward = {
             unlock_decision_category_tooltip = pra_salvage_programme
         }
@@ -1289,7 +1289,7 @@ focus_tree = {
         relative_position_id = pra_night_shifts_at_ckd
         x = 1
         y = 1
-        cost = 10
+        cost = 4.286
         completion_reward = {
             1082 = {
                 add_extra_state_shared_building_slots = 1
@@ -1315,7 +1315,7 @@ focus_tree = {
         relative_position_id = pra_night_shifts_at_ckd
         x = 0
         y = 2
-        cost = 10
+        cost = 4.286
         completion_reward = {
             add_equipment_to_stockpile = {
                 type = artillery_equipment_1
@@ -1338,7 +1338,7 @@ focus_tree = {
         relative_position_id = pra_skoda_connections
         x = -1
         y = 1
-        cost = 10
+        cost = 4.286
         completion_reward = {
             1082 = {
                 add_extra_state_shared_building_slots = 1
@@ -1358,7 +1358,7 @@ focus_tree = {
         relative_position_id = pra_skoda_connections
         x = 1
         y = 1
-        cost = 10
+        cost = 4.286
         completion_reward = {
             add_research_slot = 1
         }
@@ -1372,7 +1372,7 @@ focus_tree = {
         relative_position_id = pra_skoda_connections
         x = 0
         y = 2
-        cost = 10
+        cost = 4.286
         completion_reward = {
             remove_ideas = pra_fragmented_workshop_network
             remove_ideas = pra_modernized_workshop_network
@@ -1393,7 +1393,7 @@ focus_tree = {
         relative_position_id = pra_commandeer_workshops
         x = 0
         y = 1
-        cost = 10
+        cost = 4.286
         available = { has_government = fascism }
         completion_reward = {
             swap_ideas = {
@@ -1411,7 +1411,7 @@ focus_tree = {
         relative_position_id = pra_morning_after_coup
         x = -2
         y = 1
-        cost = 10
+        cost = 4.286
         available = { has_government = fascism }
         completion_reward = {
             if = {
@@ -1437,7 +1437,7 @@ focus_tree = {
         relative_position_id = pra_morning_after_coup
         x = 0
         y = 1
-        cost = 10
+        cost = 4.286
         available = { has_government = fascism }
         completion_reward = {
             set_country_flag = pra_directorate_decrees_issued
@@ -1452,7 +1452,7 @@ focus_tree = {
         relative_position_id = pra_directorate_decrees
         x = -1
         y = 1
-        cost = 10
+        cost = 4.286
         available = { has_government = fascism }
         completion_reward = {
             add_political_power = 50
@@ -1467,7 +1467,7 @@ focus_tree = {
         relative_position_id = pra_directorate_decrees
         x = 1
         y = 1
-        cost = 10
+        cost = 4.286
         available = { has_government = fascism }
         completion_reward = {
             army_experience = 25
@@ -1482,7 +1482,7 @@ focus_tree = {
         relative_position_id = pra_reward_loyal_officers
         x = 0
         y = 1
-        cost = 10
+        cost = 4.286
         available = { has_government = fascism }
         completion_reward = {
             add_manpower = 5000
@@ -1497,7 +1497,7 @@ focus_tree = {
         relative_position_id = pra_purge_municipal_bureaucracy
         x = 0
         y = 1
-        cost = 10
+        cost = 4.286
         available = { has_government = fascism }
         completion_reward = {
             unlock_decision_category_tooltip = pra_directorate_propaganda
@@ -1512,7 +1512,7 @@ focus_tree = {
         relative_position_id = pra_black_uniform
         x = 0
         y = 1
-        cost = 10
+        cost = 4.286
         available = { has_government = fascism }
         completion_reward = {
             add_stability = 0.05
@@ -1527,7 +1527,7 @@ focus_tree = {
         relative_position_id = pra_city_of_discipline
         x = 0
         y = 1
-        cost = 10
+        cost = 4.286
         available = { has_government = fascism }
         completion_reward = {
             remove_ideas = pra_morning_after_coup
@@ -1544,7 +1544,7 @@ focus_tree = {
         relative_position_id = pra_mohammedis_speaks_from_rudolfinum
         x = 0
         y = 1
-        cost = 10
+        cost = 4.286
         available = { has_government = fascism }
         completion_reward = {
             remove_ideas = pra_mohammedis_state
@@ -1561,7 +1561,7 @@ focus_tree = {
         relative_position_id = pra_colonel_becomes_the_state
         x = -1
         y = 1
-        cost = 10
+        cost = 4.286
         available = { has_government = fascism }
         completion_reward = {
             add_research_slot = 1
@@ -1579,7 +1579,7 @@ focus_tree = {
         relative_position_id = pra_colonel_becomes_the_state
         x = 1
         y = 1
-        cost = 10
+        cost = 4.286
         available = { has_government = fascism }
         completion_reward = {
             set_country_flag = pra_bohemian_programme
@@ -1596,7 +1596,7 @@ focus_tree = {
         relative_position_id = pra_prague_is_not_an_island
         x = 0
         y = 1
-        cost = 10
+        cost = 4.286
         available = {
             has_government = fascism
         }
@@ -1625,7 +1625,7 @@ focus_tree = {
         relative_position_id = pra_protector_of_bohemia
         x = -2
         y = 1
-        cost = 10
+        cost = 4.286
         available = { has_government = fascism }
         bypass = {
             OR = {
@@ -1654,7 +1654,7 @@ focus_tree = {
         relative_position_id = pra_protector_of_bohemia
         x = 2
         y = 1
-        cost = 10
+        cost = 4.286
         available = {
             has_government = fascism
         }
@@ -1686,7 +1686,7 @@ focus_tree = {
         relative_position_id = pra_protector_of_bohemia
         x = 0
         y = 3
-        cost = 10
+        cost = 4.286
         available = {
             has_government = fascism
             country_exists = CZE
@@ -1720,7 +1720,7 @@ focus_tree = {
         relative_position_id = pra_ultimatum_from_prague
         x = -3
         y = 1
-        cost = 10
+        cost = 4.286
         available = { has_government = fascism }
         bypass = {
             OR = {
@@ -1755,7 +1755,7 @@ focus_tree = {
         relative_position_id = pra_ultimatum_from_prague
         x = -1
         y = 1
-        cost = 10
+        cost = 4.286
         available = { has_government = fascism }
         bypass = {
             OR = {
@@ -1790,7 +1790,7 @@ focus_tree = {
         relative_position_id = pra_ultimatum_from_prague
         x = 1
         y = 1
-        cost = 10
+        cost = 4.286
         available = { has_government = fascism }
         bypass = {
             OR = {
@@ -1829,7 +1829,7 @@ focus_tree = {
         relative_position_id = pra_ultimatum_from_prague
         x = 3
         y = 1
-        cost = 10
+        cost = 4.286
         available = { has_government = fascism }
         completion_reward = {
             army_experience = 20
@@ -1844,7 +1844,7 @@ focus_tree = {
         relative_position_id = pra_ultimatum_from_prague
         x = -2
         y = 2
-        cost = 10
+        cost = 4.286
         available = { has_government = fascism }
         bypass = {
             OR = {
@@ -1885,7 +1885,7 @@ focus_tree = {
         relative_position_id = pra_ultimatum_from_prague
         x = 0
         y = 2
-        cost = 10
+        cost = 4.286
         available = { has_government = fascism }
         bypass = {
             OR = {
@@ -1914,7 +1914,7 @@ focus_tree = {
         relative_position_id = pra_ultimatum_from_prague
         x = 2
         y = 2
-        cost = 10
+        cost = 4.286
         available = { has_government = fascism }
         completion_reward = {
             if = {
@@ -1945,7 +1945,7 @@ focus_tree = {
         relative_position_id = pra_ultimatum_from_prague
         x = 0
         y = 3
-        cost = 10
+        cost = 4.286
         available = {
             has_government = fascism
             OR = {
@@ -1986,7 +1986,7 @@ focus_tree = {
         relative_position_id = pra_czech_state_reborn
         x = 0
         y = 1
-        cost = 10
+        cost = 4.286
         will_lead_to_war_with = BEN
         available = {
             is_subject = no

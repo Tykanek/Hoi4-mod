@@ -1,0 +1,40 @@
+add_namespace = ben_pra_debug
+
+# ben_pra_debug.1: Developer Test - Force BEN Victory in Lukas Elbl Bidding War
+country_event = {
+	id = ben_pra_debug.1
+	title = ben_pra_debug.1.t
+	desc = ben_pra_debug.1.d
+	picture = GFX_report_event_military_planning
+
+	is_triggered_only = yes
+
+	option = {
+		name = ben_pra_debug.1.a
+		set_global_flag = pra_ben_bidding_war_resolved
+		set_variable = { global.pra_bidding_offer = 10 }
+		set_variable = { global.ben_bidding_offer = 25 }
+		set_variable = { global.pra_ben_bidding_balance = -15 }
+		pra_ben_resolve_bidding_war_effect = yes
+	}
+}
+
+# ben_pra_debug.2: Developer Test - Force PRA Victory in Lukas Elbl Bidding War
+country_event = {
+	id = ben_pra_debug.2
+	title = ben_pra_debug.2.t
+	desc = ben_pra_debug.2.d
+	picture = GFX_report_event_military_planning
+
+	is_triggered_only = yes
+
+	option = {
+		name = ben_pra_debug.2.a
+		set_global_flag = pra_ben_bidding_war_resolved
+		set_variable = { global.pra_bidding_offer = 25 }
+		set_variable = { global.ben_bidding_offer = 10 }
+		set_variable = { global.pra_ben_bidding_balance = 15 }
+		pra_ben_resolve_bidding_war_effect = yes
+	}
+}
+

@@ -222,4 +222,34 @@ characters = {
 			}
 		}
 	}
+
+	BEN_Joe_Biden = {
+		name = BEN_Joe_Biden
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_BEN_joe_biden"
+				small = "GFX_idea_BEN_joe_biden"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = BEN_Joe_Biden
+			allowed = {
+				original_tag = BEN
+			}
+			available = {
+				IF = {
+					limit = { has_dlc = "Man the Guns" }
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
+			}
+			traits = {
+				democratic_reformer
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
 }

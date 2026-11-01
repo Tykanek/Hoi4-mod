@@ -46,7 +46,7 @@ country_event = {
 	}
 }
 
-# 4. Second Division Deployed
+# 4. Beneshov's First Field Exercises
 country_event = {
 	id = ben_flavor.4
 	title = ben_flavor.4.t
@@ -129,69 +129,6 @@ country_event = {
 	option = {
 		name = ben_flavor.8.a
 		air_experience = 10
-	}
-}
-
-# 9. Underground Network: Pub Contacts Synchronized
-country_event = {
-	id = ben_flavor.9
-	title = ben_flavor.9.t
-	desc = ben_flavor.9.d
-	picture = GFX_report_event_gathering_protest
-
-	is_triggered_only = yes
-
-	option = {
-		name = ben_flavor.9.a
-		add_political_power = 15
-	}
-}
-
-# 10. Underground Network: The Railway Telegraph
-country_event = {
-	id = ben_flavor.10
-	title = ben_flavor.10.t
-	desc = ben_flavor.10.d
-	picture = GFX_report_event_generic_train
-
-	is_triggered_only = yes
-
-	option = {
-		name = ben_flavor.10.a
-		add_political_power = 15
-	}
-}
-
-# 11. Underground Network: District Integration
-country_event = {
-	id = ben_flavor.11
-	title = ben_flavor.11.t
-	desc = ben_flavor.11.d
-	picture = GFX_report_event_gathering_protest
-
-	is_triggered_only = yes
-
-	option = {
-		name = ben_flavor.11.a
-		add_political_power = 20
-		add_stability = 0.02
-	}
-}
-
-# 12. Underground Network: From Pubs to Power
-country_event = {
-	id = ben_flavor.12
-	title = ben_flavor.12.t
-	desc = ben_flavor.12.d
-	picture = GFX_report_event_gathering_protest
-
-	is_triggered_only = yes
-
-	option = {
-		name = ben_flavor.12.a
-		add_political_power = 35
-		add_stability = 0.03
-		add_war_support = 0.02
 	}
 }
 

@@ -45,7 +45,7 @@
  pra_mohammedis.11.a: "Prague will lead."
 
  pra_mohammedis.12.t: "Prague Is Not an Island"
- pra_mohammedis.12.d: "Beneshov has fallen, but the victory leaves the central Czech lands divided between a restored Czechoslovakia and a Prague that has learned to govern itself. The Directorate now debates whether independence was a refuge or the first step toward a larger Czech state."
+ pra_mohammedis.12.d: "Beneshov remains entrenched beyond our southern approaches, while the Czech lands stay divided between competing authorities. The Directorate can fortify every bridge in Prague, but it cannot manufacture fields, mines, or strategic depth from municipal decrees. Mohammedis has therefore ordered a review of the territories surrounding the capital. What began as a question of survival is rapidly becoming a question of borders."
  pra_mohammedis.12.a: "The Vltava must reach beyond the city."
 
  pra_mohammedis.13.t: "The Ultimatum from Prague"
@@ -197,3 +197,8 @@
  pra_news.1.t:0 "Prague Blames Beneshov for Everything"
  pra_news.1.d:0 "The Prague government has formally declared Beneshov responsible for a remarkable range of domestic and international problems.\n\nAccording to the statement, Beneshov is to blame for economic instability, poor harvests, railway delays, wars in Asia, and several other crises. No evidence was presented, but the announcement has proven popular in Prague."
  pra_news.1.a:0 "At last, someone is being held accountable."
+
+ # Introductory Pre-1936 Lore Event
+ pra_intro.1.t:0 "The Prague Question"
+ pra_intro.1.d:0 "Prague is home to over one million people. It has impressive factories, busy streets, important government buildings, and one very serious problem: you cannot eat a factory.\n\nWhen the Great Depression hit Czechoslovakia, the government struggled to pay its bills. In 1932, it gave local authorities more freedom to manage their own affairs.\n\nPrague wasted no time. In 1933, its city council gained more control over taxes and trade, hoping to keep more money inside the capital. Unfortunately, the countryside was not particularly happy about paying extra fees just to deliver food.\n\nIn 1934, the small town of Beneshov demanded autonomy of its own. Somehow, a disagreement over taxes and railway deliveries had become a national political crisis.\n\nThat same year, fitness celebrity Filip Grznar rose to power in Prague, promising strength, confidence, and a brighter future. Sadly, none of those things can be turned into bread.\n\nNow it is January 1936. Prague still officially answers to Czechoslovakia, but its leaders are tired of taking orders. The city needs food from outside, the government wants its authority back, and Beneshov keeps causing problems.\n\nPrague must decide whether to remain loyal to the republic or become fully independent."
+ pra_intro.1.a:0 "Surely nothing can go wrong."

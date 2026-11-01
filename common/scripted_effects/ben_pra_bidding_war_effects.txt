@@ -8,8 +8,31 @@ pra_ben_resolve_bidding_war_effect = {
 				check_variable = { var = global.pra_ben_bidding_balance value = 0 compare = greater_than }
 			}
 		}
-		PRA_BEN_shared_field_marshal = {
-			set_character_flag = pra_ben_elbl_contract_signed
+		if = {
+			limit = {
+				PRA = { has_character = PRA_BEN_shared_field_marshal }
+			}
+			PRA = {
+				PRA_BEN_shared_field_marshal = {
+					set_character_flag = pra_ben_elbl_contract_signed
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				BEN = { has_character = PRA_BEN_shared_field_marshal }
+			}
+			BEN = {
+				PRA_BEN_shared_field_marshal = {
+					set_character_flag = pra_ben_elbl_contract_signed
+					set_nationality = PRA
+				}
+			}
+			PRA = {
+				PRA_BEN_shared_field_marshal = {
+					set_character_flag = pra_ben_elbl_contract_signed
+				}
+			}
 		}
 		PRA = {
 			country_event = { id = pra_ben_bidding_war.1 }
@@ -29,9 +52,31 @@ pra_ben_resolve_bidding_war_effect = {
 				check_variable = { var = global.pra_ben_bidding_balance value = 0 compare = less_than }
 			}
 		}
-		PRA_BEN_shared_field_marshal = {
-			set_nationality = BEN
-			set_character_flag = pra_ben_elbl_contract_signed
+		if = {
+			limit = {
+				PRA = { has_character = PRA_BEN_shared_field_marshal }
+			}
+			PRA = {
+				PRA_BEN_shared_field_marshal = {
+					set_character_flag = pra_ben_elbl_contract_signed
+					set_nationality = BEN
+				}
+			}
+			BEN = {
+				PRA_BEN_shared_field_marshal = {
+					set_character_flag = pra_ben_elbl_contract_signed
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				BEN = { has_character = PRA_BEN_shared_field_marshal }
+			}
+			BEN = {
+				PRA_BEN_shared_field_marshal = {
+					set_character_flag = pra_ben_elbl_contract_signed
+				}
+			}
 		}
 		BEN = {
 			country_event = { id = pra_ben_bidding_war.3 }
@@ -49,10 +94,55 @@ pra_ben_resolve_bidding_war_effect = {
 			country_exists = BEN
 			check_variable = { var = global.pra_ben_bidding_balance value = 0 compare = equals }
 		}
-		PRA_BEN_shared_field_marshal = {
-			retire = yes
+		if = {
+			limit = {
+				PRA = { has_character = PRA_BEN_shared_field_marshal }
+			}
+			PRA = {
+				PRA_BEN_shared_field_marshal = {
+					retire = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				BEN = { has_character = PRA_BEN_shared_field_marshal }
+			}
+			BEN = {
+				PRA_BEN_shared_field_marshal = {
+					retire = yes
+				}
+			}
 		}
 		PRA = { country_event = { id = pra_ben_bidding_war.5 } }
 		BEN = { country_event = { id = pra_ben_bidding_war.5 } }
+	}
+
+	# Both ceased to exist
+	if = {
+		limit = {
+			NOT = { country_exists = PRA }
+			NOT = { country_exists = BEN }
+		}
+		if = {
+			limit = {
+				PRA = { has_character = PRA_BEN_shared_field_marshal }
+			}
+			PRA = {
+				PRA_BEN_shared_field_marshal = {
+					retire = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				BEN = { has_character = PRA_BEN_shared_field_marshal }
+			}
+			BEN = {
+				PRA_BEN_shared_field_marshal = {
+					retire = yes
+				}
+			}
+		}
 	}
 }
