@@ -1,0 +1,449 @@
+add_namespace = ben_covert
+add_namespace = pra_covert_counter
+
+# ------------------------------------------------------------
+# Focus 2: The Missing Rifles
+# ------------------------------------------------------------
+
+country_event = {
+	id = ben_covert.1
+	title = ben_covert.1.t
+	desc = ben_covert.1.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	option = {
+		name = ben_covert.1.a
+	}
+}
+
+country_event = {
+	id = ben_covert.2
+	title = ben_covert.2.t
+	desc = ben_covert.2.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	option = {
+		name = ben_covert.2.a
+	}
+}
+
+# ------------------------------------------------------------
+# Focus 3: Follow the Money
+# ------------------------------------------------------------
+
+country_event = {
+	id = ben_covert.3
+	title = ben_covert.3.t
+	desc = ben_covert.3.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	option = {
+		name = ben_covert.3.a
+	}
+}
+
+country_event = {
+	id = ben_covert.4
+	title = ben_covert.4.t
+	desc = ben_covert.4.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	option = {
+		name = ben_covert.4.a
+	}
+}
+
+# ------------------------------------------------------------
+# Focus 4: A Better Life in Beneshov
+# ------------------------------------------------------------
+
+country_event = {
+	id = ben_covert.5
+	title = ben_covert.5.t
+	desc = ben_covert.5.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = ben_covert.5.a
+	}
+}
+
+# ------------------------------------------------------------
+# Focus 5: The Irregular Migration Scandal
+# ------------------------------------------------------------
+
+country_event = {
+	id = ben_covert.6
+	title = ben_covert.6.t
+	desc = ben_covert.6.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = ben_covert.6.a
+		ai_chance = { base = 60 }
+		add_political_power = -40
+		add_stability = 0.03
+	}
+
+	option = {
+		name = ben_covert.6.b
+		ai_chance = { base = 40 }
+		add_stability = -0.05
+	}
+}
+
+country_event = {
+	id = ben_covert.7
+	title = ben_covert.7.t
+	desc = ben_covert.7.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = ben_covert.7.a
+	}
+}
+
+# ------------------------------------------------------------
+# Focus 7: A City That Bleeds Its Rival
+# ------------------------------------------------------------
+
+country_event = {
+	id = ben_covert.8
+	title = ben_covert.8.t
+	desc = ben_covert.8.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = ben_covert.8.a
+	}
+}
+
+# ------------------------------------------------------------
+# Focus 8: The Prague Files
+# ------------------------------------------------------------
+
+country_event = {
+	id = ben_covert.10
+	title = ben_covert.10.t
+	desc = ben_covert.10.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	# Option A: Demand Secret Reparations
+	option = {
+		name = ben_covert.10.a
+		ai_chance = { base = 50 }
+		add_political_power = 75
+		add_offsite_building = {
+			type = industrial_complex
+			level = 1
+		}
+		if = {
+			limit = { country_exists = PRA }
+			PRA = {
+				country_event = { id = ben_covert.11 hours = 6 }
+			}
+		}
+	}
+
+	# Option B: Publish Everything to Disgrace Prague
+	option = {
+		name = ben_covert.10.b
+		ai_chance = { base = 50 }
+		add_political_power = 50
+		add_war_support = 0.15
+		if = {
+			limit = { country_exists = PRA }
+			PRA = {
+				add_stability = -0.15
+				add_war_support = -0.10
+				country_event = { id = ben_covert.12 hours = 6 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ben_covert.11
+	title = ben_covert.11.t
+	desc = ben_covert.11.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = ben_covert.11.a
+		add_political_power = -75
+	}
+}
+
+country_event = {
+	id = ben_covert.12
+	title = ben_covert.12.t
+	desc = ben_covert.12.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = ben_covert.12.a
+	}
+}
+
+# ------------------------------------------------------------
+# Decision Feedback Events
+# ------------------------------------------------------------
+
+country_event = {
+	id = ben_covert.20
+	title = ben_covert.20.t
+	desc = ben_covert.20.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	option = {
+		name = ben_covert.20.a
+	}
+}
+
+country_event = {
+	id = ben_covert.21
+	title = ben_covert.21.t
+	desc = ben_covert.21.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	option = {
+		name = ben_covert.21.a
+	}
+}
+
+country_event = {
+	id = ben_covert.22
+	title = ben_covert.22.t
+	desc = ben_covert.22.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = ben_covert.22.a
+	}
+}
+
+country_event = {
+	id = ben_covert.23
+	title = ben_covert.23.t
+	desc = ben_covert.23.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = ben_covert.23.a
+	}
+}
+
+country_event = {
+	id = ben_covert.24
+	title = ben_covert.24.t
+	desc = ben_covert.24.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = ben_covert.24.a
+	}
+}
+
+# ------------------------------------------------------------
+# Prague Counterplay Events
+# ------------------------------------------------------------
+
+country_event = {
+	id = pra_covert_counter.1
+	title = pra_covert_counter.1.t
+	desc = pra_covert_counter.1.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	option = {
+		name = pra_covert_counter.1.a
+		add_stability = -0.02
+	}
+}
+
+country_event = {
+	id = pra_covert_counter.2
+	title = pra_covert_counter.2.t
+	desc = pra_covert_counter.2.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	# Option A: Pay to suppress rumors
+	option = {
+		name = pra_covert_counter.2.a
+		ai_chance = { base = 70 }
+		add_political_power = -50
+	}
+
+	# Option B: Endure the damage
+	option = {
+		name = pra_covert_counter.2.b
+		ai_chance = { base = 30 }
+		add_stability = -0.05
+		add_war_support = -0.10
+	}
+}
+
+country_event = {
+	id = pra_covert_counter.3
+	title = pra_covert_counter.3.t
+	desc = pra_covert_counter.3.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = pra_covert_counter.3.a
+		add_stability = -0.02
+	}
+}
+
+
+# ------------------------------------------------------------
+# Fallback Narrative Events (When PRA Absent / Depleted)
+# ------------------------------------------------------------
+
+country_event = {
+	id = ben_covert.25
+	title = ben_covert.25.t
+	desc = ben_covert.25.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	option = {
+		name = ben_covert.25.a
+	}
+}
+
+country_event = {
+	id = ben_covert.26
+	title = ben_covert.26.t
+	desc = ben_covert.26.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = ben_covert.26.a
+	}
+}
+
+country_event = {
+	id = ben_covert.27
+	title = ben_covert.27.t
+	desc = ben_covert.27.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = ben_covert.27.a
+	}
+}
+
+# ------------------------------------------------------------
+# Isolated Debug Event for Console Testing (event ben_covert.99)
+# ------------------------------------------------------------
+
+country_event = {
+	id = ben_covert.99
+	title = "Covert Operations Verification Console"
+	desc = "Isolated testing harness for Beneshov-Prague resource transfers and countermeasure flags. Used to verify mathematical 1:1 conservation."
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	# Test 1: Equipment transfer
+	option = {
+		name = "Test: Steal 200 Rifles from PRA"
+		if = {
+			limit = {
+				country_exists = PRA
+				PRA = { has_equipment = { infantry_equipment > 199 } }
+			}
+			PRA = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -200
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 200
+				producer = PRA
+			}
+		}
+	}
+
+	# Test 2: Political Power transfer
+	option = {
+		name = "Test: Divert 50 PP from PRA"
+		if = {
+			limit = {
+				country_exists = PRA
+				PRA = { has_political_power > 49 }
+			}
+			PRA = { add_political_power = -50 }
+			add_political_power = 50
+		}
+	}
+
+	# Test 3: Manpower transfer
+	option = {
+		name = "Test: Relocate 800 Manpower from PRA"
+		if = {
+			limit = {
+				country_exists = PRA
+				PRA = { has_manpower > 799 }
+			}
+			PRA = { add_manpower = -800 }
+			add_manpower = 800
+		}
+	}
+
+	# Test 4: Toggle Arsenal Fortification on PRA
+	option = {
+		name = "Test: Toggle PRA Arsenals Fortified Flag"
+		if = {
+			limit = { country_exists = PRA }
+			PRA = {
+				if = {
+					limit = { has_country_flag = pra_arsenals_fortified }
+					clr_country_flag = pra_arsenals_fortified
+				}
+				else = {
+					set_country_flag = pra_arsenals_fortified
+				}
+			}
+		}
+	}
+
+	# Test 5: Toggle Infiltrators Purged Flag on PRA
+	option = {
+		name = "Test: Toggle PRA Infiltrators Purged Flag"
+		if = {
+			limit = { country_exists = PRA }
+			PRA = {
+				if = {
+					limit = { has_country_flag = pra_infiltrators_purged }
+					clr_country_flag = pra_infiltrators_purged
+				}
+				else = {
+					set_country_flag = pra_infiltrators_purged
+				}
+			}
+		}
+	}
+}

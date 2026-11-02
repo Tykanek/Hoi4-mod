@@ -15,6 +15,11 @@ recruit_character = PRA_alois_simek
 recruit_character = PRA_octane
 recruit_character = PRA_BEN_shared_field_marshal
 
+# Starting National Spirits
+add_ideas = {
+	pra_military_restraint
+}
+
 set_stability = 0.30
 set_war_support = 0.05
 

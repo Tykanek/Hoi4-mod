@@ -14,6 +14,9 @@ recruit_character = BEN_Joe_Biden
 
 # Starting national debuffs and laws
 add_ideas = {
+	# Starting Military Restraint & Volunteers
+	ben_military_restraint
+
 	# Laws
 	volunteer_only
 	civilian_economy

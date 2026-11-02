@@ -37,6 +37,21 @@ characters = {
 				factor = 1
 			}
 		}
+		corps_commander = {
+			traits = { infantry_officer organizer }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+			legacy_id = -1
+			visible = {
+				OR = {
+					has_completed_focus = ben_pospisil_takes_command
+					has_country_flag = ben_pospisil_in_power
+				}
+			}
+		}
 	}
 
 	BEN_adam_pospisil = {
@@ -140,6 +155,7 @@ characters = {
 			}
 			traits = {
 				communist_revolutionary
+				ben_mia_revolutionary
 			}
 			cost = 150
 			ai_will_do = {

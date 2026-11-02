@@ -1,0 +1,376 @@
+ben_covert_operations_against_prague = {
+
+	# 1. Steal Infantry Equipment
+	ben_op_steal_infantry_equipment = {
+		icon = generic_prepare_civil_war
+
+		available = {
+			country_exists = PRA
+			NOT = { has_war_with = PRA }
+			has_completed_focus = ben_the_missing_rifles
+			PRA = {
+				has_equipment = {
+					infantry_equipment > 99
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = ben_op_pra_arsenals_not_fortified_tt
+				NOT = {
+					PRA = {
+						has_country_flag = pra_arsenals_fortified
+					}
+				}
+			}
+		}
+
+		visible = {
+			country_exists = PRA
+			has_completed_focus = ben_the_missing_rifles
+		}
+
+		cost = 40
+		days_remove = 30
+		days_re_enable = 90
+
+		cancel_trigger = {
+			OR = {
+				NOT = { country_exists = PRA }
+				has_war_with = PRA
+			}
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					PRA = {
+						has_equipment = {
+							infantry_equipment > 199
+						}
+					}
+				}
+				PRA = {
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = -200
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 200
+					producer = PRA
+				}
+			}
+			else = {
+				PRA = {
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = -100
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 100
+					producer = PRA
+				}
+			}
+
+			random_list = {
+				25 = {
+					PRA = {
+						country_event = { id = pra_covert_counter.1 hours = 6 }
+					}
+				}
+				75 = {
+					country_event = { id = ben_covert.20 hours = 6 }
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	# 2. Divert Administrative Funds
+	ben_op_divert_funds = {
+		icon = generic_industry
+
+		available = {
+			country_exists = PRA
+			NOT = { has_war_with = PRA }
+			has_completed_focus = ben_follow_the_money
+			custom_trigger_tooltip = {
+				tooltip = pra_has_sufficient_pp_tt
+				PRA = {
+					has_political_power > 49
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = pra_infiltrators_not_purged_tt
+				NOT = {
+					PRA = {
+						has_country_flag = pra_infiltrators_purged
+					}
+				}
+			}
+		}
+
+		visible = {
+			country_exists = PRA
+			has_completed_focus = ben_follow_the_money
+		}
+
+		cost = 35
+		days_remove = 30
+		days_re_enable = 120
+
+		cancel_trigger = {
+			OR = {
+				NOT = { country_exists = PRA }
+				has_war_with = PRA
+			}
+		}
+
+		complete_effect = {
+			PRA = {
+				add_political_power = -50
+			}
+			add_political_power = 60
+			country_event = { id = ben_covert.21 hours = 6 }
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	# 3. Recruit Prague Defectors
+	ben_op_recruit_defectors = {
+		icon = generic_propaganda
+
+		available = {
+			country_exists = PRA
+			NOT = { has_war_with = PRA }
+			has_completed_focus = ben_a_better_life_in_benesov
+			custom_trigger_tooltip = {
+				tooltip = pra_has_sufficient_manpower_tt
+				PRA = {
+					has_manpower > 399
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = pra_infiltrators_not_purged_tt
+				NOT = {
+					PRA = {
+						has_country_flag = pra_infiltrators_purged
+					}
+				}
+			}
+		}
+
+		visible = {
+			country_exists = PRA
+			has_completed_focus = ben_a_better_life_in_benesov
+		}
+
+		cost = 50
+		days_remove = 45
+		days_re_enable = 150
+
+		cancel_trigger = {
+			OR = {
+				NOT = { country_exists = PRA }
+				has_war_with = PRA
+			}
+		}
+
+		complete_effect = {
+			PRA = {
+				add_manpower = -400
+			}
+			add_manpower = 400
+			add_timed_idea = {
+				idea = ben_prague_defector_engineers
+				days = 90
+			}
+			country_event = { id = ben_covert.22 hours = 6 }
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	# 4. Launch Disinformation Campaign
+	ben_op_disinformation_campaign = {
+		icon = generic_crisis
+
+		available = {
+			country_exists = PRA
+			NOT = { has_war_with = PRA }
+			has_completed_focus = ben_the_irregular_migration_scandal
+			custom_trigger_tooltip = {
+				tooltip = pra_infiltrators_not_purged_tt
+				NOT = {
+					PRA = {
+						has_country_flag = pra_infiltrators_purged
+					}
+				}
+			}
+		}
+
+		visible = {
+			country_exists = PRA
+			has_completed_focus = ben_the_irregular_migration_scandal
+		}
+
+		cost = 45
+		days_remove = 30
+		days_re_enable = 120
+
+		cancel_trigger = {
+			OR = {
+				NOT = { country_exists = PRA }
+				has_war_with = PRA
+			}
+		}
+
+		complete_effect = {
+			PRA = {
+				add_timed_idea = {
+					idea = pra_disinformation_turmoil
+					days = 90
+				}
+			}
+			add_stability = 0.05
+			country_event = { id = ben_covert.23 hours = 6 }
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	# 5. Manufacture Prague Municipal Crisis
+	ben_op_political_scandal = {
+		icon = generic_political_discourse
+
+		available = {
+			country_exists = PRA
+			NOT = { has_war_with = PRA }
+			has_completed_focus = ben_the_invisible_hand_of_benesov
+			custom_trigger_tooltip = {
+				tooltip = pra_infiltrators_not_purged_tt
+				NOT = {
+					PRA = {
+						has_country_flag = pra_infiltrators_purged
+					}
+				}
+			}
+		}
+
+		visible = {
+			country_exists = PRA
+			has_completed_focus = ben_the_invisible_hand_of_benesov
+		}
+
+		cost = 60
+		days_remove = 30
+		days_re_enable = 180
+
+		cancel_trigger = {
+			OR = {
+				NOT = { country_exists = PRA }
+				has_war_with = PRA
+			}
+		}
+
+		complete_effect = {
+			PRA = {
+				country_event = { id = pra_covert_counter.2 hours = 6 }
+			}
+			country_event = { id = ben_covert.24 hours = 6 }
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}
+
+pra_counter_espionage_measures = {
+
+	# Counter-measure 1: Fortify Strategic Depots
+	pra_audit_central_arsenal = {
+		icon = generic_industry
+
+		available = {
+			country_exists = BEN
+			BEN = { has_completed_focus = ben_eyes_on_prague }
+		}
+
+		visible = {
+			country_exists = BEN
+			BEN = { has_completed_focus = ben_eyes_on_prague }
+		}
+
+		cost = 35
+		days_remove = 120
+		days_re_enable = 180
+
+		modifier = {
+			foreign_subversive_activites = -0.20
+			drift_defence_factor = 0.20
+			stability_factor = 0.03
+		}
+
+		complete_effect = {
+			set_country_flag = pra_arsenals_fortified
+		}
+
+		remove_effect = {
+			clr_country_flag = pra_arsenals_fortified
+		}
+
+		ai_will_do = {
+			factor = 15
+		}
+	}
+
+	# Counter-measure 2: Root Out Foreign Provocateurs
+	pra_purge_infiltrators = {
+		icon = generic_police_action
+
+		available = {
+			country_exists = BEN
+			BEN = { has_completed_focus = ben_eyes_on_prague }
+		}
+
+		visible = {
+			country_exists = BEN
+			BEN = { has_completed_focus = ben_eyes_on_prague }
+		}
+
+		cost = 45
+		days_remove = 90
+		days_re_enable = 180
+
+		modifier = {
+			foreign_subversive_activites = -0.25
+			drift_defence_factor = 0.25
+			stability_factor = 0.05
+		}
+
+		complete_effect = {
+			set_country_flag = pra_infiltrators_purged
+		}
+
+		remove_effect = {
+			clr_country_flag = pra_infiltrators_purged
+		}
+
+		ai_will_do = {
+			factor = 15
+		}
+	}
+}

@@ -1326,7 +1326,7 @@
 		icon = GFX_focus_BEN_pospisil_takes_command
 		prerequisite = { focus = ben_dvorak_has_lost_the_streets }
 		available = {
-			communism > 0.40
+			communism > 0.50
 		}
 		x = 22
 		y = 14
@@ -1339,6 +1339,7 @@
 				ruling_party = communism
 				elections_allowed = no
 			}
+			set_country_flag = ben_pospisil_in_power
 			country_event = { id = benesov.6 hours = 6 }
 		}
 	}
@@ -1779,6 +1780,20 @@
 					generator = { 664 }
 				}
 			}
+			if = {
+				limit = { has_idea = ben_military_restraint }
+				swap_ideas = {
+					remove_idea = ben_military_restraint
+					add_idea = ben_unrestricted_volunteers
+				}
+			}
+			else_if = {
+				limit = { NOT = { has_idea = ben_unrestricted_volunteers } }
+				add_ideas = ben_unrestricted_volunteers
+			}
+			clear_rule = {
+				can_not_declare_war = yes
+			}
 		}
 	}
 
@@ -1805,6 +1820,288 @@
 			add_war_support = 0.10
 			add_ideas = ben_socialist_successor_federation
 			country_event = { id = ben_flavor.19 days = 1 }
+		}
+	}
+
+
+	# ============================================================
+	# COVERT RIVALRY AGAINST PRAGUE (8 FOCUSES)
+	# ============================================================
+
+	focus = {
+		id = ben_eyes_on_prague
+		icon = GFX_focus_BEN_eyes_on_prague
+		prerequisite = { focus = ben_the_deliveries_have_stopped }
+		x = 30
+		y = 7
+		cost = 4.286
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = { factor = 10 }
+
+		completion_reward = {
+			add_political_power = 25
+			add_ideas = ben_eyes_on_prague_spirit
+			custom_effect_tooltip = ben_eyes_on_prague_tt
+		}
+	}
+
+	focus = {
+		id = ben_the_missing_rifles
+		icon = GFX_focus_BEN_the_missing_rifles
+		prerequisite = { focus = ben_eyes_on_prague }
+		x = 29
+		y = 8
+		cost = 4.286
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 10 }
+
+		completion_reward = {
+			if = {
+				limit = {
+					country_exists = PRA
+					PRA = {
+						has_equipment = {
+							infantry_equipment > 249
+						}
+					}
+				}
+				PRA = {
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = -250
+					}
+					country_event = { id = ben_covert.2 hours = 6 }
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 250
+					producer = PRA
+				}
+				country_event = { id = ben_covert.1 hours = 6 }
+			}
+			else_if = {
+				limit = {
+					country_exists = PRA
+					PRA = {
+						has_equipment = {
+							infantry_equipment > 99
+						}
+					}
+				}
+				PRA = {
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = -100
+					}
+					country_event = { id = ben_covert.2 hours = 6 }
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 100
+					producer = PRA
+				}
+				country_event = { id = ben_covert.1 hours = 6 }
+			}
+			else_if = {
+				limit = {
+					country_exists = PRA
+					PRA = {
+						has_equipment = {
+							infantry_equipment > 49
+						}
+					}
+				}
+				PRA = {
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = -50
+					}
+					country_event = { id = ben_covert.2 hours = 6 }
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 50
+					producer = PRA
+				}
+				country_event = { id = ben_covert.1 hours = 6 }
+			}
+			else = {
+				# PRA has < 50 rifles or PRA does not exist: Zero rifles fabricated!
+				army_experience = 10
+				add_command_power = 15
+				country_event = { id = ben_covert.25 hours = 6 }
+			}
+		}
+	}
+
+	focus = {
+		id = ben_follow_the_money
+		icon = GFX_focus_BEN_follow_the_money
+		prerequisite = { focus = ben_the_missing_rifles }
+		x = 29
+		y = 9
+		cost = 4.286
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = { factor = 10 }
+
+		completion_reward = {
+			if = {
+				limit = {
+					country_exists = PRA
+					PRA = {
+						has_political_power > 49
+					}
+				}
+				PRA = {
+					add_political_power = -50
+					country_event = { id = ben_covert.4 hours = 6 }
+				}
+				add_political_power = 50
+				country_event = { id = ben_covert.3 hours = 6 }
+			}
+			else_if = {
+				limit = {
+					country_exists = PRA
+					PRA = {
+						has_political_power > 19
+					}
+				}
+				PRA = {
+					add_political_power = -20
+					country_event = { id = ben_covert.4 hours = 6 }
+				}
+				add_political_power = 20
+				country_event = { id = ben_covert.3 hours = 6 }
+			}
+			else = {
+				# PRA has < 20 PP or PRA does not exist: Zero PP fabricated!
+				add_timed_idea = {
+					idea = ben_archived_trade_ledgers
+					days = 180
+				}
+				country_event = { id = ben_covert.26 hours = 6 }
+			}
+		}
+	}
+
+	focus = {
+		id = ben_a_better_life_in_benesov
+		icon = GFX_focus_BEN_a_better_life_in_benesov
+		prerequisite = { focus = ben_eyes_on_prague }
+		x = 31
+		y = 8
+		cost = 4.286
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		ai_will_do = { factor = 10 }
+
+		completion_reward = {
+			if = {
+				limit = {
+					country_exists = PRA
+					PRA = {
+						has_manpower > 799
+					}
+				}
+				PRA = {
+					add_manpower = -800
+				}
+				add_manpower = 800
+				country_event = { id = ben_covert.5 hours = 6 }
+			}
+			else_if = {
+				limit = {
+					country_exists = PRA
+					PRA = {
+						has_manpower > 299
+					}
+				}
+				PRA = {
+					add_manpower = -300
+				}
+				add_manpower = 300
+				country_event = { id = ben_covert.5 hours = 6 }
+			}
+			else = {
+				# PRA has < 300 manpower or PRA does not exist: Zero manpower fabricated!
+				add_stability = 0.10
+				country_event = { id = ben_covert.27 hours = 6 }
+			}
+		}
+	}
+
+	focus = {
+		id = ben_the_irregular_migration_scandal
+		icon = GFX_focus_BEN_the_irregular_migration_scandal
+		prerequisite = { focus = ben_a_better_life_in_benesov }
+		x = 31
+		y = 9
+		cost = 4.286
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = { factor = 10 }
+
+		completion_reward = {
+			if = {
+				limit = { country_exists = PRA }
+				PRA = {
+					add_timed_idea = {
+						idea = pra_bureaucratic_migration_scandal
+						days = 180
+					}
+					country_event = { id = ben_covert.6 hours = 6 }
+				}
+				country_event = { id = ben_covert.7 hours = 6 }
+			}
+			else = {
+				add_stability = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = ben_the_invisible_hand_of_benesov
+		icon = GFX_focus_BEN_the_invisible_hand_of_benesov
+		prerequisite = { focus = ben_follow_the_money }
+		prerequisite = { focus = ben_the_irregular_migration_scandal }
+		x = 30
+		y = 10
+		cost = 4.286
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = { factor = 10 }
+
+		completion_reward = {
+			add_ideas = ben_master_infiltrators
+			country_event = { id = ben_covert.8 hours = 6 }
+		}
+	}
+
+	focus = {
+		id = ben_a_city_that_bleeds_its_rival
+		icon = GFX_focus_BEN_a_city_that_bleeds_its_rival
+		prerequisite = { focus = ben_the_invisible_hand_of_benesov }
+		x = 30
+		y = 11
+		cost = 4.286
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = { factor = 10 }
+
+		completion_reward = {
+			add_ideas = ben_bleeding_prague
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = ben_the_prague_files
+		icon = GFX_focus_BEN_the_prague_files
+		prerequisite = { focus = ben_a_city_that_bleeds_its_rival }
+		x = 30
+		y = 12
+		cost = 4.286
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = { factor = 10 }
+
+		completion_reward = {
+			country_event = { id = ben_covert.10 hours = 6 }
 		}
 	}
 }

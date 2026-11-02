@@ -1,4 +1,4 @@
-focus_tree = {
+﻿focus_tree = {
     id = praguean_focus
 
     country = {
@@ -819,10 +819,10 @@ focus_tree = {
 
         completion_reward = {
             BEN = {
-                army_experience = -50
-                air_experience = -50
-                navy_experience = -50
-                add_command_power = -10
+                army_experience = -200
+                air_experience = -200
+                navy_experience = -200
+                add_command_power = -50
             }
         }
     }
@@ -2009,6 +2009,20 @@ focus_tree = {
                 target = BEN
             }
             country_event = { id = pra_mohammedis.4 }
+            if = {
+                limit = { has_idea = pra_military_restraint }
+                swap_ideas = {
+                    remove_idea = pra_military_restraint
+                    add_idea = pra_unrestricted_volunteers
+                }
+            }
+            else_if = {
+                limit = { NOT = { has_idea = pra_unrestricted_volunteers } }
+                add_ideas = pra_unrestricted_volunteers
+            }
+            clear_rule = {
+                can_not_declare_war = yes
+            }
         }
     }
 

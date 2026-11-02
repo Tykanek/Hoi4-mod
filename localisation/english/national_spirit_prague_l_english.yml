@@ -62,3 +62,10 @@
  # ========================================================
  ben_matej_dvorak_getting_everyone_drunk:0 "Matej Dvorak Responsible for Getting Everyone Drunk"
  ben_matej_dvorak_getting_everyone_drunk_desc:0 "A systematic investigation has concluded that Matej Dvorak bears direct responsibility for an alarming decline in sobriety across Beneshov. The resulting demographic consequences are considered severe."
+ # ========================================================
+ # Starting Military Restraint & Volunteer Expeditions
+ # ========================================================
+ pra_military_restraint:0 "Prague's Military Restraint"
+ pra_military_restraint_desc:0 "Prague's leadership is not yet prepared to launch an independent war against its rival. Until the confrontation with Beneshov is formally authorized, Prague must exert its military influence through unrestricted volunteer expeditions."
+ pra_unrestricted_volunteers:0 "Prague Volunteer Expeditions"
+ pra_unrestricted_volunteers_desc:0 "With the confrontation against Beneshov formally authorized, Prague's former military restraint has been cast aside. The capital's armed divisions remain free to deploy abroad on unrestricted volunteer expeditions."

@@ -99,3 +99,10 @@
 
  ben_czechoslovak_command_paralysis:0 "Command Structure Paralyzed"
  ben_czechoslovak_command_paralysis_desc:0 "Mobilization orders arrive late or contradict one another. Trains are rerouted, depots report missing equipment, and entire formations wait for orders that never come. Beneshov's networks have turned the machinery of Czechoslovak mobilization against itself."
+ # ========================================================
+ # Starting Military Restraint & Volunteer Expeditions
+ # ========================================================
+ ben_military_restraint:0 "Beneshov's Military Restraint"
+ ben_military_restraint_desc:0 "Bound by the fragile political order of the former republic, Beneshov cannot independently pursue offensive wars until it formally challenges Czechoslovakia. In the meantime, the city's soldiers are free to gain experience abroad through unrestricted volunteer expeditions."
+ ben_unrestricted_volunteers:0 "Beneshov Volunteer Expeditions"
+ ben_unrestricted_volunteers_desc:0 "Having formally asserted its sovereign authority against Czechoslovakia, Beneshov is no longer bound by military restraint. Its expeditionary forces remain free to participate in foreign wars through unrestricted volunteer expeditions."
