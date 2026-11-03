@@ -23,7 +23,7 @@
     focus = {
         id = pra_reorganize_prague_garrison
         icon = GFX_goal_generic_allies_build_infantry
-        x = 2
+        x = -2
         y = 0
         cost = 4.286
         search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -129,11 +129,10 @@
         id = pra_prague_general_staff
         icon = GFX_focus_generic_military_academy
         relative_position_id = pra_standardize_army_equipment
-        x = 0
+        x = -2
         y = 2
         cost = 4.286
         prerequisite = { focus = pra_artillery_for_the_capital }
-        prerequisite = { focus = pra_motorized_reserves }
         search_filters = { FOCUS_FILTER_ARMY_XP }
 
         completion_reward = {
@@ -152,7 +151,7 @@
     focus = {
         id = pra_establish_air_command
         icon = GFX_goal_generic_build_airforce
-        x = 8
+        x = 7
         y = 0
         cost = 4.286
         search_filters = { FOCUS_FILTER_AIR_XP }
@@ -241,11 +240,11 @@
         id = pra_air_defence_of_prague
         icon = GFX_focus_PRA_air_defence_of_prague
         relative_position_id = pra_expand_letnany_aviation_complex
-        x = 0
+        x = -2
         y = 2
         cost = 4.286
         prerequisite = { focus = pra_avia_fighter_programme }
-        prerequisite = { focus = pra_letov_ground_support_programme }
+
         search_filters = { FOCUS_FILTER_AIR_XP }
 
         completion_reward = {
@@ -979,10 +978,11 @@
     focus = {
         id = pra_thirty_minute_reserve
         icon = GFX_goal_generic_army_motorized
-        prerequisite = { focus = pra_prague_general_staff }
+        prerequisite = { focus = pra_motorized_reserves }
+        prerequisite = { focus = pra_artillery_for_the_capital }
         relative_position_id = pra_prague_general_staff
-        x = -2
-        y = 1
+        x = 2
+        y = 0
         cost = 4.286
         completion_reward = {
             add_manpower = 2500
@@ -993,10 +993,10 @@
     focus = {
         id = pra_barricade_doctrine
         icon = GFX_goal_generic_defence
-        prerequisite = { focus = pra_thirty_minute_reserve }
+        prerequisite = { focus = pra_motorized_reserves }
         relative_position_id = pra_thirty_minute_reserve
-        x = 0
-        y = 1
+        x = 2
+        y = 0
         cost = 4.286
         completion_reward = {
             army_experience = 25
@@ -1011,9 +1011,10 @@
     focus = {
         id = pra_every_bridge_a_fortress
         icon = GFX_goal_generic_construct_military
-        prerequisite = { focus = pra_barricade_doctrine }
+        prerequisite = { focus = pra_prague_general_staff }
+        prerequisite = { focus = pra_thirty_minute_reserve }
         relative_position_id = pra_barricade_doctrine
-        x = -1
+        x = -3
         y = 1
         cost = 4.286
         completion_reward = {
@@ -1032,9 +1033,10 @@
     focus = {
         id = pra_legionary_officer_school
         icon = GFX_focus_generic_military_academy
+        prerequisite = { focus = pra_thirty_minute_reserve }
         prerequisite = { focus = pra_barricade_doctrine }
         relative_position_id = pra_barricade_doctrine
-        x = 1
+        x = -1
         y = 1
         cost = 4.286
         completion_reward = {
@@ -1053,7 +1055,7 @@
         prerequisite = { focus = pra_every_bridge_a_fortress }
         prerequisite = { focus = pra_legionary_officer_school }
         relative_position_id = pra_barricade_doctrine
-        x = 0
+        x = -2
         y = 2
         cost = 4.286
         completion_reward = {
@@ -1116,10 +1118,11 @@
     focus = {
         id = pra_prague_air_warning_service
         icon = GFX_focus_PRA_prague_air_warning_service
-        prerequisite = { focus = pra_air_defence_of_prague }
+        prerequisite = { focus = pra_avia_fighter_programme }
+        prerequisite = { focus = pra_letov_ground_support_programme }
         relative_position_id = pra_air_defence_of_prague
-        x = -1
-        y = 1
+        x = 2
+        y = 0
         cost = 4.286
         completion_reward = {
             air_experience = 15
@@ -1136,10 +1139,10 @@
     focus = {
         id = pra_kbely_command_network
         icon = GFX_goal_generic_radar
-        prerequisite = { focus = pra_prague_air_warning_service }
+        prerequisite = { focus = pra_letov_ground_support_programme }
         relative_position_id = pra_prague_air_warning_service
-        x = 0
-        y = 1
+        x = 2
+        y = 0
         cost = 4.286
         completion_reward = {
             air_experience = 15
@@ -1157,8 +1160,10 @@
         id = pra_underground_aircraft_workshops
         icon = GFX_goal_generic_construct_mil_factory
         prerequisite = { focus = pra_kbely_command_network }
+        prerequisite = { focus = pra_prague_air_warning_service }
+        prerequisite = { focus = pra_air_defence_of_prague }
         relative_position_id = pra_kbely_command_network
-        x = 0
+        x = -2
         y = 1
         cost = 4.286
         completion_reward = {
@@ -1229,7 +1234,7 @@
         icon = GFX_goal_generic_construct_civ_factory
         prerequisite = { focus = pra_arsenal_of_prague }
         relative_position_id = pra_arsenal_of_prague
-        x = -2
+        x = 0
         y = 1
         cost = 4.286
         completion_reward = {

@@ -46,7 +46,7 @@
 		id = ben_count_every_rifle
 		icon = GFX_focus_BEN_count_every_rifle
 		prerequisite = { focus = ben_inventory_the_armories }
-		x = 4
+		x = 5
 		y = 3
 		cost = 4.286
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -64,9 +64,9 @@
 	focus = {
 		id = ben_organize_the_garrison
 		icon = GFX_focus_BEN_organize_the_garrison
-		prerequisite = { focus = ben_count_every_rifle }
-		x = 4
-		y = 4
+		prerequisite = { focus = ben_inventory_the_armories }
+		x = 3
+		y = 3
 		cost = 4.286
 		search_filters = { FOCUS_FILTER_MANPOWER }
 		ai_will_do = { factor = 5 }
@@ -86,8 +86,8 @@
 		id = ben_begin_proper_drills
 		icon = GFX_focus_BEN_begin_proper_drills
 		prerequisite = { focus = ben_organize_the_garrison }
-		x = 3
-		y = 5
+		x = 2
+		y = 4
 		cost = 4.286
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 5 }
@@ -107,8 +107,9 @@
 		id = ben_create_an_officer_cadre
 		icon = GFX_focus_BEN_create_an_officer_cadre
 		prerequisite = { focus = ben_organize_the_garrison }
-		x = 5
-		y = 5
+		prerequisite = { focus = ben_count_every_rifle }
+		x = 4
+		y = 4
 		cost = 4.286
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 5 }
@@ -128,10 +129,10 @@
 	focus = {
 		id = ben_local_supply_depots
 		icon = GFX_focus_BEN_local_supply_depots
-		prerequisite = { focus = ben_begin_proper_drills }
-		prerequisite = { focus = ben_create_an_officer_cadre }
-		x = 4
-		y = 6
+		prerequisite = { focus = ben_count_every_rifle }
+
+		x = 6
+		y = 4
 		cost = 4.286
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY }
 		ai_will_do = { factor = 5 }
@@ -150,9 +151,10 @@
 	focus = {
 		id = ben_establish_a_quartermaster_corps
 		icon = GFX_focus_BEN_establish_a_quartermaster_corps
-		prerequisite = { focus = ben_local_supply_depots }
-		x = 5
-		y = 7
+		prerequisite = { focus = ben_begin_proper_drills }
+		prerequisite = { focus = ben_create_an_officer_cadre }
+		x = 3
+		y = 5
 		cost = 4.286
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 5 }
@@ -178,9 +180,10 @@
 	focus = {
 		id = ben_standardize_the_infantry
 		icon = GFX_focus_BEN_standardize_the_infantry
-		prerequisite = { focus = ben_establish_a_quartermaster_corps }
-		x = 4
-		y = 8
+		prerequisite = { focus = ben_local_supply_depots }
+		prerequisite = { focus = ben_create_an_officer_cadre }
+		x = 5
+		y = 5
 		cost = 4.286
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 5 }
@@ -211,8 +214,9 @@
 		id = ben_rewrite_the_field_manuals
 		icon = GFX_focus_BEN_rewrite_the_field_manuals
 		prerequisite = { focus = ben_standardize_the_infantry }
-		x = 5
-		y = 9
+		prerequisite = { focus = ben_establish_a_quartermaster_corps }
+		x = 4
+		y = 6
 		cost = 4.286
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 5 }
@@ -239,8 +243,8 @@
 		id = ben_professionalize_the_garrison
 		icon = GFX_focus_BEN_professionalize_the_garrison
 		prerequisite = { focus = ben_rewrite_the_field_manuals }
-		x = 4
-		y = 10
+		x = 3
+		y = 7
 		cost = 4.286
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 5 }
@@ -254,9 +258,9 @@
 	focus = {
 		id = ben_army_that_can_fight
 		icon = GFX_focus_BEN_army_that_can_fight
-		prerequisite = { focus = ben_professionalize_the_garrison }
-		x = 4
-		y = 11
+		prerequisite = { focus = ben_rewrite_the_field_manuals }
+		x = 5
+		y = 7
 		cost = 4.286
 		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
 		ai_will_do = { factor = 5 }
@@ -311,7 +315,7 @@
 	focus = {
 		id = ben_survey_the_airfields
 		icon = GFX_focus_BEN_survey_the_airfields
-		x = 9
+		x = 11
 		y = 2
 		cost = 4.286
 		search_filters = { FOCUS_FILTER_AIR_XP }
@@ -353,9 +357,9 @@
 	focus = {
 		id = ben_build_a_flight_school
 		icon = GFX_focus_BEN_build_a_flight_school
-		prerequisite = { focus = ben_clear_the_runways }
-		x = 10
-		y = 4
+		prerequisite = { focus = ben_survey_the_airfields }
+		x = 11
+		y = 3
 		cost = 4.286
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		ai_will_do = { factor = 5 }
@@ -369,9 +373,9 @@
 	focus = {
 		id = ben_train_the_first_pilots
 		icon = GFX_focus_BEN_train_the_first_pilots
-		prerequisite = { focus = ben_build_a_flight_school }
-		x = 11
-		y = 5
+		prerequisite = { focus = ben_survey_the_airfields }
+		x = 13
+		y = 3
 		cost = 4.286
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		ai_will_do = { factor = 5 }
@@ -390,9 +394,10 @@
 	focus = {
 		id = ben_scrounge_for_aircraft
 		icon = GFX_focus_BEN_scrounge_for_aircraft
-		prerequisite = { focus = ben_train_the_first_pilots }
-		x = 11
-		y = 6
+		prerequisite = { focus = ben_clear_the_runways }
+		prerequisite = { focus = ben_build_a_flight_school }
+		x = 10
+		y = 4
 		cost = 4.286
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		ai_will_do = { factor = 5 }
@@ -416,8 +421,8 @@
 		id = ben_standardize_spare_parts
 		icon = GFX_focus_BEN_standardize_spare_parts
 		prerequisite = { focus = ben_scrounge_for_aircraft }
-		x = 10
-		y = 7
+		x = 11
+		y = 5
 		cost = 4.286
 		search_filters = { FOCUS_FILTER_AIR_XP FOCUS_FILTER_INDUSTRY }
 		ai_will_do = { factor = 5 }
@@ -436,9 +441,10 @@
 	focus = {
 		id = ben_rebuild_the_hangars
 		icon = GFX_focus_BEN_rebuild_the_hangars
-		prerequisite = { focus = ben_scrounge_for_aircraft }
+		prerequisite = { focus = ben_train_the_first_pilots }
+		prerequisite = { focus = ben_build_a_flight_school }
 		x = 12
-		y = 7
+		y = 4
 		cost = 4.286
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		ai_will_do = { factor = 5 }
@@ -460,7 +466,7 @@
 		prerequisite = { focus = ben_standardize_spare_parts }
 		prerequisite = { focus = ben_rebuild_the_hangars }
 		x = 11
-		y = 8
+		y = 6
 		cost = 4.286
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		ai_will_do = { factor = 5 }
@@ -474,8 +480,8 @@
 		id = ben_organize_fighter_squadrons
 		icon = GFX_focus_BEN_organize_fighter_squadrons
 		prerequisite = { focus = ben_benesov_air_command }
-		x = 12
-		y = 9
+		x = 10
+		y = 7
 		cost = 4.286
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		ai_will_do = { factor = 5 }
@@ -494,9 +500,9 @@
 	focus = {
 		id = ben_domestic_aircraft_workshops
 		icon = GFX_focus_BEN_domestic_aircraft_workshops
-		prerequisite = { focus = ben_organize_fighter_squadrons }
+		prerequisite = { focus = ben_benesov_air_command }
 		x = 12
-		y = 10
+		y = 7
 		cost = 4.286
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_AIR_XP }
 		ai_will_do = { factor = 5 }
@@ -521,8 +527,9 @@
 		id = ben_professional_pilot_corps
 		icon = GFX_focus_BEN_professional_pilot_corps
 		prerequisite = { focus = ben_domestic_aircraft_workshops }
+		prerequisite = { focus = ben_organize_fighter_squadrons }
 		x = 11
-		y = 11
+		y = 8
 		cost = 4.286
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		ai_will_do = { factor = 5 }
@@ -545,7 +552,7 @@
 		icon = GFX_focus_BEN_air_force_of_our_own
 		prerequisite = { focus = ben_professional_pilot_corps }
 		x = 11
-		y = 12
+		y = 9
 		cost = 4.286
 		search_filters = { FOCUS_FILTER_AIR_XP }
 		ai_will_do = { factor = 5 }
@@ -1367,7 +1374,7 @@
 		id = ben_we_have_read_the_meta
 		icon = GFX_focus_BEN_we_have_read_the_meta
 		prerequisite = { focus = ben_the_peoples_republic_of_benesov }
-		x = 21
+		x = 20
 		y = 16
 		cost = 4.286
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1388,7 +1395,7 @@
 		id = ben_every_citizen_a_strategist
 		icon = GFX_focus_BEN_every_citizen_a_strategist
 		prerequisite = { focus = ben_we_have_read_the_meta }
-		x = 21
+		x = 19
 		y = 17
 		cost = 4.286
 		search_filters = { FOCUS_FILTER_MANPOWER }
@@ -1404,7 +1411,7 @@
 		id = ben_stepans_distribution_network
 		icon = GFX_focus_BEN_stepans_distribution_network
 		prerequisite = { focus = ben_the_peoples_republic_of_benesov }
-		x = 23
+		x = 24
 		y = 16
 		cost = 4.286
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1420,7 +1427,7 @@
 		id = ben_a_government_worthy_of_bohemia
 		icon = GFX_focus_BEN_a_government_worthy_of_bohemia
 		prerequisite = { focus = ben_stepans_distribution_network }
-		x = 23
+		x = 24
 		y = 17
 		cost = 4.286
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1435,10 +1442,10 @@
 	focus = {
 		id = ben_the_pospisil_doctrine
 		icon = GFX_focus_BEN_the_pospisil_doctrine
-		prerequisite = { focus = ben_every_citizen_a_strategist }
-		prerequisite = { focus = ben_a_government_worthy_of_bohemia }
-		x = 22
-		y = 18
+		prerequisite = { focus = ben_the_failure_of_the_old_republic }
+		prerequisite = { focus = ben_benesov_will_not_remain_small }
+		x = 24
+		y = 19
 		cost = 4.286
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 		ai_will_do = { factor = 10 }
@@ -1457,9 +1464,10 @@
 	focus = {
 		id = ben_the_failure_of_the_old_republic
 		icon = GFX_focus_BEN_the_failure_of_the_old_republic
-		prerequisite = { focus = ben_the_pospisil_doctrine }
-		x = 22
-		y = 19
+		prerequisite = { focus = ben_a_government_worthy_of_bohemia }
+
+		x = 25
+		y = 18
 		cost = 4.286
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 8 }
@@ -1479,9 +1487,9 @@
 	focus = {
 		id = ben_benesov_will_not_remain_small
 		icon = GFX_focus_BEN_benesov_will_not_remain_small
-		prerequisite = { focus = ben_the_failure_of_the_old_republic }
+		prerequisite = { focus = ben_a_government_worthy_of_bohemia }
 		x = 23
-		y = 20
+		y = 18
 		cost = 4.286
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 10 }
@@ -1495,9 +1503,9 @@
 	focus = {
 		id = ben_liberate_the_czech_workers
 		icon = GFX_focus_BEN_liberate_the_czech_workers
-		prerequisite = { focus = ben_the_failure_of_the_old_republic }
-		x = 21
-		y = 20
+		prerequisite = { focus = ben_every_citizen_a_strategist }
+		x = 18
+		y = 18
 		cost = 4.286
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 10 }
@@ -1516,9 +1524,9 @@
 		id = ben_claim_the_legacy_of_czechoslovakia
 		icon = GFX_focus_BEN_claim_the_legacy_of_czechoslovakia
 		prerequisite = { focus = ben_liberate_the_czech_workers }
-		prerequisite = { focus = ben_benesov_will_not_remain_small }
-		x = 22
-		y = 21
+		prerequisite = { focus = ben_solidarity_with_eastern_workers }
+		x = 19
+		y = 19
 		cost = 4.286
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 10 }
@@ -1540,9 +1548,10 @@
 	focus = {
 		id = ben_reach_out_to_moravian_workers
 		icon = GFX_focus_BEN_reach_out_to_moravian_workers
-		prerequisite = { focus = ben_claim_the_legacy_of_czechoslovakia }
+		prerequisite = { focus = ben_we_have_read_the_meta }
+
 		x = 21
-		y = 22
+		y = 17
 		cost = 4.286
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 10 }
@@ -1578,9 +1587,10 @@
 	focus = {
 		id = ben_solidarity_with_eastern_workers
 		icon = GFX_focus_BEN_solidarity_with_eastern_workers
-		prerequisite = { focus = ben_claim_the_legacy_of_czechoslovakia }
-		x = 23
-		y = 22
+		prerequisite = { focus = ben_every_citizen_a_strategist }
+		prerequisite = { focus = ben_reach_out_to_moravian_workers }
+		x = 20
+		y = 18
 		cost = 4.286
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 10 }
@@ -1626,10 +1636,10 @@
 	focus = {
 		id = ben_workers_of_the_former_republic
 		icon = GFX_focus_BEN_workers_of_the_former_republic
-		prerequisite = { focus = ben_reach_out_to_moravian_workers }
 		prerequisite = { focus = ben_solidarity_with_eastern_workers }
-		x = 22
-		y = 23
+
+		x = 21
+		y = 19
 		cost = 4.286
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
 		ai_will_do = { factor = 10 }
@@ -1656,9 +1666,10 @@
 	focus = {
 		id = ben_the_czechoslovak_workers_mandate
 		icon = GFX_focus_BEN_the_czechoslovak_workers_mandate
-		prerequisite = { focus = ben_workers_of_the_former_republic }
-		x = 22
-		y = 24
+		prerequisite = { focus = ben_claim_the_legacy_of_czechoslovakia }
+		prerequisite = { focus = ben_solidarity_with_eastern_workers }
+		x = 21
+		y = 20
 		cost = 4.286
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 10 }
@@ -1681,9 +1692,10 @@
 	focus = {
 		id = ben_operation_broken_lion
 		icon = GFX_focus_generic_sabotage
-		prerequisite = { focus = ben_the_czechoslovak_workers_mandate }
-		x = 22
-		y = 25
+		prerequisite = { focus = ben_workers_of_the_former_republic }
+		prerequisite = { focus = ben_the_pospisil_doctrine }
+		x = 23
+		y = 20
 		cost = 4.286
 		search_filters = { FOCUS_FILTER_MILITARY FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 10 }
@@ -1710,7 +1722,7 @@
 					add_command_power = -25
 					add_timed_idea = {
 						idea = ben_czechoslovak_command_paralysis
-						days = 210
+						days = 365
 					}
 					country_event = { id = benesov.26 days = 1 }
 				}
@@ -1722,8 +1734,9 @@
 		id = ben_enforce_the_workers_mandate
 		icon = GFX_focus_BEN_enforce_the_workers_mandate
 		prerequisite = { focus = ben_operation_broken_lion }
+		prerequisite = { focus = ben_the_czechoslovak_workers_mandate }
 		x = 22
-		y = 26
+		y = 21
 		cost = 4.286
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
 		ai_will_do = { factor = 10 }
@@ -1802,7 +1815,7 @@
 		icon = GFX_focus_BEN_the_beneshov_successor_state
 		prerequisite = { focus = ben_enforce_the_workers_mandate }
 		x = 22
-		y = 27
+		y = 23
 		cost = 4.286
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 		ai_will_do = { factor = 10 }

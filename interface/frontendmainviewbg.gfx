@@ -1,0 +1,64 @@
+spriteTypes = {
+	corneredTileSpriteType = {
+		name = "GFX_frontend_bg"
+		texturefile = "gfx/interface/custom_menu/main_menu_1.dds"
+		borderSize = { x=0 y=0 }
+		size = { x=1920 y=1440 }
+		tilingCenter = no
+		effectFile = "gfx/FX/buttonstate.shader"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_main_menu_1"
+		texturefile = "gfx/interface/custom_menu/main_menu_1.dds"
+		borderSize = { x=0 y=0 }
+		size = { x=1920 y=1440 }
+		tilingCenter = no
+		effectFile = "gfx/FX/buttonstate.shader"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_main_menu_2"
+		texturefile = "gfx/interface/custom_menu/main_menu_2.dds"
+		borderSize = { x=0 y=0 }
+		size = { x=1920 y=1440 }
+		tilingCenter = no
+		effectFile = "gfx/FX/buttonstate.shader"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_main_menu_3"
+		texturefile = "gfx/interface/custom_menu/main_menu_3.dds"
+		borderSize = { x=0 y=0 }
+		size = { x=1920 y=1440 }
+		tilingCenter = no
+		effectFile = "gfx/FX/buttonstate.shader"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_main_menu_4"
+		texturefile = "gfx/interface/custom_menu/main_menu_4.dds"
+		borderSize = { x=0 y=0 }
+		size = { x=1920 y=1440 }
+		tilingCenter = no
+		effectFile = "gfx/FX/buttonstate.shader"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_main_menu_5"
+		texturefile = "gfx/interface/custom_menu/main_menu_5.dds"
+		borderSize = { x=0 y=0 }
+		size = { x=1920 y=1440 }
+		tilingCenter = no
+		effectFile = "gfx/FX/buttonstate.shader"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_main_menu_6"
+		texturefile = "gfx/interface/custom_menu/main_menu_6.dds"
+		borderSize = { x=0 y=0 }
+		size = { x=1920 y=1440 }
+		tilingCenter = no
+		effectFile = "gfx/FX/buttonstate.shader"
+	}
+}

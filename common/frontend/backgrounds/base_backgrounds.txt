@@ -1,0 +1,26 @@
+# Database for all the frontend main menu backgrounds
+# Only main_menu_1 through main_menu_6 appear here.
+
+main_menu_1 = {
+	gfx = "GFX_main_menu_1"
+}
+
+main_menu_2 = {
+	gfx = "GFX_main_menu_2"
+}
+
+main_menu_3 = {
+	gfx = "GFX_main_menu_3"
+}
+
+main_menu_4 = {
+	gfx = "GFX_main_menu_4"
+}
+
+main_menu_5 = {
+	gfx = "GFX_main_menu_5"
+}
+
+main_menu_6 = {
+	gfx = "GFX_main_menu_6"
+}

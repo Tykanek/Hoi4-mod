@@ -9,3 +9,4 @@ tags={
 }
 name="German-Czech Advanced"
 supported_version="1.19.3.0"
+replace_path="gfx/loadingscreens"
