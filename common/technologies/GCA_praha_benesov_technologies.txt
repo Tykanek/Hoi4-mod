@@ -1,0 +1,45 @@
+technologies = {
+	GCA_benesov_roundabout_tech = {
+		allow_branch = {
+			NOT = {
+				has_dlc = "No Step Back"
+			}
+		}
+
+		army_defence_factor = 0.02
+
+		research_cost = 1
+		start_year = 1936
+
+		folder = {
+			name = GCA_praha_benesov_folder
+			position = { x = 0 y = 0 }
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	GCA_prague_tank_tuning_tech = {
+		allow_branch = {
+			has_dlc = "No Step Back"
+		}
+
+		category_all_armor = {
+			reliability = 0.02
+		}
+
+		research_cost = 1
+		start_year = 1936
+
+		folder = {
+			name = GCA_praha_benesov_folder
+			position = { x = 0 y = 0 }
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

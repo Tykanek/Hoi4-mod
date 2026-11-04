@@ -1,0 +1,17 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_GCA_praha_benesov_folder_tab"
+		textureFile = "gfx/interface/techtree/techtree_tank_tab.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_GCA_benesov_roundabout_tech_medium"
+		textureFile = "gfx/interface/technologies/engineers.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GCA_prague_tank_tuning_tech_medium"
+		textureFile = "gfx/interface/technologies/tech_maintenance_company.dds"
+	}
+}

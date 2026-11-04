@@ -1,0 +1,5 @@
+technology_folders = {
+	GCA_praha_benesov_folder = {
+		ledger = army
+	}
+}
