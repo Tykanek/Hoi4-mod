@@ -1395,6 +1395,8 @@
         id = pra_morning_after_coup
         icon = GFX_focus_PRA_morning_after_coup
         prerequisite = { focus = pra_commandeer_workshops }
+        prerequisite = { focus = pra_fortify_vltava_crossings }
+        prerequisite = { focus = pra_every_district_barracks }
         relative_position_id = pra_commandeer_workshops
         x = 0
         y = 1
@@ -1916,6 +1918,7 @@
         id = pra_secure_elbe_approaches
         icon = GFX_focus_PRA_secure_elbe_approaches
         prerequisite = { focus = pra_secure_eastern_bohemia }
+        prerequisite = { focus = pra_one_czech_command }
         relative_position_id = pra_ultimatum_from_prague
         x = 2
         y = 2
@@ -1946,7 +1949,7 @@
         icon = GFX_focus_PRA_czech_state_reborn
         prerequisite = { focus = pra_bohemian_borderlands }
         prerequisite = { focus = pra_secure_southern_borderlands }
-        prerequisite = { focus = pra_one_czech_command }
+        prerequisite = { focus = pra_secure_elbe_approaches }
         relative_position_id = pra_ultimatum_from_prague
         x = 0
         y = 3

@@ -1,32 +1,32 @@
 spriteTypes = {
 	spriteType = {
 		name = "GFX_main_menu_1_small"
-		texturefile = "gfx/interface/custom_menu/main_menu_1_small.dds"
+		texturefile = "gfx/loadingscreens/main_menu_1_small.dds"
 	}
 
 	spriteType = {
 		name = "GFX_main_menu_2_small"
-		texturefile = "gfx/interface/custom_menu/main_menu_2_small.dds"
+		texturefile = "gfx/loadingscreens/main_menu_2_small.dds"
 	}
 
 	spriteType = {
 		name = "GFX_main_menu_3_small"
-		texturefile = "gfx/interface/custom_menu/main_menu_3_small.dds"
+		texturefile = "gfx/loadingscreens/main_menu_3_small.dds"
 	}
 
 	spriteType = {
 		name = "GFX_main_menu_4_small"
-		texturefile = "gfx/interface/custom_menu/main_menu_4_small.dds"
+		texturefile = "gfx/loadingscreens/main_menu_4_small.dds"
 	}
 
 	spriteType = {
 		name = "GFX_main_menu_5_small"
-		texturefile = "gfx/interface/custom_menu/main_menu_5_small.dds"
+		texturefile = "gfx/loadingscreens/main_menu_5_small.dds"
 	}
 
 	spriteType = {
 		name = "GFX_main_menu_6_small"
-		texturefile = "gfx/interface/custom_menu/main_menu_6_small.dds"
+		texturefile = "gfx/loadingscreens/main_menu_6_small.dds"
 	}
 
 	spriteType = {
