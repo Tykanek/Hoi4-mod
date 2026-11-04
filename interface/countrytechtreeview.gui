@@ -30,8 +30,6 @@ guiTypes = {
 		name = "countrytechtreeview"
 		position = { x=-3 y=78 }
 		size = { width = 100%% height = 100%% }
-		fade_time = 400
-		fade_type = linear
 
 		background = {
 			name = "Background"
@@ -3810,7 +3808,7 @@ guiTypes = {
 
 			gridboxtype = {
 				name = "GCA_benesov_roundabout_tech_tree"
-				position = { x = 300 y = 220 }
+				position = { x = 300 y = 145 }
 				size = { width = 260 height = 140 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
@@ -3818,8 +3816,62 @@ guiTypes = {
 
 			gridboxtype = {
 				name = "GCA_prague_tank_tuning_tech_tree"
-				position = { x = 650 y = 220 }
+				position = { x = 650 y = 145 }
 				size = { width = 260 height = 140 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "GCA_czech_logistics_branch_title"
+				position = { x = 80 y = 300 }
+				font = "hoi_20bs"
+				text = "GCA_czech_logistics_branch"
+				maxWidth = 260
+				maxHeight = 30
+				format = center
+			}
+
+			gridboxtype = {
+				name = "GCA_skoda_fabia_tech_tree"
+				position = { x = 175 y = 345 }
+				size = { width = 100 height = 100 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "GCA_czech_mechanization_branch_title"
+				position = { x = 370 y = 300 }
+				font = "hoi_20bs"
+				text = "GCA_czech_mechanization_branch"
+				maxWidth = 280
+				maxHeight = 30
+				format = center
+			}
+
+			gridboxtype = {
+				name = "GCA_skoda_octavia_rs_mechanized_tech_tree"
+				position = { x = 475 y = 345 }
+				size = { width = 100 height = 100 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "GCA_steroids_doping_branch_title"
+				position = { x = 680 y = 300 }
+				font = "hoi_20bs"
+				text = "GCA_steroids_doping_branch"
+				maxWidth = 290
+				maxHeight = 30
+				format = center
+			}
+
+			gridboxtype = {
+				name = "GCA_steroids_natural_transformation_tech_tree"
+				position = { x = 720 y = 345 }
+				size = { width = 240 height = 100 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
 			}
@@ -3963,6 +4015,20 @@ guiTypes = {
 			clicksound = click_close
 			pdx_tooltip = "CLOSE"
 		}
+
+		buttonType = {
+			name = "cycle_tab_next"
+			quadTextureSprite = "GFX_tiled_window_transparent"
+			size = { x = 1 y = 1 }
+			shortcut = "ctrl+TAB"
+		}
+
+		buttonType = {
+			name = "cycle_tab_prev"
+			quadTextureSprite = "GFX_tiled_window_transparent"
+			size = { x = 1 y = 1 }
+			shortcut = "ctrl+shift+TAB"
+		}
 	}
 
 	containerWindowType = {
@@ -4081,10 +4147,11 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "technology_info_window"
-		position = { x=500 y=100 }
+		position = { x=150 y=130 }
 		size = { width = 550 height = 550 }
 		Orientation = UPPER_LEFT
 		moveable = yes
+		click_to_front = yes
 		#clipping = no
 		fade_time = 500
 		fade_type = linear

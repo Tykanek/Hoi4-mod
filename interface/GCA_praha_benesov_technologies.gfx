@@ -14,4 +14,39 @@ spriteTypes = {
 		name = "GFX_GCA_prague_tank_tuning_tech_medium"
 		textureFile = "gfx/interface/technologies/tech_maintenance_company.dds"
 	}
+
+	spriteType = {
+		name = "GFX_GCA_skoda_fabia_tech_medium"
+		textureFile = "gfx/interface/technologies/motorized_equipment_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GCA_skoda_octavia_rs_mechanized_tech_medium"
+		textureFile = "gfx/interface/technologies/mechanized_equipment_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GCA_steroids_natural_transformation_tech_medium"
+		textureFile = "gfx/interface/technologies/infantry1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GCA_doping_enhanced_performance_tech_medium"
+		textureFile = "gfx/interface/technologies/infantry2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GCA_grznar_final_form_tech_medium"
+		textureFile = "gfx/interface/technologies/infantry3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GCA_skoda_fabia_19_tdi_equipment_medium"
+		textureFile = "gfx/interface/technologies/motorized_equipment_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GCA_skoda_octavia_rs_mechanized_equipment_medium"
+		textureFile = "gfx/interface/technologies/mechanized_equipment_1.dds"
+	}
 }

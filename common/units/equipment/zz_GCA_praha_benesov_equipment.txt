@@ -1,0 +1,37 @@
+# This file must load after vanilla mechanized.txt and motorized.txt so that
+# the referenced archetypes and parent equipment types already exist.
+equipments = {
+	GCA_skoda_fabia_19_tdi_equipment = {
+		year = 1938
+
+		archetype = motorized_equipment
+		parent = motorized_equipment_1
+		priority = 35
+
+		maximum_speed = 14
+		reliability = 0.9
+		breakthrough = 6
+		build_cost_ic = 3
+		fuel_consumption = 1.1
+		supply_truck = yes
+	}
+
+	GCA_skoda_octavia_rs_mechanized_equipment = {
+		year = 1940
+
+		archetype = mechanized_equipment
+		parent = mechanized_equipment_1
+		priority = 45
+		visual_level = 0
+
+		maximum_speed = 12
+		reliability = 0.85
+		defense = 24
+		breakthrough = 6
+		hardness = 0.55
+		armor_value = 8
+		ap_attack = 11
+		build_cost_ic = 8
+		fuel_consumption = 2.2
+	}
+}

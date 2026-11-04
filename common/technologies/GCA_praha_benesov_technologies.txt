@@ -42,4 +42,121 @@ technologies = {
 			factor = 0
 		}
 	}
+
+	GCA_skoda_fabia_tech = {
+		enable_equipments = {
+			GCA_skoda_fabia_19_tdi_equipment
+		}
+
+		supply_consumption_factor = -0.01
+
+		research_cost = 1
+		start_year = 1938
+
+		folder = {
+			name = GCA_praha_benesov_folder
+			position = { x = 0 y = 0 }
+		}
+
+		categories = {
+			motorized_equipment
+			mio_cat_tech_all_motorized_mechanized
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	GCA_skoda_octavia_rs_mechanized_tech = {
+		enable_subunits = {
+			mechanized
+		}
+
+		enable_equipments = {
+			GCA_skoda_octavia_rs_mechanized_equipment
+		}
+
+		research_cost = 2
+		start_year = 1940
+
+		folder = {
+			name = GCA_praha_benesov_folder
+			position = { x = 0 y = 0 }
+		}
+
+		categories = {
+			motorized_equipment
+			mio_cat_tech_all_motorized_mechanized
+			cat_mechanized_equipment
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	GCA_steroids_natural_transformation_tech = {
+		on_research_complete = {
+			add_country_leader_trait = GCA_steroids_natural_transformation_trait
+		}
+
+		path = {
+			leads_to_tech = GCA_doping_enhanced_performance_tech
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1937
+
+		folder = {
+			name = GCA_praha_benesov_folder
+			position = { x = 0 y = 0 }
+		}
+
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+
+	GCA_doping_enhanced_performance_tech = {
+		on_research_complete = {
+			add_country_leader_trait = GCA_doping_enhanced_performance_trait
+		}
+
+		path = {
+			leads_to_tech = GCA_grznar_final_form_tech
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1939
+
+		folder = {
+			name = GCA_praha_benesov_folder
+			position = { x = 1 y = 0 }
+		}
+
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+
+	GCA_grznar_final_form_tech = {
+		on_research_complete = {
+			add_country_leader_trait = GCA_grznar_final_form_trait
+		}
+
+		research_cost = 1
+		start_year = 1942
+
+		folder = {
+			name = GCA_praha_benesov_folder
+			position = { x = 2 y = 0 }
+		}
+
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
 }
