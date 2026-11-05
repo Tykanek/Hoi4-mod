@@ -1,52 +1,62 @@
 spriteTypes = {
+	# Research Tab Folder Button (Custom Praha vs. Benesov tab with 2 frames)
 	spriteType = {
 		name = "GFX_GCA_praha_benesov_folder_tab"
-		textureFile = "gfx/interface/techtree/techtree_tank_tab.dds"
+		textureFile = "gfx/interface/techtree/techtree_praha_benesov_tab.dds"
 		noOfFrames = 2
 	}
 
+	# Benesov Roundabout Defense (Fortified circular roadblock & hedgehogs)
 	spriteType = {
 		name = "GFX_GCA_benesov_roundabout_tech_medium"
-		textureFile = "gfx/interface/technologies/engineers.dds"
+		textureFile = "gfx/interface/technologies/GCA_benesov_roundabout_tech.dds"
 	}
 
+	# Prague Tank Tuning Garage (LT-38 tank with workshop wrenches & turbo tuning)
 	spriteType = {
 		name = "GFX_GCA_prague_tank_tuning_tech_medium"
-		textureFile = "gfx/interface/technologies/tech_maintenance_company.dds"
+		textureFile = "gfx/interface/technologies/GCA_prague_tank_tuning_tech.dds"
 	}
 
+	# Skoda Fabia 1.9 TDI Technology
 	spriteType = {
 		name = "GFX_GCA_skoda_fabia_tech_medium"
-		textureFile = "gfx/interface/technologies/motorized_equipment_1.dds"
+		textureFile = "gfx/interface/technologies/GCA_skoda_fabia_tech.dds"
 	}
 
-	spriteType = {
-		name = "GFX_GCA_skoda_octavia_rs_mechanized_tech_medium"
-		textureFile = "gfx/interface/technologies/mechanized_equipment_1.dds"
-	}
-
-	spriteType = {
-		name = "GFX_GCA_steroids_natural_transformation_tech_medium"
-		textureFile = "gfx/interface/technologies/infantry1.dds"
-	}
-
-	spriteType = {
-		name = "GFX_GCA_doping_enhanced_performance_tech_medium"
-		textureFile = "gfx/interface/technologies/infantry2.dds"
-	}
-
-	spriteType = {
-		name = "GFX_GCA_grznar_final_form_tech_medium"
-		textureFile = "gfx/interface/technologies/infantry3.dds"
-	}
-
+	# Skoda Fabia 1.9 TDI Equipment
 	spriteType = {
 		name = "GFX_GCA_skoda_fabia_19_tdi_equipment_medium"
-		textureFile = "gfx/interface/technologies/motorized_equipment_1.dds"
+		textureFile = "gfx/interface/technologies/GCA_skoda_fabia_19_tdi_equipment.dds"
 	}
 
+	# Skoda Octavia RS Mechanized Edition Technology
+	spriteType = {
+		name = "GFX_GCA_skoda_octavia_rs_mechanized_tech_medium"
+		textureFile = "gfx/interface/technologies/GCA_skoda_octavia_rs_mechanized_tech.dds"
+	}
+
+	# Skoda Octavia RS Mechanized Edition Equipment
 	spriteType = {
 		name = "GFX_GCA_skoda_octavia_rs_mechanized_equipment_medium"
-		textureFile = "gfx/interface/technologies/mechanized_equipment_1.dds"
+		textureFile = "gfx/interface/technologies/GCA_skoda_octavia_rs_mechanized_equipment.dds"
+	}
+
+	# Steroids I — Natural Transformation
+	spriteType = {
+		name = "GFX_GCA_steroids_natural_transformation_tech_medium"
+		textureFile = "gfx/interface/technologies/GCA_steroids_natural_transformation_tech.dds"
+	}
+
+	# Doping II — Enhanced Performance
+	spriteType = {
+		name = "GFX_GCA_doping_enhanced_performance_tech_medium"
+		textureFile = "gfx/interface/technologies/GCA_doping_enhanced_performance_tech.dds"
+	}
+
+	# Doping III — Grznar's Final Form
+	spriteType = {
+		name = "GFX_GCA_grznar_final_form_tech_medium"
+		textureFile = "gfx/interface/technologies/GCA_grznar_final_form_tech.dds"
 	}
 }

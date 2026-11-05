@@ -3781,34 +3781,79 @@ guiTypes = {
 				name = "size_filler"
 				position = { x = 0 y = 0 }
 				size = {
-					width = 1000 height = 850
+					width = 1050 height = 900
 					min = { width = 100%% height = 100%% }
 				}
 
+				# Centered Title & Thematic Subtitle
 				instantTextBoxType = {
 					name = "GCA_praha_benesov_title"
-					position = { x = 310 y = 55 }
+					position = { x = 175 y = 35 }
 					font = "hoi_36header"
 					text = "GCA_praha_benesov_folder"
-					maxWidth = 600
+					maxWidth = 700
 					maxHeight = 45
 					format = center
 				}
 
 				instantTextBoxType = {
-					name = "GCA_praha_benesov_year"
-					position = { x = 40 y = 185 }
+					name = "GCA_praha_benesov_desc"
+					position = { x = 175 y = 78 }
+					font = "hoi_18mbs"
+					text = "GCA_praha_benesov_folder_desc"
+					maxWidth = 700
+					maxHeight = 30
+					format = center
+				}
+
+				# Timeline Year Indicators on Left Margin
+				instantTextBoxType = {
+					name = "GCA_year_1936"
+					position = { x = 40 y = 165 }
 					font = "hoi_36header"
 					text = "1936"
-					maxWidth = 130
+					maxWidth = 100
+					maxHeight = 32
+					format = left
+				}
+
+				instantTextBoxType = {
+					name = "GCA_year_1937"
+					position = { x = 40 y = 345 }
+					font = "hoi_36header"
+					text = "1937"
+					maxWidth = 100
+					maxHeight = 32
+					format = left
+				}
+
+				instantTextBoxType = {
+					name = "GCA_year_1939"
+					position = { x = 40 y = 485 }
+					font = "hoi_36header"
+					text = "1939"
+					maxWidth = 100
+					maxHeight = 32
+					format = left
+				}
+
+				instantTextBoxType = {
+					name = "GCA_year_1942"
+					position = { x = 40 y = 625 }
+					font = "hoi_36header"
+					text = "1942"
+					maxWidth = 100
 					maxHeight = 32
 					format = left
 				}
 			}
 
+			# ==================================================================
+			# Top Row: 1936 Doctrinal Rivalry (Benesov Roundabout vs. Prague Tank Tuning)
+			# ==================================================================
 			gridboxtype = {
 				name = "GCA_benesov_roundabout_tech_tree"
-				position = { x = 300 y = 145 }
+				position = { x = 304 y = 145 }
 				size = { width = 260 height = 140 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
@@ -3816,33 +3861,38 @@ guiTypes = {
 
 			gridboxtype = {
 				name = "GCA_prague_tank_tuning_tech_tree"
-				position = { x = 650 y = 145 }
+				position = { x = 654 y = 145 }
 				size = { width = 260 height = 140 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
 			}
 
+			# ==================================================================
+			# Bottom Branches: Logistics, Mechanization, and Steroids & Doping
+			# ==================================================================
+			# Branch 1: Czech Logistics — Fabia (Centered at x = 240)
 			instantTextBoxType = {
 				name = "GCA_czech_logistics_branch_title"
-				position = { x = 80 y = 300 }
+				position = { x = 100 y = 285 }
 				font = "hoi_20bs"
 				text = "GCA_czech_logistics_branch"
-				maxWidth = 260
+				maxWidth = 280
 				maxHeight = 30
 				format = center
 			}
 
 			gridboxtype = {
 				name = "GCA_skoda_fabia_tech_tree"
-				position = { x = 175 y = 345 }
+				position = { x = 194 y = 335 }
 				size = { width = 100 height = 100 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
 			}
 
+			# Branch 2: Czech Mechanization — Octavia RS (Centered at x = 525)
 			instantTextBoxType = {
 				name = "GCA_czech_mechanization_branch_title"
-				position = { x = 370 y = 300 }
+				position = { x = 385 y = 285 }
 				font = "hoi_20bs"
 				text = "GCA_czech_mechanization_branch"
 				maxWidth = 280
@@ -3852,31 +3902,31 @@ guiTypes = {
 
 			gridboxtype = {
 				name = "GCA_skoda_octavia_rs_mechanized_tech_tree"
-				position = { x = 475 y = 345 }
+				position = { x = 479 y = 335 }
 				size = { width = 100 height = 100 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
 			}
 
+			# Branch 3: Steroids & Doping (Centered at x = 810)
 			instantTextBoxType = {
 				name = "GCA_steroids_doping_branch_title"
-				position = { x = 680 y = 300 }
+				position = { x = 670 y = 285 }
 				font = "hoi_20bs"
 				text = "GCA_steroids_doping_branch"
-				maxWidth = 260
+				maxWidth = 280
 				maxHeight = 30
 				format = center
 			}
 
 			gridboxtype = {
 				name = "GCA_steroids_natural_transformation_tech_tree"
-				position = { x = 775 y = 345 }
-				size = { width = 200 height = 400 }
+				position = { x = 764 y = 335 }
+				size = { width = 200 height = 450 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 		}
-
 		containerWindowType = {
 			name = "folder_tabs"
 			position = { x=0 y=7 }
