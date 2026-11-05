@@ -172,9 +172,11 @@ technologies = {
 	}
 
 	# ==========================================================================
-	# CZECH INFRASTRUCTURE & SUPPLY (STAGE 4A — NO ACTIVE MODIFIERS)
+	# CZECH INFRASTRUCTURE & SUPPLY (STAGE 4B — ACTIVE BONUSES)
 	# ==========================================================================
 	GCA_beer_instead_of_water_tech = {
+		supply_consumption_factor = -0.02
+
 		research_cost = 1
 		start_year = 1938
 
@@ -189,6 +191,8 @@ technologies = {
 	}
 
 	GCA_d1_eternal_reconstruction_tech = {
+		max_dig_in = 1
+
 		research_cost = 1
 		start_year = 1939
 
@@ -203,9 +207,11 @@ technologies = {
 	}
 
 	# ==========================================================================
-	# GAMING & SURVIVAL RESEARCH (STAGE 4A — NO ACTIVE MODIFIERS)
+	# GAMING & SURVIVAL RESEARCH (STAGE 4B — ACTIVE BONUSES)
 	# ==========================================================================
 	GCA_pubg_pan_meta_tech = {
+		army_defence_factor = 0.02
+
 		research_cost = 1
 		start_year = 1940
 
@@ -220,6 +226,8 @@ technologies = {
 	}
 
 	GCA_rocket_league_what_a_save_tech = {
+		planning_speed = 0.03
+
 		research_cost = 1
 		start_year = 1941
 
@@ -234,6 +242,8 @@ technologies = {
 	}
 
 	GCA_lee_hey_sweet_pea_tech = {
+		army_morale_factor = 0.02
+
 		research_cost = 1
 		start_year = 1942
 
