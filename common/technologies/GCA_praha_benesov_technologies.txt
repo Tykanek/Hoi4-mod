@@ -97,4 +97,56 @@ technologies = {
 			factor = 1
 		}
 	}
+
+	GCA_steroids_natural_transformation_tech = {
+		path = {
+			leads_to_tech = GCA_doping_enhanced_performance_tech
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1937
+
+		folder = {
+			name = GCA_praha_benesov_folder
+			position = { x = 0 y = 0 }
+		}
+
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+
+	GCA_doping_enhanced_performance_tech = {
+		path = {
+			leads_to_tech = GCA_grznar_final_form_tech
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1939
+
+		folder = {
+			name = GCA_praha_benesov_folder
+			position = { x = 0 y = 1 }
+		}
+
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+
+	GCA_grznar_final_form_tech = {
+		research_cost = 1
+		start_year = 1942
+
+		folder = {
+			name = GCA_praha_benesov_folder
+			position = { x = 0 y = 2 }
+		}
+
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
 }

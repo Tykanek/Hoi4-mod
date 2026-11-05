@@ -3857,6 +3857,40 @@ guiTypes = {
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
 			}
+
+			instantTextBoxType = {
+				name = "GCA_steroids_doping_branch_title"
+				position = { x = 680 y = 300 }
+				font = "hoi_20bs"
+				text = "GCA_steroids_doping_branch"
+				maxWidth = 260
+				maxHeight = 30
+				format = center
+			}
+
+			gridboxtype = {
+				name = "GCA_steroids_natural_transformation_tech_tree"
+				position = { x = 775 y = 345 }
+				size = { width = 100 height = 280 }
+				slotsize = { width = 70 height = 90 }
+				format = "LEFT"
+			}
+
+			gridboxtype = {
+				name = "GCA_doping_enhanced_performance_tech_tree"
+				position = { x = 775 y = 435 }
+				size = { width = 70 height = 70 }
+				slotsize = { width = 70 height = 90 }
+				format = "LEFT"
+			}
+
+			gridboxtype = {
+				name = "GCA_grznar_final_form_tech_tree"
+				position = { x = 775 y = 525 }
+				size = { width = 70 height = 70 }
+				slotsize = { width = 70 height = 90 }
+				format = "LEFT"
+			}
 		}
 
 		containerWindowType = {

@@ -26,6 +26,21 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_GCA_steroids_natural_transformation_tech_medium"
+		textureFile = "gfx/interface/technologies/infantry1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GCA_doping_enhanced_performance_tech_medium"
+		textureFile = "gfx/interface/technologies/infantry2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GCA_grznar_final_form_tech_medium"
+		textureFile = "gfx/interface/technologies/infantry3.dds"
+	}
+
+	spriteType = {
 		name = "GFX_GCA_skoda_fabia_19_tdi_equipment_medium"
 		textureFile = "gfx/interface/technologies/motorized_equipment_1.dds"
 	}
