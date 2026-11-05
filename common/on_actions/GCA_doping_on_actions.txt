@@ -42,6 +42,7 @@ on_actions = {
 					OR = {
 						has_tech = GCA_steroids_natural_transformation_tech
 						has_tech = GCA_doping_enhanced_performance_tech
+						has_tech = GCA_grznar_final_form_tech
 					}
 				}
 				GCA_sync_doping_leader_traits = yes
@@ -57,6 +58,7 @@ on_actions = {
 					OR = {
 						has_tech = GCA_steroids_natural_transformation_tech
 						has_tech = GCA_doping_enhanced_performance_tech
+						has_tech = GCA_grznar_final_form_tech
 					}
 				}
 				GCA_sync_doping_leader_traits = yes
