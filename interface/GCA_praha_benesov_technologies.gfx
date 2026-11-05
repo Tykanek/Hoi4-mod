@@ -59,4 +59,34 @@ spriteTypes = {
 		name = "GFX_GCA_grznar_final_form_tech_medium"
 		textureFile = "gfx/interface/technologies/GCA_grznar_final_form_tech.dds"
 	}
+
+	# D1 — Eternal Reconstruction
+	spriteType = {
+		name = "GFX_GCA_d1_eternal_reconstruction_tech_medium"
+		textureFile = "gfx/interface/technologies/GCA_d1_eternal_reconstruction_tech.dds"
+	}
+
+	# Beer Instead of Water
+	spriteType = {
+		name = "GFX_GCA_beer_instead_of_water_tech_medium"
+		textureFile = "gfx/interface/technologies/GCA_beer_instead_of_water_tech.dds"
+	}
+
+	# PUBG — Level 3 Helmet & Pan Meta
+	spriteType = {
+		name = "GFX_GCA_pubg_pan_meta_tech_medium"
+		textureFile = "gfx/interface/technologies/GCA_pubg_pan_meta_tech.dds"
+	}
+
+	# Rocket League — What a Save!
+	spriteType = {
+		name = "GFX_GCA_rocket_league_what_a_save_tech_medium"
+		textureFile = "gfx/interface/technologies/GCA_rocket_league_what_a_save_tech.dds"
+	}
+
+	# Lee Everett — Hey, Sweet Pea!
+	spriteType = {
+		name = "GFX_GCA_lee_hey_sweet_pea_tech_medium"
+		textureFile = "gfx/interface/technologies/GCA_lee_hey_sweet_pea_tech.dds"
+	}
 }

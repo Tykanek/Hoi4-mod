@@ -170,4 +170,80 @@ technologies = {
 			factor = 0.5
 		}
 	}
+
+	# ==========================================================================
+	# CZECH INFRASTRUCTURE & SUPPLY (STAGE 4A — NO ACTIVE MODIFIERS)
+	# ==========================================================================
+	GCA_beer_instead_of_water_tech = {
+		research_cost = 1
+		start_year = 1938
+
+		folder = {
+			name = GCA_praha_benesov_folder
+			position = { x = 0 y = 0 }
+		}
+
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+
+	GCA_d1_eternal_reconstruction_tech = {
+		research_cost = 1
+		start_year = 1939
+
+		folder = {
+			name = GCA_praha_benesov_folder
+			position = { x = 0 y = 0 }
+		}
+
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+
+	# ==========================================================================
+	# GAMING & SURVIVAL RESEARCH (STAGE 4A — NO ACTIVE MODIFIERS)
+	# ==========================================================================
+	GCA_pubg_pan_meta_tech = {
+		research_cost = 1
+		start_year = 1940
+
+		folder = {
+			name = GCA_praha_benesov_folder
+			position = { x = 0 y = 0 }
+		}
+
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+
+	GCA_rocket_league_what_a_save_tech = {
+		research_cost = 1
+		start_year = 1941
+
+		folder = {
+			name = GCA_praha_benesov_folder
+			position = { x = 0 y = 0 }
+		}
+
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+
+	GCA_lee_hey_sweet_pea_tech = {
+		research_cost = 1
+		start_year = 1942
+
+		folder = {
+			name = GCA_praha_benesov_folder
+			position = { x = 0 y = 0 }
+		}
+
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
 }

@@ -3781,14 +3781,14 @@ guiTypes = {
 				name = "size_filler"
 				position = { x = 0 y = 0 }
 				size = {
-					width = 1050 height = 900
+					width = 1600 height = 1000
 					min = { width = 100%% height = 100%% }
 				}
 
-				# Centered Title & Thematic Subtitle
+				# Centered Title & Thematic Subtitle (Centered at x = 800)
 				instantTextBoxType = {
 					name = "GCA_praha_benesov_title"
-					position = { x = 175 y = 35 }
+					position = { x = 450 y = 35 }
 					font = "hoi_36header"
 					text = "GCA_praha_benesov_folder"
 					maxWidth = 700
@@ -3798,7 +3798,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "GCA_praha_benesov_desc"
-					position = { x = 175 y = 78 }
+					position = { x = 450 y = 78 }
 					font = "hoi_18mbs"
 					text = "GCA_praha_benesov_folder_desc"
 					maxWidth = 700
@@ -3809,51 +3809,71 @@ guiTypes = {
 				# Timeline Year Indicators on Left Margin
 				instantTextBoxType = {
 					name = "GCA_year_1936"
-					position = { x = 40 y = 165 }
+					position = { x = 30 y = 145 }
 					font = "hoi_36header"
 					text = "1936"
-					maxWidth = 100
+					maxWidth = 90
 					maxHeight = 32
 					format = left
 				}
 
 				instantTextBoxType = {
 					name = "GCA_year_1937"
-					position = { x = 40 y = 345 }
+					position = { x = 30 y = 315 }
 					font = "hoi_36header"
 					text = "1937"
-					maxWidth = 100
+					maxWidth = 90
+					maxHeight = 32
+					format = left
+				}
+
+				instantTextBoxType = {
+					name = "GCA_year_1938"
+					position = { x = 30 y = 380 }
+					font = "hoi_36header"
+					text = "1938"
+					maxWidth = 90
 					maxHeight = 32
 					format = left
 				}
 
 				instantTextBoxType = {
 					name = "GCA_year_1939"
-					position = { x = 40 y = 485 }
+					position = { x = 30 y = 520 }
 					font = "hoi_36header"
 					text = "1939"
-					maxWidth = 100
+					maxWidth = 90
+					maxHeight = 32
+					format = left
+				}
+
+				instantTextBoxType = {
+					name = "GCA_year_1940"
+					position = { x = 30 y = 590 }
+					font = "hoi_36header"
+					text = "1940"
+					maxWidth = 90
 					maxHeight = 32
 					format = left
 				}
 
 				instantTextBoxType = {
 					name = "GCA_year_1942"
-					position = { x = 40 y = 625 }
+					position = { x = 30 y = 690 }
 					font = "hoi_36header"
 					text = "1942"
-					maxWidth = 100
+					maxWidth = 90
 					maxHeight = 32
 					format = left
 				}
 			}
 
 			# ==================================================================
-			# Top Row: 1936 Doctrinal Rivalry (Benesov Roundabout vs. Prague Tank Tuning)
+			# Top Row: 1936 Doctrinal Rivalry (Balanced around Center x = 800)
 			# ==================================================================
 			gridboxtype = {
 				name = "GCA_benesov_roundabout_tech_tree"
-				position = { x = 304 y = 145 }
+				position = { x = 504 y = 145 }
 				size = { width = 260 height = 140 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
@@ -3861,70 +3881,133 @@ guiTypes = {
 
 			gridboxtype = {
 				name = "GCA_prague_tank_tuning_tech_tree"
-				position = { x = 654 y = 145 }
+				position = { x = 1004 y = 145 }
 				size = { width = 260 height = 140 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
 			}
 
 			# ==================================================================
-			# Bottom Branches: Logistics, Mechanization, and Steroids & Doping
+			# Five Distinct Research Columns (Symmetrically spaced across 1600 px)
 			# ==================================================================
-			# Branch 1: Czech Logistics — Fabia (Centered at x = 240)
+
+			# COLUMN 1: Czech Logistics — Fabia (Center x = 200)
 			instantTextBoxType = {
 				name = "GCA_czech_logistics_branch_title"
-				position = { x = 100 y = 285 }
+				position = { x = 70 y = 265 }
 				font = "hoi_20bs"
 				text = "GCA_czech_logistics_branch"
-				maxWidth = 280
+				maxWidth = 260
 				maxHeight = 30
 				format = center
 			}
 
 			gridboxtype = {
 				name = "GCA_skoda_fabia_tech_tree"
-				position = { x = 194 y = 335 }
+				position = { x = 154 y = 315 }
 				size = { width = 100 height = 100 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
 			}
 
-			# Branch 2: Czech Mechanization — Octavia RS (Centered at x = 525)
+			# COLUMN 2: Czech Mechanization — Octavia RS (Center x = 490)
 			instantTextBoxType = {
 				name = "GCA_czech_mechanization_branch_title"
-				position = { x = 385 y = 285 }
+				position = { x = 360 y = 265 }
 				font = "hoi_20bs"
 				text = "GCA_czech_mechanization_branch"
-				maxWidth = 280
+				maxWidth = 260
 				maxHeight = 30
 				format = center
 			}
 
 			gridboxtype = {
 				name = "GCA_skoda_octavia_rs_mechanized_tech_tree"
-				position = { x = 479 y = 335 }
+				position = { x = 444 y = 375 }
 				size = { width = 100 height = 100 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
 			}
 
-			# Branch 3: Steroids & Doping (Centered at x = 810)
+			# COLUMN 3: Czech Infrastructure & Supply (Center x = 780)
+			instantTextBoxType = {
+				name = "GCA_czech_infrastructure_branch_title"
+				position = { x = 650 y = 265 }
+				font = "hoi_20bs"
+				text = "GCA_czech_infrastructure_branch"
+				maxWidth = 260
+				maxHeight = 30
+				format = center
+			}
+
+			gridboxtype = {
+				name = "GCA_beer_instead_of_water_tech_tree"
+				position = { x = 734 y = 375 }
+				size = { width = 100 height = 100 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
+
+			gridboxtype = {
+				name = "GCA_d1_eternal_reconstruction_tech_tree"
+				position = { x = 734 y = 515 }
+				size = { width = 100 height = 100 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
+
+			# COLUMN 4: Steroids & Doping (Center x = 1070)
 			instantTextBoxType = {
 				name = "GCA_steroids_doping_branch_title"
-				position = { x = 670 y = 285 }
+				position = { x = 940 y = 265 }
 				font = "hoi_20bs"
 				text = "GCA_steroids_doping_branch"
-				maxWidth = 280
+				maxWidth = 260
 				maxHeight = 30
 				format = center
 			}
 
 			gridboxtype = {
 				name = "GCA_steroids_natural_transformation_tech_tree"
-				position = { x = 764 y = 335 }
+				position = { x = 1024 y = 315 }
 				size = { width = 200 height = 450 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
+			}
+
+			# COLUMN 5: Gaming & Survival Tactics (Center x = 1360)
+			instantTextBoxType = {
+				name = "GCA_gaming_survival_branch_title"
+				position = { x = 1230 y = 265 }
+				font = "hoi_20bs"
+				text = "GCA_gaming_survival_branch"
+				maxWidth = 260
+				maxHeight = 30
+				format = center
+			}
+
+			gridboxtype = {
+				name = "GCA_pubg_pan_meta_tech_tree"
+				position = { x = 1314 y = 375 }
+				size = { width = 100 height = 100 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
+
+			gridboxtype = {
+				name = "GCA_rocket_league_what_a_save_tech_tree"
+				position = { x = 1314 y = 515 }
+				size = { width = 100 height = 100 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
+
+			gridboxtype = {
+				name = "GCA_lee_hey_sweet_pea_tech_tree"
+				position = { x = 1314 y = 655 }
+				size = { width = 100 height = 100 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
 			}
 		}
 		containerWindowType = {
