@@ -39,7 +39,10 @@ on_actions = {
 		effect = {
 			every_country = {
 				limit = {
-					has_tech = GCA_steroids_natural_transformation_tech
+					OR = {
+						has_tech = GCA_steroids_natural_transformation_tech
+						has_tech = GCA_doping_enhanced_performance_tech
+					}
 				}
 				GCA_sync_doping_leader_traits = yes
 			}
@@ -51,11 +54,13 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
-					has_tech = GCA_steroids_natural_transformation_tech
+					OR = {
+						has_tech = GCA_steroids_natural_transformation_tech
+						has_tech = GCA_doping_enhanced_performance_tech
+					}
 				}
 				GCA_sync_doping_leader_traits = yes
 			}
 		}
 	}
 }
-

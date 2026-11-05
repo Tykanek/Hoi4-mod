@@ -125,6 +125,13 @@ technologies = {
 	}
 
 	GCA_doping_enhanced_performance_tech = {
+		on_research_complete = {
+			custom_effect_tooltip = GCA_doping_enhanced_performance_tech_tt
+			hidden_effect = {
+				country_event = { id = GCA_doping_events.1 }
+			}
+		}
+
 		path = {
 			leads_to_tech = GCA_grznar_final_form_tech
 			research_cost_coeff = 1
