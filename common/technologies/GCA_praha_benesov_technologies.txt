@@ -48,7 +48,9 @@ technologies = {
 			GCA_skoda_fabia_19_tdi_equipment
 		}
 
-		supply_consumption_factor = -0.01
+		motorized = {
+			supply_consumption_factor = -0.01
+		}
 
 		research_cost = 1
 		start_year = 1938

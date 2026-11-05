@@ -13,7 +13,6 @@ equipments = {
 		breakthrough = 6
 		build_cost_ic = 3
 		fuel_consumption = 1.1
-		supply_truck = yes
 	}
 
 	GCA_skoda_octavia_rs_mechanized_equipment = {
