@@ -1,0 +1,15 @@
+add_namespace = GCA_doping_events
+
+# Steroids I: Natural Transformation — Immediate Sync on Research Completion
+country_event = {
+	id = GCA_doping_events.1
+	title = GCA_doping_events.1.t
+	desc = GCA_doping_events.1.desc
+	picture = GFX_report_event_generic_research_lab
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		GCA_sync_doping_leader_traits = yes
+	}
+}

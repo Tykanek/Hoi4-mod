@@ -1,0 +1,61 @@
+on_actions = {
+	# Synchronize doping leader traits when the ruling party changes (ideology change / revolution / coup)
+	on_ruling_party_change = {
+		effect = {
+			GCA_sync_doping_leader_traits = yes
+		}
+	}
+
+	# Synchronize doping leader traits when the government type changes
+	on_government_change = {
+		effect = {
+			GCA_sync_doping_leader_traits = yes
+		}
+	}
+
+	# Synchronize doping leader traits when a new term election concludes
+	on_new_term_election = {
+		effect = {
+			GCA_sync_doping_leader_traits = yes
+		}
+	}
+
+	# Synchronize doping leader traits on successful coup
+	on_coup_succeeded = {
+		effect = {
+			GCA_sync_doping_leader_traits = yes
+		}
+	}
+
+	# Synchronize doping leader traits when a civil war ends
+	on_civil_war_end = {
+		effect = {
+			GCA_sync_doping_leader_traits = yes
+		}
+	}
+
+	# Synchronize on game startup or save/load
+	on_startup = {
+		effect = {
+			every_country = {
+				limit = {
+					has_tech = GCA_steroids_natural_transformation_tech
+				}
+				GCA_sync_doping_leader_traits = yes
+			}
+		}
+	}
+
+	# Daily pulse check to catch any intra-party leader change (focuses, events, retirements)
+	on_daily = {
+		effect = {
+			if = {
+				limit = {
+					has_tech = GCA_steroids_natural_transformation_tech
+				}
+				GCA_sync_doping_leader_traits = yes
+			}
+		}
+	}
+}
+

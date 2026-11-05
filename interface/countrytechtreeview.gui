@@ -3781,7 +3781,7 @@ guiTypes = {
 				name = "size_filler"
 				position = { x = 0 y = 0 }
 				size = {
-					width = 1000 height = 700
+					width = 1000 height = 850
 					min = { width = 100%% height = 100%% }
 				}
 
@@ -3871,25 +3871,9 @@ guiTypes = {
 			gridboxtype = {
 				name = "GCA_steroids_natural_transformation_tech_tree"
 				position = { x = 775 y = 345 }
-				size = { width = 100 height = 280 }
-				slotsize = { width = 70 height = 90 }
-				format = "LEFT"
-			}
-
-			gridboxtype = {
-				name = "GCA_doping_enhanced_performance_tech_tree"
-				position = { x = 775 y = 435 }
-				size = { width = 70 height = 70 }
-				slotsize = { width = 70 height = 90 }
-				format = "LEFT"
-			}
-
-			gridboxtype = {
-				name = "GCA_grznar_final_form_tech_tree"
-				position = { x = 775 y = 525 }
-				size = { width = 70 height = 70 }
-				slotsize = { width = 70 height = 90 }
-				format = "LEFT"
+				size = { width = 200 height = 400 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
 			}
 		}
 

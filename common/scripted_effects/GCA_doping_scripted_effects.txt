@@ -1,0 +1,21 @@
+# Universal leader trait synchronization for completed doping research.
+# Any country that has researched a doping technology automatically transfers
+# the corresponding trait to its current political leader.
+GCA_sync_doping_leader_traits = {
+	if = {
+		limit = {
+			has_tech = GCA_steroids_natural_transformation_tech
+		}
+		add_country_leader_trait = GCA_steroids_natural_transformation_trait
+	}
+	# Subsequent stages will add:
+	# if = {
+	# 	limit = { has_tech = GCA_doping_enhanced_performance_tech }
+	# 	add_country_leader_trait = GCA_doping_enhanced_performance_trait
+	# }
+	# if = {
+	# 	limit = { has_tech = GCA_grznar_final_form_tech }
+	# 	add_country_leader_trait = GCA_grznar_final_form_trait
+	# }
+}
+
