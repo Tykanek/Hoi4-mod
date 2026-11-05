@@ -3857,24 +3857,6 @@ guiTypes = {
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
 			}
-
-			instantTextBoxType = {
-				name = "GCA_steroids_doping_branch_title"
-				position = { x = 680 y = 300 }
-				font = "hoi_20bs"
-				text = "GCA_steroids_doping_branch"
-				maxWidth = 290
-				maxHeight = 30
-				format = center
-			}
-
-			gridboxtype = {
-				name = "GCA_steroids_natural_transformation_tech_tree"
-				position = { x = 720 y = 345 }
-				size = { width = 240 height = 100 }
-				slotsize = { width = 70 height = 70 }
-				format = "LEFT"
-			}
 		}
 
 		containerWindowType = {
